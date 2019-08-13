@@ -1,0 +1,3 @@
+# jellyfish download
+wget https://github.com/gmarcais/Jellyfish/releases/download/v2.3.0/jellyfish-linux
+
