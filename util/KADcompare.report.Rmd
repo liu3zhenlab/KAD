@@ -1,0 +1,152 @@
+---
+title: "KAD Profiles of K-mers with Unequal KADs in two assemblies"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+params:
+  prefix: NULL
+  kdbin: NULL
+  kad: NULL
+  set1: NULL
+  set2: NULL
+  binlen: 0.05
+  jfversion: null
+  version: null
+output:
+  html_document: default
+---
+
+```{r modules, echo = FALSE}
+#' Function for calculate cube root value
+#' cube root of input numbers (singular or vector) that could be 0, NA,
+#' or any positive or negative numbers
+cbrt <- function(x) {
+  y <- rep(0, length(x))
+  not0 <- !is.na(x) & x!=0
+  y[is.na(x)] <- NA
+  y[not0] <- sign(x[not0]) * exp(log(abs(x[not0])) / 3)
+  y
+}
+
+#' Function for plotting two KAD curves from k-mers with unequal KADs
+diffkadplot <- function(kdfile, transform = c("raw", "cuberoot"),
+                        xlabel = "KAD", ylabel = "Counts of k-mers",
+                        pmain = "KAD Profiles of unequal KADs",
+                        cols = c("red", "darkgreen"), xrange = NULL,
+                        yrange = NULL, legendtext = NULL,
+                        plotout = FALSE, plotfile = NULL, ...) {
+  # check parameters
+  stopifnot(sum(transform %in% c("raw", "cuberoot")) >= 1)
+  if (length(transform) > 1) { transform = "raw" }
+  
+  kd <- read.delim(kdfile, stringsAsFactors = F)
+  xval <- kd$BIN
+  y1 <- kd[, 2]
+  y2 <- kd[, 3]
+  
+  if (transform == "cuberoot") { 
+    y1 <- cbrt(y1)
+    y2 <- cbrt(y2)
+    ylabel <- paste(ylabel, "(cube root)")
+  } else if (max(y1, y2) > 1000000000) {
+    y1 <- y1 / 1000000000
+    y2 <- y2 / 1000000000
+    ylabel <- paste(ylabel, "(x10^9)")
+  } else if (max(y1, y2) > 1000000) {
+    y1 <- y1 / 1000000
+    y2 <- y2 / 1000000
+    ylabel <- paste(ylabel, "(x1,000,000)")
+  }
+  
+  
+  # plot
+  if (plotout) {
+    if (is.null(plotfile)) {
+      plotfile <- gsub(".txt$", "", kdfile)
+      plotfile <- paste0(plotfile, ".png")
+    }
+    #pdf(plotfile, width = 6, height = 5)
+    png(plotfile, width = 2.5, height = 2, res = 1200, units = "in", pointsize = 4)
+  }
+  
+  # xrange for plotting
+  if (is.null(xrange)) {
+    xrange <- range(xval)
+  }
+  
+  # yrange for plotting
+  if (is.null(yrange)) {
+    yrange <- range(c(y1, y2))
+  }
+  
+  # plot
+  plot(NULL, NULL, xlim = xrange, ylim = yrange,
+       xlab = xlabel, ylab = ylabel, main = pmain, ...)
+  lines(xval, y1, col = cols[1], lwd = 1.5)
+  lines(xval, y2, col = cols[2], lwd = 1.5)
+  
+  # legends:
+  if (is.null(legendtext)) {
+    legendtext <- colnames(kd)[2:3]
+  }
+  legend("topleft", legend = legendtext, col = cols,
+         bty = "n", lty = 1, lwd = 1.2)
+  
+  if (plotout) { dev.off() }
+}
+```
+
+
+```{r parameters, echo = FALSE}
+wd <- params$prefix
+s1 <- params$set1
+s2 <- params$set2
+kad <- params$kad
+kdfile <- params$kdbin
+binlen <- params$binlen
+jfversion <- params$jfversion
+scriptversion <- params$version
+```
+
+The analysis is to compare k-mer profiles of two sets of sequences, asumming these are two genome assemblies for the same genome. The two assemblies are *`r s1`* and *`r s2`*. From KAD data, k-mers with different copies in the two assemblies were extracted. These k-mers have different KAD values in the two KAD sets. For each KAD set, KAD counts per bin using the bin size as `r binlen` were then determined. These counts were plotted to visualize the differentiation of k-mer profiles of the two assemblies.   
+
+```{r info, echo = FALSE}
+library("knitr")
+```
+
+### Run environment and KAD script
+**R environment**:  
+`r version`
+
+**KAD script**:  
+KADcompare.pl `r scriptversion`
+
+### INPUT
+**assemblies**  
+asm1: `r s1`  
+asm2: `r s2`  
+
+**counts of k-mer in KAD bins**  
+KAD file: `r kad`
+
+### KAD profiles
+```{r plot1, echo=F, fig.align='center', fig.cap="Fig 1. KAD profiles", fig.height=6, fig.width= 6}
+# input arguments
+outbase <- gsub(".*\\/", "", kdfile)
+outbase <- gsub("txt$", "", outbase)
+
+# plot PDFs
+diffkadplot(kdfile = kdfile, transform = "raw",
+            xlabel = "KAD", ylabel = "Counts of k-mers",
+            pmain = "KAD Profiles of unequal KADs",
+            cols = c("red", "darkgreen"), xrange = NULL,
+            yrange = NULL, legendtext = NULL)
+```
+
+```{r plot2, echo=F, fig.align='center', fig.cap="Fig 2. KAD profiles", fig.height=6, fig.width= 6}
+diffkadplot(kdfile = kdfile, transform = "cuberoot",
+            xlabel = "KAD", ylabel = "Counts of k-mers",
+            pmain = "KAD Profiles of unequal KADs",
+            cols = c("red", "darkgreen"), xrange = NULL,
+            yrange = NULL, legendtext = NULL)
+```
+
+In the output directory, `r prefix`, both figures were separately generated in PDF format.

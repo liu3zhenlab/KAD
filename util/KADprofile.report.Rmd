@@ -1,0 +1,193 @@
+---
+title: "KAD Profiling"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+params:
+  klen: 25
+  readid: null
+  readfiles: null
+  readkmer: null
+  asmids: null
+  asmfiles: null
+  minc: 0
+  bincount: null
+  cmode: null
+  kadstat: null
+  kadcutoff: null
+  jfversion: null
+  version: null
+output:
+  html_document: default
+---
+
+```{r parameters, echo = FALSE}
+klen <- params$ken
+readid <- params$readfiles
+readfiles <- params$readfiles
+readkmerfile <- params$readkmer
+asmids <- params$asmids
+asmfiles <- params$asmfiles
+minc <- params$minc
+cmodefile <- params$cmode
+bincountfile <- params$bincount
+kadstat <- params$kadstat
+kadcutoff <- params$kadcutoff
+jfversion <- params$jfversion
+kadversion <- params$version
+```
+
+```{r modules, echo = FALSE}
+printmult <- function(v) {
+# print elements of a vector
+# print an element per line
+  if (length(v) == 1) {
+    v <- strsplit(v, " ")[[1]]
+  }
+  for (e in v) {
+    cat(e)
+    cat("\n")
+  }
+}
+
+
+#' Function for calculate cube root value
+#' cube root of input numbers (singular or vector) that could be 0, NA,
+#' or any positive or negative numbers
+cbrt <- function(x) {
+  y <- rep(0, length(x))
+  not0 <- !is.na(x) & x!=0
+  y[is.na(x)] <- NA
+  y[not0] <- sign(x[not0]) * exp(log(abs(x[not0])) / 3)
+  y
+}
+
+#' Function for plotting a KAD curve from a set of KADs
+kadplot <- function(kbin, plotcol = NULL,
+                    xlabel = "KAD", ylabel = "Counts of k-mers",
+                    pmain = NULL, curvecol = "darkgreen", xrange = NULL, ...) {
+  #kbin <- read.delim(kadbinfile, stringsAsFactors = F)
+  xval <- kbin$BIN
+  y1 <- kbin[, plotcol]
+  y1cr <- cbrt(y1)
+  ylabel.cr <- paste(ylabel, "(cube root)")
+  yrange2 <- range(y1cr, na.rm = T)
+  
+  if (max(y1) > 10^9) {
+    y1 <- y1 / 10^9
+    ylabel <- paste(ylabel, "(x10^9)")
+  } else if (max(y1) > 10^6) {
+    y1 <- y1 / 10^6
+    ylabel <- paste(ylabel, "(x1,000,000)")
+  }
+  yrange1 <- range(y1, na.rm = T)
+  
+  if (is.null(pmain)) {
+    pmain <- colnames(kbin)[plotcol] 
+  }
+  
+  # plot
+  # xrange for plotting
+  if (is.null(xrange)) {
+    xrange <- range(xval)
+  }
+  
+  par(mfrow = c(1, 2))
+  # plot raw
+  plot(NULL, NULL, xlim = xrange, ylim = yrange1,
+       xlab = xlabel, ylab = ylabel, main = pmain, ...)
+  lines(xval, y1, col = curvecol, lwd = 1.5)
+  abline(v = c(-1, 0), lty = 2, col = c("blue", "orange"))
+  #legend("topleft", legend = pmain, col = curvecol, bty = "n", lwd = 1.2)
+  
+  # plot cube root
+  plot(NULL, NULL, xlim = xrange, ylim = yrange2,
+       xlab = xlabel, ylab = ylabel.cr, main = pmain, ...)
+  lines(xval, y1cr, col = curvecol, lwd = 1.5)
+  abline(v = c(-1, 0), lty = 2, col = c("blue", "orange"))
+  #legend("topleft", legend = pmain, col = curvecol, bty = "n", lwd = 1.2)
+}
+
+```
+
+KAD is valuable for evaluating the accuracy of nucleotide base quality of assemblies. Briefly, abundance of k-mers are quantified for both sequencing reads and assembly sequences. Comparison of both values results in a single value per k-mer, K-mer Abundance Difference (KAD), which indicates how well the assembly matches read data for each k-mer.
+
+```{r info, echo = FALSE}
+library("knitr")
+```
+### Run environment and KAD script
+**R environment**:  
+`r version`
+
+**KAD script**:  
+seqKADprofile.pl `r kadversion`
+
+### INPUT
+**1. reads**  
+ID: `r readid`  
+```{r readprint, echo = FALSE, comment = ""}
+printmult(readfiles)
+```
+**2. assemblies**
+```{r asmprint, echo = FALSE, comment = ""}
+asmids_v <- strsplit(asmids, " ")[[1]]
+asmfiles_v <- strsplit(asmfiles, " ")[[1]]
+for (i in 1:length(asmids_v)) {
+  cat(asmids_v[i], ":\t", asmfiles_v[i], "\n", sep = "")
+}
+```
+
+### Parameters for k-mer analysis
+1. `r jfversion` was used to generate k-mers from sequences
+2. length of k-mer: `r klen`
+3. minimum counts of k-mers: `r minc`
+
+
+### Analyis 1: read k-mer analysis
+```{r kcurve, echo = FALSE, out.width='80%', fig.align='center', fig.cap="Fig 1. Spectrum of counts of read k-mers"}
+# read k-mer spectrum
+cmod <- read.delim(cmodefile, stringsAsFactors = F, header = F)
+cmodval <- as.numeric(cmod[1,2])
+rkac <- read.delim(readkmerfile, stringsAsFactors = F) # read k-mers abundance counts
+rkac <- rkac[rkac$kmerAbundance > 0, ]
+xrange <- c(as.numeric(minc), cmodval * 4)
+plot(rkac$kmerAbundance, rkac$count,
+     xlim = xrange, type = "n",
+     xlab = "k-mer abundance",
+     ylab = "Number of k-mers",
+     main = "Spectrum of read k-mer abundance")
+lines(rkac$kmerAbundance, rkac$count)
+abline(v = cmodval, col = "red")
+legend("topright", legend = paste0("mode=", cmodval), text.col = "red", bty = "n")
+```
+From most genomes, single-copy k-mers each of which is present once in the genome are dominant among all non-redundant k-mers derived from the genome. The mode of sequencing depths of single-copy kmers, representing sequencing depth of read data, can be estimated from the spectrum of k-mer abundance from reads (Fig 1).
+
+The mode of counts of read k-mers: `r cmodval`. The mode is highlighted in red in Fig1.
+
+### Analysis 2: KAD summary for each assembly
+```{r kadtable, echo = FALSE}
+kstable <- read.delim(kadstat, stringsAsFactors = F)
+kable(kstable, caption = "Table 1. Summary of KADs")
+kadcutoff_v <- strsplit(kadcutoff, " ")[[1]]
+```
+
+Here are criteria used to define k-mer categories:  
+1. Good: k-mers basically containing no errors; KADs in [`r kadcutoff_v[2]`, `r kadcutoff_v[3]`]. Note that some k-mers with low counts from reads but absent in the assembly are in this category.   
+2. SingleError: k-mers showing a single copy in the assembly but with no reads supported; KADs=-1.  
+3. MultiError: k-mers showing multiple locations in the assembly but read depths indicate lower copies; h KADs <= `r kadcutoff_v[1]`.  
+4. LowMiss: k-mers with less copies in the assembly as compared to copies indicated by read depths; KADs in [`r kadcutoff_v[4]`, `r kadcutoff_v[5]`].  
+5. HighMiss: k-mers showing less copies at a high degree in the assembly as compared to copies indicated by read depths; KADs >=`r kadcutoff_v[5]`.
+
+### Analysis 3: KAD profiles
+Here are tips to understand these KAD profiling figures.   
+1. "good" k-mers are those with KADs close to 0, representing matching copies indicated by reads and by the assembly.  
+2. "error" k-mers are located at -1 or smaller. The k-mer count at -1 represents a single-copy error k-mer in the assembly.  
+3. "missing" k-mers have positive KAD values. The higher values, the higher level of missing in the genome.  
+4. Left and right figures have different y-axes. Left figure has original count values and right figure has cube root transformed count values.  
+
+```{r kad, echo = FALSE, fig.align='center', fig.cap="Fig 2. KAD profiles", fig.height=4, fig.width= 8}
+kadbinc <- read.delim(bincountfile, stringsAsFactors = F)
+for (i in 2:ncol(kadbinc)) {
+  kadplot(kbin = kadbinc, plotcol = i,
+          xlabel = "KAD", ylabel = "Counts of k-mers",
+          pmain = NULL, curvecol = "black", xrange = NULL)
+}
+```
