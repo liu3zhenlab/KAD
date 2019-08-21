@@ -92,7 +92,7 @@ diffkadplot(kdfile = kdfile, transform = c("raw", "cuberoot"),
             yrange = NULL, legendtext = NULL,
             plotout = T, plotfile = pdf1)
 
-pdf2 <- paste0(wd, "", outbase, "Fig2.cuberoot.pdf")
+pdf2 <- paste0(wd, "/", outbase, "Fig2.cuberoot.pdf")
 diffkadplot(kdfile = kdfile, transform = "cuberoot",
             xlabel = "KAD", ylabel = "Counts of k-mers",
             pmain = "KAD Profiles of unequal KADs",
