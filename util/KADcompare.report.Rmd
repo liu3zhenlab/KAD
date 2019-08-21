@@ -149,4 +149,4 @@ diffkadplot(kdfile = kdfile, transform = "cuberoot",
             yrange = NULL, legendtext = NULL)
 ```
 
-In the output directory, `r prefix`, both figures were separately generated in PDF format.
+In the output directory, `r wd`, both figures were separately generated in PDF format.
