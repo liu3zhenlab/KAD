@@ -201,7 +201,7 @@ close TMPR;
 
 # run
 `Rscript $tmpRscript`;
-`rm $tmpRscript`;
+#`rm $tmpRscript`;
 
 close LOG;
 
