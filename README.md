@@ -18,6 +18,12 @@ The script was written with Perl and R is invoked. Both Perl and R are generally
 git clone https://github.com/liu3zhenlab/KAD.git  
 perl ./KAD/seqKADprofile.pl
 
+### Data requirements
+1. Read data
+Illumina sequencing reads with sequence depth 30x or higher. Trimmed reads are preferred.
+
+2. Assembly data
+
 ### Scripts and options
 1. **seqKADprofile.pl**: producing KAD profiles for input assemblies.  
 Usage: perl seqKADprofile.pl [options]  
