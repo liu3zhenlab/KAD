@@ -22,6 +22,28 @@ perl ./KAD/seqKADprofile.pl
 
 
 ### Walk-through example
+Let us say you have three assembly versions:
+1. asm1.fas
+2. asm2.fas
+3. asm3.fas
+
+You also have a read set:
+1. read1.fq
+2. read2.fq
+
+Assuming the Perl script was in the directory of _scriptpath_, run the following script to generate KAD profiles for all three assemblies.
+```
+perl scriptpath/seqKADprofile.pl --read read1.fq --read read2.fq \
+                                 --asm asm1.fas --asm asm2.fas --asm asm3.fas
+```
+
+You might want to assign names all three assemblies with a1, a2, and a3.
+```
+perl scriptpath/seqKADprofile.pl --read read1.fq --read read2.fq \
+                                 --asm asm1.fas --asm asm2.fas --asm asm3.fas \
+                                 --aid a1 --aid a2 --a3
+```
+You need to be carefully use --aid, which must matches with --asm order.
 
 
 
