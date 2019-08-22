@@ -22,7 +22,7 @@ perl ./KAD/seqKADprofile.pl
 
 ### Data requirements
 **1. Read data**  
-Illumina sequencing reads with sequence depth 30x or higher. Trimmed clean reads or error corrected reads are preferred. Raw data without trimming are not recommended.
+Illumina sequencing reads with 30x or higher sequence depth. Trimmed clean reads or error corrected reads are preferred. Raw data without trimming are not recommended.
 
 **2. Assembly data**  
 Assembly sequencing data in FASTA format. Each assembly is in a single FASTA file.
@@ -51,12 +51,12 @@ Assembly sequencing data in FASTA format. Each assembly is in a single FASTA fil
 **[Options]**  
     --**set1**:	\*assembly ID 1 in the \<kad\> file; required.  
     --**set2**:	\*assembly ID 2 in the \<kad\> file; required.  
-    --**prefix**:	prefix for all outputs; including output directory and files; default=KC.  
+    --**prefix**:	the output directory and the prefix for output filess; default=KC.  
     --**binlen**:	bin length to count KAD; default=0.05.  
     --**force**:	overwrite the existing directory if specified; if not, quit if the output directory exists.  
     --**help**: 	help information
 
-### Walk-through example 1: KAD profiling
+### Example 1: KAD profiling
 Let us say you have three assembly versions, as shown in the *data* directory:
 1. asm0.fas
 2. asm1.fas
@@ -76,11 +76,11 @@ You might want to assign names all three assemblies with new names different fro
 ```
 perl scriptpath/seqKADprofile.pl --read read1.fq --read read2.fq \
                                  --asm asm0.fas --asm asm1.fas --asm asm2.fas \
-                                 --aid a0 --aid a1 --a2
+                                 --aid a0 --aid a1 --aid a2
 ```
-You need to be carefully use _--aid_, which must matches with _--asm_ order.
+The number and order of _--aid_ inputs MUST match with _--asm_ inputs.
 
-The parameter _--minc_ might need to change to avoid the interference from a great number of low counts (e.g. 1-3) from error sequences. By default, it is set to 5. However, if high-depth data are generated, the number needs to be increased. Approximately 1/10 of the estimated depth or smaller might be a reasonable cutoff.
+The parameter _--minc_ might need to change to avoid the interference from a great number of low counts (e.g. 1-3) from error sequences. By default, it is set to 5. However, if high-depth data (e.g., >100x) are generated, the number needs to be increased. Approximately 1/10 of the estimated depth might be a reasonable cutoff.
 
 If corrected reads are used, _--minc_ can be set to a small number (e.g., 3).
 ```
@@ -90,8 +90,8 @@ perl scriptpath/seqKADprofile.pl --read read1.fq --read read2.fq \
 ```
 A html report in the _report_ subdirectory is generated from each run. Check this report [example](examples/result_KADprofile.report.pdf).
 
-### Walk-through example 2: KAD comparison between two assemblies
-After running the analysis using [seqKADprofile.pl](seqKADprofile.pl), KAD values are generated. In the [examples](https://github.com/liu3zhenlab/KAD/tree/master/examples) directory, the file **result_4_kad.txt** contains KAD values. Let us call it the KAD file. We now can select two assemblies to compare.
+### Example 2: KAD comparison between two assemblies
+After running the analysis using [seqKADprofile.pl](seqKADprofile.pl), KAD values are generated. In the [examples](https://github.com/liu3zhenlab/KAD/tree/master/examples) directory, the file **result_4_kad.txt** contains KAD values. Let us call it the KAD file. We now can select any two assemblies to compare.
 
 Assuming again the Perl script was in the directory of _scriptpath_, the following run compares a0 with a2. Note that the input _--set1_ and _--set2_ should match the assembly names used in the KAD file.
 
