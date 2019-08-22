@@ -12,7 +12,7 @@ where, _c_ is the count of a k-mer from reads, _m_ the mode of counts of read k-
 ### Citation
 
 ### Requirements
-The script was written with Perl and R is invoked. Both Perl and R are generally installed. To generate reports, the R packageS [knitr](https://github.com/yihui/knitr) and [rmarkdown](https://rmarkdown.rstudio.com) are needed to be installed.
+The script was written with Perl and R is invoked. Both Perl and R are generally installed. To generate reports, the R packages [knitr](https://github.com/yihui/knitr) and [rmarkdown](https://rmarkdown.rstudio.com) are needed to be installed.
 
 ### Installation
 git clone https://github.com/liu3zhenlab/KAD.git
