@@ -21,10 +21,10 @@ perl ./KAD/seqKADprofile.pl
 ```
 
 ### Data requirements
-**1. Read data**
+**1. Read data**  
 Illumina sequencing reads with sequence depth 30x or higher. Trimmed clean reads or error corrected reads are preferred. Raw data without trimming are not recommended.
 
-**2. Assembly data**
+**2. Assembly data**  
 Assembly sequencing data in FASTA format. Each assembly is in a single FASTA file.
 
 ### Scripts and options
