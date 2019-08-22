@@ -12,17 +12,18 @@ where, _c_ is the count of a k-mer from reads, _m_ the mode of counts of read k-
 ### Requirements
 The script was written with Perl and R is invoked. Both Perl and R are generally installed. If needed, please refer to [Perl](https://www.perl.org/) and [R](https://www.r-project.org/) for installation guides. To generate reports, the R packages [knitr](https://github.com/yihui/knitr) and [rmarkdown](https://rmarkdown.rstudio.com) are needed to be installed.
 
-[Jellyfish](https://www.cbcb.umd.edu/software/jellyfish/) was used to generated k-mers for either FASTA or FASTQ data. The binary executable is in the _bin_ directory of the KAD package.
+[Jellyfish](https://www.cbcb.umd.edu/software/jellyfish/) was used to generate k-mers by using either FASTA or FASTQ data. The binary Jellyfish executable is included in the _bin_ directory of the KAD package.
 
 ### Installation
 git clone https://github.com/liu3zhenlab/KAD.git  
 perl ./KAD/seqKADprofile.pl
 
 ### Data requirements
-1. Read data
-Illumina sequencing reads with sequence depth 30x or higher. Trimmed reads are preferred.
+**1. Read data**
+Illumina sequencing reads with sequence depth 30x or higher. Trimmed clean reads or error corrected reads are preferred. Raw data without trimming are not recommended.
 
-2. Assembly data
+**2. Assembly data**
+Assembly sequencing data in FASTA format. Each assembly is in a single FASTA file.
 
 ### Scripts and options
 1. **seqKADprofile.pl**: producing KAD profiles for input assemblies.  
