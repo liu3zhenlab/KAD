@@ -9,16 +9,17 @@ KAD is designed for evaluating the accuracy of nucleotide base quality of genome
 
 where, _c_ is the count of a k-mer from reads, _m_ the mode of counts of read k-mers, _n_ is the copy of the k-mer in the assembly. 
 
-### Citation
-
 ### Requirements
-The script was written with Perl and R is invoked. Both Perl and R are generally installed. To generate reports, the R packages [knitr](https://github.com/yihui/knitr) and [rmarkdown](https://rmarkdown.rstudio.com) are needed to be installed.
+The script was written with Perl and R is invoked. Both Perl and R are generally installed. If needed, please refer to [Perl](https://www.perl.org/) and [R](https://www.r-project.org/) for installation guides. To generate reports, the R packages [knitr](https://github.com/yihui/knitr) and [rmarkdown](https://rmarkdown.rstudio.com) are needed to be installed.
+
+[Jellyfish](https://www.cbcb.umd.edu/software/jellyfish/) was used to generated k-mers for either FASTA or FASTQ data. The binary executable is in the _bin_ directory of the KAD package.
 
 ### Installation
 git clone https://github.com/liu3zhenlab/KAD.git  
 perl ./KAD/seqKADprofile.pl
 
 ### Running guide
+
 
 ### Walk-through example
 
