@@ -8,6 +8,8 @@ KAD is designed for evaluating the accuracy of nucleotide base quality of genome
 KAD = log2(c+m/m*(n+1))
 @/
 
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
+
 ### Citation
 
 ### Requirements
