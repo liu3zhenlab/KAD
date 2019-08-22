@@ -12,7 +12,7 @@ where, _c_ is the count of a k-mer from reads, _m_ is the mode of counts of read
 ### Requirements
 The script was written with Perl and R is invoked. Both Perl and R are generally installed. If needed, please refer to [Perl](https://www.perl.org/) and [R](https://www.r-project.org/) for installation guides. To generate reports, the R packages [knitr](https://github.com/yihui/knitr) and [rmarkdown](https://rmarkdown.rstudio.com) are needed to be installed.
 
-[Jellyfish](https://www.cbcb.umd.edu/software/jellyfish/) was used to generate k-mers by using either FASTA or FASTQ data. The binary Jellyfish executable is included in the [bin](https://github.com/liu3zhenlab/KAD/edit/master/README.md) directory of the KAD package.
+[Jellyfish](https://www.cbcb.umd.edu/software/jellyfish/) was used to generate k-mers by using either FASTA or FASTQ data. The binary Jellyfish executable is included in the [bin](https://github.com/liu3zhenlab/KAD/edit/master/bin/) directory of the KAD package.
 
 ### Installation
 ```
