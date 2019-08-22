@@ -81,6 +81,8 @@ perl scriptpath/seqKADprofile.pl --read read1.fq --read read2.fq \
 You need to be carefully use _--aid_, which must matches with _--asm_ order.
 
 The parameter _--minc_ might need to change to avoid the interference from a great number of low counts (e.g. 1-3) from error sequences. By default, it is set to 5. However, if high-depth data are generated, the number needs to be increased. Approximately 1/10 of the estimated depth or smaller might be a reasonable cutoff.
+
+If corrected reads are used, _--minc_ can be set to a small number (e.g., 3).
 ```
 perl scriptpath/seqKADprofile.pl --read read1.fq --read read2.fq \
                                  --asm asm0.fas --asm asm1.fas --asm asm2.fas \
