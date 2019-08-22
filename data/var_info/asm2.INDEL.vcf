@@ -1,0 +1,180 @@
+##fileformat=VCFv4.1
+##fileDate=Thu Aug 22 17:10:21 2019 (GMT time)
+##source=simuG.pl
+##INFO=<ID=variant_type,Number=1,Type=String,Description="The type of the introduced genomic variant">
+##INFO=<ID=variant_id,Number=1,Type=String,Description="The id of the introduced genomic variant">
+##INFO=<ID=ref_chr,Number=1,Type=String,Description="The reference genome based chromosome ID of the introduced genomic variant">
+##INFO=<ID=ref_start,Number=1,Type=String,Description="The reference genome based start coordinate of the introduced genomic variant">
+##INFO=<ID=ref_end,Number=1,Type=String,Description="The reference genome based end coordinate of the introduced genomic variant">
+##INFO=<ID=sim_chr,Number=1,Type=String,Description="The simulated genome based chromosome ID of the introduced genomic variant">
+##INFO=<ID=sim_start,Number=1,Type=String,Description="The simulated genome based start coordinate of the introduced genomic variant">
+##INFO=<ID=sim_end,Number=1,Type=String,Description="The simulated genome based end coordinate of the introduced genomic variant">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+asm0	16	.	G	GC	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=16;ref_end=16;sim_chr=asm0;sim_start=16;sim_end=17
+asm0	75	.	A	ATCTTG	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=75;ref_end=75;sim_chr=asm0;sim_start=76;sim_end=81
+asm0	120	.	CTGACACCGA	C	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=120;ref_end=130;sim_chr=asm0;sim_start=126;sim_end=126
+asm0	276	.	ACTACTTCAGG	A	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=276;ref_end=286;sim_chr=asm0;sim_start=272;sim_end=272
+asm0	293	.	C	CT	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=293;ref_end=293;sim_chr=asm0;sim_start=279;sim_end=280
+asm0	312	.	GGTACTGTCTTTGCATAT	G	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=312;ref_end=329;sim_chr=asm0;sim_start=299;sim_end=299
+asm0	409	.	T	TCCACGATCGTAGTGAACAAAG	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=409;ref_end=409;sim_chr=asm0;sim_start=379;sim_end=400
+asm0	430	.	GT	G	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=430;ref_end=431;sim_chr=asm0;sim_start=421;sim_end=421
+asm0	442	.	AG	A	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=442;ref_end=443;sim_chr=asm0;sim_start=432;sim_end=432
+asm0	465	.	A	AC	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=465;ref_end=465;sim_chr=asm0;sim_start=454;sim_end=455
+asm0	467	.	GA	G	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=467;ref_end=468;sim_chr=asm0;sim_start=457;sim_end=457
+asm0	485	.	A	ATTA	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=485;ref_end=485;sim_chr=asm0;sim_start=474;sim_end=477
+asm0	519	.	GC	G	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=519;ref_end=520;sim_chr=asm0;sim_start=511;sim_end=511
+asm0	700	.	T	TACG	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=700;ref_end=700;sim_chr=asm0;sim_start=691;sim_end=694
+asm0	729	.	T	TC	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=729;ref_end=729;sim_chr=asm0;sim_start=723;sim_end=724
+asm0	741	.	CTA	C	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=741;ref_end=743;sim_chr=asm0;sim_start=736;sim_end=736
+asm0	748	.	AGTTC	A	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=748;ref_end=752;sim_chr=asm0;sim_start=741;sim_end=741
+asm0	763	.	G	GATA	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=763;ref_end=763;sim_chr=asm0;sim_start=752;sim_end=755
+asm0	862	.	C	CT	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=862;ref_end=862;sim_chr=asm0;sim_start=854;sim_end=855
+asm0	920	.	G	GG	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=920;ref_end=920;sim_chr=asm0;sim_start=913;sim_end=914
+asm0	949	.	A	AG	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=949;ref_end=949;sim_chr=asm0;sim_start=943;sim_end=944
+asm0	999	.	C	CA	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=999;ref_end=999;sim_chr=asm0;sim_start=994;sim_end=995
+asm0	1003	.	G	GA	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=1003;ref_end=1003;sim_chr=asm0;sim_start=999;sim_end=1000
+asm0	1103	.	A	AG	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=1103;ref_end=1103;sim_chr=asm0;sim_start=1100;sim_end=1101
+asm0	1109	.	CAT	C	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=1109;ref_end=1111;sim_chr=asm0;sim_start=1107;sim_end=1107
+asm0	1154	.	TA	T	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=1154;ref_end=1155;sim_chr=asm0;sim_start=1150;sim_end=1150
+asm0	1276	.	A	AA	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=1276;ref_end=1276;sim_chr=asm0;sim_start=1271;sim_end=1272
+asm0	1287	.	A	AG	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=1287;ref_end=1287;sim_chr=asm0;sim_start=1283;sim_end=1284
+asm0	1311	.	A	AC	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=1311;ref_end=1311;sim_chr=asm0;sim_start=1308;sim_end=1309
+asm0	1324	.	TCATC	T	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=1324;ref_end=1328;sim_chr=asm0;sim_start=1322;sim_end=1322
+asm0	1374	.	CACG	C	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=1374;ref_end=1377;sim_chr=asm0;sim_start=1368;sim_end=1368
+asm0	1391	.	CC	C	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=1391;ref_end=1392;sim_chr=asm0;sim_start=1382;sim_end=1382
+asm0	1398	.	C	CT	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=1398;ref_end=1398;sim_chr=asm0;sim_start=1388;sim_end=1389
+asm0	1484	.	A	ACAT	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=1484;ref_end=1484;sim_chr=asm0;sim_start=1475;sim_end=1478
+asm0	1506	.	A	AAGAAGGGGCACGGG	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=1506;ref_end=1506;sim_chr=asm0;sim_start=1500;sim_end=1514
+asm0	1520	.	CA	C	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=1520;ref_end=1521;sim_chr=asm0;sim_start=1528;sim_end=1528
+asm0	1589	.	T	TA	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=1589;ref_end=1589;sim_chr=asm0;sim_start=1596;sim_end=1597
+asm0	1651	.	CT	C	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=1651;ref_end=1652;sim_chr=asm0;sim_start=1659;sim_end=1659
+asm0	1658	.	T	TAG	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=1658;ref_end=1658;sim_chr=asm0;sim_start=1665;sim_end=1667
+asm0	1692	.	A	AC	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=1692;ref_end=1692;sim_chr=asm0;sim_start=1701;sim_end=1702
+asm0	1694	.	GG	G	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=1694;ref_end=1695;sim_chr=asm0;sim_start=1704;sim_end=1704
+asm0	1702	.	TC	T	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=1702;ref_end=1703;sim_chr=asm0;sim_start=1711;sim_end=1711
+asm0	1738	.	AT	A	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=1738;ref_end=1739;sim_chr=asm0;sim_start=1746;sim_end=1746
+asm0	1755	.	T	TC	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=1755;ref_end=1755;sim_chr=asm0;sim_start=1762;sim_end=1763
+asm0	1814	.	GT	G	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=1814;ref_end=1815;sim_chr=asm0;sim_start=1822;sim_end=1822
+asm0	1930	.	A	AG	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=1930;ref_end=1930;sim_chr=asm0;sim_start=1937;sim_end=1938
+asm0	1968	.	AAC	A	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=1968;ref_end=1970;sim_chr=asm0;sim_start=1976;sim_end=1976
+asm0	1969	.	A	AATA	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=1969;ref_end=1969;sim_chr=asm0;sim_start=1975;sim_end=1978
+asm0	2041	.	A	AG	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=2041;ref_end=2041;sim_chr=asm0;sim_start=2050;sim_end=2051
+asm0	2067	.	G	GG	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=2067;ref_end=2067;sim_chr=asm0;sim_start=2077;sim_end=2078
+asm0	2081	.	CG	C	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=2081;ref_end=2082;sim_chr=asm0;sim_start=2092;sim_end=2092
+asm0	2090	.	AA	A	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=2090;ref_end=2091;sim_chr=asm0;sim_start=2100;sim_end=2100
+asm0	2151	.	TT	T	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=2151;ref_end=2152;sim_chr=asm0;sim_start=2160;sim_end=2160
+asm0	2201	.	AT	A	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=2201;ref_end=2202;sim_chr=asm0;sim_start=2209;sim_end=2209
+asm0	2273	.	G	GA	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=2273;ref_end=2273;sim_chr=asm0;sim_start=2280;sim_end=2281
+asm0	2320	.	A	ACTT	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=2320;ref_end=2320;sim_chr=asm0;sim_start=2328;sim_end=2331
+asm0	2419	.	TCATGCA	T	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=2419;ref_end=2425;sim_chr=asm0;sim_start=2430;sim_end=2430
+asm0	2503	.	GG	G	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=2503;ref_end=2504;sim_chr=asm0;sim_start=2508;sim_end=2508
+asm0	2574	.	G	GTC	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=2574;ref_end=2574;sim_chr=asm0;sim_start=2578;sim_end=2580
+asm0	2596	.	G	GA	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=2596;ref_end=2596;sim_chr=asm0;sim_start=2602;sim_end=2603
+asm0	2646	.	AA	A	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=2646;ref_end=2647;sim_chr=asm0;sim_start=2653;sim_end=2653
+asm0	2722	.	A	ACGAA	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=2722;ref_end=2722;sim_chr=asm0;sim_start=2728;sim_end=2732
+asm0	2738	.	G	GA	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=2738;ref_end=2738;sim_chr=asm0;sim_start=2748;sim_end=2749
+asm0	2846	.	TG	T	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=2846;ref_end=2847;sim_chr=asm0;sim_start=2857;sim_end=2857
+asm0	2918	.	GA	G	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=2918;ref_end=2919;sim_chr=asm0;sim_start=2928;sim_end=2928
+asm0	2963	.	AC	A	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=2963;ref_end=2964;sim_chr=asm0;sim_start=2972;sim_end=2972
+asm0	2971	.	TGC	T	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=2971;ref_end=2973;sim_chr=asm0;sim_start=2979;sim_end=2979
+asm0	2993	.	CA	C	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=2993;ref_end=2994;sim_chr=asm0;sim_start=2999;sim_end=2999
+asm0	3014	.	CA	C	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=3014;ref_end=3015;sim_chr=asm0;sim_start=3019;sim_end=3019
+asm0	3036	.	TT	T	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=3036;ref_end=3037;sim_chr=asm0;sim_start=3040;sim_end=3040
+asm0	3104	.	AGGAAGTATT	A	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=3104;ref_end=3114;sim_chr=asm0;sim_start=3107;sim_end=3107
+asm0	3144	.	AG	A	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=3144;ref_end=3145;sim_chr=asm0;sim_start=3137;sim_end=3137
+asm0	3160	.	G	GA	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=3160;ref_end=3160;sim_chr=asm0;sim_start=3152;sim_end=3153
+asm0	3222	.	G	GG	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=3222;ref_end=3222;sim_chr=asm0;sim_start=3215;sim_end=3216
+asm0	3252	.	T	TT	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=3252;ref_end=3252;sim_chr=asm0;sim_start=3246;sim_end=3247
+asm0	3257	.	TC	T	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=3257;ref_end=3258;sim_chr=asm0;sim_start=3252;sim_end=3252
+asm0	3299	.	A	AGA	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=3299;ref_end=3299;sim_chr=asm0;sim_start=3293;sim_end=3295
+asm0	3425	.	TTAGAAAAGCTACATTTGTCCTGGAAGGA	T	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=3425;ref_end=3453;sim_chr=asm0;sim_start=3421;sim_end=3421
+asm0	3450	.	AG	A	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=3450;ref_end=3451;sim_chr=asm0;sim_start=3418;sim_end=3418
+asm0	3496	.	A	AA	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=3496;ref_end=3496;sim_chr=asm0;sim_start=3463;sim_end=3464
+asm0	3523	.	CA	C	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=3523;ref_end=3524;sim_chr=asm0;sim_start=3491;sim_end=3491
+asm0	3627	.	GT	G	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=3627;ref_end=3628;sim_chr=asm0;sim_start=3594;sim_end=3594
+asm0	3643	.	CG	C	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=3643;ref_end=3644;sim_chr=asm0;sim_start=3609;sim_end=3609
+asm0	3646	.	CC	C	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=3646;ref_end=3647;sim_chr=asm0;sim_start=3611;sim_end=3611
+asm0	3697	.	GGCTT	G	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=3697;ref_end=3701;sim_chr=asm0;sim_start=3661;sim_end=3661
+asm0	3718	.	GT	G	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=3718;ref_end=3719;sim_chr=asm0;sim_start=3678;sim_end=3678
+asm0	3719	.	TC	T	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=3719;ref_end=3720;sim_chr=asm0;sim_start=3678;sim_end=3678
+asm0	3734	.	ATC	A	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=3734;ref_end=3736;sim_chr=asm0;sim_start=3692;sim_end=3692
+asm0	3750	.	AA	A	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=3750;ref_end=3751;sim_chr=asm0;sim_start=3706;sim_end=3706
+asm0	3762	.	AC	A	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=3762;ref_end=3763;sim_chr=asm0;sim_start=3717;sim_end=3717
+asm0	3816	.	G	GG	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=3816;ref_end=3816;sim_chr=asm0;sim_start=3770;sim_end=3771
+asm0	3830	.	CT	C	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=3830;ref_end=3831;sim_chr=asm0;sim_start=3785;sim_end=3785
+asm0	3983	.	A	ATCGCTACCCTGGAGGAAAATCCAAACGGTTTTGCCAGCCGGAATCATCTC	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=3983;ref_end=3983;sim_chr=asm0;sim_start=3937;sim_end=3987
+asm0	4141	.	AC	A	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=4141;ref_end=4142;sim_chr=asm0;sim_start=4145;sim_end=4145
+asm0	4188	.	C	CGCCC	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=4188;ref_end=4188;sim_chr=asm0;sim_start=4191;sim_end=4195
+asm0	4212	.	GG	G	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=4212;ref_end=4213;sim_chr=asm0;sim_start=4219;sim_end=4219
+asm0	4229	.	T	TTAA	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=4229;ref_end=4229;sim_chr=asm0;sim_start=4235;sim_end=4238
+asm0	4257	.	CT	C	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=4257;ref_end=4258;sim_chr=asm0;sim_start=4266;sim_end=4266
+asm0	4262	.	A	AA	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=4262;ref_end=4262;sim_chr=asm0;sim_start=4270;sim_end=4271
+asm0	4316	.	T	TA	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=4316;ref_end=4316;sim_chr=asm0;sim_start=4325;sim_end=4326
+asm0	4478	.	T	TG	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=4478;ref_end=4478;sim_chr=asm0;sim_start=4488;sim_end=4489
+asm0	4528	.	G	GG	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=4528;ref_end=4528;sim_chr=asm0;sim_start=4539;sim_end=4540
+asm0	4550	.	G	GT	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=4550;ref_end=4550;sim_chr=asm0;sim_start=4562;sim_end=4563
+asm0	4558	.	T	TGCTGAC	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=4558;ref_end=4558;sim_chr=asm0;sim_start=4571;sim_end=4577
+asm0	4560	.	T	TT	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=4560;ref_end=4560;sim_chr=asm0;sim_start=4579;sim_end=4580
+asm0	4617	.	CC	C	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=4617;ref_end=4618;sim_chr=asm0;sim_start=4637;sim_end=4637
+asm0	4646	.	CG	C	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=4646;ref_end=4647;sim_chr=asm0;sim_start=4665;sim_end=4665
+asm0	4658	.	A	AT	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=4658;ref_end=4658;sim_chr=asm0;sim_start=4676;sim_end=4677
+asm0	4665	.	TC	T	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=4665;ref_end=4666;sim_chr=asm0;sim_start=4684;sim_end=4684
+asm0	4716	.	A	ATTT	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=4716;ref_end=4716;sim_chr=asm0;sim_start=4734;sim_end=4737
+asm0	4790	.	TG	T	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=4790;ref_end=4791;sim_chr=asm0;sim_start=4811;sim_end=4811
+asm0	4796	.	G	GA	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=4796;ref_end=4796;sim_chr=asm0;sim_start=4816;sim_end=4817
+asm0	4853	.	AT	A	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=4853;ref_end=4854;sim_chr=asm0;sim_start=4874;sim_end=4874
+asm0	4862	.	AG	A	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=4862;ref_end=4863;sim_chr=asm0;sim_start=4882;sim_end=4882
+asm0	4908	.	AG	A	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=4908;ref_end=4909;sim_chr=asm0;sim_start=4927;sim_end=4927
+asm0	5016	.	GCA	G	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=5016;ref_end=5018;sim_chr=asm0;sim_start=5034;sim_end=5034
+asm0	5049	.	GATAA	G	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=5049;ref_end=5053;sim_chr=asm0;sim_start=5065;sim_end=5065
+asm0	5113	.	G	GA	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=5113;ref_end=5113;sim_chr=asm0;sim_start=5125;sim_end=5126
+asm0	5180	.	ACT	A	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=5180;ref_end=5182;sim_chr=asm0;sim_start=5193;sim_end=5193
+asm0	5186	.	AG	A	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=5186;ref_end=5187;sim_chr=asm0;sim_start=5197;sim_end=5197
+asm0	5189	.	A	AG	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=5189;ref_end=5189;sim_chr=asm0;sim_start=5199;sim_end=5200
+asm0	5199	.	C	CG	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=5199;ref_end=5199;sim_chr=asm0;sim_start=5210;sim_end=5211
+asm0	5201	.	G	GG	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=5201;ref_end=5201;sim_chr=asm0;sim_start=5213;sim_end=5214
+asm0	5209	.	TCT	T	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=5209;ref_end=5211;sim_chr=asm0;sim_start=5222;sim_end=5222
+asm0	5305	.	CC	C	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=5305;ref_end=5307;sim_chr=asm0;sim_start=5316;sim_end=5316
+asm0	5373	.	C	CC	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=5373;ref_end=5373;sim_chr=asm0;sim_start=5382;sim_end=5383
+asm0	5448	.	G	GA	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=5448;ref_end=5448;sim_chr=asm0;sim_start=5458;sim_end=5459
+asm0	5500	.	AAA	A	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=5500;ref_end=5502;sim_chr=asm0;sim_start=5511;sim_end=5511
+asm0	5562	.	A	ATTCG	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=5562;ref_end=5562;sim_chr=asm0;sim_start=5571;sim_end=5575
+asm0	5681	.	G	GC	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=5681;ref_end=5681;sim_chr=asm0;sim_start=5694;sim_end=5695
+asm0	5741	.	CA	C	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=5741;ref_end=5742;sim_chr=asm0;sim_start=5755;sim_end=5755
+asm0	5779	.	C	CTATTTGTT	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=5779;ref_end=5779;sim_chr=asm0;sim_start=5792;sim_end=5800
+asm0	5781	.	AGA	A	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=5781;ref_end=5783;sim_chr=asm0;sim_start=5802;sim_end=5802
+asm0	5812	.	T	TC	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=5812;ref_end=5812;sim_chr=asm0;sim_start=5831;sim_end=5832
+asm0	5904	.	ATTG	A	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=5904;ref_end=5907;sim_chr=asm0;sim_start=5924;sim_end=5924
+asm0	5948	.	TCC	T	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=5948;ref_end=5950;sim_chr=asm0;sim_start=5965;sim_end=5965
+asm0	5958	.	C	CAC	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=5958;ref_end=5958;sim_chr=asm0;sim_start=5973;sim_end=5975
+asm0	5972	.	AA	A	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=5972;ref_end=5973;sim_chr=asm0;sim_start=5989;sim_end=5989
+asm0	5983	.	A	ACG	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=5983;ref_end=5983;sim_chr=asm0;sim_start=5999;sim_end=6001
+asm0	6057	.	C	CG	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=6057;ref_end=6057;sim_chr=asm0;sim_start=6075;sim_end=6076
+asm0	6063	.	A	AT	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=6063;ref_end=6063;sim_chr=asm0;sim_start=6082;sim_end=6083
+asm0	6150	.	A	ACTTATTGCGTCGCCC	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=6150;ref_end=6150;sim_chr=asm0;sim_start=6170;sim_end=6185
+asm0	6170	.	GA	G	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=6170;ref_end=6171;sim_chr=asm0;sim_start=6205;sim_end=6205
+asm0	6177	.	A	AG	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=6177;ref_end=6177;sim_chr=asm0;sim_start=6211;sim_end=6212
+asm0	6190	.	AC	A	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=6190;ref_end=6191;sim_chr=asm0;sim_start=6225;sim_end=6225
+asm0	6202	.	C	CTG	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=6202;ref_end=6202;sim_chr=asm0;sim_start=6236;sim_end=6238
+asm0	6210	.	AG	A	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=6210;ref_end=6211;sim_chr=asm0;sim_start=6246;sim_end=6246
+asm0	6223	.	A	AGTATGGTT	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=6223;ref_end=6223;sim_chr=asm0;sim_start=6258;sim_end=6266
+asm0	6232	.	AC	A	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=6232;ref_end=6233;sim_chr=asm0;sim_start=6275;sim_end=6275
+asm0	6267	.	CT	C	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=6267;ref_end=6268;sim_chr=asm0;sim_start=6309;sim_end=6309
+asm0	6289	.	GAG	G	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=6289;ref_end=6291;sim_chr=asm0;sim_start=6330;sim_end=6330
+asm0	6383	.	C	CC	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=6383;ref_end=6383;sim_chr=asm0;sim_start=6422;sim_end=6423
+asm0	6385	.	A	AC	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=6385;ref_end=6385;sim_chr=asm0;sim_start=6425;sim_end=6426
+asm0	6476	.	T	TGTCCGTTCCAC	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=6476;ref_end=6476;sim_chr=asm0;sim_start=6517;sim_end=6528
+asm0	6478	.	CC	C	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=6478;ref_end=6479;sim_chr=asm0;sim_start=6530;sim_end=6530
+asm0	6484	.	TG	T	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=6484;ref_end=6485;sim_chr=asm0;sim_start=6535;sim_end=6535
+asm0	6499	.	CA	C	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=6499;ref_end=6500;sim_chr=asm0;sim_start=6549;sim_end=6549
+asm0	6525	.	A	AC	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=6525;ref_end=6525;sim_chr=asm0;sim_start=6574;sim_end=6575
+asm0	6542	.	C	CC	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=6542;ref_end=6542;sim_chr=asm0;sim_start=6592;sim_end=6593
+asm0	6560	.	AA	A	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=6560;ref_end=6561;sim_chr=asm0;sim_start=6611;sim_end=6611
+asm0	6609	.	ATAATTCTAT	A	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=6609;ref_end=6618;sim_chr=asm0;sim_start=6659;sim_end=6659
+asm0	6611	.	AATTCT	A	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=6611;ref_end=6616;sim_chr=asm0;sim_start=6652;sim_end=6652
+asm0	6657	.	ACA	A	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=6657;ref_end=6659;sim_chr=asm0;sim_start=6693;sim_end=6693
+asm0	6705	.	CC	C	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=6705;ref_end=6706;sim_chr=asm0;sim_start=6739;sim_end=6739
+asm0	6753	.	T	TCC	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=6753;ref_end=6753;sim_chr=asm0;sim_start=6786;sim_end=6788
+asm0	6755	.	T	TTC	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=6755;ref_end=6755;sim_chr=asm0;sim_start=6790;sim_end=6792
+asm0	6774	.	CA	C	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=6774;ref_end=6775;sim_chr=asm0;sim_start=6811;sim_end=6811
+asm0	6804	.	GT	G	.	.	variant_type=INDEL;ref_chr=asm0;ref_start=6804;ref_end=6805;sim_chr=asm0;sim_start=6840;sim_end=6840

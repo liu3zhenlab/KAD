@@ -5,20 +5,19 @@
 # Author: Sanzhen Liu <liu3zhen@ksu.edu>
 # 8/17/2019
 #
-# The script is to generate KAD profiles for 1 or multiple assemblies
+# The script is to compare KADs from two assemblies
 #======================================================================
 
 use strict;
 use warnings;
 use Getopt::Long;
-#use File::Temp;
 use FindBin;
 
-my $version = "0.02";
+my $version = "0.10";
 
 sub prompt {
 	print <<EOF;
-	Usage: perl KADcompare [options] <kad>
+	Usage: perl KADcompare.pl [options] <kad>
 	[Options]
 	--set1:		*assembly ID 1 in the <kad> file; required
 	--set2:		*assembly ID 2 in the <kad> file; required
@@ -42,7 +41,7 @@ my ($set1, $set2, $prefix, $binlen, $force, $help);
 			"force" => \$force,
 			"help" => \$help);
 
-&prompt if $help;
+&prompt if $help or @ARGV == 0;
 $prefix = "KC" if (!defined $prefix); 
 $binlen = 0.05 if (!defined $binlen);
 

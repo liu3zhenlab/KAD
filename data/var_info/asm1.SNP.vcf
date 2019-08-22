@@ -1,0 +1,46 @@
+##fileformat=VCFv4.1
+##fileDate=Thu Aug 22 17:09:31 2019 (GMT time)
+##source=simuG.pl
+##INFO=<ID=variant_type,Number=1,Type=String,Description="The type of the introduced genomic variant">
+##INFO=<ID=variant_id,Number=1,Type=String,Description="The id of the introduced genomic variant">
+##INFO=<ID=ref_chr,Number=1,Type=String,Description="The reference genome based chromosome ID of the introduced genomic variant">
+##INFO=<ID=ref_start,Number=1,Type=String,Description="The reference genome based start coordinate of the introduced genomic variant">
+##INFO=<ID=ref_end,Number=1,Type=String,Description="The reference genome based end coordinate of the introduced genomic variant">
+##INFO=<ID=sim_chr,Number=1,Type=String,Description="The simulated genome based chromosome ID of the introduced genomic variant">
+##INFO=<ID=sim_start,Number=1,Type=String,Description="The simulated genome based start coordinate of the introduced genomic variant">
+##INFO=<ID=sim_end,Number=1,Type=String,Description="The simulated genome based end coordinate of the introduced genomic variant">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+asm0	45	.	G	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=45;ref_end=45;sim_chr=asm0;sim_start=45;sim_end=45
+asm0	48	.	G	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=48;ref_end=48;sim_chr=asm0;sim_start=48;sim_end=48
+asm0	89	.	G	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=89;ref_end=89;sim_chr=asm0;sim_start=89;sim_end=89
+asm0	118	.	C	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=118;ref_end=118;sim_chr=asm0;sim_start=118;sim_end=118
+asm0	358	.	C	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=358;ref_end=358;sim_chr=asm0;sim_start=359;sim_end=359
+asm0	632	.	T	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=632;ref_end=632;sim_chr=asm0;sim_start=635;sim_end=635
+asm0	708	.	A	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=708;ref_end=708;sim_chr=asm0;sim_start=711;sim_end=711
+asm0	755	.	A	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=755;ref_end=755;sim_chr=asm0;sim_start=758;sim_end=758
+asm0	1010	.	T	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=1010;ref_end=1010;sim_chr=asm0;sim_start=1013;sim_end=1013
+asm0	1166	.	T	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=1166;ref_end=1166;sim_chr=asm0;sim_start=1170;sim_end=1170
+asm0	1605	.	A	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=1605;ref_end=1605;sim_chr=asm0;sim_start=1609;sim_end=1609
+asm0	1636	.	T	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=1636;ref_end=1636;sim_chr=asm0;sim_start=1640;sim_end=1640
+asm0	1736	.	G	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=1736;ref_end=1736;sim_chr=asm0;sim_start=1741;sim_end=1741
+asm0	1946	.	C	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=1946;ref_end=1946;sim_chr=asm0;sim_start=1951;sim_end=1951
+asm0	1961	.	C	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=1961;ref_end=1961;sim_chr=asm0;sim_start=1966;sim_end=1966
+asm0	2037	.	A	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=2037;ref_end=2037;sim_chr=asm0;sim_start=2041;sim_end=2041
+asm0	2716	.	A	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=2716;ref_end=2716;sim_chr=asm0;sim_start=2719;sim_end=2719
+asm0	3020	.	T	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=3020;ref_end=3020;sim_chr=asm0;sim_start=3024;sim_end=3024
+asm0	3219	.	A	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=3219;ref_end=3219;sim_chr=asm0;sim_start=3224;sim_end=3224
+asm0	3413	.	A	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=3413;ref_end=3413;sim_chr=asm0;sim_start=3418;sim_end=3418
+asm0	3725	.	A	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=3725;ref_end=3725;sim_chr=asm0;sim_start=3714;sim_end=3714
+asm0	3960	.	G	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=3960;ref_end=3960;sim_chr=asm0;sim_start=3950;sim_end=3950
+asm0	4058	.	T	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=4058;ref_end=4058;sim_chr=asm0;sim_start=4043;sim_end=4043
+asm0	4094	.	C	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=4094;ref_end=4094;sim_chr=asm0;sim_start=4079;sim_end=4079
+asm0	4098	.	T	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=4098;ref_end=4098;sim_chr=asm0;sim_start=4083;sim_end=4083
+asm0	4223	.	T	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=4223;ref_end=4223;sim_chr=asm0;sim_start=4208;sim_end=4208
+asm0	4861	.	C	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=4861;ref_end=4861;sim_chr=asm0;sim_start=4844;sim_end=4844
+asm0	4965	.	A	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=4965;ref_end=4965;sim_chr=asm0;sim_start=4949;sim_end=4949
+asm0	5084	.	G	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5084;ref_end=5084;sim_chr=asm0;sim_start=5068;sim_end=5068
+asm0	5383	.	C	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5383;ref_end=5383;sim_chr=asm0;sim_start=5364;sim_end=5364
+asm0	5656	.	C	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5656;ref_end=5656;sim_chr=asm0;sim_start=5637;sim_end=5637
+asm0	6238	.	T	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=6238;ref_end=6238;sim_chr=asm0;sim_start=6215;sim_end=6215
+asm0	6632	.	T	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=6632;ref_end=6632;sim_chr=asm0;sim_start=6607;sim_end=6607
+asm0	6670	.	T	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=6670;ref_end=6670;sim_chr=asm0;sim_start=6645;sim_end=6645

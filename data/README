@@ -1,0 +1,30 @@
+All simulation data were based on the sequence of asm0.fas
+
+1. Reads simulation options
+- read1.fastq
+- read2.fastq
+Read type: PE reads
+Read depth: 80x
+Read length: 150bp
+Standard deviation of distance for pairs: 50bp
+Base error rate of reads: 0.2%
+Rate of mutations: 0
+Reference simulation options
+
+
+2. asm1
+SNP rate: 0.5%
+SNP transition/transversion ratio: 0.5
+INDEL rate: 0.5%
+Insertion/Deletion ratio: 1
+Total substitution errors rate: 1%
+
+3. asm2
+SNP rate: 2.5%
+SNP transition/transversion ratio: 0.5
+INDEL rate: 2.5%
+Insertion/Deletion ratio: 1
+Total substitution errors rate: 5%
+
+All variants information are in var_info directory
+

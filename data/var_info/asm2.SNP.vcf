@@ -1,0 +1,180 @@
+##fileformat=VCFv4.1
+##fileDate=Thu Aug 22 17:10:21 2019 (GMT time)
+##source=simuG.pl
+##INFO=<ID=variant_type,Number=1,Type=String,Description="The type of the introduced genomic variant">
+##INFO=<ID=variant_id,Number=1,Type=String,Description="The id of the introduced genomic variant">
+##INFO=<ID=ref_chr,Number=1,Type=String,Description="The reference genome based chromosome ID of the introduced genomic variant">
+##INFO=<ID=ref_start,Number=1,Type=String,Description="The reference genome based start coordinate of the introduced genomic variant">
+##INFO=<ID=ref_end,Number=1,Type=String,Description="The reference genome based end coordinate of the introduced genomic variant">
+##INFO=<ID=sim_chr,Number=1,Type=String,Description="The simulated genome based chromosome ID of the introduced genomic variant">
+##INFO=<ID=sim_start,Number=1,Type=String,Description="The simulated genome based start coordinate of the introduced genomic variant">
+##INFO=<ID=sim_end,Number=1,Type=String,Description="The simulated genome based end coordinate of the introduced genomic variant">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+asm0	25	.	C	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=25;ref_end=25;sim_chr=asm0;sim_start=26;sim_end=26
+asm0	77	.	G	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=77;ref_end=77;sim_chr=asm0;sim_start=83;sim_end=83
+asm0	88	.	G	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=88;ref_end=88;sim_chr=asm0;sim_start=94;sim_end=94
+asm0	112	.	G	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=112;ref_end=112;sim_chr=asm0;sim_start=118;sim_end=118
+asm0	114	.	T	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=114;ref_end=114;sim_chr=asm0;sim_start=120;sim_end=120
+asm0	131	.	G	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=131;ref_end=131;sim_chr=asm0;sim_start=127;sim_end=127
+asm0	154	.	A	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=154;ref_end=154;sim_chr=asm0;sim_start=150;sim_end=150
+asm0	416	.	C	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=416;ref_end=416;sim_chr=asm0;sim_start=407;sim_end=407
+asm0	426	.	A	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=426;ref_end=426;sim_chr=asm0;sim_start=417;sim_end=417
+asm0	428	.	C	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=428;ref_end=428;sim_chr=asm0;sim_start=419;sim_end=419
+asm0	464	.	G	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=464;ref_end=464;sim_chr=asm0;sim_start=453;sim_end=453
+asm0	495	.	A	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=495;ref_end=495;sim_chr=asm0;sim_start=487;sim_end=487
+asm0	597	.	T	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=597;ref_end=597;sim_chr=asm0;sim_start=588;sim_end=588
+asm0	678	.	A	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=678;ref_end=678;sim_chr=asm0;sim_start=669;sim_end=669
+asm0	723	.	A	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=723;ref_end=723;sim_chr=asm0;sim_start=717;sim_end=717
+asm0	765	.	A	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=765;ref_end=765;sim_chr=asm0;sim_start=757;sim_end=757
+asm0	802	.	G	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=802;ref_end=802;sim_chr=asm0;sim_start=794;sim_end=794
+asm0	811	.	C	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=811;ref_end=811;sim_chr=asm0;sim_start=803;sim_end=803
+asm0	863	.	T	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=863;ref_end=863;sim_chr=asm0;sim_start=856;sim_end=856
+asm0	1021	.	A	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=1021;ref_end=1021;sim_chr=asm0;sim_start=1018;sim_end=1018
+asm0	1200	.	T	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=1200;ref_end=1200;sim_chr=asm0;sim_start=1195;sim_end=1195
+asm0	1205	.	A	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=1205;ref_end=1205;sim_chr=asm0;sim_start=1200;sim_end=1200
+asm0	1222	.	T	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=1222;ref_end=1222;sim_chr=asm0;sim_start=1217;sim_end=1217
+asm0	1421	.	A	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=1421;ref_end=1421;sim_chr=asm0;sim_start=1412;sim_end=1412
+asm0	1423	.	T	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=1423;ref_end=1423;sim_chr=asm0;sim_start=1414;sim_end=1414
+asm0	1430	.	T	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=1430;ref_end=1430;sim_chr=asm0;sim_start=1421;sim_end=1421
+asm0	1487	.	T	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=1487;ref_end=1487;sim_chr=asm0;sim_start=1481;sim_end=1481
+asm0	1592	.	T	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=1592;ref_end=1592;sim_chr=asm0;sim_start=1600;sim_end=1600
+asm0	1636	.	T	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=1636;ref_end=1636;sim_chr=asm0;sim_start=1644;sim_end=1644
+asm0	1733	.	A	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=1733;ref_end=1733;sim_chr=asm0;sim_start=1741;sim_end=1741
+asm0	1792	.	G	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=1792;ref_end=1792;sim_chr=asm0;sim_start=1800;sim_end=1800
+asm0	1833	.	A	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=1833;ref_end=1833;sim_chr=asm0;sim_start=1840;sim_end=1840
+asm0	1889	.	G	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=1889;ref_end=1889;sim_chr=asm0;sim_start=1896;sim_end=1896
+asm0	1938	.	C	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=1938;ref_end=1938;sim_chr=asm0;sim_start=1946;sim_end=1946
+asm0	2007	.	A	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=2007;ref_end=2007;sim_chr=asm0;sim_start=2016;sim_end=2016
+asm0	2016	.	G	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=2016;ref_end=2016;sim_chr=asm0;sim_start=2025;sim_end=2025
+asm0	2024	.	T	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=2024;ref_end=2024;sim_chr=asm0;sim_start=2033;sim_end=2033
+asm0	2040	.	A	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=2040;ref_end=2040;sim_chr=asm0;sim_start=2049;sim_end=2049
+asm0	2075	.	T	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=2075;ref_end=2075;sim_chr=asm0;sim_start=2086;sim_end=2086
+asm0	2161	.	A	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=2161;ref_end=2161;sim_chr=asm0;sim_start=2169;sim_end=2169
+asm0	2210	.	A	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=2210;ref_end=2210;sim_chr=asm0;sim_start=2217;sim_end=2217
+asm0	2246	.	T	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=2246;ref_end=2246;sim_chr=asm0;sim_start=2253;sim_end=2253
+asm0	2250	.	A	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=2250;ref_end=2250;sim_chr=asm0;sim_start=2257;sim_end=2257
+asm0	2321	.	A	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=2321;ref_end=2321;sim_chr=asm0;sim_start=2332;sim_end=2332
+asm0	2358	.	A	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=2358;ref_end=2358;sim_chr=asm0;sim_start=2369;sim_end=2369
+asm0	2385	.	G	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=2385;ref_end=2385;sim_chr=asm0;sim_start=2396;sim_end=2396
+asm0	2393	.	G	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=2393;ref_end=2393;sim_chr=asm0;sim_start=2404;sim_end=2404
+asm0	2397	.	T	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=2397;ref_end=2397;sim_chr=asm0;sim_start=2408;sim_end=2408
+asm0	2479	.	T	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=2479;ref_end=2479;sim_chr=asm0;sim_start=2484;sim_end=2484
+asm0	2496	.	C	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=2496;ref_end=2496;sim_chr=asm0;sim_start=2501;sim_end=2501
+asm0	2601	.	T	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=2601;ref_end=2601;sim_chr=asm0;sim_start=2608;sim_end=2608
+asm0	2670	.	T	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=2670;ref_end=2670;sim_chr=asm0;sim_start=2676;sim_end=2676
+asm0	2703	.	C	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=2703;ref_end=2703;sim_chr=asm0;sim_start=2709;sim_end=2709
+asm0	2822	.	A	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=2822;ref_end=2822;sim_chr=asm0;sim_start=2833;sim_end=2833
+asm0	2863	.	A	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=2863;ref_end=2863;sim_chr=asm0;sim_start=2873;sim_end=2873
+asm0	2868	.	A	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=2868;ref_end=2868;sim_chr=asm0;sim_start=2878;sim_end=2878
+asm0	2895	.	C	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=2895;ref_end=2895;sim_chr=asm0;sim_start=2905;sim_end=2905
+asm0	2985	.	A	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=2985;ref_end=2985;sim_chr=asm0;sim_start=2991;sim_end=2991
+asm0	3100	.	T	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=3100;ref_end=3100;sim_chr=asm0;sim_start=3103;sim_end=3103
+asm0	3176	.	T	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=3176;ref_end=3176;sim_chr=asm0;sim_start=3169;sim_end=3169
+asm0	3185	.	T	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=3185;ref_end=3185;sim_chr=asm0;sim_start=3178;sim_end=3178
+asm0	3217	.	G	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=3217;ref_end=3217;sim_chr=asm0;sim_start=3210;sim_end=3210
+asm0	3264	.	A	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=3264;ref_end=3264;sim_chr=asm0;sim_start=3258;sim_end=3258
+asm0	3352	.	G	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=3352;ref_end=3352;sim_chr=asm0;sim_start=3348;sim_end=3348
+asm0	3412	.	G	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=3412;ref_end=3412;sim_chr=asm0;sim_start=3408;sim_end=3408
+asm0	3500	.	C	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=3500;ref_end=3500;sim_chr=asm0;sim_start=3468;sim_end=3468
+asm0	3555	.	C	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=3555;ref_end=3555;sim_chr=asm0;sim_start=3522;sim_end=3522
+asm0	3597	.	T	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=3597;ref_end=3597;sim_chr=asm0;sim_start=3564;sim_end=3564
+asm0	3667	.	C	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=3667;ref_end=3667;sim_chr=asm0;sim_start=3631;sim_end=3631
+asm0	3706	.	C	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=3706;ref_end=3706;sim_chr=asm0;sim_start=3666;sim_end=3666
+asm0	3724	.	C	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=3724;ref_end=3724;sim_chr=asm0;sim_start=3682;sim_end=3682
+asm0	3732	.	T	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=3732;ref_end=3732;sim_chr=asm0;sim_start=3690;sim_end=3690
+asm0	3784	.	G	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=3784;ref_end=3784;sim_chr=asm0;sim_start=3738;sim_end=3738
+asm0	3982	.	G	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=3982;ref_end=3982;sim_chr=asm0;sim_start=3936;sim_end=3936
+asm0	3984	.	T	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=3984;ref_end=3984;sim_chr=asm0;sim_start=3988;sim_end=3988
+asm0	4103	.	T	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=4103;ref_end=4103;sim_chr=asm0;sim_start=4107;sim_end=4107
+asm0	4154	.	T	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=4154;ref_end=4154;sim_chr=asm0;sim_start=4157;sim_end=4157
+asm0	4179	.	G	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=4179;ref_end=4179;sim_chr=asm0;sim_start=4182;sim_end=4182
+asm0	4186	.	C	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=4186;ref_end=4186;sim_chr=asm0;sim_start=4189;sim_end=4189
+asm0	4187	.	C	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=4187;ref_end=4187;sim_chr=asm0;sim_start=4190;sim_end=4190
+asm0	4205	.	G	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=4205;ref_end=4205;sim_chr=asm0;sim_start=4212;sim_end=4212
+asm0	4208	.	G	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=4208;ref_end=4208;sim_chr=asm0;sim_start=4215;sim_end=4215
+asm0	4226	.	T	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=4226;ref_end=4226;sim_chr=asm0;sim_start=4232;sim_end=4232
+asm0	4248	.	G	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=4248;ref_end=4248;sim_chr=asm0;sim_start=4257;sim_end=4257
+asm0	4252	.	A	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=4252;ref_end=4252;sim_chr=asm0;sim_start=4261;sim_end=4261
+asm0	4299	.	A	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=4299;ref_end=4299;sim_chr=asm0;sim_start=4308;sim_end=4308
+asm0	4322	.	C	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=4322;ref_end=4322;sim_chr=asm0;sim_start=4332;sim_end=4332
+asm0	4339	.	T	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=4339;ref_end=4339;sim_chr=asm0;sim_start=4349;sim_end=4349
+asm0	4341	.	T	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=4341;ref_end=4341;sim_chr=asm0;sim_start=4351;sim_end=4351
+asm0	4400	.	T	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=4400;ref_end=4400;sim_chr=asm0;sim_start=4410;sim_end=4410
+asm0	4412	.	A	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=4412;ref_end=4412;sim_chr=asm0;sim_start=4422;sim_end=4422
+asm0	4485	.	T	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=4485;ref_end=4485;sim_chr=asm0;sim_start=4496;sim_end=4496
+asm0	4498	.	A	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=4498;ref_end=4498;sim_chr=asm0;sim_start=4509;sim_end=4509
+asm0	4527	.	T	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=4527;ref_end=4527;sim_chr=asm0;sim_start=4538;sim_end=4538
+asm0	4543	.	C	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=4543;ref_end=4543;sim_chr=asm0;sim_start=4555;sim_end=4555
+asm0	4547	.	C	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=4547;ref_end=4547;sim_chr=asm0;sim_start=4559;sim_end=4559
+asm0	4592	.	G	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=4592;ref_end=4592;sim_chr=asm0;sim_start=4612;sim_end=4612
+asm0	4604	.	A	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=4604;ref_end=4604;sim_chr=asm0;sim_start=4624;sim_end=4624
+asm0	4633	.	C	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=4633;ref_end=4633;sim_chr=asm0;sim_start=4652;sim_end=4652
+asm0	4652	.	T	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=4652;ref_end=4652;sim_chr=asm0;sim_start=4670;sim_end=4670
+asm0	4663	.	G	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=4663;ref_end=4663;sim_chr=asm0;sim_start=4682;sim_end=4682
+asm0	4684	.	C	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=4684;ref_end=4684;sim_chr=asm0;sim_start=4702;sim_end=4702
+asm0	4695	.	T	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=4695;ref_end=4695;sim_chr=asm0;sim_start=4713;sim_end=4713
+asm0	4729	.	A	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=4729;ref_end=4729;sim_chr=asm0;sim_start=4750;sim_end=4750
+asm0	5012	.	C	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5012;ref_end=5012;sim_chr=asm0;sim_start=5030;sim_end=5030
+asm0	5089	.	C	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5089;ref_end=5089;sim_chr=asm0;sim_start=5101;sim_end=5101
+asm0	5097	.	T	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5097;ref_end=5097;sim_chr=asm0;sim_start=5109;sim_end=5109
+asm0	5146	.	A	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5146;ref_end=5146;sim_chr=asm0;sim_start=5159;sim_end=5159
+asm0	5168	.	C	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5168;ref_end=5168;sim_chr=asm0;sim_start=5181;sim_end=5181
+asm0	5174	.	G	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5174;ref_end=5174;sim_chr=asm0;sim_start=5187;sim_end=5187
+asm0	5239	.	G	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5239;ref_end=5239;sim_chr=asm0;sim_start=5250;sim_end=5250
+asm0	5254	.	C	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5254;ref_end=5254;sim_chr=asm0;sim_start=5265;sim_end=5265
+asm0	5266	.	A	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5266;ref_end=5266;sim_chr=asm0;sim_start=5277;sim_end=5277
+asm0	5299	.	G	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5299;ref_end=5299;sim_chr=asm0;sim_start=5310;sim_end=5310
+asm0	5317	.	C	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5317;ref_end=5317;sim_chr=asm0;sim_start=5326;sim_end=5326
+asm0	5324	.	C	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5324;ref_end=5324;sim_chr=asm0;sim_start=5333;sim_end=5333
+asm0	5327	.	A	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5327;ref_end=5327;sim_chr=asm0;sim_start=5336;sim_end=5336
+asm0	5332	.	T	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5332;ref_end=5332;sim_chr=asm0;sim_start=5341;sim_end=5341
+asm0	5333	.	G	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5333;ref_end=5333;sim_chr=asm0;sim_start=5342;sim_end=5342
+asm0	5339	.	T	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5339;ref_end=5339;sim_chr=asm0;sim_start=5348;sim_end=5348
+asm0	5360	.	T	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5360;ref_end=5360;sim_chr=asm0;sim_start=5369;sim_end=5369
+asm0	5469	.	A	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5469;ref_end=5469;sim_chr=asm0;sim_start=5480;sim_end=5480
+asm0	5472	.	A	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5472;ref_end=5472;sim_chr=asm0;sim_start=5483;sim_end=5483
+asm0	5516	.	C	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5516;ref_end=5516;sim_chr=asm0;sim_start=5525;sim_end=5525
+asm0	5523	.	G	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5523;ref_end=5523;sim_chr=asm0;sim_start=5532;sim_end=5532
+asm0	5538	.	T	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5538;ref_end=5538;sim_chr=asm0;sim_start=5547;sim_end=5547
+asm0	5554	.	G	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5554;ref_end=5554;sim_chr=asm0;sim_start=5563;sim_end=5563
+asm0	5570	.	A	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5570;ref_end=5570;sim_chr=asm0;sim_start=5583;sim_end=5583
+asm0	5582	.	T	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5582;ref_end=5582;sim_chr=asm0;sim_start=5595;sim_end=5595
+asm0	5592	.	T	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5592;ref_end=5592;sim_chr=asm0;sim_start=5605;sim_end=5605
+asm0	5620	.	G	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5620;ref_end=5620;sim_chr=asm0;sim_start=5633;sim_end=5633
+asm0	5628	.	G	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5628;ref_end=5628;sim_chr=asm0;sim_start=5641;sim_end=5641
+asm0	5676	.	C	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5676;ref_end=5676;sim_chr=asm0;sim_start=5689;sim_end=5689
+asm0	5688	.	C	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5688;ref_end=5688;sim_chr=asm0;sim_start=5702;sim_end=5702
+asm0	5703	.	C	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5703;ref_end=5703;sim_chr=asm0;sim_start=5717;sim_end=5717
+asm0	5713	.	A	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5713;ref_end=5713;sim_chr=asm0;sim_start=5727;sim_end=5727
+asm0	5762	.	A	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5762;ref_end=5762;sim_chr=asm0;sim_start=5775;sim_end=5775
+asm0	5800	.	C	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5800;ref_end=5800;sim_chr=asm0;sim_start=5819;sim_end=5819
+asm0	5834	.	G	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5834;ref_end=5834;sim_chr=asm0;sim_start=5854;sim_end=5854
+asm0	5888	.	A	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5888;ref_end=5888;sim_chr=asm0;sim_start=5908;sim_end=5908
+asm0	5893	.	A	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5893;ref_end=5893;sim_chr=asm0;sim_start=5913;sim_end=5913
+asm0	5977	.	C	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5977;ref_end=5977;sim_chr=asm0;sim_start=5993;sim_end=5993
+asm0	5991	.	G	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=5991;ref_end=5991;sim_chr=asm0;sim_start=6009;sim_end=6009
+asm0	6013	.	T	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=6013;ref_end=6013;sim_chr=asm0;sim_start=6031;sim_end=6031
+asm0	6018	.	C	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=6018;ref_end=6018;sim_chr=asm0;sim_start=6036;sim_end=6036
+asm0	6050	.	G	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=6050;ref_end=6050;sim_chr=asm0;sim_start=6068;sim_end=6068
+asm0	6110	.	C	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=6110;ref_end=6110;sim_chr=asm0;sim_start=6130;sim_end=6130
+asm0	6111	.	C	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=6111;ref_end=6111;sim_chr=asm0;sim_start=6131;sim_end=6131
+asm0	6237	.	C	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=6237;ref_end=6237;sim_chr=asm0;sim_start=6279;sim_end=6279
+asm0	6247	.	T	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=6247;ref_end=6247;sim_chr=asm0;sim_start=6289;sim_end=6289
+asm0	6281	.	G	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=6281;ref_end=6281;sim_chr=asm0;sim_start=6322;sim_end=6322
+asm0	6334	.	C	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=6334;ref_end=6334;sim_chr=asm0;sim_start=6373;sim_end=6373
+asm0	6364	.	C	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=6364;ref_end=6364;sim_chr=asm0;sim_start=6403;sim_end=6403
+asm0	6378	.	A	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=6378;ref_end=6378;sim_chr=asm0;sim_start=6417;sim_end=6417
+asm0	6391	.	G	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=6391;ref_end=6391;sim_chr=asm0;sim_start=6432;sim_end=6432
+asm0	6408	.	G	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=6408;ref_end=6408;sim_chr=asm0;sim_start=6449;sim_end=6449
+asm0	6448	.	A	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=6448;ref_end=6448;sim_chr=asm0;sim_start=6489;sim_end=6489
+asm0	6451	.	G	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=6451;ref_end=6451;sim_chr=asm0;sim_start=6492;sim_end=6492
+asm0	6493	.	C	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=6493;ref_end=6493;sim_chr=asm0;sim_start=6543;sim_end=6543
+asm0	6505	.	T	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=6505;ref_end=6505;sim_chr=asm0;sim_start=6554;sim_end=6554
+asm0	6566	.	A	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=6566;ref_end=6566;sim_chr=asm0;sim_start=6616;sim_end=6616
+asm0	6580	.	G	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=6580;ref_end=6580;sim_chr=asm0;sim_start=6630;sim_end=6630
+asm0	6586	.	T	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=6586;ref_end=6586;sim_chr=asm0;sim_start=6636;sim_end=6636
+asm0	6634	.	A	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=6634;ref_end=6634;sim_chr=asm0;sim_start=6670;sim_end=6670
+asm0	6740	.	T	C	.	.	variant_type=SNP;ref_chr=asm0;ref_start=6740;ref_end=6740;sim_chr=asm0;sim_start=6773;sim_end=6773
+asm0	6759	.	C	A	.	.	variant_type=SNP;ref_chr=asm0;ref_start=6759;ref_end=6759;sim_chr=asm0;sim_start=6796;sim_end=6796
+asm0	6761	.	C	T	.	.	variant_type=SNP;ref_chr=asm0;ref_start=6761;ref_end=6761;sim_chr=asm0;sim_start=6798;sim_end=6798
+asm0	6772	.	T	G	.	.	variant_type=SNP;ref_chr=asm0;ref_start=6772;ref_end=6772;sim_chr=asm0;sim_start=6809;sim_end=6809

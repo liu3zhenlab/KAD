@@ -1,0 +1,337 @@
+ref_chr	ref_start	ref_end	ref_strand	ref_allele	sim_chr	sim_start	sim_end	ref_strand	sim_allele	variant_type	variant_id	donor_chr_in_ref	donor_start_in_ref	donor_end_in_ref	donor_strand_in_ref	duplication_type	inserted_copy_number	total_copy_number
+asm0	16	16	+	G	asm0	16	17	+	GC	INDEL	INDEL_18	.	.	.	.	.	.	.
+asm0	25	25	+	C	asm0	26	26	+	T	SNP	SNP_85	.	.	.	.	.	.	.
+asm0	75	75	+	A	asm0	76	81	+	ATCTTG	INDEL	INDEL_28	.	.	.	.	.	.	.
+asm0	77	77	+	G	asm0	83	83	+	C	SNP	SNP_41	.	.	.	.	.	.	.
+asm0	88	88	+	G	asm0	94	94	+	A	SNP	SNP_89	.	.	.	.	.	.	.
+asm0	112	112	+	G	asm0	118	118	+	A	SNP	SNP_14	.	.	.	.	.	.	.
+asm0	114	114	+	T	asm0	120	120	+	A	SNP	SNP_2	.	.	.	.	.	.	.
+asm0	120	130	+	CTGACACCGA	asm0	126	126	+	C	INDEL	INDEL_96	.	.	.	.	.	.	.
+asm0	131	131	+	G	asm0	127	127	+	T	SNP	SNP_42	.	.	.	.	.	.	.
+asm0	154	154	+	A	asm0	150	150	+	G	SNP	SNP_149	.	.	.	.	.	.	.
+asm0	276	286	+	ACTACTTCAGG	asm0	272	272	+	A	INDEL	INDEL_24	.	.	.	.	.	.	.
+asm0	293	293	+	C	asm0	279	280	+	CT	INDEL	INDEL_136	.	.	.	.	.	.	.
+asm0	312	329	+	GGTACTGTCTTTGCATAT	asm0	299	299	+	G	INDEL	INDEL_76	.	.	.	.	.	.	.
+asm0	409	409	+	T	asm0	379	400	+	TCCACGATCGTAGTGAACAAAG	INDEL	INDEL_41	.	.	.	.	.	.	.
+asm0	416	416	+	C	asm0	407	407	+	A	SNP	SNP_38	.	.	.	.	.	.	.
+asm0	426	426	+	A	asm0	417	417	+	G	SNP	SNP_12	.	.	.	.	.	.	.
+asm0	428	428	+	C	asm0	419	419	+	A	SNP	SNP_104	.	.	.	.	.	.	.
+asm0	430	431	+	GT	asm0	421	421	+	G	INDEL	INDEL_121	.	.	.	.	.	.	.
+asm0	442	443	+	AG	asm0	432	432	+	A	INDEL	INDEL_35	.	.	.	.	.	.	.
+asm0	464	464	+	G	asm0	453	453	+	A	SNP	SNP_8	.	.	.	.	.	.	.
+asm0	465	465	+	A	asm0	454	455	+	AC	INDEL	INDEL_163	.	.	.	.	.	.	.
+asm0	467	468	+	GA	asm0	457	457	+	G	INDEL	INDEL_55	.	.	.	.	.	.	.
+asm0	485	485	+	A	asm0	474	477	+	ATTA	INDEL	INDEL_71	.	.	.	.	.	.	.
+asm0	495	495	+	A	asm0	487	487	+	T	SNP	SNP_88	.	.	.	.	.	.	.
+asm0	519	520	+	GC	asm0	511	511	+	G	INDEL	INDEL_108	.	.	.	.	.	.	.
+asm0	597	597	+	T	asm0	588	588	+	A	SNP	SNP_19	.	.	.	.	.	.	.
+asm0	678	678	+	A	asm0	669	669	+	G	SNP	SNP_95	.	.	.	.	.	.	.
+asm0	700	700	+	T	asm0	691	694	+	TACG	INDEL	INDEL_153	.	.	.	.	.	.	.
+asm0	723	723	+	A	asm0	717	717	+	C	SNP	SNP_9	.	.	.	.	.	.	.
+asm0	729	729	+	T	asm0	723	724	+	TC	INDEL	INDEL_154	.	.	.	.	.	.	.
+asm0	741	743	+	CTA	asm0	736	736	+	C	INDEL	INDEL_129	.	.	.	.	.	.	.
+asm0	748	752	+	AGTTC	asm0	741	741	+	A	INDEL	INDEL_5	.	.	.	.	.	.	.
+asm0	763	763	+	G	asm0	752	755	+	GATA	INDEL	INDEL_70	.	.	.	.	.	.	.
+asm0	765	765	+	A	asm0	757	757	+	G	SNP	SNP_117	.	.	.	.	.	.	.
+asm0	802	802	+	G	asm0	794	794	+	A	SNP	SNP_125	.	.	.	.	.	.	.
+asm0	811	811	+	C	asm0	803	803	+	A	SNP	SNP_159	.	.	.	.	.	.	.
+asm0	862	862	+	C	asm0	854	855	+	CT	INDEL	INDEL_27	.	.	.	.	.	.	.
+asm0	863	863	+	T	asm0	856	856	+	G	SNP	SNP_77	.	.	.	.	.	.	.
+asm0	920	920	+	G	asm0	913	914	+	GG	INDEL	INDEL_147	.	.	.	.	.	.	.
+asm0	949	949	+	A	asm0	943	944	+	AG	INDEL	INDEL_56	.	.	.	.	.	.	.
+asm0	999	999	+	C	asm0	994	995	+	CA	INDEL	INDEL_168	.	.	.	.	.	.	.
+asm0	1003	1003	+	G	asm0	999	1000	+	GA	INDEL	INDEL_95	.	.	.	.	.	.	.
+asm0	1021	1021	+	A	asm0	1018	1018	+	G	SNP	SNP_106	.	.	.	.	.	.	.
+asm0	1103	1103	+	A	asm0	1100	1101	+	AG	INDEL	INDEL_46	.	.	.	.	.	.	.
+asm0	1109	1111	+	CAT	asm0	1107	1107	+	C	INDEL	INDEL_42	.	.	.	.	.	.	.
+asm0	1154	1155	+	TA	asm0	1150	1150	+	T	INDEL	INDEL_84	.	.	.	.	.	.	.
+asm0	1200	1200	+	T	asm0	1195	1195	+	A	SNP	SNP_91	.	.	.	.	.	.	.
+asm0	1205	1205	+	A	asm0	1200	1200	+	C	SNP	SNP_61	.	.	.	.	.	.	.
+asm0	1222	1222	+	T	asm0	1217	1217	+	A	SNP	SNP_64	.	.	.	.	.	.	.
+asm0	1276	1276	+	A	asm0	1271	1272	+	AA	INDEL	INDEL_44	.	.	.	.	.	.	.
+asm0	1287	1287	+	A	asm0	1283	1284	+	AG	INDEL	INDEL_91	.	.	.	.	.	.	.
+asm0	1311	1311	+	A	asm0	1308	1309	+	AC	INDEL	INDEL_109	.	.	.	.	.	.	.
+asm0	1324	1328	+	TCATC	asm0	1322	1322	+	T	INDEL	INDEL_50	.	.	.	.	.	.	.
+asm0	1374	1377	+	CACG	asm0	1368	1368	+	C	INDEL	INDEL_103	.	.	.	.	.	.	.
+asm0	1391	1392	+	CC	asm0	1382	1382	+	C	INDEL	INDEL_45	.	.	.	.	.	.	.
+asm0	1398	1398	+	C	asm0	1388	1389	+	CT	INDEL	INDEL_10	.	.	.	.	.	.	.
+asm0	1421	1421	+	A	asm0	1412	1412	+	T	SNP	SNP_82	.	.	.	.	.	.	.
+asm0	1423	1423	+	T	asm0	1414	1414	+	G	SNP	SNP_98	.	.	.	.	.	.	.
+asm0	1430	1430	+	T	asm0	1421	1421	+	C	SNP	SNP_15	.	.	.	.	.	.	.
+asm0	1484	1484	+	A	asm0	1475	1478	+	ACAT	INDEL	INDEL_47	.	.	.	.	.	.	.
+asm0	1487	1487	+	T	asm0	1481	1481	+	C	SNP	SNP_80	.	.	.	.	.	.	.
+asm0	1506	1506	+	A	asm0	1500	1514	+	AAGAAGGGGCACGGG	INDEL	INDEL_80	.	.	.	.	.	.	.
+asm0	1520	1521	+	CA	asm0	1528	1528	+	C	INDEL	INDEL_66	.	.	.	.	.	.	.
+asm0	1589	1589	+	T	asm0	1596	1597	+	TA	INDEL	INDEL_90	.	.	.	.	.	.	.
+asm0	1592	1592	+	T	asm0	1600	1600	+	C	SNP	SNP_108	.	.	.	.	.	.	.
+asm0	1636	1636	+	T	asm0	1644	1644	+	C	SNP	SNP_7	.	.	.	.	.	.	.
+asm0	1651	1652	+	CT	asm0	1659	1659	+	C	INDEL	INDEL_140	.	.	.	.	.	.	.
+asm0	1658	1658	+	T	asm0	1665	1667	+	TAG	INDEL	INDEL_105	.	.	.	.	.	.	.
+asm0	1692	1692	+	A	asm0	1701	1702	+	AC	INDEL	INDEL_51	.	.	.	.	.	.	.
+asm0	1694	1695	+	GG	asm0	1704	1704	+	G	INDEL	INDEL_152	.	.	.	.	.	.	.
+asm0	1702	1703	+	TC	asm0	1711	1711	+	T	INDEL	INDEL_92	.	.	.	.	.	.	.
+asm0	1733	1733	+	A	asm0	1741	1741	+	G	SNP	SNP_76	.	.	.	.	.	.	.
+asm0	1738	1739	+	AT	asm0	1746	1746	+	A	INDEL	INDEL_79	.	.	.	.	.	.	.
+asm0	1755	1755	+	T	asm0	1762	1763	+	TC	INDEL	INDEL_151	.	.	.	.	.	.	.
+asm0	1792	1792	+	G	asm0	1800	1800	+	A	SNP	SNP_141	.	.	.	.	.	.	.
+asm0	1814	1815	+	GT	asm0	1822	1822	+	G	INDEL	INDEL_132	.	.	.	.	.	.	.
+asm0	1833	1833	+	A	asm0	1840	1840	+	C	SNP	SNP_115	.	.	.	.	.	.	.
+asm0	1889	1889	+	G	asm0	1896	1896	+	C	SNP	SNP_79	.	.	.	.	.	.	.
+asm0	1930	1930	+	A	asm0	1937	1938	+	AG	INDEL	INDEL_102	.	.	.	.	.	.	.
+asm0	1938	1938	+	C	asm0	1946	1946	+	A	SNP	SNP_158	.	.	.	.	.	.	.
+asm0	1968	1970	+	AAC	asm0	1976	1976	+	A	INDEL	INDEL_49	.	.	.	.	.	.	.
+asm0	1969	1969	+	A	asm0	1975	1978	+	AATA	INDEL	INDEL_104	.	.	.	.	.	.	.
+asm0	2007	2007	+	A	asm0	2016	2016	+	C	SNP	SNP_60	.	.	.	.	.	.	.
+asm0	2016	2016	+	G	asm0	2025	2025	+	T	SNP	SNP_55	.	.	.	.	.	.	.
+asm0	2024	2024	+	T	asm0	2033	2033	+	G	SNP	SNP_21	.	.	.	.	.	.	.
+asm0	2040	2040	+	A	asm0	2049	2049	+	T	SNP	SNP_92	.	.	.	.	.	.	.
+asm0	2041	2041	+	A	asm0	2050	2051	+	AG	INDEL	INDEL_165	.	.	.	.	.	.	.
+asm0	2067	2067	+	G	asm0	2077	2078	+	GG	INDEL	INDEL_17	.	.	.	.	.	.	.
+asm0	2075	2075	+	T	asm0	2086	2086	+	C	SNP	SNP_138	.	.	.	.	.	.	.
+asm0	2081	2082	+	CG	asm0	2092	2092	+	C	INDEL	INDEL_89	.	.	.	.	.	.	.
+asm0	2090	2091	+	AA	asm0	2100	2100	+	A	INDEL	INDEL_162	.	.	.	.	.	.	.
+asm0	2151	2152	+	TT	asm0	2160	2160	+	T	INDEL	INDEL_107	.	.	.	.	.	.	.
+asm0	2161	2161	+	A	asm0	2169	2169	+	T	SNP	SNP_45	.	.	.	.	.	.	.
+asm0	2201	2202	+	AT	asm0	2209	2209	+	A	INDEL	INDEL_139	.	.	.	.	.	.	.
+asm0	2210	2210	+	A	asm0	2217	2217	+	T	SNP	SNP_48	.	.	.	.	.	.	.
+asm0	2246	2246	+	T	asm0	2253	2253	+	A	SNP	SNP_100	.	.	.	.	.	.	.
+asm0	2250	2250	+	A	asm0	2257	2257	+	G	SNP	SNP_22	.	.	.	.	.	.	.
+asm0	2273	2273	+	G	asm0	2280	2281	+	GA	INDEL	INDEL_86	.	.	.	.	.	.	.
+asm0	2320	2320	+	A	asm0	2328	2331	+	ACTT	INDEL	INDEL_135	.	.	.	.	.	.	.
+asm0	2321	2321	+	A	asm0	2332	2332	+	G	SNP	SNP_143	.	.	.	.	.	.	.
+asm0	2358	2358	+	A	asm0	2369	2369	+	T	SNP	SNP_152	.	.	.	.	.	.	.
+asm0	2385	2385	+	G	asm0	2396	2396	+	C	SNP	SNP_27	.	.	.	.	.	.	.
+asm0	2393	2393	+	G	asm0	2404	2404	+	A	SNP	SNP_84	.	.	.	.	.	.	.
+asm0	2397	2397	+	T	asm0	2408	2408	+	A	SNP	SNP_114	.	.	.	.	.	.	.
+asm0	2419	2425	+	TCATGCA	asm0	2430	2430	+	T	INDEL	INDEL_118	.	.	.	.	.	.	.
+asm0	2479	2479	+	T	asm0	2484	2484	+	C	SNP	SNP_29	.	.	.	.	.	.	.
+asm0	2496	2496	+	C	asm0	2501	2501	+	G	SNP	SNP_90	.	.	.	.	.	.	.
+asm0	2503	2504	+	GG	asm0	2508	2508	+	G	INDEL	INDEL_32	.	.	.	.	.	.	.
+asm0	2574	2574	+	G	asm0	2578	2580	+	GTC	INDEL	INDEL_144	.	.	.	.	.	.	.
+asm0	2596	2596	+	G	asm0	2602	2603	+	GA	INDEL	INDEL_38	.	.	.	.	.	.	.
+asm0	2601	2601	+	T	asm0	2608	2608	+	A	SNP	SNP_103	.	.	.	.	.	.	.
+asm0	2646	2647	+	AA	asm0	2653	2653	+	A	INDEL	INDEL_61	.	.	.	.	.	.	.
+asm0	2670	2670	+	T	asm0	2676	2676	+	C	SNP	SNP_24	.	.	.	.	.	.	.
+asm0	2703	2703	+	C	asm0	2709	2709	+	A	SNP	SNP_126	.	.	.	.	.	.	.
+asm0	2722	2722	+	A	asm0	2728	2732	+	ACGAA	INDEL	INDEL_166	.	.	.	.	.	.	.
+asm0	2738	2738	+	G	asm0	2748	2749	+	GA	INDEL	INDEL_82	.	.	.	.	.	.	.
+asm0	2822	2822	+	A	asm0	2833	2833	+	G	SNP	SNP_10	.	.	.	.	.	.	.
+asm0	2846	2847	+	TG	asm0	2857	2857	+	T	INDEL	INDEL_85	.	.	.	.	.	.	.
+asm0	2863	2863	+	A	asm0	2873	2873	+	T	SNP	SNP_62	.	.	.	.	.	.	.
+asm0	2868	2868	+	A	asm0	2878	2878	+	T	SNP	SNP_69	.	.	.	.	.	.	.
+asm0	2895	2895	+	C	asm0	2905	2905	+	G	SNP	SNP_119	.	.	.	.	.	.	.
+asm0	2918	2919	+	GA	asm0	2928	2928	+	G	INDEL	INDEL_148	.	.	.	.	.	.	.
+asm0	2963	2964	+	AC	asm0	2972	2972	+	A	INDEL	INDEL_19	.	.	.	.	.	.	.
+asm0	2971	2973	+	TGC	asm0	2979	2979	+	T	INDEL	INDEL_158	.	.	.	.	.	.	.
+asm0	2985	2985	+	A	asm0	2991	2991	+	C	SNP	SNP_34	.	.	.	.	.	.	.
+asm0	2993	2994	+	CA	asm0	2999	2999	+	C	INDEL	INDEL_114	.	.	.	.	.	.	.
+asm0	3014	3015	+	CA	asm0	3019	3019	+	C	INDEL	INDEL_137	.	.	.	.	.	.	.
+asm0	3036	3037	+	TT	asm0	3040	3040	+	T	INDEL	INDEL_106	.	.	.	.	.	.	.
+asm0	3100	3100	+	T	asm0	3103	3103	+	C	SNP	SNP_142	.	.	.	.	.	.	.
+asm0	3104	3114	+	AGGAAGTATT	asm0	3107	3107	+	A	INDEL	INDEL_122	.	.	.	.	.	.	.
+asm0	3144	3145	+	AG	asm0	3137	3137	+	A	INDEL	INDEL_21	.	.	.	.	.	.	.
+asm0	3160	3160	+	G	asm0	3152	3153	+	GA	INDEL	INDEL_13	.	.	.	.	.	.	.
+asm0	3176	3176	+	T	asm0	3169	3169	+	G	SNP	SNP_66	.	.	.	.	.	.	.
+asm0	3185	3185	+	T	asm0	3178	3178	+	G	SNP	SNP_23	.	.	.	.	.	.	.
+asm0	3217	3217	+	G	asm0	3210	3210	+	A	SNP	SNP_164	.	.	.	.	.	.	.
+asm0	3222	3222	+	G	asm0	3215	3216	+	GG	INDEL	INDEL_54	.	.	.	.	.	.	.
+asm0	3252	3252	+	T	asm0	3246	3247	+	TT	INDEL	INDEL_60	.	.	.	.	.	.	.
+asm0	3257	3258	+	TC	asm0	3252	3252	+	T	INDEL	INDEL_43	.	.	.	.	.	.	.
+asm0	3264	3264	+	A	asm0	3258	3258	+	G	SNP	SNP_71	.	.	.	.	.	.	.
+asm0	3299	3299	+	A	asm0	3293	3295	+	AGA	INDEL	INDEL_155	.	.	.	.	.	.	.
+asm0	3352	3352	+	G	asm0	3348	3348	+	A	SNP	SNP_32	.	.	.	.	.	.	.
+asm0	3412	3412	+	G	asm0	3408	3408	+	A	SNP	SNP_97	.	.	.	.	.	.	.
+asm0	3425	3453	+	TTAGAAAAGCTACATTTGTCCTGGAAGGA	asm0	3421	3421	+	T	INDEL	INDEL_83	.	.	.	.	.	.	.
+asm0	3450	3451	+	AG	asm0	3418	3418	+	A	INDEL	INDEL_159	.	.	.	.	.	.	.
+asm0	3496	3496	+	A	asm0	3463	3464	+	AA	INDEL	INDEL_20	.	.	.	.	.	.	.
+asm0	3500	3500	+	C	asm0	3468	3468	+	G	SNP	SNP_52	.	.	.	.	.	.	.
+asm0	3523	3524	+	CA	asm0	3491	3491	+	C	INDEL	INDEL_75	.	.	.	.	.	.	.
+asm0	3555	3555	+	C	asm0	3522	3522	+	G	SNP	SNP_86	.	.	.	.	.	.	.
+asm0	3597	3597	+	T	asm0	3564	3564	+	C	SNP	SNP_118	.	.	.	.	.	.	.
+asm0	3627	3628	+	GT	asm0	3594	3594	+	G	INDEL	INDEL_77	.	.	.	.	.	.	.
+asm0	3643	3644	+	CG	asm0	3609	3609	+	C	INDEL	INDEL_59	.	.	.	.	.	.	.
+asm0	3646	3647	+	CC	asm0	3611	3611	+	C	INDEL	INDEL_73	.	.	.	.	.	.	.
+asm0	3667	3667	+	C	asm0	3631	3631	+	T	SNP	SNP_155	.	.	.	.	.	.	.
+asm0	3697	3701	+	GGCTT	asm0	3661	3661	+	G	INDEL	INDEL_52	.	.	.	.	.	.	.
+asm0	3706	3706	+	C	asm0	3666	3666	+	T	SNP	SNP_165	.	.	.	.	.	.	.
+asm0	3718	3719	+	GT	asm0	3678	3678	+	G	INDEL	INDEL_26	.	.	.	.	.	.	.
+asm0	3719	3720	+	TC	asm0	3678	3678	+	T	INDEL	INDEL_157	.	.	.	.	.	.	.
+asm0	3724	3724	+	C	asm0	3682	3682	+	A	SNP	SNP_31	.	.	.	.	.	.	.
+asm0	3732	3732	+	T	asm0	3690	3690	+	G	SNP	SNP_65	.	.	.	.	.	.	.
+asm0	3734	3736	+	ATC	asm0	3692	3692	+	A	INDEL	INDEL_7	.	.	.	.	.	.	.
+asm0	3750	3751	+	AA	asm0	3706	3706	+	A	INDEL	INDEL_64	.	.	.	.	.	.	.
+asm0	3762	3763	+	AC	asm0	3717	3717	+	A	INDEL	INDEL_167	.	.	.	.	.	.	.
+asm0	3784	3784	+	G	asm0	3738	3738	+	T	SNP	SNP_160	.	.	.	.	.	.	.
+asm0	3816	3816	+	G	asm0	3770	3771	+	GG	INDEL	INDEL_40	.	.	.	.	.	.	.
+asm0	3830	3831	+	CT	asm0	3785	3785	+	C	INDEL	INDEL_1	.	.	.	.	.	.	.
+asm0	3982	3982	+	G	asm0	3936	3936	+	C	SNP	SNP_20	.	.	.	.	.	.	.
+asm0	3983	3983	+	A	asm0	3937	3987	+	ATCGCTACCCTGGAGGAAAATCCAAACGGTTTTGCCAGCCGGAATCATCTC	INDEL	INDEL_88	.	.	.	.	.	.	.
+asm0	3984	3984	+	T	asm0	3988	3988	+	G	SNP	SNP_28	.	.	.	.	.	.	.
+asm0	4103	4103	+	T	asm0	4107	4107	+	C	SNP	SNP_144	.	.	.	.	.	.	.
+asm0	4141	4142	+	AC	asm0	4145	4145	+	A	INDEL	INDEL_113	.	.	.	.	.	.	.
+asm0	4154	4154	+	T	asm0	4157	4157	+	A	SNP	SNP_30	.	.	.	.	.	.	.
+asm0	4179	4179	+	G	asm0	4182	4182	+	A	SNP	SNP_36	.	.	.	.	.	.	.
+asm0	4186	4186	+	C	asm0	4189	4189	+	T	SNP	SNP_78	.	.	.	.	.	.	.
+asm0	4187	4187	+	C	asm0	4190	4190	+	T	SNP	SNP_72	.	.	.	.	.	.	.
+asm0	4188	4188	+	C	asm0	4191	4195	+	CGCCC	INDEL	INDEL_128	.	.	.	.	.	.	.
+asm0	4205	4205	+	G	asm0	4212	4212	+	T	SNP	SNP_4	.	.	.	.	.	.	.
+asm0	4208	4208	+	G	asm0	4215	4215	+	A	SNP	SNP_49	.	.	.	.	.	.	.
+asm0	4212	4213	+	GG	asm0	4219	4219	+	G	INDEL	INDEL_112	.	.	.	.	.	.	.
+asm0	4226	4226	+	T	asm0	4232	4232	+	A	SNP	SNP_73	.	.	.	.	.	.	.
+asm0	4229	4229	+	T	asm0	4235	4238	+	TTAA	INDEL	INDEL_97	.	.	.	.	.	.	.
+asm0	4248	4248	+	G	asm0	4257	4257	+	C	SNP	SNP_68	.	.	.	.	.	.	.
+asm0	4252	4252	+	A	asm0	4261	4261	+	T	SNP	SNP_46	.	.	.	.	.	.	.
+asm0	4257	4258	+	CT	asm0	4266	4266	+	C	INDEL	INDEL_4	.	.	.	.	.	.	.
+asm0	4262	4262	+	A	asm0	4270	4271	+	AA	INDEL	INDEL_15	.	.	.	.	.	.	.
+asm0	4299	4299	+	A	asm0	4308	4308	+	C	SNP	SNP_131	.	.	.	.	.	.	.
+asm0	4316	4316	+	T	asm0	4325	4326	+	TA	INDEL	INDEL_161	.	.	.	.	.	.	.
+asm0	4322	4322	+	C	asm0	4332	4332	+	A	SNP	SNP_123	.	.	.	.	.	.	.
+asm0	4339	4339	+	T	asm0	4349	4349	+	C	SNP	SNP_17	.	.	.	.	.	.	.
+asm0	4341	4341	+	T	asm0	4351	4351	+	A	SNP	SNP_40	.	.	.	.	.	.	.
+asm0	4400	4400	+	T	asm0	4410	4410	+	G	SNP	SNP_168	.	.	.	.	.	.	.
+asm0	4412	4412	+	A	asm0	4422	4422	+	C	SNP	SNP_127	.	.	.	.	.	.	.
+asm0	4478	4478	+	T	asm0	4488	4489	+	TG	INDEL	INDEL_138	.	.	.	.	.	.	.
+asm0	4485	4485	+	T	asm0	4496	4496	+	A	SNP	SNP_58	.	.	.	.	.	.	.
+asm0	4498	4498	+	A	asm0	4509	4509	+	C	SNP	SNP_70	.	.	.	.	.	.	.
+asm0	4527	4527	+	T	asm0	4538	4538	+	A	SNP	SNP_156	.	.	.	.	.	.	.
+asm0	4528	4528	+	G	asm0	4539	4540	+	GG	INDEL	INDEL_131	.	.	.	.	.	.	.
+asm0	4543	4543	+	C	asm0	4555	4555	+	T	SNP	SNP_33	.	.	.	.	.	.	.
+asm0	4547	4547	+	C	asm0	4559	4559	+	G	SNP	SNP_150	.	.	.	.	.	.	.
+asm0	4550	4550	+	G	asm0	4562	4563	+	GT	INDEL	INDEL_2	.	.	.	.	.	.	.
+asm0	4558	4558	+	T	asm0	4571	4577	+	TGCTGAC	INDEL	INDEL_11	.	.	.	.	.	.	.
+asm0	4560	4560	+	T	asm0	4579	4580	+	TT	INDEL	INDEL_134	.	.	.	.	.	.	.
+asm0	4592	4592	+	G	asm0	4612	4612	+	C	SNP	SNP_101	.	.	.	.	.	.	.
+asm0	4604	4604	+	A	asm0	4624	4624	+	T	SNP	SNP_105	.	.	.	.	.	.	.
+asm0	4617	4618	+	CC	asm0	4637	4637	+	C	INDEL	INDEL_67	.	.	.	.	.	.	.
+asm0	4633	4633	+	C	asm0	4652	4652	+	G	SNP	SNP_102	.	.	.	.	.	.	.
+asm0	4646	4647	+	CG	asm0	4665	4665	+	C	INDEL	INDEL_6	.	.	.	.	.	.	.
+asm0	4652	4652	+	T	asm0	4670	4670	+	A	SNP	SNP_83	.	.	.	.	.	.	.
+asm0	4658	4658	+	A	asm0	4676	4677	+	AT	INDEL	INDEL_124	.	.	.	.	.	.	.
+asm0	4663	4663	+	G	asm0	4682	4682	+	A	SNP	SNP_116	.	.	.	.	.	.	.
+asm0	4665	4666	+	TC	asm0	4684	4684	+	T	INDEL	INDEL_36	.	.	.	.	.	.	.
+asm0	4684	4684	+	C	asm0	4702	4702	+	T	SNP	SNP_161	.	.	.	.	.	.	.
+asm0	4695	4695	+	T	asm0	4713	4713	+	G	SNP	SNP_146	.	.	.	.	.	.	.
+asm0	4716	4716	+	A	asm0	4734	4737	+	ATTT	INDEL	INDEL_111	.	.	.	.	.	.	.
+asm0	4729	4729	+	A	asm0	4750	4750	+	C	SNP	SNP_109	.	.	.	.	.	.	.
+asm0	4790	4791	+	TG	asm0	4811	4811	+	T	INDEL	INDEL_143	.	.	.	.	.	.	.
+asm0	4796	4796	+	G	asm0	4816	4817	+	GA	INDEL	INDEL_94	.	.	.	.	.	.	.
+asm0	4853	4854	+	AT	asm0	4874	4874	+	A	INDEL	INDEL_22	.	.	.	.	.	.	.
+asm0	4862	4863	+	AG	asm0	4882	4882	+	A	INDEL	INDEL_93	.	.	.	.	.	.	.
+asm0	4908	4909	+	AG	asm0	4927	4927	+	A	INDEL	INDEL_14	.	.	.	.	.	.	.
+asm0	5012	5012	+	C	asm0	5030	5030	+	T	SNP	SNP_128	.	.	.	.	.	.	.
+asm0	5016	5018	+	GCA	asm0	5034	5034	+	G	INDEL	INDEL_9	.	.	.	.	.	.	.
+asm0	5049	5053	+	GATAA	asm0	5065	5065	+	G	INDEL	INDEL_116	.	.	.	.	.	.	.
+asm0	5089	5089	+	C	asm0	5101	5101	+	A	SNP	SNP_111	.	.	.	.	.	.	.
+asm0	5097	5097	+	T	asm0	5109	5109	+	G	SNP	SNP_57	.	.	.	.	.	.	.
+asm0	5113	5113	+	G	asm0	5125	5126	+	GA	INDEL	INDEL_146	.	.	.	.	.	.	.
+asm0	5146	5146	+	A	asm0	5159	5159	+	G	SNP	SNP_67	.	.	.	.	.	.	.
+asm0	5168	5168	+	C	asm0	5181	5181	+	A	SNP	SNP_99	.	.	.	.	.	.	.
+asm0	5174	5174	+	G	asm0	5187	5187	+	A	SNP	SNP_81	.	.	.	.	.	.	.
+asm0	5180	5182	+	ACT	asm0	5193	5193	+	A	INDEL	INDEL_39	.	.	.	.	.	.	.
+asm0	5186	5187	+	AG	asm0	5197	5197	+	A	INDEL	INDEL_115	.	.	.	.	.	.	.
+asm0	5189	5189	+	A	asm0	5199	5200	+	AG	INDEL	INDEL_63	.	.	.	.	.	.	.
+asm0	5199	5199	+	C	asm0	5210	5211	+	CG	INDEL	INDEL_149	.	.	.	.	.	.	.
+asm0	5201	5201	+	G	asm0	5213	5214	+	GG	INDEL	INDEL_57	.	.	.	.	.	.	.
+asm0	5209	5211	+	TCT	asm0	5222	5222	+	T	INDEL	INDEL_87	.	.	.	.	.	.	.
+asm0	5239	5239	+	G	asm0	5250	5250	+	T	SNP	SNP_121	.	.	.	.	.	.	.
+asm0	5254	5254	+	C	asm0	5265	5265	+	T	SNP	SNP_39	.	.	.	.	.	.	.
+asm0	5266	5266	+	A	asm0	5277	5277	+	G	SNP	SNP_94	.	.	.	.	.	.	.
+asm0	5299	5299	+	G	asm0	5310	5310	+	A	SNP	SNP_151	.	.	.	.	.	.	.
+asm0	5305	5307	+	CC	asm0	5316	5316	+	C	INDEL	INDEL_3	.	.	.	.	.	.	.
+asm0	5317	5317	+	C	asm0	5326	5326	+	A	SNP	SNP_133	.	.	.	.	.	.	.
+asm0	5324	5324	+	C	asm0	5333	5333	+	A	SNP	SNP_1	.	.	.	.	.	.	.
+asm0	5327	5327	+	A	asm0	5336	5336	+	G	SNP	SNP_154	.	.	.	.	.	.	.
+asm0	5332	5332	+	T	asm0	5341	5341	+	C	SNP	SNP_130	.	.	.	.	.	.	.
+asm0	5333	5333	+	G	asm0	5342	5342	+	T	SNP	SNP_110	.	.	.	.	.	.	.
+asm0	5339	5339	+	T	asm0	5348	5348	+	C	SNP	SNP_63	.	.	.	.	.	.	.
+asm0	5360	5360	+	T	asm0	5369	5369	+	C	SNP	SNP_59	.	.	.	.	.	.	.
+asm0	5373	5373	+	C	asm0	5382	5383	+	CC	INDEL	INDEL_72	.	.	.	.	.	.	.
+asm0	5448	5448	+	G	asm0	5458	5459	+	GA	INDEL	INDEL_8	.	.	.	.	.	.	.
+asm0	5469	5469	+	A	asm0	5480	5480	+	T	SNP	SNP_112	.	.	.	.	.	.	.
+asm0	5472	5472	+	A	asm0	5483	5483	+	T	SNP	SNP_3	.	.	.	.	.	.	.
+asm0	5500	5502	+	AAA	asm0	5511	5511	+	A	INDEL	INDEL_141	.	.	.	.	.	.	.
+asm0	5516	5516	+	C	asm0	5525	5525	+	G	SNP	SNP_35	.	.	.	.	.	.	.
+asm0	5523	5523	+	G	asm0	5532	5532	+	T	SNP	SNP_75	.	.	.	.	.	.	.
+asm0	5538	5538	+	T	asm0	5547	5547	+	G	SNP	SNP_96	.	.	.	.	.	.	.
+asm0	5554	5554	+	G	asm0	5563	5563	+	T	SNP	SNP_157	.	.	.	.	.	.	.
+asm0	5562	5562	+	A	asm0	5571	5575	+	ATTCG	INDEL	INDEL_62	.	.	.	.	.	.	.
+asm0	5570	5570	+	A	asm0	5583	5583	+	G	SNP	SNP_153	.	.	.	.	.	.	.
+asm0	5582	5582	+	T	asm0	5595	5595	+	G	SNP	SNP_134	.	.	.	.	.	.	.
+asm0	5592	5592	+	T	asm0	5605	5605	+	C	SNP	SNP_145	.	.	.	.	.	.	.
+asm0	5620	5620	+	G	asm0	5633	5633	+	A	SNP	SNP_87	.	.	.	.	.	.	.
+asm0	5628	5628	+	G	asm0	5641	5641	+	A	SNP	SNP_47	.	.	.	.	.	.	.
+asm0	5676	5676	+	C	asm0	5689	5689	+	G	SNP	SNP_147	.	.	.	.	.	.	.
+asm0	5681	5681	+	G	asm0	5694	5695	+	GC	INDEL	INDEL_98	.	.	.	.	.	.	.
+asm0	5688	5688	+	C	asm0	5702	5702	+	G	SNP	SNP_53	.	.	.	.	.	.	.
+asm0	5703	5703	+	C	asm0	5717	5717	+	A	SNP	SNP_5	.	.	.	.	.	.	.
+asm0	5713	5713	+	A	asm0	5727	5727	+	G	SNP	SNP_120	.	.	.	.	.	.	.
+asm0	5741	5742	+	CA	asm0	5755	5755	+	C	INDEL	INDEL_69	.	.	.	.	.	.	.
+asm0	5762	5762	+	A	asm0	5775	5775	+	T	SNP	SNP_167	.	.	.	.	.	.	.
+asm0	5779	5779	+	C	asm0	5792	5800	+	CTATTTGTT	INDEL	INDEL_133	.	.	.	.	.	.	.
+asm0	5781	5783	+	AGA	asm0	5802	5802	+	A	INDEL	INDEL_127	.	.	.	.	.	.	.
+asm0	5800	5800	+	C	asm0	5819	5819	+	T	SNP	SNP_135	.	.	.	.	.	.	.
+asm0	5812	5812	+	T	asm0	5831	5832	+	TC	INDEL	INDEL_123	.	.	.	.	.	.	.
+asm0	5834	5834	+	G	asm0	5854	5854	+	A	SNP	SNP_13	.	.	.	.	.	.	.
+asm0	5888	5888	+	A	asm0	5908	5908	+	G	SNP	SNP_18	.	.	.	.	.	.	.
+asm0	5893	5893	+	A	asm0	5913	5913	+	T	SNP	SNP_25	.	.	.	.	.	.	.
+asm0	5904	5907	+	ATTG	asm0	5924	5924	+	A	INDEL	INDEL_117	.	.	.	.	.	.	.
+asm0	5948	5950	+	TCC	asm0	5965	5965	+	T	INDEL	INDEL_160	.	.	.	.	.	.	.
+asm0	5958	5958	+	C	asm0	5973	5975	+	CAC	INDEL	INDEL_23	.	.	.	.	.	.	.
+asm0	5972	5973	+	AA	asm0	5989	5989	+	A	INDEL	INDEL_126	.	.	.	.	.	.	.
+asm0	5977	5977	+	C	asm0	5993	5993	+	A	SNP	SNP_50	.	.	.	.	.	.	.
+asm0	5983	5983	+	A	asm0	5999	6001	+	ACG	INDEL	INDEL_99	.	.	.	.	.	.	.
+asm0	5991	5991	+	G	asm0	6009	6009	+	C	SNP	SNP_129	.	.	.	.	.	.	.
+asm0	6013	6013	+	T	asm0	6031	6031	+	C	SNP	SNP_162	.	.	.	.	.	.	.
+asm0	6018	6018	+	C	asm0	6036	6036	+	G	SNP	SNP_74	.	.	.	.	.	.	.
+asm0	6050	6050	+	G	asm0	6068	6068	+	T	SNP	SNP_136	.	.	.	.	.	.	.
+asm0	6057	6057	+	C	asm0	6075	6076	+	CG	INDEL	INDEL_125	.	.	.	.	.	.	.
+asm0	6063	6063	+	A	asm0	6082	6083	+	AT	INDEL	INDEL_29	.	.	.	.	.	.	.
+asm0	6110	6110	+	C	asm0	6130	6130	+	G	SNP	SNP_6	.	.	.	.	.	.	.
+asm0	6111	6111	+	C	asm0	6131	6131	+	G	SNP	SNP_148	.	.	.	.	.	.	.
+asm0	6150	6150	+	A	asm0	6170	6185	+	ACTTATTGCGTCGCCC	INDEL	INDEL_34	.	.	.	.	.	.	.
+asm0	6170	6171	+	GA	asm0	6205	6205	+	G	INDEL	INDEL_12	.	.	.	.	.	.	.
+asm0	6177	6177	+	A	asm0	6211	6212	+	AG	INDEL	INDEL_68	.	.	.	.	.	.	.
+asm0	6190	6191	+	AC	asm0	6225	6225	+	A	INDEL	INDEL_78	.	.	.	.	.	.	.
+asm0	6202	6202	+	C	asm0	6236	6238	+	CTG	INDEL	INDEL_48	.	.	.	.	.	.	.
+asm0	6210	6211	+	AG	asm0	6246	6246	+	A	INDEL	INDEL_31	.	.	.	.	.	.	.
+asm0	6223	6223	+	A	asm0	6258	6266	+	AGTATGGTT	INDEL	INDEL_53	.	.	.	.	.	.	.
+asm0	6232	6233	+	AC	asm0	6275	6275	+	A	INDEL	INDEL_119	.	.	.	.	.	.	.
+asm0	6237	6237	+	C	asm0	6279	6279	+	A	SNP	SNP_122	.	.	.	.	.	.	.
+asm0	6247	6247	+	T	asm0	6289	6289	+	C	SNP	SNP_132	.	.	.	.	.	.	.
+asm0	6267	6268	+	CT	asm0	6309	6309	+	C	INDEL	INDEL_16	.	.	.	.	.	.	.
+asm0	6281	6281	+	G	asm0	6322	6322	+	T	SNP	SNP_137	.	.	.	.	.	.	.
+asm0	6289	6291	+	GAG	asm0	6330	6330	+	G	INDEL	INDEL_164	.	.	.	.	.	.	.
+asm0	6334	6334	+	C	asm0	6373	6373	+	A	SNP	SNP_44	.	.	.	.	.	.	.
+asm0	6364	6364	+	C	asm0	6403	6403	+	A	SNP	SNP_113	.	.	.	.	.	.	.
+asm0	6378	6378	+	A	asm0	6417	6417	+	T	SNP	SNP_124	.	.	.	.	.	.	.
+asm0	6383	6383	+	C	asm0	6422	6423	+	CC	INDEL	INDEL_156	.	.	.	.	.	.	.
+asm0	6385	6385	+	A	asm0	6425	6426	+	AC	INDEL	INDEL_81	.	.	.	.	.	.	.
+asm0	6391	6391	+	G	asm0	6432	6432	+	T	SNP	SNP_37	.	.	.	.	.	.	.
+asm0	6408	6408	+	G	asm0	6449	6449	+	A	SNP	SNP_43	.	.	.	.	.	.	.
+asm0	6448	6448	+	A	asm0	6489	6489	+	T	SNP	SNP_139	.	.	.	.	.	.	.
+asm0	6451	6451	+	G	asm0	6492	6492	+	T	SNP	SNP_26	.	.	.	.	.	.	.
+asm0	6476	6476	+	T	asm0	6517	6528	+	TGTCCGTTCCAC	INDEL	INDEL_100	.	.	.	.	.	.	.
+asm0	6478	6479	+	CC	asm0	6530	6530	+	C	INDEL	INDEL_37	.	.	.	.	.	.	.
+asm0	6484	6485	+	TG	asm0	6535	6535	+	T	INDEL	INDEL_101	.	.	.	.	.	.	.
+asm0	6493	6493	+	C	asm0	6543	6543	+	T	SNP	SNP_163	.	.	.	.	.	.	.
+asm0	6499	6500	+	CA	asm0	6549	6549	+	C	INDEL	INDEL_25	.	.	.	.	.	.	.
+asm0	6505	6505	+	T	asm0	6554	6554	+	C	SNP	SNP_107	.	.	.	.	.	.	.
+asm0	6525	6525	+	A	asm0	6574	6575	+	AC	INDEL	INDEL_30	.	.	.	.	.	.	.
+asm0	6542	6542	+	C	asm0	6592	6593	+	CC	INDEL	INDEL_150	.	.	.	.	.	.	.
+asm0	6560	6561	+	AA	asm0	6611	6611	+	A	INDEL	INDEL_110	.	.	.	.	.	.	.
+asm0	6566	6566	+	A	asm0	6616	6616	+	G	SNP	SNP_16	.	.	.	.	.	.	.
+asm0	6580	6580	+	G	asm0	6630	6630	+	C	SNP	SNP_166	.	.	.	.	.	.	.
+asm0	6586	6586	+	T	asm0	6636	6636	+	G	SNP	SNP_51	.	.	.	.	.	.	.
+asm0	6609	6618	+	ATAATTCTAT	asm0	6659	6659	+	A	INDEL	INDEL_142	.	.	.	.	.	.	.
+asm0	6611	6616	+	AATTCT	asm0	6652	6652	+	A	INDEL	INDEL_74	.	.	.	.	.	.	.
+asm0	6634	6634	+	A	asm0	6670	6670	+	G	SNP	SNP_93	.	.	.	.	.	.	.
+asm0	6657	6659	+	ACA	asm0	6693	6693	+	A	INDEL	INDEL_145	.	.	.	.	.	.	.
+asm0	6705	6706	+	CC	asm0	6739	6739	+	C	INDEL	INDEL_58	.	.	.	.	.	.	.
+asm0	6740	6740	+	T	asm0	6773	6773	+	C	SNP	SNP_140	.	.	.	.	.	.	.
+asm0	6753	6753	+	T	asm0	6786	6788	+	TCC	INDEL	INDEL_120	.	.	.	.	.	.	.
+asm0	6755	6755	+	T	asm0	6790	6792	+	TTC	INDEL	INDEL_33	.	.	.	.	.	.	.
+asm0	6759	6759	+	C	asm0	6796	6796	+	A	SNP	SNP_11	.	.	.	.	.	.	.
+asm0	6761	6761	+	C	asm0	6798	6798	+	T	SNP	SNP_54	.	.	.	.	.	.	.
+asm0	6772	6772	+	T	asm0	6809	6809	+	G	SNP	SNP_56	.	.	.	.	.	.	.
+asm0	6774	6775	+	CA	asm0	6811	6811	+	C	INDEL	INDEL_130	.	.	.	.	.	.	.
+asm0	6804	6805	+	GT	asm0	6840	6840	+	G	INDEL	INDEL_65	.	.	.	.	.	.	.

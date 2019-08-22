@@ -1,7 +1,7 @@
 #!/use/bin/perl -w
 #
 #======================================================================
-# KADprofile.pl
+# seqKADprofile.pl
 # Author: Sanzhen Liu <liu3zhen@ksu.edu>
 # 7/27/2019
 #
@@ -21,28 +21,30 @@ my $version = "0.10";
 
 sub prompt {
 	print <<EOF;
-	Usage: perl KADprofile [options]
+	Usage: perl seqKADprofile.pl [options]
 	[Options]
-	--read <file>:	FASTQ/A read file for k-mer generation; overridden by --rkmer;
+	--read <file>	FASTQ/A read file for k-mer generation;
 					the parameter can be used multiple times; zip files with the suffix of .gz are allowed; 
 					Jellyfish is used to generate counts of k-mers.
-	--minc <num>:	minimal number of counts per k-mer from reads;
-					k-mers with counts smaller than <num> are not output. default=5
-	--asm <file>:	FASTA sequence file for k-mer generation; overridden by --akmer
+	--minc <num>	minimal number of counts per k-mer from reads;
+					k-mers with counts smaller than <num> are not output. default=5.
+	--asm <file>	FASTA sequence file for k-mer generation;
 					the parameter can be used multiple times to allow using multiple FASTA file;
 					each file is considered an indepedent assembly.
-	--rid <str>:	ID used in the header of the k-mer table generated from reads;
-	--aid <str>:	ID used in the header of the asm k-mer table to be generated from each assembly;
+	--rid <str>		ID used in the header of the k-mer table generated from reads.
+	--aid <str> 	ID used in the header of the asm k-mer table to be generated from each assembly;
 					the parameter can be used multiple times to match --asm input.
 	                By default, a header ID is generated from the file name of each assembly
 					by removing PATH and the suffix of .fa, .fas, or .fasta.
 					IMPORTANT: If --aid is specified, it must match the --asm parameter. One --aid is used
 					for one k-mer table generated from one assembly file specified by --asm. To match --asm and --aid input,
-					the order of two inputs should have the matching order;
-	--prefix		the prefix for all output files; also it is the output directory; default=kad.
-	--klen			length of k-mers; default=25.
-	--readdepth		estimated depth of reads; not required; if specified, it will be compared to the mode of read k-mers.
-	--kadcutoff		a set of numbers to define k-mer categories:
+					the order of two inputs should have the matching order.
+	--prefix <str>	the output directory and the prefix for output files; default=kad.
+	--klen <num>	length of k-mers; default=25.
+	--readdepth <num>
+					estimated depth of reads; not required; if specified, it will be compared to the mode of read k-mers.
+	--kadcutoff	<str of num>
+					a set of numbers to define k-mer categories:
 					1. Good: k-mers basically containing no errors, for which, by default, KADs are between -0.5 and 0.5;
 					         Note: some k-mers with low counts from reads but not presented in the assembly are in this category;
 					2. SingleError: k-mers showing a single copy in the assembly but with no reads supported, for which
@@ -53,16 +55,16 @@ sub prompt {
 					            which, by default, KADs are between 0.75 and 2;
 					5. HighMiss: k-mers showing less copies at a high degree in the assembly as compared to copies
 					             indicated by read depths, for which, by default, KADs are >=2;
-					default=(-2, -0.5, 0.5, 0.75, 2)
-	--binlen:		bin length to count KAD; default=0.05;
-	--threads		number of cpus; default=1.
+					default=(-2, -0.5, 0.5, 0.75, 2).
+	--binlen <num>	bin length to count KAD; default=0.05.
+	--threads <num>	number of cpus; default=1.
 	--version		version
 	--help:			help information
 
 	o example: to generate KAD profiles with read and assemblies
-		perl KADprofile.pl --read data1.fq.gz --read data2.fq.gz --rid PE250 --minc 5 \
-		                   --asm asm1.fasta --asm asm2.fasta --asm asm3.fasta \
-						   --aid asm1 --aid asm2 --aid asm3
+		perl seqKADprofile.pl --read data1.fq.gz --read data2.fq.gz --rid PE250 --minc 5 \
+		                      --asm asm1.fasta --asm asm2.fasta --asm asm3.fasta \
+						     --aid asm1 --aid asm2 --aid asm3
 
 EOF
 exit;
@@ -83,7 +85,7 @@ if (exists $opts{version}) {
 	print "$0 $version\n";
 	exit;
 }
-&prompt if exists $opts{help};
+&prompt if exists $opts{help} or !%opts;
 @read = @{$opts{read}} if exists $opts{read};
 $minc = exists $opts{minc} ? $opts{minc} : 5;
 @asm = @{$opts{asm}} if exists $opts{asm};
