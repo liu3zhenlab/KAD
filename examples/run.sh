@@ -13,5 +13,5 @@ perl ../seqKADprofile.pl \
 	--read $fq1 --read $fq2 \
 	--asm $asm0 --asm $asm1 --asm $asm2 \
 	--aid a0  --aid a1 --aid a2 \
-	--prefix example
+	--prefix result
 
