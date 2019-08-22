@@ -15,8 +15,10 @@ The script was written with Perl and R is invoked. Both Perl and R are generally
 [Jellyfish](https://www.cbcb.umd.edu/software/jellyfish/) was used to generate k-mers by using either FASTA or FASTQ data. The binary Jellyfish executable is included in the _bin_ directory of the KAD package.
 
 ### Installation
+```
 git clone https://github.com/liu3zhenlab/KAD.git  
 perl ./KAD/seqKADprofile.pl
+```
 
 ### Data requirements
 **1. Read data**
