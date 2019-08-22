@@ -88,7 +88,7 @@ perl scriptpath/seqKADprofile.pl --read read1.fq --read read2.fq \
                                  --asm asm0.fas --asm asm1.fas --asm asm2.fas \
                                  --aid a0 --aid a1 --a2 --minc 15
 ```
-A html report in the _report_ subdirectory is generated from each run.
+A html report in the _report_ subdirectory is generated from each run. Check this report [example](examples/result_KADprofile.report.pdf).
 
 ### Walk-through example 2: KAD comparison between two assemblies
 After running the analysis using _seqKADprofile.pl_, KAD values are generated. In the _examples_ directory, the file **result_4_kad.txt** contains KAD values. Let us call it the KAD file. We now can select two assemblies to compare.
