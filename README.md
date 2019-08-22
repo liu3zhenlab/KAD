@@ -7,10 +7,12 @@ KAD is designed for evaluating the accuracy of nucleotide base quality of genome
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;KAD=log2\frac{c+m}{m*(n+1)}" />
 
+where, _c_ is the count of a k-mer from reads, _m_ the mode of counts of read k-mers, _n_ is the copy of the k-mer in the assembly. 
+
 ### Citation
 
 ### Requirements
-The script was written with Perl and R is invoked. Both Perl and R are generally installed. To generate reports, the package [knitr](https://github.com/yihui/knitr) and [rmarkdown](https://rmarkdown.rstudio.com) are needed to be installed in R.
+The script was written with Perl and R is invoked. Both Perl and R are generally installed. To generate reports, the R packageS [knitr](https://github.com/yihui/knitr) and [rmarkdown](https://rmarkdown.rstudio.com) are needed to be installed.
 
 ### Installation
 
