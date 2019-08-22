@@ -5,9 +5,9 @@ Assessing genome assemblies by comparing k-mer copies in assemblies and K-mer ab
 KAD is designed for evaluating the accuracy of nucleotide base quality of genome assemblies. Briefly, abundance of k-mers are quantified for both sequencing reads and assembly sequences. Comparison of the two values results in a single value per k-mer, K-mer Abundance Difference (KAD), which indicates how well the assembly matches read data for each k-mer.
 
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;KAD=log2\frac{c+m}{m*(n+1)}" />
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;KAD=log_{2}\begin{pmatrix}\frac{c+m}{m(n+1)}\end{pmatrix}" />
 
-where, _c_ is the count of a k-mer from reads, _m_ the mode of counts of read k-mers, _n_ is the copy of the k-mer in the assembly. 
+where, _c_ is the count of a k-mer from reads, _m_ the mode of counts of read k-mers, and _n_ is the copy of the k-mer in the assembly. 
 
 ### Requirements
 The script was written with Perl and R is invoked. Both Perl and R are generally installed. If needed, please refer to [Perl](https://www.perl.org/) and [R](https://www.r-project.org/) for installation guides. To generate reports, the R packages [knitr](https://github.com/yihui/knitr) and [rmarkdown](https://rmarkdown.rstudio.com) are needed to be installed.
@@ -57,29 +57,35 @@ Assembly sequencing data in FASTA format. Each assembly is in a single FASTA fil
     --**help**: 	help information
 
 ### Walk-through example 1: KAD profiling
-Let us say you have three assembly versions:
-1. asm1.fas
-2. asm2.fas
-3. asm3.fas
+Let us say you have three assembly versions, as shown in the *data* directory:
+1. asm0.fas
+2. asm1.fas
+3. asm2.fas
 
 You also have a read set:
-1. read1.fq
-2. read2.fq
+1. read1.fq.gz
+2. read2.fq.gz
 
 Assuming the Perl script was in the directory of _scriptpath_, run the following script to generate KAD profiles for all three assemblies.
 ```
-perl scriptpath/seqKADprofile.pl --read read1.fq --read read2.fq \
-                                 --asm asm1.fas --asm asm2.fas --asm asm3.fas
+perl scriptpath/seqKADprofile.pl --read read1.fq.gz --read read2.fq.gz \
+                                 --asm asm0.fas --asm asm1.fas --asm asm2.fas
 ```
 
-You might want to assign names all three assemblies with new names different from file names, such as a1, a2, and a3.
+You might want to assign names all three assemblies with new names different from file names, such as a0, a1, and a2.
 ```
 perl scriptpath/seqKADprofile.pl --read read1.fq --read read2.fq \
-                                 --asm asm1.fas --asm asm2.fas --asm asm3.fas \
-                                 --aid a1 --aid a2 --a3
+                                 --asm asm0.fas --asm asm1.fas --asm asm2.fas \
+                                 --aid a0 --aid a1 --a2
 ```
-You need to be carefully use --aid, which must matches with --asm order.
+You need to be carefully use _--aid_, which must matches with _--asm_ order.
 
+The parameter _--minc_ might need to change to avoid the interference from a great number of low counts (e.g. 1-3) from error sequences. By default, it is set to 5. However, if high-depth data are generated, the number needs to be increased. Approximately 1/10 of the estimated depth or smaller might be a reasonable cutoff.
+```
+perl scriptpath/seqKADprofile.pl --read read1.fq --read read2.fq \
+                                 --asm asm0.fas --asm asm1.fas --asm asm2.fas \
+                                 --aid a0 --aid a1 --a2 --minc 15
+```
 ### Walk-through example 2: KAD comparison between two assemblies
 
 
