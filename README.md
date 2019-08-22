@@ -81,11 +81,21 @@ perl scriptpath/seqKADprofile.pl --read read1.fq --read read2.fq \
 You need to be carefully use _--aid_, which must matches with _--asm_ order.
 
 The parameter _--minc_ might need to change to avoid the interference from a great number of low counts (e.g. 1-3) from error sequences. By default, it is set to 5. However, if high-depth data are generated, the number needs to be increased. Approximately 1/10 of the estimated depth or smaller might be a reasonable cutoff.
+
+If corrected reads are used, _--minc_ can be set to a small number (e.g., 3).
 ```
 perl scriptpath/seqKADprofile.pl --read read1.fq --read read2.fq \
                                  --asm asm0.fas --asm asm1.fas --asm asm2.fas \
                                  --aid a0 --aid a1 --a2 --minc 15
 ```
+A html report in the _report_ subdirectory is generated from each run.
+
 ### Walk-through example 2: KAD comparison between two assemblies
+After running the analysis using _seqKADprofile.pl_, KAD values are generated. In the _examples_ directory, the file **result_4_kad.txt** contains KAD values. Let us call it the KAD file. We now can select two assemblies to compare.
 
+Assuming again the Perl script was in the directory of _scriptpath_, the following run compares _a0_ with _a2_. Note that the input _--set1_ and _--set2_ should match the assembly names used in the KAD file.
 
+```
+perl scriptpath/KADcompare.pl --set1 a0 --set2 a2 --prefix a0_2 result_4_kad.txt
+```
+A html report in the _report_ subdirectory is generated from each run.
