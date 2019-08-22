@@ -19,7 +19,25 @@ git clone https://github.com/liu3zhenlab/KAD.git
 perl ./KAD/seqKADprofile.pl
 
 ### Running guide
+1. **seqKADprofile.pl**: producing KAD profiles for input assemblies.
+Usage: perl seqKADprofile.pl [options]
+[Options]
+--read <file>:	FASTQ/A read file for k-mer generation; the parameter can be used multiple times; zip files with the suffix of .gz are allowed;  
+--minc <num>:	minimal number of counts per k-mer from reads; k-mers with counts smaller than <num> are not output. default=5.  
+--asm <file>:	FASTA sequence file for k-mer generation; the parameter can be used multiple times to allow using multiple FASTA file;
+					each file is considered an indepedent assembly.  
+--rid <str>:	ID used in the header of the k-mer table generated from reads.  
+--aid <str>:	ID used in the header of the asm k-mer table to be generated from each assembly; the parameter can be used multiple times to match --asm input. By default, a header ID is generated from the file name of each assembly by removing PATH and the suffix of .fa, .fas, or .fasta.  
+--prefix <str>:the output directory and the prefix for output files; default=kad.  
+--klen <num>:  length of k-mers; default=25.  
+--readdepth <num>: estimated depth of reads; not required; if specified, it will be compared to the mode of read k-mers.  
+--kadcutoff <str of nums>: a set of numbers to define k-mer categories; default="-2 -0.5, 0.5, 0.75, 2".  
+--binlen <num>:		bin length to count KAD; default=0.05.  
+--threads <num>:		number of cpus; default=1.  
+--version:		version  
+--help:			help information
 
+2. **seqKADprofile.pl**: producing KAD profiles for input assemblies.
 
 ### Walk-through example
 Let us say you have three assembly versions:
