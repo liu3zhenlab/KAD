@@ -98,4 +98,4 @@ Assuming again the Perl script was in the directory of _scriptpath_, the followi
 ```
 perl scriptpath/KADcompare.pl --set1 a0 --set2 a2 --prefix a0_2 result_4_kad.txt
 ```
-A html report in the _report_ subdirectory is generated from each run.
+A html report in the _report_ subdirectory is generated from each run. Check this report [example](examples/a0_2_a0-a2.report.pdf).
