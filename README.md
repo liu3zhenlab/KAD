@@ -1,5 +1,5 @@
 # KAD
-Assessing genome assemblies by comparing k-mer copies in assemblies and K-mer abundance in reads
+Assessing genome assemblies by comparing k-mer copies in assemblies and k-mer abundance in reads
 
 ### Introduction
 KAD is designed for evaluating the accuracy of nucleotide base quality of genome assemblies. Briefly, abundance of k-mers are quantified for both sequencing reads and assembly sequences. Comparison of the two values results in a single value per k-mer, K-mer Abundance Difference (KAD), which indicates how well the assembly matches read data for each k-mer.
