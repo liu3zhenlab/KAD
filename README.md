@@ -86,7 +86,7 @@ If corrected reads are used, _--minc_ can be set to a small number (e.g., 3).
 ```
 perl scriptpath/seqKADprofile.pl --read read1.fq --read read2.fq \
                                  --asm asm0.fas --asm asm1.fas --asm asm2.fas \
-                                 --aid a0 --aid a1 --a2 --minc 15
+                                 --aid a0 --aid a1 --aid a2 --minc 15
 ```
 A html report in the _report_ subdirectory is generated from each run. Check this report [example](examples/result_KADprofile.report.pdf).
 
