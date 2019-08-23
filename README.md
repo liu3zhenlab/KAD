@@ -57,7 +57,7 @@ Assembly sequencing data in FASTA format. Each assembly is in a single FASTA fil
     --**help**: 	help information
 
 ### Example:
-**Analysis 1. KAD profiling**
+**Analysis 1. KAD profiling**  
 This analysis will generate KAD profiles for each input assembly. You will see numbers of total k-mers, error k-mers, and possible missing k-mers in assembly
 
 _**how to run**_  
