@@ -57,7 +57,10 @@ Assembly sequencing data in FASTA format. Each assembly is in a single FASTA fil
     --**help**: 	help information
 
 ### Example:
-**PART 1. KAD profiling**
+**Analysis 1. KAD profiling**
+This analysis will generate KAD profiles for each input assembly. You will see numbers of total k-mers, error k-mers, and possible missing k-mers in assembly
+
+_**how to run**_
 Let us say you have three assembly versions, as shown in the *data* directory:
 1. asm0.fas
 2. asm1.fas
@@ -91,12 +94,20 @@ perl scriptpath/seqKADprofile.pl --read read1.fq --read read2.fq \
 ```
 A html report in the _report_ subdirectory is generated from each run. Check this report [example](examples/result_KADprofile.report.pdf).
 
-**PART 2. KAD comparison between two assemblies**
-After running the analysis using [seqKADprofile.pl](seqKADprofile.pl), KAD values are generated. In the [examples](https://github.com/liu3zhenlab/KAD/tree/master/examples) directory, the file **result_4_kad.txt** contains KAD values. Let us call it the KAD file. We now can select any two assemblies to compare.
+**Analysis 2. KAD comparison between two assemblies**
+This analysis will directly compare two assemblies based on KADs of the subset of k-mers that have unequal KADs.
 
+After running the analysis using [seqKADprofile.pl](seqKADprofile.pl), KAD values are generated. In the [examples](https://github.com/liu3zhenlab/KAD/tree/master/examples) directory, the file **result_4_kad.txt** contains KAD values. We now can select any two assemblies in this file to compare.
+
+_**how to run**_
 Assuming again the Perl script was in the directory of _scriptpath_, the following run compares a0 with a2. Note that the input _--set1_ and _--set2_ should match the assembly names used in the KAD file.
 
 ```
 perl scriptpath/KADcompare.pl --set1 a0 --set2 a2 --prefix a0_2 result_4_kad.txt
 ```
 A html report in the _report_ subdirectory is generated from each run. Check this report [example](examples/a0_2_a0-a2.report.pdf).
+
+**Notes**: Here are what analysis 2 does:
+First, the script extracts k-mers with unequal copies in the two assemblies. Two KADs per k-mer of the two assemblies are therefore different. Of two KADs per k-mer, one KAD may be NA because zero count of the k-mer from both reads and the assembly. These NAs are converted to 0 due to the agreement between reads and assembly data.
+
+Second, the script counts KAD per defined bin, which, by default, is 0.05. Separate counts per bin of two assemblies are used for visualizing the two KAD profiles of k-mers with unequal KADs.
