@@ -107,7 +107,7 @@ perl scriptpath/KADcompare.pl --set1 a0 --set2 a2 --prefix a0_2 result_4_kad.txt
 ```
 A html report in the _report_ subdirectory is generated from each run. Check this report [example](examples/a0_2_a0-a2.report.pdf).
 
-**Notes**: Here are what analysis 2 does:
+**Notes**: Here are what analysis 2 does:  
 First, the script extracts k-mers with unequal copies in the two assemblies. Two KADs per k-mer of the two assemblies are therefore different. Of two KADs per k-mer, one KAD may be NA because zero count of the k-mer from both reads and the assembly. These NAs are converted to 0 due to the agreement between reads and assembly data.
 
 Second, the script counts KAD per defined bin, which, by default, is 0.05. Separate counts per bin of two assemblies are used for visualizing the two KAD profiles of k-mers with unequal KADs.
