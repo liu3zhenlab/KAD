@@ -94,12 +94,12 @@ perl scriptpath/seqKADprofile.pl --read read1.fq --read read2.fq \
 ```
 A html report in the _report_ subdirectory is generated from each run. Check this report [example](examples/result_KADprofile.report.pdf).
 
-**Analysis 2. KAD comparison between two assemblies**
+**Analysis 2. KAD comparison between two assemblies**  
 This analysis will directly compare two assemblies based on KADs of the subset of k-mers that have unequal KADs.
 
 After running the analysis using [seqKADprofile.pl](seqKADprofile.pl), KAD values are generated. In the [examples](https://github.com/liu3zhenlab/KAD/tree/master/examples) directory, the file **result_4_kad.txt** contains KAD values. We now can select any two assemblies in this file to compare.
 
-_**how to run**_
+_**how to run**_  
 Assuming again the Perl script was in the directory of _scriptpath_, the following run compares a0 with a2. Note that the input _--set1_ and _--set2_ should match the assembly names used in the KAD file.
 
 ```
