@@ -17,7 +17,7 @@ use lib "$FindBin::Bin/lib";
 use kmerge;
 use kad;
 
-my $version = "0.10";
+my $version = "0.11";
 
 sub prompt {
 	print <<EOF;
@@ -76,6 +76,7 @@ exit;
 my %opts = ();
 my (@read, $minc, @asm, $rkmer, $akmer, $rid, @aid, $readdepth, $threads,
     $kadcutoff, $binlen, $klen);
+
 &GetOptions(\%opts, "read=s@", "minc=i", "asm=s@",
                     "rid=s", "aid=s@", "prefix=s",
 					"readdepth=i", "threads=i", "klen=i",
@@ -85,6 +86,7 @@ if (exists $opts{version}) {
 	print "$0 $version\n";
 	exit;
 }
+
 &prompt if exists $opts{help} or !%opts;
 @read = @{$opts{read}} if exists $opts{read};
 $minc = exists $opts{minc} ? $opts{minc} : 5;
@@ -103,11 +105,10 @@ $binlen = exists $opts{binlen} ? $opts{binlen} : 0.05;
 ###############################################
 # preparation
 ###############################################
-
 # create a directory for outputs
 if (-d $prefix) {
-	print LOG "the directory $prefix exists. Run stopped!\n";
-	exit;
+	print STDERR "Warning: the directory $prefix exists.\n";
+	#exit;
 } else {
 	`mkdir $prefix`;
 }
@@ -115,7 +116,6 @@ if (-d $prefix) {
 # script path:
 my $scriptPath = $FindBin::Bin;
 my $binPath = $scriptPath."/bin/";
-
 
 # log file
 my $logfile = $prefix."_KADrun.log";
@@ -130,15 +130,22 @@ my $read_files;
 if (exists $opts{read}) {
 	print LOG "o generate counts of read k-mers\n";
 	foreach (@read) {
-		print LOG "$_\n";
+		print LOG "  $_\n";
 	}
+	
 	$read_files = join(" ", @read);
 	if (!exists $opts{rid}) {
 		$rid = "reads";
 	}
-	&kgen($read_files, $rid, $minc, $rkout, $prefix); # input: files, id, minimal count, outfile #output: k-mer table file, prefix
+
+	# check if the k-mer table exists:
+	if (-f $rkout) {
+		print LOG "o warning: the read k-mer table found, which will not be regenerated from reads.\n";
+	} else {
+		&kgen($read_files, $rid, $minc, $rkout, $prefix); # input: files, id, minimal count, outfile #output: k-mer table file, prefix
+	}
 } else {
-	print LOG "ERROR: read files or the read k-mer file must be provided. Run stopped\n"; 
+	print LOG "ERROR: read files must be provided. Run stopped\n"; 
 	exit;
 }
 
@@ -149,7 +156,7 @@ my (@akout, $allasm_files, $allasm_ids);
 if (exists $opts{asm}) {
 	if (exists $opts{aid}) {
 		if ($#aid != $#asm) {
-			print LOG "ERROR: --aid and --asm should be invoked equal times. Run stopped\n";
+			print LOG "ERROR: --aid and --asm should be invoked with equal times. Run stopped\n";
 			exit;
 		} else {
 			foreach (@aid) {  # set asm kmer output files
@@ -172,12 +179,16 @@ if (exists $opts{asm}) {
 	print LOG "o generate counts of k-mers of assemblies\n";
 		
 	foreach (@asm) {
-		print LOG "$_\n";
+		print LOG "  $_\n";
 	}
 	
 	# generate k-mer talbe for each assembly:
 	foreach (my $i=0; $i<=$#asm; $i++) {
-		&kgen($asm[$i], $aid[$i], 1, $akout[$i], $prefix); # input: files, id, minimal count, outfile #output: k-mer table file, prefix
+		if (-f $akout[$i]) {
+			print LOG "o warning: the $aid[$i] k-mer table found, which will not be regenerated.\n";
+		} else {
+			&kgen($asm[$i], $aid[$i], 1, $akout[$i], $prefix); # input: files, id, minimal count, outfile #output: k-mer table file, prefix
+		}
 	}
 
 	# convert array to string:
@@ -190,12 +201,20 @@ if (exists $opts{asm}) {
 ###############################################
 my $mergekmer = $prefix."/".$prefix."_2_merge.kmer.table.";
 my $mergekmer_out = $mergekmer."txt";
-`cp $rkout $mergekmer_out`;
 print LOG "o merge k-mer tables\n";
-for (my $i=0; $i<=$#akout; $i++) {
-	my $tmpout = $mergekmer."$i";
-	kmerge::kmerge($mergekmer_out, $akout[$i], $tmpout);
-	`mv $tmpout $mergekmer_out`;
+
+if (-f $mergekmer_out) {
+	print LOG "o warning: the merge k-mer table exists, which will not be regenerated.\n";
+} else {
+	my $mergekmer_tmp = $mergekmer."tmp";
+	`cp $rkout $mergekmer_tmp`;
+	for (my $i=0; $i<=$#akout; $i++) {
+		my $tmpout = $mergekmer."$i";
+		kmerge::kmerge($mergekmer_tmp, $akout[$i], $tmpout);
+		`mv $tmpout $mergekmer_tmp`;
+	}
+	# rename
+	`mv $mergekmer_tmp $mergekmer_out`;
 }
 
 ###############################################
@@ -206,10 +225,16 @@ my $cmode_file = $prefix."/".$prefix."_3_readkmer.cmode";
 open(CMODE, ">$cmode_file") || die;
 
 print LOG "o determine mode of counts of read k-mers\n";
-my $cmodev = kad::cmode($mergekmer_out, 2);
-print LOG "the mode of counts of read k-mers is $cmodev\n";
+my $minc_val = $minc;
+my $cmodev = kad::cmode($mergekmer_out, 2, $minc_val);
+while ($cmodev == $minc_val) {
+	$minc_val += $minc;
+	$cmodev = kad::cmode($mergekmer_out, 2, $minc_val);
+	print LOG "warning: the estimated mode equals to $minc. Reestimate.\n";
+}
+print LOG "  - the mode of counts of read k-mers is $cmodev\n";
 if (defined $readdepth and abs($readdepth - $cmodev) / $cmodev > 0.5) {
-	print LOG "WARNING: the estimated mode is quite different from the estimated depth that is $readdepth.\n";
+	print LOG "warning: the estimated mode is quite different from the estimated depth that is $readdepth.\n";
 }
 
 print CMODE "$rid\t$cmodev\n";
@@ -285,7 +310,7 @@ my @around1_range = @kadcutoff[3..4];
 my %total;
 my %allbinnum;
 
-print LOG "o Summarize KAD values\n";
+print LOG "o summarize KAD values\n";
 
 open(KAD_IN, $kadout) || die;
 $_ = <KAD_IN>; # skip header
