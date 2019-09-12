@@ -54,7 +54,7 @@ Assembly sequencing data in FASTA format. Each assembly is in a single FASTA fil
     --**mincopy**|m <num>: k-mers  with at least --mincopy in the assembly will be aligned to the assembly; default=1.  
     --**maxcopy**|i <num>: k-mers  with at most --maxcopy in the assembly will be aligned to the assembly; default=100.  
     --**winsize**|w <num>: window size on which the number of each KAD type is counted; default=50000.  
-    --**kadcutoff** <str>: same to --kadcutoff in the seqKADprofile.pl; default="-2 -0.5 0.5 0.75 2".  
+    --**kadcutoff**|s <str>: same to --kadcutoff in the seqKADprofile.pl; default="-2 -0.5 0.5 0.75 2".  
     --**prefix**|p <str>:  the output directory and the prefix for output files; default=KADdist.  
     --**minwin4plot**|n <num>: contigs or chromosomes with minimum window number (--minwin4plot) will be plotted; default=10.  
     --**pdfoutdir**|o <str>: the subdirectory under --prefix directory for PDF outputs.  
@@ -113,7 +113,7 @@ A html report in the _report_ subdirectory is generated from each run. Check thi
 
 **Analysis 2. k-mer distribution on contigs or chromosomes of an assembly**  
 Based on KAD values of k-mers from Analysis 1, problematic k-mers can be categorized into "error", "overRep", "lowUnderRep", and "highUnderRep", representing k-mers with errors, over-represention, low levels of under-representation, and high levels of under-representation in the assembly. The script [KADdist.pl](KADdist.pl) maps these k-mers to the assembly and combines the KAD value each k-mer to produce:  
-1. bigwig file for visualization  
+1. a [bigwig](https://genome.ucsc.edu/goldenpath/help/bigWig.html) file for visualization  
 2. mapping location of error k-mers  
 3. plots of distributions of problematic k-mers  
 
