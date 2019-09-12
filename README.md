@@ -117,7 +117,7 @@ Based on KAD values of k-mers from Analysis 1, problematic k-mers can be categor
 2. mapping location of error k-mers  
 3. plots of distributions of problematic k-mers  
 
-_**how to run**_
+_**how to run**_  
 For example, from analysis 1, the assembly *a0* (asm0.fas) was KAD profiled. We now can analyze the ouput file suffixed with "kad.txt" to examine distributions of problematic k-mers. Below is the example script:
 
 ```
