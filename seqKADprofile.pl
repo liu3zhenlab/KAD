@@ -125,6 +125,7 @@ open(LOG, ">$logfile") || die;
 # read to kmers:
 ###############################################
 my $rkout; # read kmer table file name
+my $rktmp = $prefix."/".$prefix."_0_reads.kmer.table.tmp"; # tmp reads k-mer table
 $rkout = $prefix."/".$prefix."_0_reads.kmer.table.txt"; # reads k-mer table output
 my $read_files;
 if (exists $opts{read}) {
@@ -142,7 +143,8 @@ if (exists $opts{read}) {
 	if (-f $rkout) {
 		print LOG "o warning: the read k-mer table found, which will not be regenerated from reads.\n";
 	} else {
-		&kgen($read_files, $rid, $minc, $rkout, $prefix); # input: files, id, minimal count, outfile #output: k-mer table file, prefix
+		&kgen($read_files, $rid, $minc, $rktmp, $prefix); # input: files, id, minimal count, outfile #output: k-mer table file, prefix
+		`mv $rktmp $rkout`; # to ensure that .txt is the final read k-mer file
 	}
 } else {
 	print LOG "ERROR: read files must be provided. Run stopped\n"; 
@@ -226,11 +228,18 @@ open(CMODE, ">$cmode_file") || die;
 
 print LOG "o determine mode of counts of read k-mers\n";
 my $minc_val = $minc;
+my $num_try = 1;
 my $cmodev = kad::cmode($mergekmer_out, 2, $minc_val);
 while ($cmodev == $minc_val) {
-	$minc_val += $minc;
-	$cmodev = kad::cmode($mergekmer_out, 2, $minc_val);
-	print LOG "warning: the estimated mode equals to $minc. Reestimate.\n";
+	if ($num_try < 3) {
+		$minc_val += $minc;
+		$cmodev = kad::cmode($mergekmer_out, 2, $minc_val);
+		print LOG "warning: the estimated mode equals to $minc. reestimate...\n";
+		$num_try++;
+	} else {
+		print LOG "ERROR: a reasonable cmod should be > 3 * $minc; can not find a reasonable cmod. quit\n";
+		exit;
+	}
 }
 print LOG "  - the mode of counts of read k-mers is $cmodev\n";
 if (defined $readdepth and abs($readdepth - $cmodev) / $cmodev > 0.5) {
@@ -350,7 +359,7 @@ while(<KAD_IN>) {
 close KAD_IN;
 
 # bincount output file
-my $bincount_file = $prefix."/".$prefix."_6_.bincount.txt";
+my $bincount_file = $prefix."/".$prefix."_6_bincount.txt";
 open(BIN, ">$bincount_file") || die;
 print BIN "BIN\t";
 print BIN join("\t", @aid);
