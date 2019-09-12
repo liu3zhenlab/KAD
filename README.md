@@ -110,11 +110,15 @@ perl scriptpath/seqKADprofile.pl --read read1.fq --read read2.fq \
 A html report in the _report_ subdirectory is generated from each run. Check this report [example](examples/result_KADprofile.report.pdf).
 
 
-**Analysis 2. k-mer distributuion on contigs or chromosomes of an assembly** 
-Based on KAD values of k-mers from Analysis 1, problematic k-mers can be categorized into "error", "overRep", "lowUnderRep", and "highUnderRep", representing k-mers with errors, over-represention, low levels of under-representation, and high levels of under-representation in the assembly. The script [KADdist.pl](KADdist.pl) maps these k-mers to the assembly. Some k-mers will be mapped to multiple locations.
+**Analysis 2. k-mer distribution on contigs or chromosomes of an assembly** 
+Based on KAD values of k-mers from Analysis 1, problematic k-mers can be categorized into "error", "overRep", "lowUnderRep", and "highUnderRep", representing k-mers with errors, over-represention, low levels of under-representation, and high levels of under-representation in the assembly. The script [KADdist.pl](KADdist.pl) maps these k-mers to the assembly and combines the KAD value each k-mer to produce:
+1. bigwig file for visualization
+2. mapping location of error k-mers
+3. plots of distributions of problematic k-mers
 ```
-perl KADdist.pl 
-
+perl scriptpath/KADdist.pl \ 
+--kad a0_4_kad.txt --prefix a0KD \
+--aid a0 --asm asm0.fas
 ```
 
 **Analysis 3. KAD comparison between two assemblies**  
