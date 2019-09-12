@@ -71,7 +71,7 @@ Assembly sequencing data in FASTA format. Each assembly is in a single FASTA fil
     --**force**:	overwrite the existing directory if specified; if not, quit if the output directory exists.  
     --**help**: 	help information
 
-### Example:
+### Examples:
 **Analysis 1. KAD profiling**  
 This analysis will generate KAD profiles for each input assembly. You will see numbers of total k-mers, error k-mers, and possible missing k-mers of each assembly.
 
@@ -91,7 +91,7 @@ perl scriptpath/seqKADprofile.pl --read read1.fq.gz --read read2.fq.gz \
                                  --asm asm0.fas --asm asm1.fas --asm asm2.fas
 ```
 
-You might want to assign names all three assemblies with new names different from file names, such as a0, a1, and a2.
+You might want to assign names of all three assemblies with new names different from file names, such as a0, a1, and a2.
 ```
 perl scriptpath/seqKADprofile.pl --read read1.fq --read read2.fq \
                                  --asm asm0.fas --asm asm1.fas --asm asm2.fas \
@@ -116,6 +116,9 @@ Based on KAD values of k-mers from Analysis 1, problematic k-mers can be categor
 1. bigwig file for visualization  
 2. mapping location of error k-mers  
 3. plots of distributions of problematic k-mers  
+
+_**how to run**_
+For example, from analysis 1, the assembly *a0* (asm0.fas) was KAD profiled. We now can analyze the ouput file suffixed with "kad.txt" to examine distributions of problematic k-mers. Below is the example script:
 
 ```
 perl scriptpath/KADdist.pl \ 
