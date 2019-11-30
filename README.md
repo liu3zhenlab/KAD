@@ -14,10 +14,22 @@ The script was written with Perl and R is invoked. Both Perl and R are generally
 
 [Jellyfish](https://www.cbcb.umd.edu/software/jellyfish/) was used to generate k-mers by using either FASTA or FASTQ data. The binary Jellyfish executable is included in the [bin](https://github.com/liu3zhenlab/KAD/edit/master/bin/) directory of the KAD package.
 
+To run KADdist.pl, [bowtie](http://bowtie-bio.sourceforge.net/index.shtml) and [bedtools](https://bedtools.readthedocs.io/en/latest/) are required.
+
 ### Installation
 ```
 git clone https://github.com/liu3zhenlab/KAD.git  
 perl ./KAD/seqKADprofile.pl
+```
+
+### conda intallation
+Aternatively, all required packages can be installed through conda
+```
+conda create -n kad
+conda activate kad
+conda install -c anaconda perl
+conda install -c r r-base r-knitr r-rmarkdown
+conda install -c bioconda pandoc bowtie bedtools
 ```
 
 ### Data requirements
