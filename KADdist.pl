@@ -23,7 +23,7 @@ sub prompt {
 	--mincopy|m <num>: k-mers  with at least --mincopy in the assembly will be aligned to the assembly; default=1
 	--maxcopy|i <num>: k-mers  with at most --maxcopy in the assembly will be aligned to the assembly; default=100
 	--winsize|w <num>: window size on which the number of each KAD type is counted; default=50000
-	--kadcutoff <str>: same to --kadcutoff in the seqKADprofile.pl
+	--kadcutoff|s <str>: same to --kadcutoff in the seqKADprofile.pl
 	                   default="-2 -0.5 0.5 0.75 2"
 	--prefix|p <str>:  the output directory and the prefix for output files; default=KADdist
 	--minwin4plot|n <num>: contigs or chromosomes with minimum window number (--minwin4plot) will be plotted; default=10
@@ -64,7 +64,7 @@ $pdfoutdir = "pdf" if !defined $pdfoutdir;
 ###############################################
 if (-d $prefix) {
 	print STDERR "error: the directory $prefix exists.\n";
-	exit;
+	#exit;
 } else {
 	`mkdir $prefix`;
 }
@@ -127,8 +127,9 @@ close FAS;
 ###############################################
 my $kmeraln_file = $prefix."/".$prefix."_2_kmer.aln";
 my $bowtie_dbidx = $prefix."/bowtie";
-`mkdir $bowtie_dbidx`;
-
+if (! -d $bowtie_dbidx) {
+	`mkdir $bowtie_dbidx`;
+}
 # index asm
 `$binPath/bowtie/bowtie-build $asm_file $bowtie_dbidx/$aid`;
 # aln
@@ -136,33 +137,33 @@ my $bowtie_dbidx = $prefix."/bowtie";
 
 
 ###############################################
+# generate bed from bowtie alignments
+###############################################
+my $kmerkad_bedfile = $prefix."/".$prefix."_3_kmer.kad.bed";
+&aln2bed($kmeraln_file, $kmerkad_bedfile);
+
+###############################################
+# error count (KAD=-1)
+###############################################
+my $errpos_file = $prefix."/".$prefix."_4_error.pos.bed";
+my $errpos_merge_file = $prefix."/".$prefix."_4_error.pos.merge.bed";
+`awk '{ if (\$5 == -1) print }' $kmerkad_bedfile | cut -f 1-3 > $errpos_file`;
+`bedtools merge -i $errpos_file > $errpos_merge_file`;
+
+###############################################
 # generate a kad-wig file
 ###############################################
-my $chrlen_file = $prefix."/".$prefix."_3_asm.lengths";
-my $wig_file = $prefix."/".$prefix."_4_kad.wig";
-my $bigwig_file = $prefix."/".$prefix."_4_kad.bigwig";
+my $chrlen_file = $prefix."/".$prefix."_5_asm.lengths";
+my $wig_file = $prefix."/".$prefix."_5_kad.wig";
+my $bigwig_file = $prefix."/".$prefix."_5_kad.bigwig";
 
-my $errors = &aln2kadwig_error($kmeraln_file, $wig_file);
+&bed2kadwig($kmerkad_bedfile, $wig_file);
 
 # wig to bigwig
 `$scriptPath/util/fastaSize.pl $asm_file > $chrlen_file`;
 `$binPath/wigToBigWig $wig_file $chrlen_file $bigwig_file`;
 
 close LOG;
-
-###############################################
-# error count (KAD=-1)
-###############################################
-my $errpos_file = $prefix."/".$prefix."_5_error.pos.txt";
-open(ERRPOS, ">$errpos_file") || die;
-my %errors = %{$errors};
-foreach my $echr (sort {$a cmp $b} keys %errors) {
-	my %echrpos = %{$errors{$echr}};
-	foreach (sort {$a <=> $b} keys %echrpos) {
-		print ERRPOS "$echr\t$_\n";
-	}
-}
-close ERRPOS;
 
 ###############################################
 # aln to dist
@@ -206,53 +207,93 @@ if (-d $pdfdir) {
 `Rscript $scriptPath/util/kaddistPlot.R $dist_file $minwin4plot $pdfdir`;
 
 ###############################################
-## module to generate a wig file and error data
+## module to bed
 ################################################
-sub aln2kadwig_error {
-	my ($in_aln, $out_wig) = @_;
-	my %pos_nkad;
-	my %pos_kadsum;
-	my %error_pos;
+sub aln2bed {
+	my ($in_aln, $out_bed) = @_;
+	my %pos_kad;
 
 	# read aln and analyze KAD at each pos
-	open(INALN, $in_aln) || die;
+	open(INALN, "<", $in_aln) || die;
 	while(<INALN>) {
 		chomp;
 		my ($inkinfo, $inchr, $inpos, $nummatch) = split;
 		my @kmer_kad = split("_", $inkinfo);
 		my $inkad = $kmer_kad[2];
 		$nummatch =~ s/M//g;
-		for (my $cpos = $inpos; $cpos <= $inpos + $nummatch - 1; $cpos++) {
-			$pos_nkad{$inchr}{$cpos}++;
-			if (exists $pos_kadsum{$inchr."_".$cpos}) {
-				$pos_kadsum{$inchr."_".$cpos} += $inkad;
-			} else {
-				$pos_kadsum{$inchr."_".$cpos} = $inkad;
-			}
-		}
-		
-		# errors
-		if ($inkad == -1) {
-			$error_pos{$inchr}{$inpos}++;
-		}
-
+		my $instart = $inpos - 1; # 0-based
+		$pos_kad{$inchr}{$instart} = $nummatch."_".$inkad;
 	}
 	close INALN;
 
-	# output a WIG file
-	open(WIG, ">$out_wig") || die;
-	foreach my $echr (sort { $a cmp $b } keys %pos_nkad) {
-		print WIG "variableStep  chrom=$echr\n";
-		my %echrPos = %{$pos_nkad{$echr}};
-		foreach my $epos (sort {$a <=> $b} keys %echrPos) {
-			my $kad_mean = $pos_kadsum{$echr."_".$epos} / $echrPos{$epos};
-			print WIG "$epos\t$kad_mean\n";
+	# output
+	open(BED, ">", $out_bed) || die; # sorted BED
+	foreach my $inec (sort {$a cmp $b} keys %pos_kad) {
+		my %ec_pos_kad = %{$pos_kad{$inec}};
+		foreach my $estart (sort {$a <=> $b} keys %ec_pos_kad) {
+			my $match_kad = $ec_pos_kad{$estart};
+			my ($nummatch_value, $kad_value) = split("_", $match_kad);
+			my $eend = $estart + $nummatch_value;
+			print BED "$inec\t$estart\t$eend\t\.\t$kad_value\n";
 		}
 	}
-	close WIG;
-	return(\%error_pos);
+	close BED;
 }
 
+###############################################
+## module to generate a wig file and error data
+################################################
+sub bed2kadwig {
+	my ($in_bed, $out_wig) = @_;
+	my %pos_nkad;
+	my %pos_kadsum;
+	my %inctghash;
+	my $curctg;
+	
+	# WIG output
+	open(WIG, ">$out_wig") || die;
+
+	# read aln and analyze KAD at each pos
+	open(BED, $in_bed) || die;
+	while(<BED>) {
+		chomp;
+		my @inline = split;
+		my ($inctg, $instart, $inend, $inkad) = @inline[0,1,2,4];
+		$instart += 1; # adjust to 1-based
+
+		if (defined $curctg and !exists $inctghash{$inctg}) {
+			print WIG "variableStep  chrom=$curctg\n";
+			foreach my $epos (sort {$a <=> $b} keys %pos_kadsum) {
+				my $kad_mean = $pos_kadsum{$epos} / $pos_nkad{$epos};
+				print WIG "$epos\t$kad_mean\n";
+			}
+			%pos_nkad = ();
+			%pos_kadsum = ();
+			$curctg = "";
+		}
+
+		$curctg = $inctg;
+		$inctghash{$curctg}++;
+		for (my $cpos = $instart; $cpos <= $inend; $cpos++) {
+			$pos_nkad{$cpos}++;
+			if (exists $pos_kadsum{$cpos}) {
+				$pos_kadsum{$cpos} += $inkad;
+			} else {
+				$pos_kadsum{$cpos} = $inkad;
+			}
+		}
+	}
+	close BED;
+	# last one
+	print WIG "variableStep  chrom=$curctg\n";
+	foreach my $epos (sort {$a <=> $b} keys %pos_kadsum) {
+		my $kad_mean = $pos_kadsum{$epos} / $pos_nkad{$epos};
+		print WIG "$epos\t$kad_mean\n";
+	}
+	%pos_nkad = ();
+	%pos_kadsum = ();
+	close WIG;
+}
 
 ###############################################
 ## module to generate distribution of 4 categories
@@ -304,4 +345,6 @@ sub aln2dist {
 	return(\%wins, \%inchrsize);
 }
 
+# cleanup
+#`rm $chrlen_file`;
 
