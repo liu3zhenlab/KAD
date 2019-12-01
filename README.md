@@ -22,8 +22,8 @@ git clone https://github.com/liu3zhenlab/KAD.git
 perl ./KAD/seqKADprofile.pl
 ```
 
-### conda intallation
-Aternatively, all required packages can be installed through conda
+### Conda intallation
+Aternatively, all required packages can be installed through [conda](https://docs.conda.io/en/latest/)
 ```
 conda create -n kad
 conda activate kad
@@ -130,7 +130,7 @@ Based on KAD values of k-mers from Analysis 1, problematic k-mers can be categor
 3. plots of distributions of problematic k-mers  
 
 _**how to run**_  
-For example, from analysis 1, the assembly *a0* (asm0.fas) was KAD profiled. We now can analyze the ouput file suffixed with "kad.txt" to examine distributions of problematic k-mers. Below is the example script:
+For example, from Analysis 1, the assembly *a0* (asm0.fas) was KAD profiled. With the ouput file suffixed with "kad.txt" from Analysis 1, distributions of problematic k-mers can be further analyzed. Below is the example script:
 
 ```
 perl scriptpath/KADdist.pl \ 
