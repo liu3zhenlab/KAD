@@ -16,13 +16,7 @@ The script was written with Perl and R is invoked. Both Perl and R are generally
 
 To run KADdist.pl, [bowtie](http://bowtie-bio.sourceforge.net/index.shtml) and [bedtools](https://bedtools.readthedocs.io/en/latest/) are required.
 
-### Installation
-```
-git clone https://github.com/liu3zhenlab/KAD.git  
-perl ./KAD/KADprofile.pl
-```
-
-### Conda intallation
+### Intallation of all requirements via Conda
 Aternatively, all required packages can be installed through [conda](https://docs.conda.io/en/latest/)
 ```
 conda create -n kad
@@ -30,6 +24,12 @@ conda activate kad
 conda install -c anaconda perl
 conda install -c r r-base r-knitr r-rmarkdown
 conda install -c bioconda pandoc bowtie bedtools
+```
+### Installation of KAD
+Basically, the installation is just to copy all KAD files in the a directory. KAD can be directly used afterwards.
+```
+git clone https://github.com/liu3zhenlab/KAD.git  
+perl ./KAD/KADprofile.pl
 ```
 
 ### Data requirements
