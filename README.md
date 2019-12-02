@@ -52,8 +52,12 @@ Assembly sequencing data in FASTA format. Each assembly is in a single FASTA fil
     --**klen** <num>:  length of k-mers; default=25.  
     --**readdepth** <num>: estimated depth of reads; not required; if specified, it will be compared to the mode of read k-mers.  
     --**kadcutoff** <str of nums>: a set of numbers to define k-mer categories; default="-2 -0.5, 0.5, 0.75, 2".  
-	This parameter is used to categorize k-mers into:  1. *OverRep*: over-represented k-mers (KAD <= -2; higher abundance in the assembly than indicated by reads); 2. *Good*: correct k-mer (-0.5 <= KAD <= 0.5; relatively equal abundance); 3. *LowUnderRep*: a low-level of under-represented k-mers (0.75 <= KAD < 2; lower abundance in the assembly); 4. *HighUnderRep*: a high-level of under-represented k-mers (KAD >= 2; lower abundance in the assembly).  
-    **Note**: error k-mers (*Error*) are k-mers with KADs equaling to -1, which is unrelated to this parameter.  
+	This parameter is used to categorize k-mers into:  
+	1. *OverRep*: over-represented k-mers (KAD <= -2; higher abundance in the assembly than indicated by reads);  
+	2. *Good*: correct k-mer (-0.5 <= KAD <= 0.5; relatively equal abundance);  
+	3. *LowUnderRep*: a low-level of under-represented k-mers (0.75 <= KAD < 2; lower abundance in the assembly);  
+	4. *HighUnderRep*: a high-level of under-represented k-mers (KAD >= 2; lower abundance in the assembly).  
+        **Note**: error k-mers (*Error*) are k-mers with KADs equaling to -1, which is unrelated to this parameter.  
     --**binlen** <num>:		bin length to count KAD; default=0.05.  
     --**threads** <num>:		number of cpus; default=1.  
     --**version**:		version  
