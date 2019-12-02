@@ -63,14 +63,20 @@ Assembly sequencing data in FASTA format. Each assembly is in a single FASTA fil
     --**kad**|k <file>:      KAD output file from KADprofile.pl; required.  
     --**aid**|i <str>:       assembly ID in the header of KAD file; required.  
     --**asm**|a <file>:      assembly FASTA file, including path; required.  
-    --**mincopy**|m <num>: k-mers  with at least --mincopy in the assembly will be aligned to the assembly; default=1.  
-    --**maxcopy**|i <num>: k-mers  with at most --maxcopy in the assembly will be aligned to the assembly; default=100.  
-    --**winsize**|w <num>: window size on which the number of each KAD type is counted; default=50000.  
-    --**kadcutoff**|s <str>: same to --kadcutoff in the KADprofile.pl; default="-2 -0.5 0.5 0.75 2".  
-    --**prefix**|p <str>:  the output directory and the prefix for output files; default=KADdist.  
+    --**mincopy**|m <num>:   k-mers  with at least --mincopy in the assembly will be aligned to the assembly; default=1.  
+    --**maxcopy**|i <num>:   k-mers  with at most --maxcopy in the assembly will be aligned to the assembly; default=100.  
+    --**winsize**|w <num>:   window size on which the number of each KAD type is counted; default=50000.  
+    --**kadcutoff**|s <str>: same to --kadcutoff in the KADprofile.pl; default="-2 -0.5 0.5 0.75 2". 
+	                     this parameter is used to categorize k-mers into:
+	                     1. OverRep: over-represented k-mers (KAD <= -2; higher abundance in the assembly than indicated by reads)
+	                     2. Good: correct k-mer (-0.5 <= KAD <= 0.5; relatively equal abundance)
+                             3. LowUnderRep: a low-level of under-represented k-mers (0.75 <= KAD < 2; lower abundance in the assembly)
+	                     4. HighUnderRep: a high-level of under-represented k-mers  (KAD >= 2; lower abundance in the assembly)
+	                     Note: error k-mers are k-mers with KADs equaling to -1, which is not unrelated to this parameter.
+    --**prefix**|p <str>:    the output directory and the prefix for output files; default=KADdist.  
     --**minwin4plot**|n <num>: contigs or chromosomes with minimum window number (--minwin4plot) will be plotted; default=10.  
     --**pdfoutdir**|o <str>: the subdirectory under --prefix directory for PDF outputs.  
-    --**help**:            help information.  
+    --**help**:              help information.  
 	
 3. [KADcompare.pl](KADcompare.pl): comparing unequal KADs between two assemblies.  
 **Usage**: perl KADcompare.pl [options] \<kad\>  
