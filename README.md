@@ -26,7 +26,7 @@ conda install -c r r-base r-knitr r-rmarkdown
 conda install -c bioconda pandoc bowtie bedtools
 ```
 ### Installation of KAD
-Basically, the installation is just to copy all KAD files in the a directory. KAD can be directly used afterwards.
+Basically, the installation is just to copy all KAD files in a directory. KAD can be directly used afterwards.
 ```
 git clone https://github.com/liu3zhenlab/KAD.git  
 perl ./KAD/KADprofile.pl
