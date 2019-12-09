@@ -137,7 +137,7 @@ A html report in the _report_ subdirectory is generated from each run. Check thi
 
 **Analysis 2. k-mer distribution on contigs or chromosomes of an assembly**  
 Based on KAD values of k-mers from Analysis 1, problematic k-mers can be categorized into "error", "overRep", "lowUnderRep", and "highUnderRep", representing k-mers with errors, over-represention, low levels of under-representation, and high levels of under-representation in the assembly. The script [KADdist.pl](KADdist.pl) maps these k-mers to the assembly and combines the KAD value each k-mer to produce:  
-1. a wiggle track format ([wig](https://genome.ucsc.edu/goldenPath/help/wiggle.html) file  
+1. a wiggle track format ([wig](https://genome.ucsc.edu/goldenPath/help/wiggle.html)) file  
 2. a [bigwig](https://genome.ucsc.edu/goldenpath/help/bigWig.html) file for visualization  
 3. mapping location of error k-mers  
 4. plots of distributions of problematic k-mers  
