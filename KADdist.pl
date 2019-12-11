@@ -17,17 +17,17 @@ sub prompt {
 	print <<EOF;
 	Usage KADdist.pl [options]
 	[Options]
-	--kad|k <file>:      KAD output file from seqKADprofile.pl; required
+	--kad|k <file>:      KAD output file from KADprofile.pl; required
 	--aid|i <str>:       assembly ID in the header of KAD file; required
 	--asm|a <file>:      assembly FASTA file, including path; required
 	--mincopy|m <num>: k-mers  with at least --mincopy in the assembly will be aligned to the assembly; default=1
 	--maxcopy|i <num>: k-mers  with at most --maxcopy in the assembly will be aligned to the assembly; default=100
 	--winsize|w <num>: window size on which the number of each KAD type is counted; default=50000
-	--kadcutoff|s <str>: same to --kadcutoff in the seqKADprofile.pl
-	                   default="-2 -0.5 0.5 0.75 2"
+	--kadcutoff|s <str>: same to --kadcutoff in the KADprofile.pl
+	                   default="-0.8 -0.5 0.5 0.75 2"
 	--prefix|p <str>:  the output directory and the prefix for output files; default=KADdist
 	--minwin4plot|n <num>: contigs or chromosomes with minimum window number (--minwin4plot) will be plotted; default=10
-	--pdfoutdir|o <str>: the subdirectory under --prefix directory for PDF outputs
+	--pdfoutdir|o <str>: the subdirectory under --prefix directory for PDF outputs; default=pdf
 	--help
 EOF
 exit;
@@ -53,7 +53,7 @@ my ($kad_file, $aid, $asm_file, $mincopy, $maxcopy,
 &prompt if ($help or !defined $kad_file or !defined $aid or !defined $asm_file);
 $mincopy = 1 if !defined $mincopy;
 $maxcopy = 100 if !defined $maxcopy;
-$kadcutoff = "-2 -0.5 0.5 0.75 2" if !defined $kadcutoff;
+$kadcutoff = "-0.8 -0.5 0.5 0.75 2" if !defined $kadcutoff;
 $winsize = 50000 if !defined $winsize;
 $prefix = "KADdist" if !defined $prefix;
 $minwin4plot = 10 if !defined $minwin4plot;
@@ -159,7 +159,7 @@ my $bigwig_file = $prefix."/".$prefix."_5_kad.bigwig";
 
 &bed2kadwig($kmerkad_bedfile, $wig_file);
 
-# wig to bigwig
+# chrlen
 `$scriptPath/util/fastaSize.pl $asm_file > $chrlen_file`;
 `$binPath/wigToBigWig $wig_file $chrlen_file $bigwig_file`;
 
@@ -328,7 +328,7 @@ sub aln2dist {
 		my $inkad = $kmer_kad[2];
 		my $cwin = int(($inpos - 1) / $in_win);
 		my $type = "others";
-		if ($inkad <= $inkad_cutoff[0]) {
+		if ($inkad <= $inkad_cutoff[0] and $inkad != -1) {
 			$type = "overrep";
 		} elsif ($inkad >= $inkad_cutoff[1] and $inkad <= $inkad_cutoff[2]) {
 			$type = "good";

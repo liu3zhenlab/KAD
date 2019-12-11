@@ -67,9 +67,6 @@ if (-d $prefix) {
 
 # script path:
 my $scriptPath = $FindBin::Bin;
-#my $binPath = $scriptPath."/bin/";
-#my $utilPath = $scriptPath."/util/";
-
 
 ###############################################
 # diff data

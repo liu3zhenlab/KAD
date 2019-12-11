@@ -51,12 +51,12 @@ sub prompt {
 					2. Error: k-mers showing a single copy in the assembly but with no reads supported, for which
 					          KADs equals to -1; this value is fixed; 
 					3. OverRep: k-mers showing multiple locations in the assembly but read depths indicate lower copies, for
-					            which, by default, KADs are smaller than or equqal to -2;
+					            which, by default, KADs are smaller than or equqal to -0.8 but not equal to -1;
 					4. LowUnderRep: k-mers showing less copies in the assembly compared to copies indicated by read depths, for
 					                which, by default, KADs are between 0.75 and 2;
 					5. HighUnderRep: k-mers showing less copies at a high degree in the assembly as compared to copies
 					                 indicated by read depths, for which, by default, KADs are >=2;
-					default=(-2, -0.5, 0.5, 0.75, 2).
+					default=(-0.8, -0.5, 0.5, 0.75, 2).
 	--binlen <num>	bin length to count KAD; default=0.05.
 	--threads <num>	number of cpus; default=1.
 	--version		version
@@ -99,7 +99,7 @@ $prefix = $opts{prefix} if exists $opts{prefix};
 $readdepth = $opts{readdepth} if exists $opts{readdepth};
 $threads = exists $opts{threads} ? $opts{threads} : 1;
 $klen = exists $opts{klen} ? $opts{klen} : 25;
-$kadcutoff = exists $opts{kadcutoff} ? $opts{kadcutoff} : "-2 -0.5 0.5 0.75 2";
+$kadcutoff = exists $opts{kadcutoff} ? $opts{kadcutoff} : "-0.8 -0.5 0.5 0.75 2";
 my @kadcutoff = split(" ", $kadcutoff);
 $binlen = exists $opts{binlen} ? $opts{binlen} : 0.05;
 
@@ -356,7 +356,7 @@ while(<KAD_IN>) {
 			# plus and minus
 			if ($count >= $kadcutoff[4]) {
 				$plusHighNum{$colname}++;;
-			} elsif ($count <= $kadcutoff[0]) {
+			} elsif ($count <= $kadcutoff[0] and $count != -1) {
 				$minusHighAbsNum{$colname}++;
 			}
 		}
@@ -405,7 +405,7 @@ if ($#aid >= 1) {
 	print LOG "\n";
 	print LOG "o Two assemblies can be directly compared by using KADcompare.pl\n";
 	print LOG "e.g., to compare $aid[0] with $aid[1], run:\n";
-	print LOG "  $scriptPath\/KADcompare.pl \\\n";
+	print LOG "  perl $scriptPath\/KADcompare.pl \\\n";
 	print LOG "      \-\-set1 $aid[0] \-\-set2 $aid[1] \\\n";
 	print LOG "      \-\-prefix $aid[0]_$aid[1] \\\n";
 	print LOG "      $kadout\n";
@@ -415,7 +415,7 @@ print LOG "\n";
 
 print LOG "o Run the following command to obtain KAD distribution in a bigwig format on a selected assembly\n";
 print LOG "e.g., assembly --$aid[0]\n";
-print LOG "  $scriptPath\/KADdist.pl \\\n";
+print LOG "  perl $scriptPath\/KADdist.pl \\\n";
 print LOG "      \-\-kad $kadout \\\n";
 print LOG "      \-\-aid $aid[0] \\\n";
 print LOG "      \-\-asm $asm[0] \\\n";
