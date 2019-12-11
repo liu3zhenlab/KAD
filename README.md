@@ -16,13 +16,7 @@ The script was written with Perl and R is invoked. Both Perl and R are generally
 
 To run KADdist.pl, [bowtie](http://bowtie-bio.sourceforge.net/index.shtml) and [bedtools](https://bedtools.readthedocs.io/en/latest/) are required.
 
-### Installation
-```
-git clone https://github.com/liu3zhenlab/KAD.git  
-perl ./KAD/KADprofile.pl
-```
-
-### Conda intallation
+### Intallation of all requirements via Conda
 Aternatively, all required packages can be installed through [conda](https://docs.conda.io/en/latest/)
 ```
 conda create -n kad
@@ -30,6 +24,12 @@ conda activate kad
 conda install -c anaconda perl
 conda install -c r r-base r-knitr r-rmarkdown
 conda install -c bioconda pandoc bowtie bedtools
+```
+### Installation of KAD
+Basically, the installation is just to copy all KAD files in a directory. KAD can be directly used afterwards.
+```
+git clone https://github.com/liu3zhenlab/KAD.git  
+perl ./KAD/KADprofile.pl
 ```
 
 ### Data requirements
@@ -52,6 +52,12 @@ Assembly sequencing data in FASTA format. Each assembly is in a single FASTA fil
     --**klen** <num>:  length of k-mers; default=25.  
     --**readdepth** <num>: estimated depth of reads; not required; if specified, it will be compared to the mode of read k-mers.  
     --**kadcutoff** <str of nums>: a set of numbers to define k-mer categories; default="-2 -0.5, 0.5, 0.75, 2".  
+This parameter is used to categorize k-mers into:  
+1.*OverRep*: over-represented k-mers (KAD <= -2; higher abundance in the assembly than indicated by reads);  
+2.*Good*: correct k-mer (-0.5 <= KAD <= 0.5; relatively equal abundance);  
+3.*LowUnderRep*: a low-level of under-represented k-mers (0.75 <= KAD < 2; lower abundance in the assembly);  
+4.*HighUnderRep*: a high-level of under-represented k-mers (KAD >= 2; lower abundance in the assembly).  
+**Note**: error k-mers (*Error*) are k-mers with KADs equaling to -1, which is unrelated to this parameter.  
     --**binlen** <num>:		bin length to count KAD; default=0.05.  
     --**threads** <num>:		number of cpus; default=1.  
     --**version**:		version  
@@ -63,14 +69,20 @@ Assembly sequencing data in FASTA format. Each assembly is in a single FASTA fil
     --**kad**|k <file>:      KAD output file from KADprofile.pl; required.  
     --**aid**|i <str>:       assembly ID in the header of KAD file; required.  
     --**asm**|a <file>:      assembly FASTA file, including path; required.  
-    --**mincopy**|m <num>: k-mers  with at least --mincopy in the assembly will be aligned to the assembly; default=1.  
-    --**maxcopy**|i <num>: k-mers  with at most --maxcopy in the assembly will be aligned to the assembly; default=100.  
-    --**winsize**|w <num>: window size on which the number of each KAD type is counted; default=50000.  
+    --**mincopy**|m <num>:   k-mers  with at least --mincopy in the assembly will be aligned to the assembly; default=1.  
+    --**maxcopy**|i <num>:   k-mers  with at most --maxcopy in the assembly will be aligned to the assembly; default=100.  
+    --**winsize**|w <num>:   window size on which the number of each KAD type is counted; default=50000.  
     --**kadcutoff**|s <str>: same to --kadcutoff in the KADprofile.pl; default="-2 -0.5 0.5 0.75 2".  
-    --**prefix**|p <str>:  the output directory and the prefix for output files; default=KADdist.  
+	This parameter is used to categorize k-mers into:  
+	1.*OverRep*: over-represented k-mers (KAD <= -2; higher abundance in the assembly than indicated by reads);  
+	2.*Good*: correct k-mer (-0.5 <= KAD <= 0.5; relatively equal abundance);  
+	3. *LowUnderRep*: a low-level of under-represented k-mers (0.75 <= KAD < 2; lower abundance in the assembly);  
+	4. *HighUnderRep*: a high-level of under-represented k-mers (KAD >= 2; lower abundance in the assembly).  
+	**Note**: error k-mers (*Error*) are k-mers with KADs equaling to -1, which is unrelated to this parameter.  
+    --**prefix**|p <str>:    the output directory and the prefix for output files; default=KADdist.  
     --**minwin4plot**|n <num>: contigs or chromosomes with minimum window number (--minwin4plot) will be plotted; default=10.  
     --**pdfoutdir**|o <str>: the subdirectory under --prefix directory for PDF outputs.  
-    --**help**:            help information.  
+    --**help**:              help information.  
 	
 3. [KADcompare.pl](KADcompare.pl): comparing unequal KADs between two assemblies.  
 **Usage**: perl KADcompare.pl [options] \<kad\>  
@@ -125,9 +137,10 @@ A html report in the _report_ subdirectory is generated from each run. Check thi
 
 **Analysis 2. k-mer distribution on contigs or chromosomes of an assembly**  
 Based on KAD values of k-mers from Analysis 1, problematic k-mers can be categorized into "error", "overRep", "lowUnderRep", and "highUnderRep", representing k-mers with errors, over-represention, low levels of under-representation, and high levels of under-representation in the assembly. The script [KADdist.pl](KADdist.pl) maps these k-mers to the assembly and combines the KAD value each k-mer to produce:  
-1. a [bigwig](https://genome.ucsc.edu/goldenpath/help/bigWig.html) file for visualization  
-2. mapping location of error k-mers  
-3. plots of distributions of problematic k-mers  
+1. a wiggle track format ([wig](https://genome.ucsc.edu/goldenPath/help/wiggle.html)) file  
+2. a [bigwig](https://genome.ucsc.edu/goldenpath/help/bigWig.html) file for visualization  
+3. mapping location of error k-mers  
+4. plots of distributions of problematic k-mers  
 
 _**how to run**_  
 For example, from Analysis 1, the assembly *a0* (asm0.fas) was KAD profiled. With the ouput file suffixed with "kad.txt" from Analysis 1, distributions of problematic k-mers can be further analyzed. Below is the example script:
