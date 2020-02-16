@@ -17,7 +17,7 @@ use lib "$FindBin::Bin/lib";
 use kmerge;
 use kad;
 
-my $version = "0.14";
+my $version = "0.15";
 
 sub prompt {
 	print <<EOF;
