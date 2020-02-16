@@ -13,7 +13,7 @@ use warnings;
 use Getopt::Long;
 use FindBin;
 
-my $version = "0.10";
+my $version = "0.15";
 
 sub prompt {
 	print <<EOF;

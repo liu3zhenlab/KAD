@@ -11,23 +11,22 @@ use warnings;
 use Getopt::Long;
 use FindBin;
 
-my $version = 0.10;
+my $version = 0.15;
 
 sub prompt {
 	print <<EOF;
 	Usage KADdist.pl [options]
 	[Options]
-	--kad|k <file>:      KAD output file from KADprofile.pl; required
-	--aid|i <str>:       assembly ID in the header of KAD file; required
-	--asm|a <file>:      assembly FASTA file, including path; required
-	--mincopy|m <num>: k-mers  with at least --mincopy in the assembly will be aligned to the assembly; default=1
-	--maxcopy|i <num>: k-mers  with at most --maxcopy in the assembly will be aligned to the assembly; default=100
-	--winsize|w <num>: window size on which the number of each KAD type is counted; default=50000
-	--kadcutoff|s <str>: same to --kadcutoff in the KADprofile.pl
-	                   default="-0.8 -0.5 0.5 0.75 2"
-	--prefix|p <str>:  the output directory and the prefix for output files; default=KADdist
-	--minwin4plot|n <num>: contigs or chromosomes with minimum window number (--minwin4plot) will be plotted; default=10
-	--pdfoutdir|o <str>: the subdirectory under --prefix directory for PDF outputs; default=pdf
+	--kad|k <file>:      KAD output file from KADprofile.pl (required)
+	--aid|i <str>:       assembly ID in the header of KAD file (required)
+	--asm|a <file>:      assembly FASTA file, including path (required)
+	--mincopy|m <num>: k-mers  with at least --mincopy in the assembly will be aligned to the assembly (1)
+	--maxcopy|i <num>: k-mers  with at most --maxcopy in the assembly will be aligned to the assembly (100)
+	--winsize|w <num>: window size on which the number of each KAD type is counted (50000)
+	--kadcutoff|s <str>: same to --kadcutoff in the KADprofile.pl ("-0.8 -0.5 0.5 0.75 2")
+	--prefix|p <str>:  the output directory and the prefix for output files (KADdist)
+	--minwin4plot|n <num>: contigs or chromosomes with minimum window number (--minwin4plot) will be plotted (10)
+	--pdfoutdir|o <str>: the subdirectory under --prefix directory for PDF outputs (pdf)
 	--help
 EOF
 exit;

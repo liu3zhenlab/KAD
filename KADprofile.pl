@@ -17,50 +17,50 @@ use lib "$FindBin::Bin/lib";
 use kmerge;
 use kad;
 
-my $version = "0.13";
+my $version = "0.14";
 
 sub prompt {
 	print <<EOF;
 	Usage: perl seqKADprofile.pl [options]
 	[Options]
-	--read <file>	FASTQ/A read file for k-mer generation;
-					the parameter can be used multiple times; zip files with the suffix of .gz are allowed; 
-					Jellyfish is used to generate counts of k-mers.
-	--minc <num>	minimal number of counts per k-mer from reads;
-					k-mers with counts smaller than <num> are not output. default=5.
-	--asm <file>	FASTA sequence file for k-mer generation;
+	--read <file>	FASTQ/A file of reads
+					the parameter can be used multiple times; zip files with the suffix of .gz are allowed. 
+	--minc <num>	minimal number of counts per k-mer from reads (5)
+					k-mers with counts smaller than <num> are not output.
+	--asm <file>	FASTA file of the assembly
 					the parameter can be used multiple times to allow using multiple FASTA file;
 					each file is considered an indepedent assembly.
 	--rid <str>		ID used in the header of the k-mer table generated from reads.
-	--aid <str> 	ID used in the header of the asm k-mer table to be generated from each assembly;
-					the parameter can be used multiple times to match --asm input.
+	--aid <str> 	ID used in the header of the k-mer table generated from an assembly;
+					the parameter can be used multiple times to match --asm inputs.
 	                By default, a header ID is generated from the file name of each assembly
 					by removing PATH and the suffix of .fa, .fas, or .fasta.
-					IMPORTANT: If --aid is specified, it must match the --asm parameter. One --aid is used
-					for one k-mer table generated from one assembly file specified by --asm. To match --asm and --aid input,
-					the order of two inputs should have the matching order.
-	--prefix <str>	the output directory and the prefix for output files; default=kad.
-	--klen <num>	length of k-mers; default=25.
-	--cmode <num>   input mode of counts of read k-mer abundance; if specified, cmode will not be computed by read k-mer profiles.
+					IMPORTANT: If multiple --aid are specified, their order must match corresponding --asm order.
+	--prefix <str>	the output directory and the prefix for output files (kad)
+	--klen <num>	length of k-mers (25)
+	--cmode <num>   input mode of counts of read k-mer abundance; By default, the mode will be automatically determined.
+	                If specified, cmode will not be computed by using the profile of read k-mer abundance.
 	--readdepth <num>
-					estimated depth of reads; not required; if specified, it will be compared to the mode of read k-mers.
+					estimated depth of reads; not required; if specified, it will be used to evaluate the accuracy of "cmode".
 	--kadcutoff	<str of num>
-					a set of numbers to define k-mer categories:
-					1. Good: k-mers basically containing no errors, for which, by default, KADs are between -0.5 and 0.5;
-					         Note: some k-mers with low counts from reads but not presented in the assembly are in this category;
-					2. Error: k-mers showing a single copy in the assembly but with no reads supported, for which
-					          KADs equals to -1; this value is fixed; 
-					3. OverRep: k-mers showing multiple locations in the assembly but read depths indicate lower copies, for
-					            which, by default, KADs are smaller than or equqal to -0.8 but not equal to -1;
-					4. LowUnderRep: k-mers showing less copies in the assembly compared to copies indicated by read depths, for
-					                which, by default, KADs are between 0.75 and 2;
-					5. HighUnderRep: k-mers showing less copies at a high degree in the assembly as compared to copies
-					                 indicated by read depths, for which, by default, KADs are >=2;
+					a set of cutoffs specified to classify k-mers based on KAD values:
+					1. Good:         K-mers that basically contain no errors; KADs of these k-mers are between the 2nd value and
+					                 the 3rd value specified by --kadcutoff, which by default are (-0.5, 0.5).
+					                 Note: some k-mers with low counts from reads but not presented in the assembly are in this category;
+					2. Error:        K-mers with a KAD equaling -1. In this group, most k-mers are single copy in the assembly but with
+					                 zero counts in reads. The criteria specified by --kadcutoff will not affect the finding of Error k-mers.
+					3. OverRep:      K-mers showing multiple locations in the assembly but lower copied are indicated by read depths;
+					                 KADs of these k-mers are smaller than or equqal to the 1st value specified by --kadcutoff, which by
+									 default is -0.8. K-mers with a KAD equaling -1 are excluded.
+					4. LowUnderRep:  K-mers showing less copies in the assembly compared to copies indicated by read depths, for
+					                 which, by default, KADs are between the 4th value (0.75) and the 5th value (2) specified by --kadcutoff.
+					5. HighUnderRep: K-mers showing less copies at a high degree in the assembly as compared to copies indicated by read
+					                 depths, for which, by default, KADs are higher than or equal to the 5th value (2) specified by --kadcutoff.
 					default=(-0.8, -0.5, 0.5, 0.75, 2).
-	--binlen <num>	bin length to count KAD; default=0.05.
-	--threads <num>	number of cpus; default=1.
-	--version		version
-	--help:			help information
+	--binlen <num>  length of KAD interval for KAD statistics; similar to bin size for determining KAD histogram (0.05)
+	--threads <num>	number of cpus (1)
+	--version		version information
+	--help:			help information.
 
 	o example: to generate KAD profiles with read and assemblies
 		perl seqKADprofile.pl --read data1.fq.gz --read data2.fq.gz --rid PE250 --minc 5 \
@@ -240,7 +240,7 @@ if (exists $opts{incmode}) {
 		if ($num_try < 3) {
 			$minc_val += $minc;
 			$cmodev = kad::cmode($mergekmer_out, 2, $minc_val);
-			print LOG "warning: the estimated mode equals to $minc. reestimate...\n";
+			print LOG "warning: the estimated mode equals $minc. reestimate...\n";
 			$num_try++;
 		} else {
 			print LOG "ERROR: a reasonable cmod should be > 3 * $minc; can not find a reasonable cmod. quit\n";
@@ -429,6 +429,7 @@ chomp($jellyfish_version);
 
 # Rmd
 my $rmd = $scriptPath."\/util\/KADprofile.report.Rmd";
+
 #html report:
 my $reportdir = $prefix."/report";
 my $figuredir = $prefix."/figures";
@@ -504,8 +505,9 @@ sub kgen {
 	}
 	
 	# generate jf file
-	`$binPath/jellyfish count -C -s 1000M -m $klen -t $threads -L  $in_minc -o $jf_out $infiles2`;
+	`$binPath/jellyfish count -C -s 1000M -m $klen -t $threads -L $in_minc -o $jf_out $infiles2`;
 	`rm -f $inprefix/$inprefix"_X_reads"*`; # cleanup
+	
 	# add header
 	open(OUT, ">$in_out") || die;
 	print OUT "Kmer\t$in_rid\n";
