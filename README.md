@@ -65,7 +65,7 @@ This parameter is used to categorize k-mers into:
 2.*Good*: correct k-mer (-0.5 <= KAD <= 0.5; relatively equal abundance);  
 3.*LowUnderRep*: a low-level of under-represented k-mers (0.75 <= KAD < 2; lower abundance in the assembly);  
 4.*HighUnderRep*: a high-level of under-represented k-mers (KAD >= 2; lower abundance in the assembly).  
-**Note**: error k-mers (*Error*) are k-mers with KADs equaling to -1, which is unrelated to this parameter.  
+**Note**: error k-mers (*Error*) are k-mers with KADs equaling -1, which is unrelated to this parameter.  
     --**readdepth** <num>: estimated depth of reads; not required; if specified, it will be used to evaluate the accuracy of "cmode".  
     --**binlen** <num>: length of KAD interval for KAD statistics; similar to bin size for determining KAD histogram (0.05)  
     --**version**:	version information  
@@ -86,7 +86,7 @@ This parameter is used to categorize k-mers into:
 	2.*Good*: correct k-mer (-0.5 <= KAD <= 0.5; relatively equal abundance);  
 	3. *LowUnderRep*: a low-level of under-represented k-mers (0.75 <= KAD < 2; lower abundance in the assembly);  
 	4. *HighUnderRep*: a high-level of under-represented k-mers (KAD >= 2; lower abundance in the assembly).  
-	**Note**: error k-mers (*Error*) are k-mers with KADs equaling to -1, which is unrelated to this parameter.  
+	**Note**: error k-mers (*Error*) are k-mers with KADs equaling -1, which is unrelated to this parameter.  
     --**prefix**|p <str>:    the output directory and the prefix for output files; default=KADdist.  
     --**minwin4plot**|n <num>: contigs or chromosomes with minimum window number (--minwin4plot) will be plotted; default=10.  
     --**pdfoutdir**|o <str>: the subdirectory under --prefix directory for PDF outputs.  
