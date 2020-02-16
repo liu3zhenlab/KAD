@@ -43,14 +43,22 @@ Assembly sequencing data in FASTA format. Each assembly is in a single FASTA fil
 1. [KADprofile.pl](KADprofile.pl): producing KAD profiles for input assemblies.  
 **Usage**: perl KADprofile.pl [options]  
 **[Options]**  
-    --**read** <file>:	\*FASTQ/A read file for k-mer generation; the parameter can be used multiple times; zip files with the suffix of .gz are allowed; required.
-    --**minc** <num>:	minimal number of counts per k-mer from reads; k-mers with counts smaller than <num> are not output. default=5.  
-    --**asm** <file>:	\*FASTA sequence file for k-mer generation; the parameter can be used multiple times to allow using multiple FASTA file; required.  
+    --**read** <file>:	\*FASTQ/A file of reads (required)  
+                        the parameter can be used multiple times; zip files with the suffix of .gz are allowed. required.  
+    --**asm** <file>:	\*FASTA file of the assembly (required)  
+                        the parameter can be used multiple times to allow using multiple FASTA file;  
+                        each file is considered an indepedent assembly.  
+    --**threads** <num>:number of cpus (1)  
+    --**minc** <num>:	minimal number of counts per k-mer from reads (5)  
+                        k-mers with counts smaller than <num> are not output.  
     --**rid** <str>:	ID used in the header of the k-mer table generated from reads.  
-    --**aid** <str>:	ID used in the header of the asm k-mer table to be generated from each assembly; the parameter can be used multiple times to match --asm input. By default, a header ID is generated from the file name of each assembly by removing PATH and the suffix of .fa, .fas, or .fasta.  
-    --**prefix** <str>:the output directory and the prefix for output files; default=kad.  
-    --**klen** <num>:  length of k-mers; default=25.  
-    --**readdepth** <num>: estimated depth of reads; not required; if specified, it will be compared to the mode of read k-mers.  
+    --**aid** <str>:	ID used in the header of the k-mer table generated from an assembly;  
+                        the parameter can be used multiple times to match --asm inputs.  
+                        By default, a header ID is generated from the file name of each assembly  
+                        by removing PATH and the suffix of .fa, .fas, or .fasta.  
+			IMPORTANT: If multiple --aid parameters are specified, their order must match corresponding --asm order.  
+    --**prefix** <str>: the output directory and the prefix for output files (kad).  
+    --**klen** <num>:   length of k-mers (25).  
     --**kadcutoff** <str of nums>: a set of numbers to define k-mer categories; default="-0.8 -0.5, 0.5, 0.75, 2".  
 This parameter is used to categorize k-mers into:  
 1.*OverRep*: over-represented k-mers (KAD <= -0.8 but KAD != -1; higher abundance in the assembly than indicated by reads);  
@@ -58,10 +66,10 @@ This parameter is used to categorize k-mers into:
 3.*LowUnderRep*: a low-level of under-represented k-mers (0.75 <= KAD < 2; lower abundance in the assembly);  
 4.*HighUnderRep*: a high-level of under-represented k-mers (KAD >= 2; lower abundance in the assembly).  
 **Note**: error k-mers (*Error*) are k-mers with KADs equaling to -1, which is unrelated to this parameter.  
-    --**binlen** <num>:		bin length to count KAD; default=0.05.  
-    --**threads** <num>:		number of cpus; default=1.  
-    --**version**:		version  
-    --**help**:			help information
+    --**readdepth** <num>: estimated depth of reads; not required; if specified, it will be used to evaluate the accuracy of "cmode".  
+    --**binlen** <num>: length of KAD interval for KAD statistics; similar to bin size for determining KAD histogram (0.05)  
+    --**version**:	version information  
+    --**help**:		help information
 
 2. [KADdist.pl](KADdist.pl): generating distributions of error and other k-mers on contigs or chromosomes.  
 **Usage** KADdist.pl [options]  
