@@ -1,17 +1,18 @@
 ---
-title: "KAD Profiles of K-mers with Unequal KADs in two assemblies"
+title: "Assembly comparison via KAD profiling"
+output:
+  pdf_document: default
+  html_document: default
 date: "`r format(Sys.time(), '%d %B %Y')`"
 params:
-  prefix: NULL
-  kdbin: NULL
-  kad: NULL
-  set1: NULL
-  set2: NULL
   binlen: 0.05
   jfversion: null
+  kad: null
+  kdbin: null
+  prefix: null
+  set1: null
+  set2: null
   version: null
-output:
-  html_document: default
 ---
 
 ```{r modules, echo = FALSE}
@@ -121,11 +122,11 @@ KADcompare.pl `r scriptversion`
 
 ### INPUT
 **assemblies**  
-asm1: `r s1`  
-asm2: `r s2`  
+1. asm1: `r s1`  
+2. asm2: `r s2`  
 
 **counts of k-mer in KAD bins**  
-KAD file: `r kad`
+- KAD file: `r kad`
 
 ### KAD profiles
 ```{r plot1, echo=F, fig.align='center', fig.cap="Fig 1. KAD profiles", fig.height=6, fig.width= 6}

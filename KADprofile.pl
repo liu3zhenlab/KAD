@@ -51,12 +51,12 @@ sub prompt {
 					                 zero counts in reads. The criteria specified by --kadcutoff will not affect the finding of Error k-mers.
 					3. OverRep:      K-mers showing multiple locations in the assembly but lower copied are indicated by read depths;
 					                 KADs of these k-mers are smaller than or equqal to the 1st value specified by --kadcutoff, which by
-									 default is -0.8. K-mers with a KAD equaling -1 are excluded.
+									 default is -1. K-mers with a KAD equaling -1 are excluded no matter what cutoff is used.
 					4. LowUnderRep:  K-mers showing less copies in the assembly compared to copies indicated by read depths, for
 					                 which, by default, KADs are between the 4th value (0.75) and the 5th value (2) specified by --kadcutoff.
 					5. HighUnderRep: K-mers showing less copies at a high degree in the assembly as compared to copies indicated by read
 					                 depths, for which, by default, KADs are higher than or equal to the 5th value (2) specified by --kadcutoff.
-					default=(-0.8, -0.5, 0.5, 0.75, 2).
+					default=(-1, -0.5, 0.5, 0.75, 2).
 	--binlen <num>  length of KAD interval for KAD statistics; similar to bin size for determining KAD histogram (0.05)
 	--threads <num>	number of cpus (1)
 	--version		version information
@@ -99,7 +99,7 @@ $prefix = $opts{prefix} if exists $opts{prefix};
 $readdepth = $opts{readdepth} if exists $opts{readdepth};
 $threads = exists $opts{threads} ? $opts{threads} : 1;
 $klen = exists $opts{klen} ? $opts{klen} : 25;
-$kadcutoff = exists $opts{kadcutoff} ? $opts{kadcutoff} : "-0.8 -0.5 0.5 0.75 2";
+$kadcutoff = exists $opts{kadcutoff} ? $opts{kadcutoff} : "-1 -0.5 0.5 0.75 2";
 my @kadcutoff = split(" ", $kadcutoff);
 $binlen = exists $opts{binlen} ? $opts{binlen} : 0.05;
 

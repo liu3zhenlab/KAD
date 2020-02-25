@@ -129,10 +129,17 @@ my $bowtie_dbidx = $prefix."/bowtie";
 if (! -d $bowtie_dbidx) {
 	`mkdir $bowtie_dbidx`;
 }
+
+# bowtie path:
+my $bowtiebuild = `which bowtie-build || echo $binPath/bowtie/bowtie-build`;
+chomp $bowtiebuild;
+my $bowtie = `which bowtie || echo $binPath/bowtie/bowtie`;
+chomp $bowtie;
+
 # index asm
-`$binPath/bowtie/bowtie-build $asm_file $bowtie_dbidx/$aid`;
+`$bowtiebuild $asm_file $bowtie_dbidx/$aid`;
 # aln
-`$binPath/bowtie/bowtie -n 0 -v 0 -k $maxcopy --quiet --no-unal -a -B 1 --sam --sam-nohead -f $bowtie_dbidx/$aid $fas_file | cut -f 1,3,4,6 > $kmeraln_file`;
+`$bowtie -n 0 -v 0 -k $maxcopy --quiet --no-unal -a -B 1 --sam --sam-nohead -f $bowtie_dbidx/$aid $fas_file | cut -f 1,3,4,6 > $kmeraln_file`;
 
 
 ###############################################
@@ -345,6 +352,6 @@ sub aln2dist {
 }
 
 # cleanup
-'rm $bowtie_dbidx -rf`;
+`rm $bowtie_dbidx -rf`;
 `rm $chrlen_file`;
 

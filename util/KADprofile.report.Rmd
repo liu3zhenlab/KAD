@@ -20,8 +20,8 @@ output:
 ---
 
 ```{r parameters, echo = FALSE}
-klen <- params$ken
-readid <- params$readfiles
+klen <- params$klen
+readid <- params$readid
 readfiles <- params$readfiles
 readkmerfile <- params$readkmer
 asmids <- params$asmids
@@ -106,6 +106,15 @@ kadplot <- function(kbin, plotcol = NULL,
   #legend("topleft", legend = pmain, col = curvecol, bty = "n", lwd = 1.2)
 }
 
+
+#' Function for plotting abundance of k-mers
+kcurveplot <- function(k_abundance, k_counts, cmod_val, ...) {
+	plot(k_abundance, k_counts, ...)
+	lines(k_abundance, k_counts)
+	abline(v = cmod_val, col = "red")
+	legend("topright", legend = paste0("mode=", cmod_val), text.col = "red", bty = "n")
+}
+
 ```
 
 KAD is valuable for evaluating the accuracy of nucleotide base quality of assemblies. Briefly, abundance of k-mers are quantified for both sequencing reads and assembly sequences. Comparison of both values results in a single value per k-mer, K-mer Abundance Difference (KAD), which indicates how well the assembly matches read data for each k-mer.
@@ -118,7 +127,7 @@ library("knitr")
 `r version`
 
 **KAD script**:  
-seqKADprofile.pl `r kadversion`
+KADprofile.pl `r kadversion`
 
 ### INPUT
 **1. reads**  
@@ -142,21 +151,40 @@ for (i in 1:length(asmids_v)) {
 
 
 ### Analyis 1: read k-mer analysis
-```{r kcurve, echo = FALSE, out.width='80%', fig.align='center', fig.cap="Fig 1. Spectrum of counts of read k-mers"}
+```{r kcurve, echo = FALSE, results="hide", out.width='80%', fig.align='center', fig.cap="Fig 1. Spectrum of counts of read k-mers"}
 # read k-mer spectrum
 cmod <- read.delim(cmodefile, stringsAsFactors = F, header = F)
 cmodval <- as.numeric(cmod[1,2])
 rkac <- read.delim(readkmerfile, stringsAsFactors = F) # read k-mers abundance counts
 rkac <- rkac[rkac$kmerAbundance > 0, ]
 xrange <- c(as.numeric(minc), cmodval * 4)
-plot(rkac$kmerAbundance, rkac$count,
-     xlim = xrange, type = "n",
-     xlab = "k-mer abundance",
-     ylab = "Number of k-mers",
-     main = "Spectrum of read k-mer abundance")
-lines(rkac$kmerAbundance, rkac$count)
-abline(v = cmodval, col = "red")
-legend("topright", legend = paste0("mode=", cmodval), text.col = "red", bty = "n")
+
+kcurveplot(k_abundance = rkac$kmerAbundance,
+	k_counts = rkac$count, cmod_val = cmodval,
+	xlim = xrange, type = "n",
+	xlab = "k-mer abundance",
+	ylab = "Number of k-mers",
+	main = "Spectrum of read k-mer abundance")
+
+# output a pdf file
+kcurve.pdfout <- paste0(dirname(bincountfile), "/figures/reads.kmer.abundance.profile.pdf")
+pdf(kcurve.pdfout, width = 4, height = 4)
+kcurveplot(k_abundance = rkac$kmerAbundance,
+	k_counts = rkac$count, cmod_val = cmodval,
+	xlim = xrange, type = "n",
+	xlab = "k-mer abundance",
+	ylab = "Number of k-mers",
+	main = "Spectrum of read k-mer abundance")
+dev.off()
+
+#plot(rkac$kmerAbundance, rkac$count,
+#     xlim = xrange, type = "n",
+#     xlab = "k-mer abundance",
+#     ylab = "Number of k-mers",
+#     main = "Spectrum of read k-mer abundance")
+#lines(rkac$kmerAbundance, rkac$count)
+#abline(v = cmodval, col = "red")
+#legend("topright", legend = paste0("mode=", cmodval), text.col = "red", bty = "n")
 ```
 From most genomes, single-copy k-mers each of which is present once in the genome are dominant among all non-redundant k-mers derived from the genome. The mode of sequencing depths of single-copy kmers, representing sequencing depth of read data, can be estimated from the spectrum of k-mer abundance from reads (Fig 1).
 
@@ -171,23 +199,53 @@ kadcutoff_v <- strsplit(kadcutoff, " ")[[1]]
 
 Here are criteria used to define k-mer categories:  
 1. Good: k-mers basically containing no errors; KADs in [`r kadcutoff_v[2]`, `r kadcutoff_v[3]`]. Note that some k-mers with low counts from reads but absent in the assembly are in this category.   
-2. SingleError: k-mers showing a single copy in the assembly but with no reads supported; KADs=-1.  
-3. MultiError: k-mers showing multiple locations in the assembly but read depths indicate lower copies; h KADs <= `r kadcutoff_v[1]`.  
-4. LowMiss: k-mers with less copies in the assembly as compared to copies indicated by read depths; KADs in [`r kadcutoff_v[4]`, `r kadcutoff_v[5]`].  
-5. HighMiss: k-mers showing less copies at a high degree in the assembly as compared to copies indicated by read depths; KADs >=`r kadcutoff_v[5]`.
+2. Error: k-mers showing a single copy in the assembly but with no reads supported; KADs=-1.  
+3. OverRep: k-mers showing multiple locations in the assembly but read depths indicate lower copies; KADs <= `r kadcutoff_v[1]` and do not equal -1.  
+4. LowUnderRep: k-mers with less copies in the assembly as compared to copies indicated by read depths; KADs in [`r kadcutoff_v[4]`, `r kadcutoff_v[5]`].  
+5. HighUnderRep: k-mers showing less copies at a high degree in the assembly as compared to copies indicated by read depths; KADs >=`r kadcutoff_v[5]`.
+
+
+```{r errtable, echo = FALSE, result="hide"}
+errs <- kstable[, c(1,4)]
+errs[, 1] <- gsub(".KAD$", "", errs[, 1])
+high_conversion_rate <- as.numeric(klen) - 1;
+low_conversion_rate <- as.numeric(klen) - 11;
+errs[, paste0("BaseErrorNum_", high_conversion_rate)] <- round(errs[, 2] / high_conversion_rate)
+errs[, paste0("BaseErrorNum_", low_conversion_rate)] <- round(errs[, 2] / low_conversion_rate)
+errNote <- "Because the read depth is >40, the error estimation should be accurate as long as no strong biases in generating read data"
+if (cmodval < 40) {
+	errNote <- "Because the read depth is <40, the error estimation might be higher than actual errors"
+}
+
+kable(errs[, -2], caption = "Table 2. Estimation of base errors")
+```
+
+Note: Of the header, "BaseErrorNum_xx" represents the number of base errors detected through dividing the number of error k-mers by the conversion rate of "xx". `r errNote`.
 
 ### Analysis 3: KAD profiles
 Here are tips to understand these KAD profiling figures.   
 1. "good" k-mers are those with KADs close to 0, representing matching copies indicated by reads and by the assembly.  
-2. "error" k-mers are located at -1 or smaller. The k-mer count at -1 represents a single-copy error k-mer in the assembly.  
-3. "missing" k-mers have positive KAD values. The higher values, the higher level of missing in the genome.  
-4. Left and right figures have different y-axes. Left figure has original count values and right figure has cube root transformed count values.  
+2. "error" k-mers are located at -1, representing a single-copy error k-mer in the assembly.  
+3. "Overepresented" k-mers have negative KAD values smaller than -2, representing some levels of redundancy or systematic sequencing errors.
+4. "Underrepresented" k-mers have positive KAD values. The higher values, the higher level of missing in the genome. DNA contamination in Illumina sequencing data and organell DNA sequences are in this category.
+5. Left and right figures have different y-axes. Left figure has original count values and right figure has cube root transformed count values.  
 
 ```{r kad, echo = FALSE, fig.align='center', fig.cap="Fig 2. KAD profiles", fig.height=4, fig.width= 8}
 kadbinc <- read.delim(bincountfile, stringsAsFactors = F)
 for (i in 2:ncol(kadbinc)) {
+  # pdf output
+  asmname <- colnames(kadbinc)[i]
+  pdfout <- paste0(dirname(bincountfile), "/figures/", asmname, ".kad.profile.pdf")
+  pdf(pdfout, width = 7, height = 4)
   kadplot(kbin = kadbinc, plotcol = i,
           xlabel = "KAD", ylabel = "Counts of k-mers",
           pmain = NULL, curvecol = "black", xrange = NULL)
+  dev.off()
+  
+  # directly output figures in reports:
+  kadplot(kbin = kadbinc, plotcol = i,
+          xlabel = "KAD", ylabel = "Counts of k-mers",
+          pmain = NULL, curvecol = "black", xrange = NULL)
+
 }
 ```

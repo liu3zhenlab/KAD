@@ -165,8 +165,12 @@ kaddistPlot <- function(kdfile, minWins=10, outdir=".") {
     xunit <- curchrlen/100
     # error and overRep
     base1 <- 6
-    countmax1 <- max(rowSums(ckd[, 6:7]))
-    dist(counts.df = ckd, plotcols = c(6, 7), ymax=countmax1, yplotmax=5, base=base1,
+	countmax1 <- max(rowSums(ckd[, 6:7]))
+	if (countmax1 == 0) {
+		countmax1 <- 100
+	}
+    
+	dist(counts.df = ckd, plotcols = c(6, 7), ymax=countmax1, yplotmax=5, base=base1,
          ori = "up", color = colscheme[1])
     dist(counts.df = ckd, plotcols = 6, ymax=countmax1, yplotmax=5, base=base1,
          ori = "up", color = colscheme[2])
@@ -177,7 +181,10 @@ kaddistPlot <- function(kdfile, minWins=10, outdir=".") {
     # underRep
     base2 <- 5
     countmax2 <- max(rowSums(ckd[, 8:9]))
-    dist(counts.df = ckd, plotcols = c(8,9), ymax=countmax2, yplotmax=5, base=base2,
+    if (countmax2 == 0) {
+		countmax2 <- 100
+	}
+	dist(counts.df = ckd, plotcols = c(8,9), ymax=countmax2, yplotmax=5, base=base2,
          ori = "down", color = colscheme[3])
     dist(counts.df = ckd, plotcols = 9, ymax=countmax2, yplotmax=5, base=base2,
          ori = "down", color = colscheme[4])
