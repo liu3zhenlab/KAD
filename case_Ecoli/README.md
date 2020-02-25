@@ -164,4 +164,5 @@ Here are the KAD comparison plot for the two assemblies U00096.1 and U00096.2:
 <img src="https://github.com/liu3zhenlab/KAD/blob/master/case_Ecoli/figures/U00096.1vs3_2_U00096.1-U00096.3.Fig1.raw.png" alt="KAD comparison plot" width="500"/>
 
 **Conclusion**  
-The KAD comparison result indicates U00096.3 has less errors as compared to U000096.1.
+The KAD comparison result indicates U00096.3 has less errors as compared to U000096.1. Disagreements between reads and each assembly were found at both assemblies regions that need further examination.
+
