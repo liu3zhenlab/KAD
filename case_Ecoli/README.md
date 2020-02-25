@@ -90,8 +90,8 @@ U00096.3: copy number of the k-mer in the assembly of U00096.3
 U00096.1.KAD: the KAD value of the k-mer of U00096.1  
 U00096.3.KAD: the KAD value of the k-mer of U00096.3  
 
-2. KAD summary in MG1655_7_kad.stat.txt.  
-3. A report in HTML format "MG1655_KADprofile.report.html" in the directory of "report"  
+2. KAD summary in MG1655_7_kad.stat.txt  
+3. A report in HTML format "MG1655_KADprofile.report.html" in the directory of "report". [Here](KAD_Profiling_Report.pdf) you can read this report.   
 4. Editable PDF figures in the directory of "figures"
 
 Here are the KAD profiling plot for the assembly U00096.1:  
