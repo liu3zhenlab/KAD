@@ -10,20 +10,21 @@ Through this preparation, we will have two genome assemblies for *Escherichia co
 2. U00096.3.fasta
 
 and a set of clean paired-end reads
-1. MG1655_1P.gz
-2. MG1655_2P.gz
+1. MG1655_1.fq.gz
+2. MG1655_2.fq.gz
 
 **data preparation**
 1. genome assemblies
 For this example, we used two genome assemblies of *Escherichia coli* K-12 MG1655, which were from Genbank accession U00096.1 and U00096.3.
+
 2. Illumina read data
 Illumina data for the same bacterial strain were downloaded from NCBI with [sra-tools](https://github.com/ncbi/sra-tools].
 ```
 fasterq-dump --skip-technical --split-3 ERR022075
 ```
+
 3. trimming of read data with [trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic)
 ```
-#!/bin/bash
 ########### subject to change #############
 trimmomaticDir=<trimmomatic directory>
 trimmomatic=$trimmomaticDir/trimmomatic-0.38.jar
@@ -42,9 +43,13 @@ java -jar $trimmomatic PE \
     LEADING:3 TRAILING:3 \
     SLIDINGWINDOW:4:13 \
     MINLEN:$minlen
+```
 
-# gzip data
-gzip MG1655_[12]P
+4. subsample reads with [seqtk](https://github.com/lh3/seqtk) because original read data have >700x sequencing depth. 
+```
+nreads=2000000
+seqtk sample -s 100 MG1655_1P $nreads | gzip > MG1655_1.fq.gz
+seqtk sample -s 100 MG1655_2P $nreads | gzip > MG1655_2.fq.gz
 ```
 
 #### PART II: KAD profiling
@@ -158,4 +163,5 @@ Here are the KAD comparison plot for the two assemblies U00096.1 and U00096.2:
 
 <img src="https://github.com/liu3zhenlab/KAD/blob/master/cases/Ecoli/analysis/U00096.1vs3/U00096.1vs3_2_U00096.1-U00096.3.Fig1.raw.png" alt="KAD comparison plot" width="500"/>
 
-
+**Conclusion**  
+The KAD comparison result indicates U00096.3 has less errors as compared to U000096.1.
