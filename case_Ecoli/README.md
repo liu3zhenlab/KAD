@@ -136,6 +136,10 @@ perl <path-to-kad>/KADdist.pl \
      --aid U00096.3 --asm U00096.3.fasta
 ```
 
+Here are the landscape plot for the assembly U00096.3:
+
+<img src="https://github.com/liu3zhenlab/KAD/blob/master/case_Ecoli/figures/U00096.3.kad.dist.png" alt="KAD landscape plot" width="500"/>
+
 #### PART IV. KAD comparison between two assemblies, if applied
 This analysis compares KAD values for KAD comparison of two assemblies using the output from KAD profiling. K-mers showing distinct KAD values are extracted. The KAD comparison plot visulizes KAD profiles of these k-mers from the two assemblies.
 
