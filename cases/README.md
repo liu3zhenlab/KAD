@@ -121,7 +121,7 @@ The file "U00096.1dist_6_KADtype.dist.txt" contains number of k-mers for each k-
 
 Here are the landscape plot for the assembly U00096.1:  
 
-<img src="https://github.com/liu3zhenlab/KAD/blob/master/cases/Ecoli/analysis/U00096.1dist/U00096.1.kad.dist.png" alt="KAD landscape plot" width="600"/>
+<img src="https://github.com/liu3zhenlab/KAD/blob/master/cases/Ecoli/analysis/U00096.1dist/U00096.1.kad.dist.png" alt="KAD landscape plot" width="500"/>
 
 **KAD distribution can be generated for U00096.3 using the following script**
 ```
@@ -156,6 +156,6 @@ In the output, "U00096.1vs3_1_U00096.1-U00096.3.KADdiff.txt" lists all k-mers wi
 
 Here are the KAD comparison plot for the two assemblies U00096.1 and U00096.2:  
 
-<img src="https://github.com/liu3zhenlab/KAD/blob/master/cases/Ecoli/analysis/U00096.1vs3/U00096.1vs3_2_U00096.1-U00096.3.Fig1.raw.png" alt="KAD comparison plot" width="600"/>
+<img src="https://github.com/liu3zhenlab/KAD/blob/master/cases/Ecoli/analysis/U00096.1vs3/U00096.1vs3_2_U00096.1-U00096.3.Fig1.raw.png" alt="KAD comparison plot" width="500"/>
 
 
