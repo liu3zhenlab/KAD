@@ -59,9 +59,9 @@ Assembly sequencing data in FASTA format. Each assembly is in a single FASTA fil
 			IMPORTANT: If multiple --aid parameters are specified, their order must match corresponding --asm order.  
     --**prefix** <str>: the output directory and the prefix for output files (kad).  
     --**klen** <num>:   length of k-mers (25).  
-    --**kadcutoff** <str of nums>: a set of numbers to define k-mer categories; default="-0.8 -0.5, 0.5, 0.75, 2".  
+    --**kadcutoff** <str of nums>: a set of numbers to define k-mer categories; default="-1 -0.5, 0.5, 0.75, 2".  
 This parameter is used to categorize k-mers into:  
-1.*OverRep*: over-represented k-mers (KAD <= -0.8 but KAD != -1; higher abundance in the assembly than indicated by reads);  
+1.*OverRep*: over-represented k-mers (KAD<-1; higher abundance in the assembly than indicated by reads);  
 2.*Good*: correct k-mer (-0.5 <= KAD <= 0.5; relatively equal abundance);  
 3.*LowUnderRep*: a low-level of under-represented k-mers (0.75 <= KAD < 2; lower abundance in the assembly);  
 4.*HighUnderRep*: a high-level of under-represented k-mers (KAD >= 2; lower abundance in the assembly).  
@@ -80,9 +80,9 @@ This parameter is used to categorize k-mers into:
     --**mincopy**|m <num>:   k-mers  with at least --mincopy in the assembly will be aligned to the assembly (1).  
     --**maxcopy**|i <num>:   k-mers  with at most --maxcopy in the assembly will be aligned to the assembly (100).  
     --**winsize**|w <num>:   window size on which the number of each KAD type is counted (50000).  
-    --**kadcutoff**|s <str>: same to --kadcutoff in the KADprofile.pl ("-0.8 -0.5 0.5 0.75 2").  
+    --**kadcutoff**|s <str>: same to --kadcutoff in the KADprofile.pl ("-1 -0.5 0.5 0.75 2").  
 	This parameter is used to categorize k-mers into:  
-	1.*OverRep*: over-represented k-mers (KAD <= -0.8 but KAD != -1; higher abundance in the assembly than indicated by reads);  
+	1.*OverRep*: over-represented k-mers (KAD <= -1; higher abundance in the assembly than indicated by reads);  
 	2.*Good*: correct k-mer (-0.5 <= KAD <= 0.5; relatively equal abundance);  
 	3. *LowUnderRep*: a low-level of under-represented k-mers (0.75 <= KAD < 2; lower abundance in the assembly);  
 	4. *HighUnderRep*: a high-level of under-represented k-mers (KAD >= 2; lower abundance in the assembly).  
@@ -119,13 +119,13 @@ You also have a read set:
 
 Assuming the Perl script was in the directory of _scriptpath_, run the following script to generate KAD profiles for all three assemblies.
 ```
-perl scriptpath/KADprofile.pl --read read1.fq.gz --read read2.fq.gz \
+perl <scriptpath>/KADprofile.pl --read read1.fq.gz --read read2.fq.gz \
                               --asm asm0.fas --asm asm1.fas --asm asm2.fas
 ```
 
 You might want to assign names of all three assemblies with new names different from file names, such as a0, a1, and a2.
 ```
-perl scriptpath/KADprofile.pl --read read1.fq --read read2.fq \
+perl <scriptpath>/KADprofile.pl --read read1.fq --read read2.fq \
                               --asm asm0.fas --asm asm1.fas --asm asm2.fas \
                               --aid a0 --aid a1 --aid a2
 ```
@@ -136,7 +136,7 @@ The parameter _--minc_ might need to change to avoid the interference from a gre
 If corrected reads are used, _--minc_ can be set to a small number (e.g., 3).
 
 ```
-perl scriptpath/KADprofile.pl --read read1.fq --read read2.fq \
+perl <scriptpath>/KADprofile.pl --read read1.fq --read read2.fq \
                               --asm asm0.fas --asm asm1.fas --asm asm2.fas \
                               --aid a0 --aid a1 --aid a2 --minc 15
 ```
@@ -154,7 +154,7 @@ _**how to run**_
 For example, from Analysis 1, the assembly *a0* (asm0.fas) was KAD profiled. With the ouput file suffixed with "kad.txt" from Analysis 1, distributions of problematic k-mers can be further analyzed. Below is the example script:
 
 ```
-perl scriptpath/KADdist.pl \ 
+perl <scriptpath>/KADdist.pl \ 
 --kad a0_4_kad.txt --prefix a0KD \
 --aid a0 --asm asm0.fas
 ```
