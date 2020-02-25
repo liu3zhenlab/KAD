@@ -1,7 +1,7 @@
 ### A Case study to illustrate KAD analysis
 *- Evaluation of *E. coli* genomes with KAD analysis*  
 
-In this case, two versions of *E. coli* genome aseemblies and Illumina read data were downloaded. Analyses for KAD profiling, KAD distribution, and KAD comparison were performed. Partial results were deposited here as well.
+In this case, two versions of *E. coli* genome aseemblies and Illumina read data were downloaded. Analyses for KAD profiling, KAD distribution, and KAD comparison were performed.
 
 #### PART I: Data preparation for KAD analysis
 
@@ -10,10 +10,10 @@ Through this preparation, we will have two genome assemblies for *Escherichia co
 2. U00096.3.fasta
 
 and a set of clean paired-end reads
-1. MG1655_1.fq.gz
-2. MG1655_2.fq.gz
+1. MG1655_1P.gz
+2. MG1655_2P.gz
 
-#### step 1: data preparation
+**data preparation**
 1. genome assemblies
 For this example, we used two genome assemblies of *Escherichia coli* K-12 MG1655, which were from Genbank accession U00096.1 and U00096.3.
 2. Illumina read data
@@ -42,13 +42,18 @@ java -jar $trimmomatic PE \
     LEADING:3 TRAILING:3 \
     SLIDINGWINDOW:4:13 \
     MINLEN:$minlen
+
+# gzip data
+gzip MG1655_[12]P
 ```
 
-#### KAD profiling
-**Running script - KAD profiling**
+#### PART II: KAD profiling
+KAD profiling is a core step for KAD analysis. It produces k-mer profiles for assembled sequences and reads, combines them into a merged table, determines KAD values, and groups each k-mer based on its KAD value. It generates KAD profiling plots for each assembly.
+
+**Run script**
 ```
-perl KADprofile.pl \
-     --read MG1655_1.fq.gz --read MG1655_2.fq.gz \
+perl <path-to-kad>/KADprofile.pl \
+     --read MG1655_1P.gz --read MG1655_2P.gz \
      --asm U00096.1.fasta --aid U00096.1 \
      --asm U00096.3.fasta --aid U00096.3  \
      --prefix MG1655
@@ -88,10 +93,12 @@ Here are the KAD profiling plot for the assembly U00096.1:
 
 <img src="https://github.com/liu3zhenlab/KAD/raw/master/cases/Ecoli/analysis/MG1655/figures/U00096.1.kad.profile.png" alt="KAD profiling plot of U00096.1" width="600" />
 
-#### KAD distribution on contigs or chromosomes  
-**Running script - KAD landscape distribution**
+#### PART III: KAD distribution 
+In this step, k-mers are aligned to each original assembly. Based on alignments, distribution of each group of k-mers, particularly error k-mers on assembled sequences is determined. This analysis generates KAD landscape plots.
+
+**Running script for U00096.1**
 ```
-perl KADdist.pl \
+perl <path-to-kad>/KADdist.pl \
      --prefix U00096.1dist \
      --kad ./MG1655/MG1655_4_kad.txt \
      --aid U00096.1 --asm U00096.1.fasta
@@ -116,16 +123,18 @@ Here are the landscape plot for the assembly U00096.1:
 
 <img src="https://github.com/liu3zhenlab/KAD/blob/master/cases/Ecoli/analysis/U00096.1dist/U00096.1.kad.dist.png" alt="KAD landscape plot" width="600"/>
 
-**The landscape distribution can be generated for U00096.3 using the following script**
+**KAD distribution can be generated for U00096.3 using the following script**
 ```
-perl KADdist.pl \
+perl <path-to-kad>/KADdist.pl \
      --prefix U00096.1dist \
      --kad ./MG1655/MG1655_4_kad.txt \
      --aid U00096.3 --asm U00096.3.fasta
 ```
 
-#### KAD comparison between two assemblies
-**KAD comparison of two assemblies using the output from KAD profiling**
+#### PART IV. KAD comparison between two assemblies, if applied
+This analysis compares KAD values for KAD comparison of two assemblies using the output from KAD profiling. K-mers showing distinct KAD values are extracted. The KAD comparison plot visulizes KAD profiles of these k-mers from the two assemblies.
+
+**Run script**
 ```
 perl KADcompare.pl \
      --set1 U00096.1
