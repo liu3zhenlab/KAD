@@ -494,7 +494,7 @@ sub kgen {
 			#### suffix
 			my $ori_suffix = $_;
 			$ori_suffix =~ s/.gz$//g;
-			$ori_suffix =~ s/.*\.//g;
+			$ori_suffix =~ s/.*\///g;
 			#### unzip to a new temp file
 			my $infiles_tmp = $inprefix."/".$inprefix."_X_reads.".$infiles_count.".".$ori_suffix;
 			`gunzip -c $_ > $infiles_tmp`; # unzip
