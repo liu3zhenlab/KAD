@@ -96,7 +96,7 @@ U00096.3.KAD: the KAD value of the k-mer of U00096.3
 
 Here are the KAD profiling plot for the assembly U00096.1:  
 
-<img src="https://github.com/liu3zhenlab/KAD/raw/master/cases/Ecoli/analysis/MG1655/figures/U00096.1.kad.profile.png" alt="KAD profiling plot of U00096.1" width="600" />
+<img src="https://github.com/liu3zhenlab/KAD/blob/master/case_Ecoli/figures/U00096.1.kad.profile.png" alt="KAD profiling plot of U00096.1" width="600" />
 
 #### PART III: KAD distribution 
 In this step, k-mers are aligned to each original assembly. Based on alignments, distribution of each group of k-mers, particularly error k-mers on assembled sequences is determined. This analysis generates KAD landscape plots.
@@ -126,7 +126,7 @@ The file "U00096.1dist_6_KADtype.dist.txt" contains number of k-mers for each k-
 
 Here are the landscape plot for the assembly U00096.1:  
 
-<img src="https://github.com/liu3zhenlab/KAD/blob/master/cases/Ecoli/analysis/U00096.1dist/U00096.1.kad.dist.png" alt="KAD landscape plot" width="500"/>
+<img src="https://github.com/liu3zhenlab/KAD/blob/master/case_Ecoli/figures/U00096.1.kad.dist.png" alt="KAD landscape plot" width="500"/>
 
 **KAD distribution can be generated for U00096.3 using the following script**
 ```
@@ -161,7 +161,7 @@ In the output, "U00096.1vs3_1_U00096.1-U00096.3.KADdiff.txt" lists all k-mers wi
 
 Here are the KAD comparison plot for the two assemblies U00096.1 and U00096.2:  
 
-<img src="https://github.com/liu3zhenlab/KAD/blob/master/cases/Ecoli/analysis/U00096.1vs3/U00096.1vs3_2_U00096.1-U00096.3.Fig1.raw.png" alt="KAD comparison plot" width="500"/>
+<img src="https://github.com/liu3zhenlab/KAD/blob/master/case_Ecoli/figures/U00096.1vs3_2_U00096.1-U00096.3.Fig1.raw.png" alt="KAD comparison plot" width="500"/>
 
 **Conclusion**  
 The KAD comparison result indicates U00096.3 has less errors as compared to U000096.1.
