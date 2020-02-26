@@ -147,7 +147,7 @@ A html report in the _report_ subdirectory is generated from each run. Check the
 
 A *KAD profile plot* was generated for each assembly. Here are three KAD profile plots:
 
-<img src="examples/KADprofiles.png" alt="profileplots" width=800 />
+<img src="examples/KADprofiles.png" alt="profileplots" width=850 />
 
 **Analysis 2. k-mer distribution on contigs or chromosomes of an assembly**  
 Based on KAD values of k-mers from Analysis 1, problematic k-mers can be categorized into "error", "overRep", "lowUnderRep", and "highUnderRep", representing k-mers with errors, over-represention, low levels of under-representation, and high levels of under-representation in the assembly. The script [KADdist.pl](KADdist.pl) maps these k-mers to the assembly and combines the KAD value each k-mer to produce:  
@@ -167,8 +167,7 @@ perl <scriptpath>/KADdist.pl \
 --winsize 500  # 500 minimum window size; added becaused this example has a small contig
 ```
 
-![KAD landscape plot](examples/asm.kad.dist.png)
-
+<img src="examples/asm.kad.dist.png" alt="landscapeplots" width=850 />
 
 **Analysis 3. KAD comparison between two assemblies**  
 This analysis will directly compare two assemblies based on KADs of the subset of k-mers that have unequal KADs.
@@ -184,7 +183,7 @@ perl scriptpath/KADcompare.pl --set1 a0 --set2 a1 --prefix a0_a1 1-KADprofile/1-
 
 Here shows the comparison plot for the comparison between a1 and a0.
 
-![a0_a1 comparison plot](examples/a0_a1.compare.png)
+<img src="examples/a0_a1.compare.png" alt="comparisonplot" width=500 />
 
 **Notes**: Here are what analysis 3 does:  
 First, the script extracts k-mers with unequal copies in the two assemblies. Two KADs per k-mer of the two assemblies are therefore different. Of two KADs per k-mer, one KAD may be NA because zero count of the k-mer from both reads and the assembly. These NAs are converted to 0 due to the agreement between reads and assembly data.
