@@ -14,7 +14,7 @@ where, _c_ is the count of a k-mer from reads, _m_ is the mode of counts of read
 ### Requirements
 The script was written with Perl and R is invoked. Both Perl and R are generally installed. If needed, please refer to [Perl](https://www.perl.org/) and [R](https://www.r-project.org/) for installation guides. To generate reports, [pandoc](https://pandoc.org) and R packages [knitr](https://github.com/yihui/knitr) and [rmarkdown](https://rmarkdown.rstudio.com) are needed to be installed.
 
-[Jellyfish](https://www.cbcb.umd.edu/software/jellyfish/) was used to generate k-mers by using either FASTA or FASTQ data. The binary Jellyfish executable is included in the [bin](https://github.com/liu3zhenlab/KAD/edit/master/bin/) directory of the KAD package.
+[Jellyfish](https://www.cbcb.umd.edu/software/jellyfish/) is used to generate k-mers by using either FASTA or FASTQ data. The binary Jellyfish executable is included in the [bin](https://github.com/liu3zhenlab/KAD/edit/master/bin/) directory of the KAD package.
 
 To run KADdist.pl, [bowtie](http://bowtie-bio.sourceforge.net/index.shtml) and [bedtools](https://bedtools.readthedocs.io/en/latest/) are required.
 
@@ -45,22 +45,22 @@ Assembly sequencing data in FASTA format. Each assembly is in a single FASTA fil
 1. [KADprofile.pl](KADprofile.pl): producing KAD profiles for input assemblies.  
 **Usage**: perl KADprofile.pl [options]  
 **[Options]**  
-    --**read** <file>:	\*FASTQ/A file of reads (required)  
+    --**read** \<file\>:	\*FASTQ/A file of reads (required)  
                         the parameter can be used multiple times; zip files with the suffix of .gz are allowed. required.  
-    --**asm** <file>:	\*FASTA file of the assembly (required)  
+    --**asm** \<file\>:	\*FASTA file of the assembly (required)  
                         the parameter can be used multiple times to allow using multiple FASTA file;  
                         each file is considered an indepedent assembly.  
-    --**threads** <num>:number of cpus (1)  
-    --**minc** <num>:	minimal number of counts per k-mer from reads (5)  
-                        k-mers with counts smaller than <num> are not output.  
-    --**rid** <str>:	ID used in the header of the k-mer table generated from reads.  
-    --**aid** <str>:	ID used in the header of the k-mer table generated from an assembly;  
+    --**threads** \<num\>:number of cpus (1)  
+    --**minc** \<num\>:	minimal number of counts per k-mer from reads (5)  
+                        k-mers with counts smaller than \<num\> are not output.  
+    --**rid** \<str\>:	ID used in the header of the k-mer table generated from reads.  
+    --**aid** \<str\>:	ID used in the header of the k-mer table generated from an assembly;  
                         the parameter can be used multiple times to match --asm inputs.  
                         By default, a header ID is generated from the file name of each assembly  
                         by removing PATH and the suffix of .fa, .fas, or .fasta.  
 			IMPORTANT: If multiple --aid parameters are specified, their order must match corresponding --asm order.  
-    --**prefix** <str>: the output directory and the prefix for output files (kad).  
-    --**klen** <num>:   length of k-mers (25).  
+    --**prefix** \<str\>: the output directory and the prefix for output files (kad).  
+    --**klen** \<num\>:   length of k-mers (25).  
     --**kadcutoff** <str of nums>: a set of numbers to define k-mer categories; default="-1 -0.5, 0.5, 0.75, 2".  
 This parameter is used to categorize k-mers into:  
 1.*OverRep*: over-represented k-mers (KAD<-1; higher abundance in the assembly than indicated by reads);  
