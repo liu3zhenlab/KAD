@@ -353,5 +353,5 @@ sub aln2dist {
 
 # cleanup
 `rm $bowtie_dbidx -rf`;
-`rm $chrlen_file`;
+#`rm $chrlen_file`;
 
