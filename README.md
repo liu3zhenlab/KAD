@@ -119,6 +119,8 @@ You also have a read set:
 1. read1.fq.gz
 2. read2.fq.gz
 
+*Data note*: These are 2x150bp paired-end reads with 0.2% errors simulated from asm0.fas. The simulated assembly data asm1 and asm2 contain ~1% and ~5% differences from asm0, respectively.
+
 Assuming the Perl script was in the directory of _scriptpath_, run the following script to generate KAD profiles for all three assemblies.
 ```
 perl <scriptpath>/KADprofile.pl --read read1.fq.gz --read read2.fq.gz \
@@ -186,6 +188,8 @@ Here shows the comparison plot for the comparison between a1 and a0.
 <img src="examples/a0_a1.compare.png" alt="comparisonplot" width=500 />
 
 **Notes**: Here are what analysis 3 does:  
-First, the script extracts k-mers with unequal copies in the two assemblies. Two KADs per k-mer of the two assemblies are therefore different. Of two KADs per k-mer, one KAD may be NA because zero count of the k-mer from both reads and the assembly. These NAs are converted to 0 due to the agreement between reads and assembly data.
+*First*, the script extracts k-mers with unequal copies in the two assemblies. Two KADs per k-mer of the two assemblies are therefore different. Of two KADs per k-mer, one KAD may be NA because zero count of the k-mer from both reads and the assembly. These NAs are converted to 0 due to the agreement between reads and assembly data.
 
-Second, the script counts KAD per defined bin, which, by default, is 0.05. Separate counts per bin of two assemblies are used for visualizing the two KAD profiles of k-mers with unequal KADs.
+*Second*, the script counts KAD per defined bin, which, by default, is 0.05. Separate counts per bin of two assemblies are used for visualizing the two KAD profiles of k-mers with unequal KADs.
+
+The result from three analyses indicates that ends of the sequence (a0) were not well sampled in reads. And most "LowUnderRef" k-mers of a1 and a2 assemblies are true k-mers found in reads but not identified in each assembly, which are replaced by actually error k-mers in the assemblies.
