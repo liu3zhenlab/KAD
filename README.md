@@ -147,7 +147,7 @@ A html report in the _report_ subdirectory is generated from each run. Check the
 
 A *KAD profile plot* was generated for each assembly. Here are three KAD profile plots:
 
-![KAD profile plots](examples/KADprofiles.png)
+<img src="examples/KADprofiles.png" alt="profileplots" width=800 />
 
 **Analysis 2. k-mer distribution on contigs or chromosomes of an assembly**  
 Based on KAD values of k-mers from Analysis 1, problematic k-mers can be categorized into "error", "overRep", "lowUnderRep", and "highUnderRep", representing k-mers with errors, over-represention, low levels of under-representation, and high levels of under-representation in the assembly. The script [KADdist.pl](KADdist.pl) maps these k-mers to the assembly and combines the KAD value each k-mer to produce:  
