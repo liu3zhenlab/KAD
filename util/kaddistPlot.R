@@ -167,7 +167,7 @@ kaddistPlot <- function(kdfile, minWins=10, outdir=".") {
     base1 <- 6
 	countmax1 <- max(rowSums(ckd[, 6:7]))
 	if (countmax1 == 0) {
-		countmax1 <- 100
+		countmax1 <- 1
 	}
     
 	dist(counts.df = ckd, plotcols = c(6, 7), ymax=countmax1, yplotmax=5, base=base1,
@@ -182,7 +182,7 @@ kaddistPlot <- function(kdfile, minWins=10, outdir=".") {
     base2 <- 5
     countmax2 <- max(rowSums(ckd[, 8:9]))
     if (countmax2 == 0) {
-		countmax2 <- 100
+		countmax2 <- 1
 	}
 	dist(counts.df = ckd, plotcols = c(8,9), ymax=countmax2, yplotmax=5, base=base2,
          ori = "down", color = colscheme[3])
