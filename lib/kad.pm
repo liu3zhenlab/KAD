@@ -46,7 +46,7 @@ sub num2bin {
 
 sub cmode {
 # mode value from a set of numbers
-	my ($infile, $col) = @_;
+	my ($infile, $col, $inminc) = @_;
 	my $outmode;
 	my %intmpcounts;
 	open(INTMP, $infile) || die;
@@ -55,7 +55,7 @@ sub cmode {
 		chomp;
 		my @intmpline = split;
 		my $intmpcount = $intmpline[$col - 1];
-		if ($intmpcount > 0) {
+		if ($intmpcount >= $inminc) {
 			$intmpcounts{$intmpcount}++;
 		}
 	}
