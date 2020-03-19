@@ -8,7 +8,7 @@ KAD is designed for evaluating the accuracy of nucleotide base quality of genome
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;KAD=log_{2}\begin{pmatrix}\frac{c+m}{m(n+1)}\end{pmatrix}" />
 
-<img src="https://render.githubusercontent.com/render/math?math=KAD=log_{2}\begin{pmatrix}\frac{c\+m}{m(n\+1)}\end{pmatrix}">
+<img src="https://render.githubusercontent.com/render/math?math=KAD=log_{2}\begin{pmatrix}\frac{c%2Bm}{m(n%2B1)}\end{pmatrix}">
 
 where, _c_ is the count of a k-mer from reads, _m_ is the mode of counts of read k-mers, and _n_ is the copy of the k-mer in the assembly. 
 
