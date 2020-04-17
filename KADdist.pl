@@ -11,7 +11,9 @@ use warnings;
 use Getopt::Long;
 use FindBin;
 
-my $version = 0.15;
+my $version = 0.16;
+
+# 4/17/2020: fix the running failure due to shared assembly names on the KAD file
 
 sub prompt {
 	print <<EOF;
@@ -88,7 +90,7 @@ $_ = <KAD>;
 my @head = split("\t", $_);
 my @selcols = ();
 for (my $i=0; $i<=$#head; $i++) {
-	if ($head[$i] =~ /$aid/) {
+	if ($head[$i] eq $aid or $head[$i] eq $aid.".KAD") {
 		push(@selcols, $i);
 	}
 }
