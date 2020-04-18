@@ -11,7 +11,7 @@ use warnings;
 use Getopt::Long;
 use FindBin;
 
-my $version = 0.16;
+my $version = 0.1.6;
 
 # 4/17/2020: fix the running failure due to shared assembly names on the KAD file
 
@@ -87,16 +87,24 @@ open(FAS, ">$fas_file") || die;
 open(KAD, $kad_file) || die;
 # header and determine select cols:
 $_ = <KAD>;
+chomp;
 my @head = split("\t", $_);
 my @selcols = ();
+my $kad_id = $aid.".KAD";
 for (my $i=0; $i<=$#head; $i++) {
-	if ($head[$i] eq $aid or $head[$i] eq $aid.".KAD") {
+	my $head_value = $head[$i];
+	$head_value =~ s/\.KAD$//g;
+	if ($head_value eq $aid) {
 		push(@selcols, $i);
 	}
 }
 
 if (!@selcols) {
 	print STDERR "error: no columns were identified to match --aid\n";
+	exit;
+} elsif ($#selcols == 0) {
+	print STDERR "error: only 1 column was identified to match --aid\n";
+	print STDERR "       there should be one column for --aid and one for its KAD values\n";
 	exit;
 } elsif ($#selcols > 1) {
 	print STDERR "error: >2 columns were identified to match --aid\n";
