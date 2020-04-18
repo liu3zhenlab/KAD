@@ -17,7 +17,7 @@ use lib "$FindBin::Bin/lib";
 use kmerge;
 use kad;
 
-my $version = "0.16";
+my $version = "0.1.6";
 
 sub prompt {
     print <<EOF;
@@ -42,26 +42,26 @@ sub prompt {
                     If specified, cmode will not be computed by using the profile of read k-mer abundance.
     --readdepth <num> estimated depth of reads; not required; if specified, it will be used to evaluate the accuracy of "cmode".
     --kadcutoff	<str of five numbers>
-        a set of cutoffs specified to classify k-mers based on KAD values:
-        1. Good:        K-mers that basically contain no errors; KADs of these k-mers are between the 2nd value and
-                        the 3rd value specified by --kadcutoff, which by default are (-0.5, 0.5).
-                        Note: some k-mers with low counts from reads but not presented in the assembly are in this category;
-        2. Error:       K-mers with a KAD equaling -1. In this group, most k-mers are single copy in the assembly but with
-                        zero counts in reads. The criteria specified by --kadcutoff will not affect the finding of Error k-mers.
-        3. OverRep:     K-mers showing multiple locations in the assembly but lower copied are indicated by read depths;
-                        KADs of these k-mers are smaller than or equqal to the 1st value specified by --kadcutoff, which by
-                        default is -1. K-mers with a KAD equaling -1 are excluded no matter what cutoff is used.
-        4. LowUnderRep: K-mers showing less copies in the assembly compared to copies indicated by read depths, for
-                        which, by default, KADs are between the 4th value (0.75) and the 5th value (2) specified by --kadcutoff.
-        5. HighUnderRep:K-mers showing less copies at a high degree in the assembly as compared to copies indicated by read
-                        depths, for which, by default, KADs are higher than or equal to the 5th value (2) specified by --kadcutoff.
-        default=(-1, -0.5, 0.5, 0.75, 2).
+      a set of cutoffs specified to classify k-mers based on KAD values:
+      1.Good:        K-mers that basically contain no errors; KADs of these k-mers are between the 2nd value and
+                     the 3rd value specified by --kadcutoff, which by default are (-0.5, 0.5).
+                     Note: some k-mers with low counts from reads but not presented in the assembly are in this category;
+      2.Error:       K-mers with a KAD equaling -1. In this group, most k-mers are single copy in the assembly but with
+                     zero counts in reads. The criteria specified by --kadcutoff will not affect the finding of Error k-mers.
+      3.OverRep:     K-mers showing multiple locations in the assembly but lower copied are indicated by read depths;
+                     KADs of these k-mers are smaller than or equqal to the 1st value specified by --kadcutoff, which by
+                     default is -1. K-mers with a KAD equaling -1 are excluded no matter what cutoff is used.
+      4.LowUnderRep: K-mers showing less copies in the assembly compared to copies indicated by read depths, for
+                     which, by default, KADs are between the 4th value (0.75) and the 5th value (2) specified by --kadcutoff.
+      5.HighUnderRep:K-mers showing less copies at a high degree in the assembly as compared to copies indicated by read
+                     depths, for which, by default, KADs are higher than or equal to the 5th value (2) specified by --kadcutoff.
+      Default=(-1, -0.5, 0.5, 0.75, 2).
     --binlen <num>  length of KAD interval for KAD statistics; similar to bin size for determining KAD histogram (0.05)
     --threads <num> number of cpus (1)
     --version       version information
     --help:         help information.
 
-	o example: to generate KAD profiles with read and assemblies
+    o example: to generate KAD profiles with read and assemblies
       perl seqKADprofile.pl --read data1.fq.gz --read data2.fq.gz --rid PE250 --minc 5 \
          --asm asm1.fasta --asm asm2.fasta --asm asm3.fasta \
          --aid asm1 --aid asm2 --aid asm3
