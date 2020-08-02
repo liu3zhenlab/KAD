@@ -17,7 +17,9 @@ use lib "$FindBin::Bin/lib";
 use kmerge;
 use kad;
 
-my $version = "0.1.6";
+my $version = "0.1.7";
+# LOG
+# 8/1/2020: fix an error by changing "incmode" to "cmode"
 
 sub prompt {
     print <<EOF;
@@ -79,7 +81,7 @@ my (@read, $minc, @asm, $rkmer, $akmer, $rid, @aid, $readdepth, $threads,
 
 &GetOptions(\%opts, "read=s@", "minc=i", "asm=s@",
                     "rid=s", "aid=s@", "prefix=s",
-					"readdepth=i", "threads=i", "klen=i", "incmode=i",
+					"readdepth=i", "threads=i", "klen=i", "cmode=i",
 					"kadcutoff=s", "binlen=f", "version", "help");
 
 if (exists $opts{version}) {
@@ -229,8 +231,8 @@ open(CMODE, ">$cmode_file") || die;
 print LOG "o determine mode of counts of read k-mers\n";
 my $minc_val = $minc;
 my $cmodev;
-if (exists $opts{incmode}) {
-	$cmodev = $opts{incmode};
+if (exists $opts{cmode}) {
+	$cmodev = $opts{cmode};
 	print LOG "  - use user's input cmode as the mode of counts of read k-mers, which is $cmodev\n";
 } else {
 	my $num_try = 1;
