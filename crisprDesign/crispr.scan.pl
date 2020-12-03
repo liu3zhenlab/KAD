@@ -120,6 +120,13 @@ if ($bowtiepath eq "") {
 	exit;
 }
 
+my $rscript=`which Rscript`;
+chomp $rscript;
+if ($rscript eq "") {
+	print STDERR "R needs to be installed or loaded\n";
+	exit;
+}
+
 &logmessage("Dependency was detected");
 
 #####################

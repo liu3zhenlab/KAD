@@ -1,0 +1,186 @@
+---
+title: "Report of CRISPR Oligo Design"
+output:
+  html_document:
+    df_print: paged
+date: "`r format(Sys.time(), '%d %B %Y')`"
+params:
+  crdesign: null
+  gtf: null
+  prefix: null
+  wd: null
+  nperfect: null
+  offcutoff: null
+---
+
+<style type="text/css">
+body{ /* Normal  */
+	font-size: 16px;
+}
+
+td {  /* Table  */
+	font-size: 12px;
+}
+h1.title {
+	font-size: 32px;
+	color: DarkRed;
+}
+h1 { /* Header 1 */
+	font-size: 24px;
+	color: DarkBlue;
+}
+h2 { /* Header 2 */
+	font-size: 20px;
+	color: DarkBlue;
+}
+h3 { /* Header 3 */
+	font-size: 18px;
+	color: DarkBlue;
+}
+
+code.r{ /* Code block */
+	font-size: 12px;
+}
+
+pre { /* Code block - determines code spacing between lines */
+	font-size: 14px;
+}
+
+caption {
+	font-weight: bold;
+	font-size: 1.05em;
+} 
+</style>
+
+### Here is working directory
+```{r, echo = FALSE, comment = ""}
+wd <- params$wd
+prefix <- params$prefix
+crdesign <- params$crdesign
+gtf <- params$gtf
+perfect_hits_cutoff <- params$nperfect
+second.hits.score.cutoff <- params$offcutoff
+```
+`r wd`
+
+```{r, echo = FALSE}
+judge.order <- function(x) {
+  count <- 0
+  while (x > 1) {
+    x <- x/10
+    count = count +1;
+  }
+  return(count)
+}
+
+# exchange A with B
+tr <- function(str, A, B) {
+  str <- gsub(A, "x", str)
+  str <- gsub(B, A, str)
+  str <- gsub("x", B, str)
+  str
+}
+
+### string reverse
+strrev <- function(str) {
+  str.vec <- rev(strsplit(str, "")[[1]])
+  newstr <- paste(str.vec, collapse = "")
+  newstr
+}
+
+### sequence reverse-complementary
+revcom <- function(str) {
+  str <- strrev(str)
+  str <- tr(str, "A", "T")
+  str <- tr(str, "a", "t")
+  str <- tr(str, "G", "C")
+  str <- tr(str, "g", "c")
+  str
+}
+
+### convert xxxx-xxxx to mean position
+mean.pos <- function(posstr) {
+  .pos <- as.integer(strsplit(posstr, "_")[[1]])
+  meanpos <- round(mean(.pos))
+}
+
+### CRISPR oligo ID and positions for a transcript:
+crispr2pos <- function(crispr, transcript, all = F) {
+  if (all) {
+    crispr2 <- crispr
+  } else {
+    crispr2 <- crispr[grep(transcript, crispr$Source), ]
+  }
+  ids <- crispr2$Order
+  osource <- crispr2$Source
+  osource <- gsub(".*;.*us", "us", osource)
+  osource <- gsub(";.*", "", osource)
+  osource <- gsub(".*us-[0-9]+_[0-9]+-[^_+]_", "", osource) # only keep two coordinates on reference, e.g., "xxx_xxx"
+  osource.meanpos <- sapply(osource, mean.pos)
+  osource.meanpos <- as.numeric(as.character(osource.meanpos))
+  pos.order <- order(osource.meanpos)
+  osource.meanpos <- osource.meanpos[pos.order]
+  ids <- ids[pos.order]
+  list(ids = ids, os = osource.meanpos)
+}
+
+### Transcript information
+```{r, echo=FALSE, comment=""}
+# read gtf data
+gtfdata <- read.delim(gtf, header = F)
+gtfdata.info <- gtfdata[, 9]
+gtfdata.info <- gtfdata.info[grep("transcript_id", gtfdata.info)]
+gtfdata.info <- gsub(".*transcript_id ", "", gtfdata.info)
+gtfdata.info <- gsub(";.*", "", gtfdata.info)
+isoforms <- unique(gtfdata.info)
+isoforms.df <- data.frame(Transcript = isoforms)
+kable(isoforms.df, row.names = F, caption = "Table 1. List of transcripts")
+```
+
+### crRNA 20 nt oligo design: `r prefix`
+Off-target scoring rule, considering PAM site after crRNA:  
+perfect match to designed oligo: 22  
+Penalty of mismatch at the PAM site: -10  
+Penalty of mismatch at 1 and 9-20  : -5  
+Penalty of mismatch at 6-8         : -3  
+Penalty of mismatch at 2-5         : -2
+
+```{r, echo=FALSE, comment=""}
+# crRNA
+d <- read.delim(crdesign, stringsAsFactors = F)
+### filtering criteria:
+#perfect_hits_cutoff <- 1
+#second.hits.score.cutoff <- 10
+criteria <- d$BestNum <= perfect_hits_cutoff & d$SecondBestScore < second.hits.score.cutoff
+```
+
+In total, `r nrow(d)` crRNA oligos were designed, which were aligned to the reference genome
+ to evalue off targets. The following criteria were used to filter crRNA oligos with a high chance to hit off-targets.  
+1. At most, `r perfect_hits_cutoff` perfect (best) match allowed in the reference genome  
+2. the score of the second best match smaller than `r second.hits.score.cutoff`  
+As a result, the number of designs passing the criteria is **`r sum(criteria)`**.  
+
+```{r, echo=FALSE, comment=""}
+d <- d[criteria, ]
+### order based on design ID
+d$Order <- as.integer(gsub(".*:", "", d$crOligo_name ))
+d <- d[order(d$Order), ]
+d$crOligo20 <- substr(d$crOligo, 1, 20)
+
+### output designing list
+out <- d[, c("Order", "crOligo_name", "crOligo20", "Source")]
+kable(out[, 1:3], row.names = F, caption = "Table 2. CRISPR design")
+```
+
+### Output oligos with overhangs for **BsmBI** 
+```{r, echo=FALSE, comment=""}
+cat("Fusion crRNA oligo design for BsmBII site:")
+d$crRNA_BsmBIplus <-  paste0("tgca", d$crOligo20)
+d$crOligo20rc <- sapply(d$crOligo20, revcom)
+d$crRNA_BsmBIminus = paste0("aaac", d$crOligo20rc)
+out.BsmBI <- d[, c("Order", "crOligo_name", "crRNA_BsmBIplus", "crRNA_BsmBIminus")]
+BsmBI_outfile <- paste0(wd, "/", prefix, "/5.", prefix, ".BsmBI.oligos.txt")
+write.table(out.BsmBI, BsmBI_outfile, quote = F, row.names = F, sep = "\t")
+kable(out.BsmBI, row.names = F, caption = "Table 3. crRNA-BsmBI-oligos")
+```
+

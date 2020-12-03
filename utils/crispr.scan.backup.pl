@@ -384,44 +384,6 @@ foreach my $each_entry (keys %entry_record) {
 }
 close IN;
 
-###############################################
-# Rmd for report
-###############################################
-
-&logmessage("Generate HTML report");
-
-# Rmd
-my $rmd = $scriptPath."\/utils\/crRNAonGene.Rmd";
-my $wdir = `pwd`;
-chomp($wdir);
-
-
-#html report:
-my $htmlout = $prefix.".gRNAdesign.report.html";
-my $tmpRscript = $prefix."/.".$prefix.".Rmd.render.R";
-open(TMPR, ">$tmpRscript") || die;
-print TMPR "library\(rmarkdown\)\n";
-print TMPR "library\(knitr\)\n";
-print TMPR "\n";
-print TMPR "render\(\'$rmd\',\n";
-print TMPR "  params = list(\n";
-print TMPR "    wd=\"$wdir\",\n";
-print TMPR "    crdesign=\"$design_out\",\n";
-print TMPR "    gtf=\"$genegtf\",\n";
-print TMPR "    prefix=\"$prefix\",\n";
-print TMPR "    nperfect=\"$max_perfect\",\n";
-print TMPR "    offcutoff=\"$offtarget_cutoff_score\"\),\n";
-print TMPR "  knit_root_dir=getwd\(\),\n";
-print TMPR "  output_dir=getwd\(\),\n";
-print TMPR "  output_format=\"html_document\",\n";
-print TMPR "  output_file=\"$htmlout\"\)\n";
-close TMPR;
-
-# run
-`Rscript $tmpRscript`;
-#`rm $tmpRscript`;
-
-
 #############
 # modules
 #############
