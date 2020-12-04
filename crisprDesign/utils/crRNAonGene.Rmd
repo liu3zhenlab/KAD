@@ -163,9 +163,10 @@ As a result, the number of designs passing the criteria is **`r sum(criteria)`**
 ```{r, echo=FALSE, comment=""}
 d <- d[criteria, ]
 ### order based on design ID
-d$Order <- as.integer(gsub(".*:", "", d$crOligo_name ))
-d <- d[order(d$Order), ]
+
+d <- d[order(d$crOligo_name), ]
 d$crOligo20 <- substr(d$crOligo, 1, 20)
+d$Order <- 1:nrow(d)
 
 ### output designing list
 out <- d[, c("Order", "crOligo_name", "crOligo20", "Source")]
