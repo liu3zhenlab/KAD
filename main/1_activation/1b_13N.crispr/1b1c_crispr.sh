@@ -12,5 +12,6 @@ perl ../../../crisprDesign/crispr.scan.pl --fasta $ref \
 	--glist $genelist \
 	--feature promoter \
 	--pattern [ATGC]{21}GG \
+	--motif NNN \
 	--force
  
