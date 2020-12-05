@@ -10,7 +10,7 @@
 
 
 
-<meta name="date" content="2020-12-04" />
+<meta name="date" content="2020-12-05" />
 
 <title>Report of CRISPR Oligo Design</title>
 
@@ -1634,7 +1634,7 @@ summary {
 
 
 <h1 class="title toc-ignore">Report of CRISPR Oligo Design</h1>
-<h4 class="date">04 December 2020</h4>
+<h4 class="date">05 December 2020</h4>
 
 </div>
 
@@ -1679,7 +1679,7 @@ caption {
 </style>
 <div id="here-is-working-directory" class="section level3">
 <h3>Here is working directory</h3>
-<p>/bulk/liu3zhen/research/projects/HTcrispr/main/1_activation/1b_crispr</p>
+<p>/bulk/liu3zhen/research/projects/HTcrispr/main/1_activation/1b_13N.crispr</p>
 <table>
 <caption>Table 1. List of transcripts</caption>
 <thead>
@@ -1699,10 +1699,10 @@ Penalty of mismatch at the PAM site: -10<br />
 Penalty of mismatch at 1 and 9-20 : -5<br />
 Penalty of mismatch at 6-8 : -3<br />
 Penalty of mismatch at 2-5 : -2</p>
-<p>In total, 178 crRNA oligos were designed, which were aligned to the reference genome to evalue off targets. The following criteria were used to filter crRNA oligos with a high chance to hit off-targets.<br />
+<p>In total, 255 crRNA oligos were designed, which were aligned to the reference genome to evalue off targets. The following criteria were used to filter crRNA oligos with a high chance to hit off-targets.<br />
 1. At most, 1 perfect (best) match allowed in the reference genome<br />
 2. the score of the second best match smaller than 10<br />
-As a result, the number of designs passing the criteria is <strong>123</strong>.</p>
+As a result, the number of designs passing the criteria is <strong>183</strong>.</p>
 <table>
 <caption>Table 2. CRISPR design</caption>
 <thead>
@@ -1715,618 +1715,918 @@ As a result, the number of designs passing the criteria is <strong>123</strong>.
 <tbody>
 <tr class="odd">
 <td align="right">1</td>
-<td align="left">Zm00001d003322:1</td>
-<td align="left">GCACCAAAACTCCGAAAGTT</td>
+<td align="left">Zm00001d002234:2</td>
+<td align="left">TGCAATCCGCATTTATTGAG</td>
 </tr>
 <tr class="even">
 <td align="right">2</td>
-<td align="left">Zm00001d003322:2</td>
-<td align="left">GCACGCGCCGCACCGCGCCA</td>
+<td align="left">Zm00001d002234:5</td>
+<td align="left">TTTATTTCTGTTTCTACAGA</td>
 </tr>
 <tr class="odd">
 <td align="right">3</td>
-<td align="left">Zm00001d003322:5</td>
-<td align="left">TTTCCTTCGAAAATTTGCCA</td>
+<td align="left">Zm00001d003322:1</td>
+<td align="left">AATCCAAACTTTCGGAGTTT</td>
 </tr>
 <tr class="even">
 <td align="right">4</td>
-<td align="left">Zm00001d005016:0</td>
-<td align="left">AGGACGGGGTTTTTATAGAG</td>
+<td align="left">Zm00001d003322:10</td>
+<td align="left">GCACCAAAACTCCGAAAGTT</td>
 </tr>
 <tr class="odd">
 <td align="right">5</td>
-<td align="left">Zm00001d005016:1</td>
-<td align="left">CAACTGCCATTGTTGTTGCG</td>
+<td align="left">Zm00001d003322:6</td>
+<td align="left">GCACGCGCCGCACCGCGCCA</td>
 </tr>
 <tr class="even">
 <td align="right">6</td>
+<td align="left">Zm00001d003322:9</td>
+<td align="left">TTTCCTTCGAAAATTTGCCA</td>
+</tr>
+<tr class="odd">
+<td align="right">7</td>
+<td align="left">Zm00001d005016:0</td>
+<td align="left">AGGACGGGGTTTTTATAGAG</td>
+</tr>
+<tr class="even">
+<td align="right">8</td>
+<td align="left">Zm00001d005016:1</td>
+<td align="left">CAACTGCCATTGTTGTTGCG</td>
+</tr>
+<tr class="odd">
+<td align="right">9</td>
+<td align="left">Zm00001d005016:8</td>
+<td align="left">CATGAGCACAACGGGGGGGC</td>
+</tr>
+<tr class="even">
+<td align="right">10</td>
+<td align="left">Zm00001d005071:3</td>
+<td align="left">CAATATTAGAATTTTAAGAA</td>
+</tr>
+<tr class="odd">
+<td align="right">11</td>
+<td align="left">Zm00001d005071:4</td>
+<td align="left">TTGGTTGGTTCGTATCGTGG</td>
+</tr>
+<tr class="even">
+<td align="right">12</td>
+<td align="left">Zm00001d005071:5</td>
+<td align="left">GAGGCATTTAATGACAGGGC</td>
+</tr>
+<tr class="odd">
+<td align="right">13</td>
+<td align="left">Zm00001d005071:6</td>
+<td align="left">AGGGTAGGGCAGCATGCGTA</td>
+</tr>
+<tr class="even">
+<td align="right">14</td>
 <td align="left">Zm00001d005843:0</td>
 <td align="left">GTCCACTCCACTCCCTACTC</td>
 </tr>
 <tr class="odd">
-<td align="right">7</td>
-<td align="left">Zm00001d005843:4</td>
+<td align="right">15</td>
+<td align="left">Zm00001d005843:11</td>
 <td align="left">AGGCGTGCTGAGCGGGTGAC</td>
 </tr>
 <tr class="even">
-<td align="right">8</td>
-<td align="left">Zm00001d005843:5</td>
+<td align="right">16</td>
+<td align="left">Zm00001d005843:12</td>
 <td align="left">ATTTTAACTGGTGGAGGTGG</td>
 </tr>
 <tr class="odd">
-<td align="right">9</td>
+<td align="right">17</td>
 <td align="left">Zm00001d007039:0</td>
 <td align="left">GCGAATCATTAAGAAACGCC</td>
 </tr>
 <tr class="even">
-<td align="right">10</td>
-<td align="left">Zm00001d007039:6</td>
-<td align="left">AGAGATAGTTGGGCCTTTCG</td>
+<td align="right">18</td>
+<td align="left">Zm00001d007039:10</td>
+<td align="left">AGGCAAACTAAAATTACGCG</td>
 </tr>
 <tr class="odd">
-<td align="right">11</td>
-<td align="left">Zm00001d007039:7</td>
+<td align="right">19</td>
+<td align="left">Zm00001d007039:3</td>
 <td align="left">AATGATTCGCTGACGTTGAA</td>
 </tr>
 <tr class="even">
-<td align="right">12</td>
+<td align="right">20</td>
+<td align="left">Zm00001d007039:9</td>
+<td align="left">GATTCGGAGAGGATGATGAA</td>
+</tr>
+<tr class="odd">
+<td align="right">21</td>
 <td align="left">Zm00001d007978:0</td>
 <td align="left">GCCTGCATGTCTGATTCAGT</td>
 </tr>
-<tr class="odd">
-<td align="right">13</td>
-<td align="left">Zm00001d007978:2</td>
+<tr class="even">
+<td align="right">22</td>
+<td align="left">Zm00001d007978:3</td>
 <td align="left">GCTGCGCGGAACTGCACCCT</td>
 </tr>
-<tr class="even">
-<td align="right">14</td>
-<td align="left">Zm00001d007978:8</td>
+<tr class="odd">
+<td align="right">23</td>
+<td align="left">Zm00001d007978:5</td>
 <td align="left">AACGCACGCCGAGTCGCCGA</td>
 </tr>
-<tr class="odd">
-<td align="right">15</td>
-<td align="left">Zm00001d008251:1</td>
+<tr class="even">
+<td align="right">24</td>
+<td align="left">Zm00001d008251:8</td>
 <td align="left">AATTCTGGATGCAGTCTGCA</td>
 </tr>
+<tr class="odd">
+<td align="right">25</td>
+<td align="left">Zm00001d009493:4</td>
+<td align="left">GGGAGACGGCTCGGAGCTGC</td>
+</tr>
 <tr class="even">
-<td align="right">16</td>
-<td align="left">Zm00001d008251:2</td>
-<td align="left">AGGTTCAGAGGCCGCCCGTG</td>
+<td align="right">26</td>
+<td align="left">Zm00001d011223:0</td>
+<td align="left">ACAGCCTTTTGCATCTTTGT</td>
 </tr>
 <tr class="odd">
-<td align="right">17</td>
+<td align="right">27</td>
+<td align="left">Zm00001d011223:1</td>
+<td align="left">AGCTTTTATCTACTCGCTGC</td>
+</tr>
+<tr class="even">
+<td align="right">28</td>
+<td align="left">Zm00001d011223:2</td>
+<td align="left">TTTTAACATGTTTCTTTGAG</td>
+</tr>
+<tr class="odd">
+<td align="right">29</td>
+<td align="left">Zm00001d011223:8</td>
+<td align="left">CTTTTAGGGGAAGGGGAGAA</td>
+</tr>
+<tr class="even">
+<td align="right">30</td>
+<td align="left">Zm00001d011223:9</td>
+<td align="left">AGAAGGCAAAAGAGAGAGCC</td>
+</tr>
+<tr class="odd">
+<td align="right">31</td>
 <td align="left">Zm00001d011712:0</td>
 <td align="left">GTTTGAGTCCTTTCAAGACC</td>
 </tr>
 <tr class="even">
-<td align="right">18</td>
+<td align="right">32</td>
 <td align="left">Zm00001d011712:10</td>
-<td align="left">TTGAAAGGACTCAAACACCG</td>
-</tr>
-<tr class="odd">
-<td align="right">19</td>
-<td align="left">Zm00001d011712:3</td>
-<td align="left">AGAGGCAGAGCTGCTATTTT</td>
-</tr>
-<tr class="even">
-<td align="right">20</td>
-<td align="left">Zm00001d011712:4</td>
 <td align="left">GAAGTCCCAAGTTAGCAAGC</td>
 </tr>
 <tr class="odd">
-<td align="right">21</td>
-<td align="left">Zm00001d011712:6</td>
-<td align="left">TAACTTGGGACTTCCATTTC</td>
+<td align="right">33</td>
+<td align="left">Zm00001d011712:11</td>
+<td align="left">AGAGGCAGAGCTGCTATTTT</td>
 </tr>
 <tr class="even">
-<td align="right">22</td>
-<td align="left">Zm00001d011712:7</td>
+<td align="right">34</td>
+<td align="left">Zm00001d011712:13</td>
 <td align="left">CTGCGGTGAAGCTTAAAAGT</td>
 </tr>
 <tr class="odd">
-<td align="right">23</td>
-<td align="left">Zm00001d011712:8</td>
+<td align="right">35</td>
+<td align="left">Zm00001d011712:14</td>
 <td align="left">CCTCTCCTGCTCCTCGACTC</td>
 </tr>
 <tr class="even">
-<td align="right">24</td>
+<td align="right">36</td>
+<td align="left">Zm00001d011712:15</td>
+<td align="left">TAACTTGGGACTTCCATTTC</td>
+</tr>
+<tr class="odd">
+<td align="right">37</td>
+<td align="left">Zm00001d011712:16</td>
+<td align="left">TTGAAAGGACTCAAACACCG</td>
+</tr>
+<tr class="even">
+<td align="right">38</td>
 <td align="left">Zm00001d017207:0</td>
 <td align="left">TTATAAGAGAAGCTAAGAAC</td>
 </tr>
 <tr class="odd">
-<td align="right">25</td>
-<td align="left">Zm00001d017207:10</td>
+<td align="right">39</td>
+<td align="left">Zm00001d017207:21</td>
+<td align="left">TACATACATTTTTTTTCCCT</td>
+</tr>
+<tr class="even">
+<td align="right">40</td>
+<td align="left">Zm00001d017207:24</td>
+<td align="left">CTTAACTAAGAAGCATAAAA</td>
+</tr>
+<tr class="odd">
+<td align="right">41</td>
+<td align="left">Zm00001d017207:26</td>
 <td align="left">CGTTTTATGCTTCTTAGTTA</td>
 </tr>
 <tr class="even">
-<td align="right">26</td>
-<td align="left">Zm00001d017207:8</td>
-<td align="left">TACATACATTTTTTTTCCCT</td>
-</tr>
-<tr class="odd">
-<td align="right">27</td>
-<td align="left">Zm00001d017207:9</td>
-<td align="left">CTTAACTAAGAAGCATAAAA</td>
-</tr>
-<tr class="even">
-<td align="right">28</td>
-<td align="left">Zm00001d020790:0</td>
+<td align="right">42</td>
+<td align="left">Zm00001d020790:1</td>
 <td align="left">TGTTCTCCCTTTGCCGATGC</td>
 </tr>
 <tr class="odd">
-<td align="right">29</td>
-<td align="left">Zm00001d020790:10</td>
-<td align="left">TATGGACTATTCAGCTTCAG</td>
-</tr>
-<tr class="even">
-<td align="right">30</td>
-<td align="left">Zm00001d020790:9</td>
+<td align="right">43</td>
+<td align="left">Zm00001d020790:6</td>
 <td align="left">GCAAAGGGAGAACAGATTGA</td>
 </tr>
+<tr class="even">
+<td align="right">44</td>
+<td align="left">Zm00001d020790:7</td>
+<td align="left">TATGGACTATTCAGCTTCAG</td>
+</tr>
 <tr class="odd">
-<td align="right">31</td>
+<td align="right">45</td>
+<td align="left">Zm00001d026351:1</td>
+<td align="left">CGCTCTCTCTCTCTCTCTCC</td>
+</tr>
+<tr class="even">
+<td align="right">46</td>
+<td align="left">Zm00001d026351:5</td>
+<td align="left">GTGCAATCCACATTTATGAG</td>
+</tr>
+<tr class="odd">
+<td align="right">47</td>
 <td align="left">Zm00001d027425:0</td>
 <td align="left">TCACCGCCACCTAATAAAGA</td>
 </tr>
 <tr class="even">
-<td align="right">32</td>
+<td align="right">48</td>
 <td align="left">Zm00001d027425:1</td>
 <td align="left">AAAATTATCGCGCCCGCCAT</td>
 </tr>
 <tr class="odd">
-<td align="right">33</td>
+<td align="right">49</td>
 <td align="left">Zm00001d027425:2</td>
-<td align="left">GCGCACTGTCTGCCTCTTTT</td>
-</tr>
-<tr class="even">
-<td align="right">34</td>
-<td align="left">Zm00001d027425:3</td>
 <td align="left">GGGGGGAGGAAAGCGAAGCC</td>
 </tr>
+<tr class="even">
+<td align="right">50</td>
+<td align="left">Zm00001d027425:3</td>
+<td align="left">GCGCACTGTCTGCCTCTTTT</td>
+</tr>
 <tr class="odd">
-<td align="right">35</td>
+<td align="right">51</td>
 <td align="left">Zm00001d027425:4</td>
 <td align="left">CGCGGCCCCTTCCCGAAAAG</td>
 </tr>
 <tr class="even">
-<td align="right">36</td>
+<td align="right">52</td>
 <td align="left">Zm00001d027425:5</td>
 <td align="left">GACAGTGCGCACCCGGCCAA</td>
 </tr>
 <tr class="odd">
-<td align="right">37</td>
+<td align="right">53</td>
 <td align="left">Zm00001d027425:6</td>
 <td align="left">GCGCGATAATTTTCCTCGGA</td>
 </tr>
 <tr class="even">
-<td align="right">38</td>
+<td align="right">54</td>
 <td align="left">Zm00001d027425:7</td>
 <td align="left">CCCCCATACCCTTCTTTATT</td>
 </tr>
 <tr class="odd">
-<td align="right">39</td>
+<td align="right">55</td>
+<td align="left">Zm00001d027878:0</td>
+<td align="left">TTATGCGAGCAAGCTATATA</td>
+</tr>
+<tr class="even">
+<td align="right">56</td>
+<td align="left">Zm00001d027878:10</td>
+<td align="left">TGCTCGCATAAACGTCAAAA</td>
+</tr>
+<tr class="odd">
+<td align="right">57</td>
+<td align="left">Zm00001d027878:2</td>
+<td align="left">TACGTATGCTAAACGCTTCT</td>
+</tr>
+<tr class="even">
+<td align="right">58</td>
+<td align="left">Zm00001d027878:8</td>
+<td align="left">CTACGGGGGGAGTGCTGTGT</td>
+</tr>
+<tr class="odd">
+<td align="right">59</td>
+<td align="left">Zm00001d027878:9</td>
+<td align="left">AAGAAGCGTTTAGCATACGT</td>
+</tr>
+<tr class="even">
+<td align="right">60</td>
 <td align="left">Zm00001d028216:0</td>
 <td align="left">TTGCAAGAGAAGATAGGGGT</td>
 </tr>
-<tr class="even">
-<td align="right">40</td>
-<td align="left">Zm00001d028216:8</td>
+<tr class="odd">
+<td align="right">61</td>
+<td align="left">Zm00001d028216:2</td>
 <td align="left">TGCGTACGGACCCATGTGTG</td>
 </tr>
+<tr class="even">
+<td align="right">62</td>
+<td align="left">Zm00001d028216:4</td>
+<td align="left">GAGACCAACCACGCAGCGAT</td>
+</tr>
 <tr class="odd">
-<td align="right">41</td>
-<td align="left">Zm00001d028216:9</td>
-<td align="left">CTCTCCGCCCGATCGCTGCG</td>
+<td align="right">63</td>
+<td align="left">Zm00001d028317:0</td>
+<td align="left">TCCGAGGCAGGCGGACAGCG</td>
 </tr>
 <tr class="even">
-<td align="right">42</td>
-<td align="left">Zm00001d028317:0</td>
+<td align="right">64</td>
+<td align="left">Zm00001d028317:1</td>
 <td align="left">GAGGCCATTGAAGGAGACAA</td>
 </tr>
 <tr class="odd">
-<td align="right">43</td>
-<td align="left">Zm00001d028317:3</td>
+<td align="right">65</td>
+<td align="left">Zm00001d028317:2</td>
 <td align="left">TGCAAATCTAAATTTTTCGC</td>
 </tr>
 <tr class="even">
-<td align="right">44</td>
+<td align="right">66</td>
 <td align="left">Zm00001d028317:4</td>
-<td align="left">TAGTCCTTTGTCTCCTTCAA</td>
+<td align="left">CCCACGCTGTCCGCCTGCCT</td>
 </tr>
 <tr class="odd">
-<td align="right">45</td>
+<td align="right">67</td>
 <td align="left">Zm00001d028317:5</td>
 <td align="left">GTTTTCCATTCGTTTTCTTT</td>
 </tr>
 <tr class="even">
-<td align="right">46</td>
-<td align="left">Zm00001d031109:6</td>
-<td align="left">TCAAGATTATGCTTGTGAGA</td>
+<td align="right">68</td>
+<td align="left">Zm00001d028317:6</td>
+<td align="left">TAGTCCTTTGTCTCCTTCAA</td>
 </tr>
 <tr class="odd">
-<td align="right">47</td>
+<td align="right">69</td>
+<td align="left">Zm00001d030069:0</td>
+<td align="left">CTGCCACGTGGGCTCCGTGA</td>
+</tr>
+<tr class="even">
+<td align="right">70</td>
+<td align="left">Zm00001d030069:1</td>
+<td align="left">TCCGCTTTGACTTGTTATTC</td>
+</tr>
+<tr class="odd">
+<td align="right">71</td>
+<td align="left">Zm00001d030069:2</td>
+<td align="left">CTTCCGCGTGACTCGACCTG</td>
+</tr>
+<tr class="even">
+<td align="right">72</td>
+<td align="left">Zm00001d030069:3</td>
+<td align="left">GACGCGCTCGGCTGACTTCA</td>
+</tr>
+<tr class="odd">
+<td align="right">73</td>
+<td align="left">Zm00001d030069:4</td>
+<td align="left">CCACGCGCGCTGGACCGTCA</td>
+</tr>
+<tr class="even">
+<td align="right">74</td>
+<td align="left">Zm00001d030069:6</td>
+<td align="left">GCCAGAATAACAAGTCAAAG</td>
+</tr>
+<tr class="odd">
+<td align="right">75</td>
 <td align="left">Zm00001d031109:7</td>
 <td align="left">ATTTGTTCCATAGATTCAGT</td>
 </tr>
 <tr class="even">
-<td align="right">48</td>
-<td align="left">Zm00001d032249:0</td>
-<td align="left">TTTGACATCTCAAGAGAAAG</td>
-</tr>
-<tr class="odd">
-<td align="right">49</td>
-<td align="left">Zm00001d032249:2</td>
-<td align="left">TTGCTTGTGCTTGTGTTTTC</td>
-</tr>
-<tr class="even">
-<td align="right">50</td>
-<td align="left">Zm00001d032249:3</td>
-<td align="left">ATAGCAACTCACAAAAAAAG</td>
-</tr>
-<tr class="odd">
-<td align="right">51</td>
-<td align="left">Zm00001d036425:0</td>
-<td align="left">TGTGCCAAAAGCCGCCACCA</td>
-</tr>
-<tr class="even">
-<td align="right">52</td>
-<td align="left">Zm00001d036425:1</td>
-<td align="left">CGCGCCGAGATCGACCCAGC</td>
-</tr>
-<tr class="odd">
-<td align="right">53</td>
-<td align="left">Zm00001d036425:2</td>
-<td align="left">CTGACCGACGGACGGCACGG</td>
-</tr>
-<tr class="even">
-<td align="right">54</td>
-<td align="left">Zm00001d036425:3</td>
-<td align="left">CCCACGCCGCGTCAGATCAC</td>
-</tr>
-<tr class="odd">
-<td align="right">55</td>
-<td align="left">Zm00001d036425:4</td>
-<td align="left">CCGGCCCCTGTGATCTGACG</td>
-</tr>
-<tr class="even">
-<td align="right">56</td>
-<td align="left">Zm00001d036425:5</td>
-<td align="left">GGGTGTAAGCGCCGGCCGGC</td>
-</tr>
-<tr class="odd">
-<td align="right">57</td>
-<td align="left">Zm00001d036425:6</td>
-<td align="left">CAATCCACCGTGCCGTCCGT</td>
-</tr>
-<tr class="even">
-<td align="right">58</td>
-<td align="left">Zm00001d036425:7</td>
-<td align="left">TCAGCCGTGGTGGCGGCTTT</td>
-</tr>
-<tr class="odd">
-<td align="right">59</td>
-<td align="left">Zm00001d037737:10</td>
-<td align="left">CGGTACCAAAGATATAAAAA</td>
-</tr>
-<tr class="even">
-<td align="right">60</td>
-<td align="left">Zm00001d037737:11</td>
-<td align="left">AGAGGGGAATGGAAGAGTCC</td>
-</tr>
-<tr class="odd">
-<td align="right">61</td>
-<td align="left">Zm00001d037737:12</td>
-<td align="left">TTTCGTCCGTTTGAAACGTG</td>
-</tr>
-<tr class="even">
-<td align="right">62</td>
-<td align="left">Zm00001d037737:13</td>
-<td align="left">GCTACGACCTGCACATTTTT</td>
-</tr>
-<tr class="odd">
-<td align="right">63</td>
-<td align="left">Zm00001d037737:8</td>
-<td align="left">ATAATTACCTAAAAATGTGC</td>
-</tr>
-<tr class="even">
-<td align="right">64</td>
-<td align="left">Zm00001d037737:9</td>
-<td align="left">TTAAATTAATACGAAAGAAT</td>
-</tr>
-<tr class="odd">
-<td align="right">65</td>
-<td align="left">Zm00001d037814:0</td>
-<td align="left">TGACTGAATGCTCCGCAGCG</td>
-</tr>
-<tr class="even">
-<td align="right">66</td>
-<td align="left">Zm00001d037814:2</td>
-<td align="left">TTGCATGGAAGAGCTTGGTG</td>
-</tr>
-<tr class="odd">
-<td align="right">67</td>
-<td align="left">Zm00001d037814:4</td>
-<td align="left">GGCTATGGGTCGAGAAAGAG</td>
-</tr>
-<tr class="even">
-<td align="right">68</td>
-<td align="left">Zm00001d037814:5</td>
-<td align="left">CACATCCTCGCCCCGCGCTG</td>
-</tr>
-<tr class="odd">
-<td align="right">69</td>
-<td align="left">Zm00001d037814:6</td>
-<td align="left">GTCATTTGCCACTACTCTCA</td>
-</tr>
-<tr class="even">
-<td align="right">70</td>
-<td align="left">Zm00001d037814:7</td>
-<td align="left">AAGCTCTTCCATGCAATCCA</td>
-</tr>
-<tr class="odd">
-<td align="right">71</td>
-<td align="left">Zm00001d037814:8</td>
-<td align="left">GTAGCAACAAAAGTGGTGAC</td>
-</tr>
-<tr class="even">
-<td align="right">72</td>
-<td align="left">Zm00001d038832:1</td>
-<td align="left">GGATGGTGTGTAGTCTAGAT</td>
-</tr>
-<tr class="odd">
-<td align="right">73</td>
-<td align="left">Zm00001d038832:7</td>
-<td align="left">TATAAAATTTTAAACAACAA</td>
-</tr>
-<tr class="even">
-<td align="right">74</td>
-<td align="left">Zm00001d038832:9</td>
-<td align="left">TATAAGCTAGATAATAGAGA</td>
-</tr>
-<tr class="odd">
-<td align="right">75</td>
-<td align="left">Zm00001d039017:0</td>
-<td align="left">CACCCCAGCTGTCTTGCCCA</td>
-</tr>
-<tr class="even">
 <td align="right">76</td>
-<td align="left">Zm00001d039017:2</td>
-<td align="left">CCGACGTGCGCTTTTATCGA</td>
+<td align="left">Zm00001d031109:9</td>
+<td align="left">TCAAGATTATGCTTGTGAGA</td>
 </tr>
 <tr class="odd">
 <td align="right">77</td>
+<td align="left">Zm00001d032249:0</td>
+<td align="left">TTGCTTGTGCTTGTGTTTTC</td>
+</tr>
+<tr class="even">
+<td align="right">78</td>
+<td align="left">Zm00001d032249:11</td>
+<td align="left">TTTGACATCTCAAGAGAAAG</td>
+</tr>
+<tr class="odd">
+<td align="right">79</td>
+<td align="left">Zm00001d032249:2</td>
+<td align="left">ATAGCAACTCACAAAAAAAG</td>
+</tr>
+<tr class="even">
+<td align="right">80</td>
+<td align="left">Zm00001d036425:0</td>
+<td align="left">TGTGCCAAAAGCCGCCACCA</td>
+</tr>
+<tr class="odd">
+<td align="right">81</td>
+<td align="left">Zm00001d036425:1</td>
+<td align="left">CTGACCGACGGACGGCACGG</td>
+</tr>
+<tr class="even">
+<td align="right">82</td>
+<td align="left">Zm00001d036425:2</td>
+<td align="left">CGCGCCGAGATCGACCCAGC</td>
+</tr>
+<tr class="odd">
+<td align="right">83</td>
+<td align="left">Zm00001d036425:3</td>
+<td align="left">CCCACGCCGCGTCAGATCAC</td>
+</tr>
+<tr class="even">
+<td align="right">84</td>
+<td align="left">Zm00001d036425:4</td>
+<td align="left">CCGGCCCCTGTGATCTGACG</td>
+</tr>
+<tr class="odd">
+<td align="right">85</td>
+<td align="left">Zm00001d036425:5</td>
+<td align="left">GGGTGTAAGCGCCGGCCGGC</td>
+</tr>
+<tr class="even">
+<td align="right">86</td>
+<td align="left">Zm00001d036425:6</td>
+<td align="left">CAATCCACCGTGCCGTCCGT</td>
+</tr>
+<tr class="odd">
+<td align="right">87</td>
+<td align="left">Zm00001d036425:7</td>
+<td align="left">TCAGCCGTGGTGGCGGCTTT</td>
+</tr>
+<tr class="even">
+<td align="right">88</td>
+<td align="left">Zm00001d037737:10</td>
+<td align="left">CGGTACCAAAGATATAAAAA</td>
+</tr>
+<tr class="odd">
+<td align="right">89</td>
+<td align="left">Zm00001d037737:11</td>
+<td align="left">AGAGGGGAATGGAAGAGTCC</td>
+</tr>
+<tr class="even">
+<td align="right">90</td>
+<td align="left">Zm00001d037737:12</td>
+<td align="left">GCTACGACCTGCACATTTTT</td>
+</tr>
+<tr class="odd">
+<td align="right">91</td>
+<td align="left">Zm00001d037737:13</td>
+<td align="left">TTTCGTCCGTTTGAAACGTG</td>
+</tr>
+<tr class="even">
+<td align="right">92</td>
+<td align="left">Zm00001d037737:8</td>
+<td align="left">ATAATTACCTAAAAATGTGC</td>
+</tr>
+<tr class="odd">
+<td align="right">93</td>
+<td align="left">Zm00001d037737:9</td>
+<td align="left">TTAAATTAATACGAAAGAAT</td>
+</tr>
+<tr class="even">
+<td align="right">94</td>
+<td align="left">Zm00001d037814:1</td>
+<td align="left">TTGCATGGAAGAGCTTGGTG</td>
+</tr>
+<tr class="odd">
+<td align="right">95</td>
+<td align="left">Zm00001d037814:2</td>
+<td align="left">TGACTGAATGCTCCGCAGCG</td>
+</tr>
+<tr class="even">
+<td align="right">96</td>
+<td align="left">Zm00001d037814:3</td>
+<td align="left">GGCTATGGGTCGAGAAAGAG</td>
+</tr>
+<tr class="odd">
+<td align="right">97</td>
+<td align="left">Zm00001d037814:4</td>
+<td align="left">CACATCCTCGCCCCGCGCTG</td>
+</tr>
+<tr class="even">
+<td align="right">98</td>
+<td align="left">Zm00001d037814:5</td>
+<td align="left">GTCATTTGCCACTACTCTCA</td>
+</tr>
+<tr class="odd">
+<td align="right">99</td>
+<td align="left">Zm00001d037814:6</td>
+<td align="left">AAGCTCTTCCATGCAATCCA</td>
+</tr>
+<tr class="even">
+<td align="right">100</td>
+<td align="left">Zm00001d037814:7</td>
+<td align="left">GTAGCAACAAAAGTGGTGAC</td>
+</tr>
+<tr class="odd">
+<td align="right">101</td>
+<td align="left">Zm00001d038832:1</td>
+<td align="left">GGATGGTGTGTAGTCTAGAT</td>
+</tr>
+<tr class="even">
+<td align="right">102</td>
+<td align="left">Zm00001d038832:14</td>
+<td align="left">TATAAGCTAGATAATAGAGA</td>
+</tr>
+<tr class="odd">
+<td align="right">103</td>
+<td align="left">Zm00001d038832:25</td>
+<td align="left">TATAAAATTTTAAACAACAA</td>
+</tr>
+<tr class="even">
+<td align="right">104</td>
+<td align="left">Zm00001d039017:0</td>
+<td align="left">CACCCCAGCTGTCTTGCCCA</td>
+</tr>
+<tr class="odd">
+<td align="right">105</td>
+<td align="left">Zm00001d039017:2</td>
+<td align="left">CCGACGTGCGCTTTTATCGA</td>
+</tr>
+<tr class="even">
+<td align="right">106</td>
+<td align="left">Zm00001d039017:4</td>
+<td align="left">CTGTGCTCGATCGATGATGA</td>
+</tr>
+<tr class="odd">
+<td align="right">107</td>
+<td align="left">Zm00001d039017:5</td>
+<td align="left">GTGCGTCACTGCTGGTGAGA</td>
+</tr>
+<tr class="even">
+<td align="right">108</td>
+<td align="left">Zm00001d039510:0</td>
+<td align="left">CTCCATTTTTCTAACTCCAC</td>
+</tr>
+<tr class="odd">
+<td align="right">109</td>
+<td align="left">Zm00001d039510:1</td>
+<td align="left">CAGTGACTCAGTCCCCCGCT</td>
+</tr>
+<tr class="even">
+<td align="right">110</td>
+<td align="left">Zm00001d039510:2</td>
+<td align="left">CGCAGCCGGCAAGTGAAGCT</td>
+</tr>
+<tr class="odd">
+<td align="right">111</td>
+<td align="left">Zm00001d039510:4</td>
+<td align="left">GGGACTGAGTCACTGAGGTG</td>
+</tr>
+<tr class="even">
+<td align="right">112</td>
+<td align="left">Zm00001d039510:5</td>
+<td align="left">AACTAGAAGCAGCTGAAGTG</td>
+</tr>
+<tr class="odd">
+<td align="right">113</td>
+<td align="left">Zm00001d039510:6</td>
+<td align="left">GGCCGGTGGAGTTAGAAAAA</td>
+</tr>
+<tr class="even">
+<td align="right">114</td>
+<td align="left">Zm00001d039510:7</td>
+<td align="left">CGGAGCCGAGCTTCACTTGC</td>
+</tr>
+<tr class="odd">
+<td align="right">115</td>
+<td align="left">Zm00001d039531:0</td>
+<td align="left">CTAGAGTAGACGCACGCGCA</td>
+</tr>
+<tr class="even">
+<td align="right">116</td>
+<td align="left">Zm00001d039531:1</td>
+<td align="left">TCCCGTCACACGCAACGCAA</td>
+</tr>
+<tr class="odd">
+<td align="right">117</td>
+<td align="left">Zm00001d039531:3</td>
+<td align="left">TGCCGTTGCGTTGCGTGTGA</td>
+</tr>
+<tr class="even">
+<td align="right">118</td>
+<td align="left">Zm00001d039531:8</td>
+<td align="left">CGCTCGCTATAGCTCCACAG</td>
+</tr>
+<tr class="odd">
+<td align="right">119</td>
 <td align="left">Zm00001d039694:0</td>
 <td align="left">TTTTCCTTCCTGGCCTAGCT</td>
 </tr>
 <tr class="even">
-<td align="right">78</td>
+<td align="right">120</td>
 <td align="left">Zm00001d039694:2</td>
-<td align="left">AAAAACGTTGATTAATTAGT</td>
+<td align="left">CGTATATCTATCTCTACATA</td>
 </tr>
 <tr class="odd">
-<td align="right">79</td>
-<td align="left">Zm00001d042111:0</td>
+<td align="right">121</td>
+<td align="left">Zm00001d039694:4</td>
+<td align="left">TTTTCTACTGATTTATTCGC</td>
+</tr>
+<tr class="even">
+<td align="right">122</td>
+<td align="left">Zm00001d041853:0</td>
+<td align="left">TTTCTCTCCTCCTACCTACC</td>
+</tr>
+<tr class="odd">
+<td align="right">123</td>
+<td align="left">Zm00001d041853:3</td>
+<td align="left">AGACATTTGACCGGGTAGGT</td>
+</tr>
+<tr class="even">
+<td align="right">124</td>
+<td align="left">Zm00001d041853:4</td>
+<td align="left">AAACGCGAGGGATGAAGACG</td>
+</tr>
+<tr class="odd">
+<td align="right">125</td>
+<td align="left">Zm00001d042111:2</td>
 <td align="left">GCTCTTGAGAAAAAGAGAGA</td>
 </tr>
 <tr class="even">
-<td align="right">80</td>
-<td align="left">Zm00001d042821:0</td>
-<td align="left">TCAGCATTTCCTCTGACCAG</td>
+<td align="right">126</td>
+<td align="left">Zm00001d042111:4</td>
+<td align="left">ATGGCTACTGTTACTGTATG</td>
 </tr>
 <tr class="odd">
-<td align="right">81</td>
-<td align="left">Zm00001d042821:6</td>
+<td align="right">127</td>
+<td align="left">Zm00001d042111:6</td>
+<td align="left">GGGAAGGCTGTCTCGCAGTG</td>
+</tr>
+<tr class="even">
+<td align="right">128</td>
+<td align="left">Zm00001d042821:1</td>
 <td align="left">CCTCGCCACTGCCCCTGAGC</td>
 </tr>
-<tr class="even">
-<td align="right">82</td>
-<td align="left">Zm00001d042821:7</td>
+<tr class="odd">
+<td align="right">129</td>
+<td align="left">Zm00001d042821:10</td>
 <td align="left">TCTAGCTTCTGCTTCTGATT</td>
 </tr>
-<tr class="odd">
-<td align="right">83</td>
-<td align="left">Zm00001d042821:9</td>
+<tr class="even">
+<td align="right">130</td>
+<td align="left">Zm00001d042821:13</td>
 <td align="left">GGTCCTTATATAGCCGGCTC</td>
 </tr>
+<tr class="odd">
+<td align="right">131</td>
+<td align="left">Zm00001d042821:7</td>
+<td align="left">TCAGCATTTCCTCTGACCAG</td>
+</tr>
 <tr class="even">
-<td align="right">84</td>
-<td align="left">Zm00001d043840:2</td>
+<td align="right">132</td>
+<td align="left">Zm00001d043131:15</td>
+<td align="left">CTCTCTCTACTTCAACTTCG</td>
+</tr>
+<tr class="odd">
+<td align="right">133</td>
+<td align="left">Zm00001d043131:17</td>
+<td align="left">TTGAAGTAGAGAGAGAAAAT</td>
+</tr>
+<tr class="even">
+<td align="right">134</td>
+<td align="left">Zm00001d043131:18</td>
+<td align="left">CCCATACGCCCACGCCCAAT</td>
+</tr>
+<tr class="odd">
+<td align="right">135</td>
+<td align="left">Zm00001d043131:9</td>
+<td align="left">ACAGCGCCAGAGAAGCCTAT</td>
+</tr>
+<tr class="even">
+<td align="right">136</td>
+<td align="left">Zm00001d043271:0</td>
+<td align="left">AGTGGATCTTGCTGGCCAGG</td>
+</tr>
+<tr class="odd">
+<td align="right">137</td>
+<td align="left">Zm00001d043271:4</td>
+<td align="left">CATCTCGCAGGAACACTGCC</td>
+</tr>
+<tr class="even">
+<td align="right">138</td>
+<td align="left">Zm00001d043271:5</td>
+<td align="left">CTGTCGGCCCTTGCACCACC</td>
+</tr>
+<tr class="odd">
+<td align="right">139</td>
+<td align="left">Zm00001d043840:1</td>
 <td align="left">AACAAGCTCTACATCTCACA</td>
 </tr>
-<tr class="odd">
-<td align="right">85</td>
+<tr class="even">
+<td align="right">140</td>
 <td align="left">Zm00001d043937:0</td>
-<td align="left">GTAGGTGCTGCCATTATAAG</td>
+<td align="left">GAGACCGACCATTCATTGCG</td>
+</tr>
+<tr class="odd">
+<td align="right">141</td>
+<td align="left">Zm00001d043937:1</td>
+<td align="left">GCGCGAGCGCGAGACGACCG</td>
 </tr>
 <tr class="even">
-<td align="right">86</td>
-<td align="left">Zm00001d043937:1</td>
-<td align="left">GAACGCTCGCACACTGCTGC</td>
+<td align="right">142</td>
+<td align="left">Zm00001d043937:2</td>
+<td align="left">GTAGGTGCTGCCATTATAAG</td>
 </tr>
 <tr class="odd">
-<td align="right">87</td>
+<td align="right">143</td>
+<td align="left">Zm00001d043937:3</td>
+<td align="left">CCCCGTAGCGTGTAGCGAGA</td>
+</tr>
+<tr class="even">
+<td align="right">144</td>
 <td align="left">Zm00001d043937:4</td>
 <td align="left">CACCTTCTCGCTACACGCTA</td>
 </tr>
-<tr class="even">
-<td align="right">88</td>
+<tr class="odd">
+<td align="right">145</td>
 <td align="left">Zm00001d043937:5</td>
+<td align="left">GAACGCTCGCACACTGCTGC</td>
+</tr>
+<tr class="even">
+<td align="right">146</td>
+<td align="left">Zm00001d043937:6</td>
 <td align="left">ATAATGGCAGCACCTACCCT</td>
 </tr>
 <tr class="odd">
-<td align="right">89</td>
-<td align="left">Zm00001d043937:6</td>
+<td align="right">147</td>
+<td align="left">Zm00001d043937:7</td>
 <td align="left">CAGCGTTGCCACGCAATGAA</td>
 </tr>
 <tr class="even">
-<td align="right">90</td>
+<td align="right">148</td>
 <td align="left">Zm00001d046126:0</td>
-<td align="left">TATACATTTTATACACACAT</td>
-</tr>
-<tr class="odd">
-<td align="right">91</td>
-<td align="left">Zm00001d046126:1</td>
-<td align="left">TTTGTCTTTGAAGAGAATCT</td>
-</tr>
-<tr class="even">
-<td align="right">92</td>
-<td align="left">Zm00001d046126:11</td>
 <td align="left">ATAAAATGTATACTAGTCTT</td>
 </tr>
 <tr class="odd">
-<td align="right">93</td>
-<td align="left">Zm00001d046126:5</td>
+<td align="right">149</td>
+<td align="left">Zm00001d046126:12</td>
 <td align="left">GGATGTATTGCTGCCTTATA</td>
 </tr>
 <tr class="even">
-<td align="right">94</td>
-<td align="left">Zm00001d046126:9</td>
-<td align="left">TCTCTACCCCACTCCATATA</td>
+<td align="right">150</td>
+<td align="left">Zm00001d046126:17</td>
+<td align="left">TTTGTCTTTGAAGAGAATCT</td>
 </tr>
 <tr class="odd">
-<td align="right">95</td>
+<td align="right">151</td>
+<td align="left">Zm00001d046126:18</td>
+<td align="left">TCTCTACCCCACTCCATATA</td>
+</tr>
+<tr class="even">
+<td align="right">152</td>
+<td align="left">Zm00001d046126:7</td>
+<td align="left">TATACATTTTATACACACAT</td>
+</tr>
+<tr class="odd">
+<td align="right">153</td>
 <td align="left">Zm00001d046501:0</td>
+<td align="left">GCCTCCGGATCAGGGAGTGG</td>
+</tr>
+<tr class="even">
+<td align="right">154</td>
+<td align="left">Zm00001d046501:1</td>
+<td align="left">GGGTATGTGTAGATGCCGGC</td>
+</tr>
+<tr class="odd">
+<td align="right">155</td>
+<td align="left">Zm00001d046501:2</td>
 <td align="left">GCCCTCTTTCCCTTCCATTC</td>
 </tr>
 <tr class="even">
-<td align="right">96</td>
-<td align="left">Zm00001d046501:1</td>
-<td align="left">GCCTCCGGATCAGGGAGTGG</td>
-</tr>
-<tr class="odd">
-<td align="right">97</td>
-<td align="left">Zm00001d046501:2</td>
-<td align="left">GGGTATGTGTAGATGCCGGC</td>
-</tr>
-<tr class="even">
-<td align="right">98</td>
+<td align="right">156</td>
 <td align="left">Zm00001d046501:3</td>
 <td align="left">CGCACTGTACTTGCGTCCGC</td>
 </tr>
 <tr class="odd">
-<td align="right">99</td>
+<td align="right">157</td>
 <td align="left">Zm00001d046501:4</td>
 <td align="left">ACCGCATTAACGCTGCCCTG</td>
 </tr>
 <tr class="even">
-<td align="right">100</td>
+<td align="right">158</td>
 <td align="left">Zm00001d046501:5</td>
 <td align="left">GGTAGCGCTAAAATATTCAC</td>
 </tr>
 <tr class="odd">
-<td align="right">101</td>
+<td align="right">159</td>
 <td align="left">Zm00001d046501:7</td>
 <td align="left">CCCACCCCCACTCCCTGATC</td>
 </tr>
 <tr class="even">
-<td align="right">102</td>
+<td align="right">160</td>
 <td align="left">Zm00001d048319:0</td>
 <td align="left">TCAACTCGAGCCGCAGCTTG</td>
 </tr>
 <tr class="odd">
-<td align="right">103</td>
+<td align="right">161</td>
 <td align="left">Zm00001d048319:10</td>
 <td align="left">AAACTGGATGCGCGACACGC</td>
 </tr>
 <tr class="even">
-<td align="right">104</td>
+<td align="right">162</td>
 <td align="left">Zm00001d048319:11</td>
 <td align="left">ACTGCTGGAGCCTCAAGCTG</td>
 </tr>
 <tr class="odd">
-<td align="right">105</td>
+<td align="right">163</td>
 <td align="left">Zm00001d048319:12</td>
-<td align="left">CCCTGTCCTCGATTTCAAAA</td>
-</tr>
-<tr class="even">
-<td align="right">106</td>
-<td align="left">Zm00001d048319:13</td>
 <td align="left">GCGTGTCGCGCATCCAGTTT</td>
 </tr>
+<tr class="even">
+<td align="right">164</td>
+<td align="left">Zm00001d048319:13</td>
+<td align="left">CCCTGTCCTCGATTTCAAAA</td>
+</tr>
 <tr class="odd">
-<td align="right">107</td>
+<td align="right">165</td>
 <td align="left">Zm00001d048319:8</td>
 <td align="left">TCGGCTCCGTTTTGAAATCG</td>
 </tr>
 <tr class="even">
-<td align="right">108</td>
+<td align="right">166</td>
 <td align="left">Zm00001d048319:9</td>
 <td align="left">ACAGGGATGCTTTGCTTGCC</td>
 </tr>
 <tr class="odd">
-<td align="right">109</td>
+<td align="right">167</td>
 <td align="left">Zm00001d051891:3</td>
-<td align="left">AGGGCTGTGTCTGTGTAGAC</td>
-</tr>
-<tr class="even">
-<td align="right">110</td>
-<td align="left">Zm00001d051891:4</td>
 <td align="left">TTTATAGGAGGGGAGGCGAG</td>
 </tr>
+<tr class="even">
+<td align="right">168</td>
+<td align="left">Zm00001d051891:4</td>
+<td align="left">AGGGCTGTGTCTGTGTAGAC</td>
+</tr>
 <tr class="odd">
-<td align="right">111</td>
-<td align="left">Zm00001d051891:6</td>
+<td align="right">169</td>
+<td align="left">Zm00001d051891:5</td>
 <td align="left">GGGACGAGTGTCTGGTTCGA</td>
 </tr>
 <tr class="even">
-<td align="right">112</td>
-<td align="left">Zm00001d051891:7</td>
+<td align="right">170</td>
+<td align="left">Zm00001d051891:6</td>
 <td align="left">TTAATGCTGTGTTGAAGAAA</td>
 </tr>
 <tr class="odd">
-<td align="right">113</td>
+<td align="right">171</td>
 <td align="left">Zm00001d051995:0</td>
 <td align="left">GGGGCCCTGGTCCGTGGTTA</td>
 </tr>
 <tr class="even">
-<td align="right">114</td>
-<td align="left">Zm00001d051995:1</td>
-<td align="left">TGCCCCGCCCTTTCCCAAAC</td>
-</tr>
-<tr class="odd">
-<td align="right">115</td>
-<td align="left">Zm00001d051995:10</td>
-<td align="left">GGGCGGGGCATCCGAAACTG</td>
-</tr>
-<tr class="even">
-<td align="right">116</td>
-<td align="left">Zm00001d051995:2</td>
+<td align="right">172</td>
+<td align="left">Zm00001d051995:11</td>
 <td align="left">GTGCTGAGCAGCAGAGATGG</td>
 </tr>
 <tr class="odd">
-<td align="right">117</td>
-<td align="left">Zm00001d051995:3</td>
+<td align="right">173</td>
+<td align="left">Zm00001d051995:12</td>
 <td align="left">TGCGTCTCCCGCCTCAGTTT</td>
 </tr>
 <tr class="even">
-<td align="right">118</td>
-<td align="left">Zm00001d051995:5</td>
+<td align="right">174</td>
+<td align="left">Zm00001d051995:13</td>
+<td align="left">TGCCCCGCCCTTTCCCAAAC</td>
+</tr>
+<tr class="odd">
+<td align="right">175</td>
+<td align="left">Zm00001d051995:14</td>
 <td align="left">GCCCGTGTCTCCCCACCGAC</td>
 </tr>
-<tr class="odd">
-<td align="right">119</td>
-<td align="left">Zm00001d051995:6</td>
+<tr class="even">
+<td align="right">176</td>
+<td align="left">Zm00001d051995:15</td>
 <td align="left">CCAATCCTTAACCACGGACC</td>
 </tr>
-<tr class="even">
-<td align="right">120</td>
-<td align="left">Zm00001d051995:9</td>
+<tr class="odd">
+<td align="right">177</td>
+<td align="left">Zm00001d051995:7</td>
 <td align="left">ATTGGACCCACCTGTCGGTG</td>
 </tr>
+<tr class="even">
+<td align="right">178</td>
+<td align="left">Zm00001d051995:9</td>
+<td align="left">GGGCGGGGCATCCGAAACTG</td>
+</tr>
 <tr class="odd">
-<td align="right">121</td>
-<td align="left">Zm00001d053696:2</td>
+<td align="right">179</td>
+<td align="left">Zm00001d052543:1</td>
+<td align="left">ATTTTGTTCTCCCTTTCCCT</td>
+</tr>
+<tr class="even">
+<td align="right">180</td>
+<td align="left">Zm00001d052543:19</td>
+<td align="left">CAAAATCACAGTACAAAAGC</td>
+</tr>
+<tr class="odd">
+<td align="right">181</td>
+<td align="left">Zm00001d053696:17</td>
 <td align="left">TCTTTCTCTACGACGCAAAC</td>
 </tr>
 <tr class="even">
-<td align="right">122</td>
-<td align="left">Zm00001d053696:4</td>
-<td align="left">TGCGTCGTAGAGAAAGAACA</td>
+<td align="right">182</td>
+<td align="left">Zm00001d053696:22</td>
+<td align="left">CTGCAAGTGTGTGTGTGTGT</td>
 </tr>
 <tr class="odd">
-<td align="right">123</td>
-<td align="left">Zm00001d053696:5</td>
-<td align="left">CTGCAAGTGTGTGTGTGTGT</td>
+<td align="right">183</td>
+<td align="left">Zm00001d053696:23</td>
+<td align="left">TGCGTCGTAGAGAAAGAACA</td>
 </tr>
 </tbody>
 </table>
@@ -2347,741 +2647,1101 @@ As a result, the number of designs passing the criteria is <strong>123</strong>.
 <tbody>
 <tr class="odd">
 <td align="right">1</td>
-<td align="left">Zm00001d003322:1</td>
-<td align="left">tgcaGCACCAAAACTCCGAAAGTT</td>
-<td align="left">aaacAACTTTCGGAGTTTTGGTGC</td>
+<td align="left">Zm00001d002234:2</td>
+<td align="left">tgcaTGCAATCCGCATTTATTGAG</td>
+<td align="left">aaacCTCAATAAATGCGGATTGCA</td>
 </tr>
 <tr class="even">
 <td align="right">2</td>
-<td align="left">Zm00001d003322:2</td>
-<td align="left">tgcaGCACGCGCCGCACCGCGCCA</td>
-<td align="left">aaacTGGCGCGGTGCGGCGCGTGC</td>
+<td align="left">Zm00001d002234:5</td>
+<td align="left">tgcaTTTATTTCTGTTTCTACAGA</td>
+<td align="left">aaacTCTGTAGAAACAGAAATAAA</td>
 </tr>
 <tr class="odd">
 <td align="right">3</td>
-<td align="left">Zm00001d003322:5</td>
-<td align="left">tgcaTTTCCTTCGAAAATTTGCCA</td>
-<td align="left">aaacTGGCAAATTTTCGAAGGAAA</td>
+<td align="left">Zm00001d003322:1</td>
+<td align="left">tgcaAATCCAAACTTTCGGAGTTT</td>
+<td align="left">aaacAAACTCCGAAAGTTTGGATT</td>
 </tr>
 <tr class="even">
 <td align="right">4</td>
+<td align="left">Zm00001d003322:10</td>
+<td align="left">tgcaGCACCAAAACTCCGAAAGTT</td>
+<td align="left">aaacAACTTTCGGAGTTTTGGTGC</td>
+</tr>
+<tr class="odd">
+<td align="right">5</td>
+<td align="left">Zm00001d003322:6</td>
+<td align="left">tgcaGCACGCGCCGCACCGCGCCA</td>
+<td align="left">aaacTGGCGCGGTGCGGCGCGTGC</td>
+</tr>
+<tr class="even">
+<td align="right">6</td>
+<td align="left">Zm00001d003322:9</td>
+<td align="left">tgcaTTTCCTTCGAAAATTTGCCA</td>
+<td align="left">aaacTGGCAAATTTTCGAAGGAAA</td>
+</tr>
+<tr class="odd">
+<td align="right">7</td>
 <td align="left">Zm00001d005016:0</td>
 <td align="left">tgcaAGGACGGGGTTTTTATAGAG</td>
 <td align="left">aaacCTCTATAAAAACCCCGTCCT</td>
 </tr>
-<tr class="odd">
-<td align="right">5</td>
+<tr class="even">
+<td align="right">8</td>
 <td align="left">Zm00001d005016:1</td>
 <td align="left">tgcaCAACTGCCATTGTTGTTGCG</td>
 <td align="left">aaacCGCAACAACAATGGCAGTTG</td>
 </tr>
+<tr class="odd">
+<td align="right">9</td>
+<td align="left">Zm00001d005016:8</td>
+<td align="left">tgcaCATGAGCACAACGGGGGGGC</td>
+<td align="left">aaacGCCCCCCCGTTGTGCTCATG</td>
+</tr>
 <tr class="even">
-<td align="right">6</td>
+<td align="right">10</td>
+<td align="left">Zm00001d005071:3</td>
+<td align="left">tgcaCAATATTAGAATTTTAAGAA</td>
+<td align="left">aaacTTCTTAAAATTCTAATATTG</td>
+</tr>
+<tr class="odd">
+<td align="right">11</td>
+<td align="left">Zm00001d005071:4</td>
+<td align="left">tgcaTTGGTTGGTTCGTATCGTGG</td>
+<td align="left">aaacCCACGATACGAACCAACCAA</td>
+</tr>
+<tr class="even">
+<td align="right">12</td>
+<td align="left">Zm00001d005071:5</td>
+<td align="left">tgcaGAGGCATTTAATGACAGGGC</td>
+<td align="left">aaacGCCCTGTCATTAAATGCCTC</td>
+</tr>
+<tr class="odd">
+<td align="right">13</td>
+<td align="left">Zm00001d005071:6</td>
+<td align="left">tgcaAGGGTAGGGCAGCATGCGTA</td>
+<td align="left">aaacTACGCATGCTGCCCTACCCT</td>
+</tr>
+<tr class="even">
+<td align="right">14</td>
 <td align="left">Zm00001d005843:0</td>
 <td align="left">tgcaGTCCACTCCACTCCCTACTC</td>
 <td align="left">aaacGAGTAGGGAGTGGAGTGGAC</td>
 </tr>
 <tr class="odd">
-<td align="right">7</td>
-<td align="left">Zm00001d005843:4</td>
+<td align="right">15</td>
+<td align="left">Zm00001d005843:11</td>
 <td align="left">tgcaAGGCGTGCTGAGCGGGTGAC</td>
 <td align="left">aaacGTCACCCGCTCAGCACGCCT</td>
 </tr>
 <tr class="even">
-<td align="right">8</td>
-<td align="left">Zm00001d005843:5</td>
+<td align="right">16</td>
+<td align="left">Zm00001d005843:12</td>
 <td align="left">tgcaATTTTAACTGGTGGAGGTGG</td>
 <td align="left">aaacCCACCTCCACCAGTTAAAAT</td>
 </tr>
 <tr class="odd">
-<td align="right">9</td>
+<td align="right">17</td>
 <td align="left">Zm00001d007039:0</td>
 <td align="left">tgcaGCGAATCATTAAGAAACGCC</td>
 <td align="left">aaacGGCGTTTCTTAATGATTCGC</td>
 </tr>
 <tr class="even">
-<td align="right">10</td>
-<td align="left">Zm00001d007039:6</td>
-<td align="left">tgcaAGAGATAGTTGGGCCTTTCG</td>
-<td align="left">aaacCGAAAGGCCCAACTATCTCT</td>
+<td align="right">18</td>
+<td align="left">Zm00001d007039:10</td>
+<td align="left">tgcaAGGCAAACTAAAATTACGCG</td>
+<td align="left">aaacCGCGTAATTTTAGTTTGCCT</td>
 </tr>
 <tr class="odd">
-<td align="right">11</td>
-<td align="left">Zm00001d007039:7</td>
+<td align="right">19</td>
+<td align="left">Zm00001d007039:3</td>
 <td align="left">tgcaAATGATTCGCTGACGTTGAA</td>
 <td align="left">aaacTTCAACGTCAGCGAATCATT</td>
 </tr>
 <tr class="even">
-<td align="right">12</td>
+<td align="right">20</td>
+<td align="left">Zm00001d007039:9</td>
+<td align="left">tgcaGATTCGGAGAGGATGATGAA</td>
+<td align="left">aaacTTCATCATCCTCTCCGAATC</td>
+</tr>
+<tr class="odd">
+<td align="right">21</td>
 <td align="left">Zm00001d007978:0</td>
 <td align="left">tgcaGCCTGCATGTCTGATTCAGT</td>
 <td align="left">aaacACTGAATCAGACATGCAGGC</td>
 </tr>
-<tr class="odd">
-<td align="right">13</td>
-<td align="left">Zm00001d007978:2</td>
+<tr class="even">
+<td align="right">22</td>
+<td align="left">Zm00001d007978:3</td>
 <td align="left">tgcaGCTGCGCGGAACTGCACCCT</td>
 <td align="left">aaacAGGGTGCAGTTCCGCGCAGC</td>
 </tr>
-<tr class="even">
-<td align="right">14</td>
-<td align="left">Zm00001d007978:8</td>
+<tr class="odd">
+<td align="right">23</td>
+<td align="left">Zm00001d007978:5</td>
 <td align="left">tgcaAACGCACGCCGAGTCGCCGA</td>
 <td align="left">aaacTCGGCGACTCGGCGTGCGTT</td>
 </tr>
-<tr class="odd">
-<td align="right">15</td>
-<td align="left">Zm00001d008251:1</td>
+<tr class="even">
+<td align="right">24</td>
+<td align="left">Zm00001d008251:8</td>
 <td align="left">tgcaAATTCTGGATGCAGTCTGCA</td>
 <td align="left">aaacTGCAGACTGCATCCAGAATT</td>
 </tr>
+<tr class="odd">
+<td align="right">25</td>
+<td align="left">Zm00001d009493:4</td>
+<td align="left">tgcaGGGAGACGGCTCGGAGCTGC</td>
+<td align="left">aaacGCAGCTCCGAGCCGTCTCCC</td>
+</tr>
 <tr class="even">
-<td align="right">16</td>
-<td align="left">Zm00001d008251:2</td>
-<td align="left">tgcaAGGTTCAGAGGCCGCCCGTG</td>
-<td align="left">aaacCACGGGCGGCCTCTGAACCT</td>
+<td align="right">26</td>
+<td align="left">Zm00001d011223:0</td>
+<td align="left">tgcaACAGCCTTTTGCATCTTTGT</td>
+<td align="left">aaacACAAAGATGCAAAAGGCTGT</td>
 </tr>
 <tr class="odd">
-<td align="right">17</td>
+<td align="right">27</td>
+<td align="left">Zm00001d011223:1</td>
+<td align="left">tgcaAGCTTTTATCTACTCGCTGC</td>
+<td align="left">aaacGCAGCGAGTAGATAAAAGCT</td>
+</tr>
+<tr class="even">
+<td align="right">28</td>
+<td align="left">Zm00001d011223:2</td>
+<td align="left">tgcaTTTTAACATGTTTCTTTGAG</td>
+<td align="left">aaacCTCAAAGAAACATGTTAAAA</td>
+</tr>
+<tr class="odd">
+<td align="right">29</td>
+<td align="left">Zm00001d011223:8</td>
+<td align="left">tgcaCTTTTAGGGGAAGGGGAGAA</td>
+<td align="left">aaacTTCTCCCCTTCCCCTAAAAG</td>
+</tr>
+<tr class="even">
+<td align="right">30</td>
+<td align="left">Zm00001d011223:9</td>
+<td align="left">tgcaAGAAGGCAAAAGAGAGAGCC</td>
+<td align="left">aaacGGCTCTCTCTTTTGCCTTCT</td>
+</tr>
+<tr class="odd">
+<td align="right">31</td>
 <td align="left">Zm00001d011712:0</td>
 <td align="left">tgcaGTTTGAGTCCTTTCAAGACC</td>
 <td align="left">aaacGGTCTTGAAAGGACTCAAAC</td>
 </tr>
 <tr class="even">
-<td align="right">18</td>
+<td align="right">32</td>
 <td align="left">Zm00001d011712:10</td>
-<td align="left">tgcaTTGAAAGGACTCAAACACCG</td>
-<td align="left">aaacCGGTGTTTGAGTCCTTTCAA</td>
-</tr>
-<tr class="odd">
-<td align="right">19</td>
-<td align="left">Zm00001d011712:3</td>
-<td align="left">tgcaAGAGGCAGAGCTGCTATTTT</td>
-<td align="left">aaacAAAATAGCAGCTCTGCCTCT</td>
-</tr>
-<tr class="even">
-<td align="right">20</td>
-<td align="left">Zm00001d011712:4</td>
 <td align="left">tgcaGAAGTCCCAAGTTAGCAAGC</td>
 <td align="left">aaacGCTTGCTAACTTGGGACTTC</td>
 </tr>
 <tr class="odd">
-<td align="right">21</td>
-<td align="left">Zm00001d011712:6</td>
-<td align="left">tgcaTAACTTGGGACTTCCATTTC</td>
-<td align="left">aaacGAAATGGAAGTCCCAAGTTA</td>
+<td align="right">33</td>
+<td align="left">Zm00001d011712:11</td>
+<td align="left">tgcaAGAGGCAGAGCTGCTATTTT</td>
+<td align="left">aaacAAAATAGCAGCTCTGCCTCT</td>
 </tr>
 <tr class="even">
-<td align="right">22</td>
-<td align="left">Zm00001d011712:7</td>
+<td align="right">34</td>
+<td align="left">Zm00001d011712:13</td>
 <td align="left">tgcaCTGCGGTGAAGCTTAAAAGT</td>
 <td align="left">aaacACTTTTAAGCTTCACCGCAG</td>
 </tr>
 <tr class="odd">
-<td align="right">23</td>
-<td align="left">Zm00001d011712:8</td>
+<td align="right">35</td>
+<td align="left">Zm00001d011712:14</td>
 <td align="left">tgcaCCTCTCCTGCTCCTCGACTC</td>
 <td align="left">aaacGAGTCGAGGAGCAGGAGAGG</td>
 </tr>
 <tr class="even">
-<td align="right">24</td>
+<td align="right">36</td>
+<td align="left">Zm00001d011712:15</td>
+<td align="left">tgcaTAACTTGGGACTTCCATTTC</td>
+<td align="left">aaacGAAATGGAAGTCCCAAGTTA</td>
+</tr>
+<tr class="odd">
+<td align="right">37</td>
+<td align="left">Zm00001d011712:16</td>
+<td align="left">tgcaTTGAAAGGACTCAAACACCG</td>
+<td align="left">aaacCGGTGTTTGAGTCCTTTCAA</td>
+</tr>
+<tr class="even">
+<td align="right">38</td>
 <td align="left">Zm00001d017207:0</td>
 <td align="left">tgcaTTATAAGAGAAGCTAAGAAC</td>
 <td align="left">aaacGTTCTTAGCTTCTCTTATAA</td>
 </tr>
 <tr class="odd">
-<td align="right">25</td>
-<td align="left">Zm00001d017207:10</td>
+<td align="right">39</td>
+<td align="left">Zm00001d017207:21</td>
+<td align="left">tgcaTACATACATTTTTTTTCCCT</td>
+<td align="left">aaacAGGGAAAAAAAATGTATGTA</td>
+</tr>
+<tr class="even">
+<td align="right">40</td>
+<td align="left">Zm00001d017207:24</td>
+<td align="left">tgcaCTTAACTAAGAAGCATAAAA</td>
+<td align="left">aaacTTTTATGCTTCTTAGTTAAG</td>
+</tr>
+<tr class="odd">
+<td align="right">41</td>
+<td align="left">Zm00001d017207:26</td>
 <td align="left">tgcaCGTTTTATGCTTCTTAGTTA</td>
 <td align="left">aaacTAACTAAGAAGCATAAAACG</td>
 </tr>
 <tr class="even">
-<td align="right">26</td>
-<td align="left">Zm00001d017207:8</td>
-<td align="left">tgcaTACATACATTTTTTTTCCCT</td>
-<td align="left">aaacAGGGAAAAAAAATGTATGTA</td>
-</tr>
-<tr class="odd">
-<td align="right">27</td>
-<td align="left">Zm00001d017207:9</td>
-<td align="left">tgcaCTTAACTAAGAAGCATAAAA</td>
-<td align="left">aaacTTTTATGCTTCTTAGTTAAG</td>
-</tr>
-<tr class="even">
-<td align="right">28</td>
-<td align="left">Zm00001d020790:0</td>
+<td align="right">42</td>
+<td align="left">Zm00001d020790:1</td>
 <td align="left">tgcaTGTTCTCCCTTTGCCGATGC</td>
 <td align="left">aaacGCATCGGCAAAGGGAGAACA</td>
 </tr>
 <tr class="odd">
-<td align="right">29</td>
-<td align="left">Zm00001d020790:10</td>
-<td align="left">tgcaTATGGACTATTCAGCTTCAG</td>
-<td align="left">aaacCTGAAGCTGAATAGTCCATA</td>
-</tr>
-<tr class="even">
-<td align="right">30</td>
-<td align="left">Zm00001d020790:9</td>
+<td align="right">43</td>
+<td align="left">Zm00001d020790:6</td>
 <td align="left">tgcaGCAAAGGGAGAACAGATTGA</td>
 <td align="left">aaacTCAATCTGTTCTCCCTTTGC</td>
 </tr>
+<tr class="even">
+<td align="right">44</td>
+<td align="left">Zm00001d020790:7</td>
+<td align="left">tgcaTATGGACTATTCAGCTTCAG</td>
+<td align="left">aaacCTGAAGCTGAATAGTCCATA</td>
+</tr>
 <tr class="odd">
-<td align="right">31</td>
+<td align="right">45</td>
+<td align="left">Zm00001d026351:1</td>
+<td align="left">tgcaCGCTCTCTCTCTCTCTCTCC</td>
+<td align="left">aaacGGAGAGAGAGAGAGAGAGCG</td>
+</tr>
+<tr class="even">
+<td align="right">46</td>
+<td align="left">Zm00001d026351:5</td>
+<td align="left">tgcaGTGCAATCCACATTTATGAG</td>
+<td align="left">aaacCTCATAAATGTGGATTGCAC</td>
+</tr>
+<tr class="odd">
+<td align="right">47</td>
 <td align="left">Zm00001d027425:0</td>
 <td align="left">tgcaTCACCGCCACCTAATAAAGA</td>
 <td align="left">aaacTCTTTATTAGGTGGCGGTGA</td>
 </tr>
 <tr class="even">
-<td align="right">32</td>
+<td align="right">48</td>
 <td align="left">Zm00001d027425:1</td>
 <td align="left">tgcaAAAATTATCGCGCCCGCCAT</td>
 <td align="left">aaacATGGCGGGCGCGATAATTTT</td>
 </tr>
 <tr class="odd">
-<td align="right">33</td>
+<td align="right">49</td>
 <td align="left">Zm00001d027425:2</td>
-<td align="left">tgcaGCGCACTGTCTGCCTCTTTT</td>
-<td align="left">aaacAAAAGAGGCAGACAGTGCGC</td>
-</tr>
-<tr class="even">
-<td align="right">34</td>
-<td align="left">Zm00001d027425:3</td>
 <td align="left">tgcaGGGGGGAGGAAAGCGAAGCC</td>
 <td align="left">aaacGGCTTCGCTTTCCTCCCCCC</td>
 </tr>
+<tr class="even">
+<td align="right">50</td>
+<td align="left">Zm00001d027425:3</td>
+<td align="left">tgcaGCGCACTGTCTGCCTCTTTT</td>
+<td align="left">aaacAAAAGAGGCAGACAGTGCGC</td>
+</tr>
 <tr class="odd">
-<td align="right">35</td>
+<td align="right">51</td>
 <td align="left">Zm00001d027425:4</td>
 <td align="left">tgcaCGCGGCCCCTTCCCGAAAAG</td>
 <td align="left">aaacCTTTTCGGGAAGGGGCCGCG</td>
 </tr>
 <tr class="even">
-<td align="right">36</td>
+<td align="right">52</td>
 <td align="left">Zm00001d027425:5</td>
 <td align="left">tgcaGACAGTGCGCACCCGGCCAA</td>
 <td align="left">aaacTTGGCCGGGTGCGCACTGTC</td>
 </tr>
 <tr class="odd">
-<td align="right">37</td>
+<td align="right">53</td>
 <td align="left">Zm00001d027425:6</td>
 <td align="left">tgcaGCGCGATAATTTTCCTCGGA</td>
 <td align="left">aaacTCCGAGGAAAATTATCGCGC</td>
 </tr>
 <tr class="even">
-<td align="right">38</td>
+<td align="right">54</td>
 <td align="left">Zm00001d027425:7</td>
 <td align="left">tgcaCCCCCATACCCTTCTTTATT</td>
 <td align="left">aaacAATAAAGAAGGGTATGGGGG</td>
 </tr>
 <tr class="odd">
-<td align="right">39</td>
+<td align="right">55</td>
+<td align="left">Zm00001d027878:0</td>
+<td align="left">tgcaTTATGCGAGCAAGCTATATA</td>
+<td align="left">aaacTATATAGCTTGCTCGCATAA</td>
+</tr>
+<tr class="even">
+<td align="right">56</td>
+<td align="left">Zm00001d027878:10</td>
+<td align="left">tgcaTGCTCGCATAAACGTCAAAA</td>
+<td align="left">aaacTTTTGACGTTTATGCGAGCA</td>
+</tr>
+<tr class="odd">
+<td align="right">57</td>
+<td align="left">Zm00001d027878:2</td>
+<td align="left">tgcaTACGTATGCTAAACGCTTCT</td>
+<td align="left">aaacAGAAGCGTTTAGCATACGTA</td>
+</tr>
+<tr class="even">
+<td align="right">58</td>
+<td align="left">Zm00001d027878:8</td>
+<td align="left">tgcaCTACGGGGGGAGTGCTGTGT</td>
+<td align="left">aaacACACAGCACTCCCCCCGTAG</td>
+</tr>
+<tr class="odd">
+<td align="right">59</td>
+<td align="left">Zm00001d027878:9</td>
+<td align="left">tgcaAAGAAGCGTTTAGCATACGT</td>
+<td align="left">aaacACGTATGCTAAACGCTTCTT</td>
+</tr>
+<tr class="even">
+<td align="right">60</td>
 <td align="left">Zm00001d028216:0</td>
 <td align="left">tgcaTTGCAAGAGAAGATAGGGGT</td>
 <td align="left">aaacACCCCTATCTTCTCTTGCAA</td>
 </tr>
-<tr class="even">
-<td align="right">40</td>
-<td align="left">Zm00001d028216:8</td>
+<tr class="odd">
+<td align="right">61</td>
+<td align="left">Zm00001d028216:2</td>
 <td align="left">tgcaTGCGTACGGACCCATGTGTG</td>
 <td align="left">aaacCACACATGGGTCCGTACGCA</td>
 </tr>
+<tr class="even">
+<td align="right">62</td>
+<td align="left">Zm00001d028216:4</td>
+<td align="left">tgcaGAGACCAACCACGCAGCGAT</td>
+<td align="left">aaacATCGCTGCGTGGTTGGTCTC</td>
+</tr>
 <tr class="odd">
-<td align="right">41</td>
-<td align="left">Zm00001d028216:9</td>
-<td align="left">tgcaCTCTCCGCCCGATCGCTGCG</td>
-<td align="left">aaacCGCAGCGATCGGGCGGAGAG</td>
+<td align="right">63</td>
+<td align="left">Zm00001d028317:0</td>
+<td align="left">tgcaTCCGAGGCAGGCGGACAGCG</td>
+<td align="left">aaacCGCTGTCCGCCTGCCTCGGA</td>
 </tr>
 <tr class="even">
-<td align="right">42</td>
-<td align="left">Zm00001d028317:0</td>
+<td align="right">64</td>
+<td align="left">Zm00001d028317:1</td>
 <td align="left">tgcaGAGGCCATTGAAGGAGACAA</td>
 <td align="left">aaacTTGTCTCCTTCAATGGCCTC</td>
 </tr>
 <tr class="odd">
-<td align="right">43</td>
-<td align="left">Zm00001d028317:3</td>
+<td align="right">65</td>
+<td align="left">Zm00001d028317:2</td>
 <td align="left">tgcaTGCAAATCTAAATTTTTCGC</td>
 <td align="left">aaacGCGAAAAATTTAGATTTGCA</td>
 </tr>
 <tr class="even">
-<td align="right">44</td>
+<td align="right">66</td>
 <td align="left">Zm00001d028317:4</td>
-<td align="left">tgcaTAGTCCTTTGTCTCCTTCAA</td>
-<td align="left">aaacTTGAAGGAGACAAAGGACTA</td>
+<td align="left">tgcaCCCACGCTGTCCGCCTGCCT</td>
+<td align="left">aaacAGGCAGGCGGACAGCGTGGG</td>
 </tr>
 <tr class="odd">
-<td align="right">45</td>
+<td align="right">67</td>
 <td align="left">Zm00001d028317:5</td>
 <td align="left">tgcaGTTTTCCATTCGTTTTCTTT</td>
 <td align="left">aaacAAAGAAAACGAATGGAAAAC</td>
 </tr>
 <tr class="even">
-<td align="right">46</td>
-<td align="left">Zm00001d031109:6</td>
-<td align="left">tgcaTCAAGATTATGCTTGTGAGA</td>
-<td align="left">aaacTCTCACAAGCATAATCTTGA</td>
+<td align="right">68</td>
+<td align="left">Zm00001d028317:6</td>
+<td align="left">tgcaTAGTCCTTTGTCTCCTTCAA</td>
+<td align="left">aaacTTGAAGGAGACAAAGGACTA</td>
 </tr>
 <tr class="odd">
-<td align="right">47</td>
+<td align="right">69</td>
+<td align="left">Zm00001d030069:0</td>
+<td align="left">tgcaCTGCCACGTGGGCTCCGTGA</td>
+<td align="left">aaacTCACGGAGCCCACGTGGCAG</td>
+</tr>
+<tr class="even">
+<td align="right">70</td>
+<td align="left">Zm00001d030069:1</td>
+<td align="left">tgcaTCCGCTTTGACTTGTTATTC</td>
+<td align="left">aaacGAATAACAAGTCAAAGCGGA</td>
+</tr>
+<tr class="odd">
+<td align="right">71</td>
+<td align="left">Zm00001d030069:2</td>
+<td align="left">tgcaCTTCCGCGTGACTCGACCTG</td>
+<td align="left">aaacCAGGTCGAGTCACGCGGAAG</td>
+</tr>
+<tr class="even">
+<td align="right">72</td>
+<td align="left">Zm00001d030069:3</td>
+<td align="left">tgcaGACGCGCTCGGCTGACTTCA</td>
+<td align="left">aaacTGAAGTCAGCCGAGCGCGTC</td>
+</tr>
+<tr class="odd">
+<td align="right">73</td>
+<td align="left">Zm00001d030069:4</td>
+<td align="left">tgcaCCACGCGCGCTGGACCGTCA</td>
+<td align="left">aaacTGACGGTCCAGCGCGCGTGG</td>
+</tr>
+<tr class="even">
+<td align="right">74</td>
+<td align="left">Zm00001d030069:6</td>
+<td align="left">tgcaGCCAGAATAACAAGTCAAAG</td>
+<td align="left">aaacCTTTGACTTGTTATTCTGGC</td>
+</tr>
+<tr class="odd">
+<td align="right">75</td>
 <td align="left">Zm00001d031109:7</td>
 <td align="left">tgcaATTTGTTCCATAGATTCAGT</td>
 <td align="left">aaacACTGAATCTATGGAACAAAT</td>
 </tr>
 <tr class="even">
-<td align="right">48</td>
-<td align="left">Zm00001d032249:0</td>
-<td align="left">tgcaTTTGACATCTCAAGAGAAAG</td>
-<td align="left">aaacCTTTCTCTTGAGATGTCAAA</td>
+<td align="right">76</td>
+<td align="left">Zm00001d031109:9</td>
+<td align="left">tgcaTCAAGATTATGCTTGTGAGA</td>
+<td align="left">aaacTCTCACAAGCATAATCTTGA</td>
 </tr>
 <tr class="odd">
-<td align="right">49</td>
-<td align="left">Zm00001d032249:2</td>
+<td align="right">77</td>
+<td align="left">Zm00001d032249:0</td>
 <td align="left">tgcaTTGCTTGTGCTTGTGTTTTC</td>
 <td align="left">aaacGAAAACACAAGCACAAGCAA</td>
 </tr>
 <tr class="even">
-<td align="right">50</td>
-<td align="left">Zm00001d032249:3</td>
+<td align="right">78</td>
+<td align="left">Zm00001d032249:11</td>
+<td align="left">tgcaTTTGACATCTCAAGAGAAAG</td>
+<td align="left">aaacCTTTCTCTTGAGATGTCAAA</td>
+</tr>
+<tr class="odd">
+<td align="right">79</td>
+<td align="left">Zm00001d032249:2</td>
 <td align="left">tgcaATAGCAACTCACAAAAAAAG</td>
 <td align="left">aaacCTTTTTTTGTGAGTTGCTAT</td>
 </tr>
-<tr class="odd">
-<td align="right">51</td>
+<tr class="even">
+<td align="right">80</td>
 <td align="left">Zm00001d036425:0</td>
 <td align="left">tgcaTGTGCCAAAAGCCGCCACCA</td>
 <td align="left">aaacTGGTGGCGGCTTTTGGCACA</td>
 </tr>
-<tr class="even">
-<td align="right">52</td>
-<td align="left">Zm00001d036425:1</td>
-<td align="left">tgcaCGCGCCGAGATCGACCCAGC</td>
-<td align="left">aaacGCTGGGTCGATCTCGGCGCG</td>
-</tr>
 <tr class="odd">
-<td align="right">53</td>
-<td align="left">Zm00001d036425:2</td>
+<td align="right">81</td>
+<td align="left">Zm00001d036425:1</td>
 <td align="left">tgcaCTGACCGACGGACGGCACGG</td>
 <td align="left">aaacCCGTGCCGTCCGTCGGTCAG</td>
 </tr>
 <tr class="even">
-<td align="right">54</td>
+<td align="right">82</td>
+<td align="left">Zm00001d036425:2</td>
+<td align="left">tgcaCGCGCCGAGATCGACCCAGC</td>
+<td align="left">aaacGCTGGGTCGATCTCGGCGCG</td>
+</tr>
+<tr class="odd">
+<td align="right">83</td>
 <td align="left">Zm00001d036425:3</td>
 <td align="left">tgcaCCCACGCCGCGTCAGATCAC</td>
 <td align="left">aaacGTGATCTGACGCGGCGTGGG</td>
 </tr>
-<tr class="odd">
-<td align="right">55</td>
+<tr class="even">
+<td align="right">84</td>
 <td align="left">Zm00001d036425:4</td>
 <td align="left">tgcaCCGGCCCCTGTGATCTGACG</td>
 <td align="left">aaacCGTCAGATCACAGGGGCCGG</td>
 </tr>
-<tr class="even">
-<td align="right">56</td>
+<tr class="odd">
+<td align="right">85</td>
 <td align="left">Zm00001d036425:5</td>
 <td align="left">tgcaGGGTGTAAGCGCCGGCCGGC</td>
 <td align="left">aaacGCCGGCCGGCGCTTACACCC</td>
 </tr>
-<tr class="odd">
-<td align="right">57</td>
+<tr class="even">
+<td align="right">86</td>
 <td align="left">Zm00001d036425:6</td>
 <td align="left">tgcaCAATCCACCGTGCCGTCCGT</td>
 <td align="left">aaacACGGACGGCACGGTGGATTG</td>
 </tr>
-<tr class="even">
-<td align="right">58</td>
+<tr class="odd">
+<td align="right">87</td>
 <td align="left">Zm00001d036425:7</td>
 <td align="left">tgcaTCAGCCGTGGTGGCGGCTTT</td>
 <td align="left">aaacAAAGCCGCCACCACGGCTGA</td>
 </tr>
-<tr class="odd">
-<td align="right">59</td>
+<tr class="even">
+<td align="right">88</td>
 <td align="left">Zm00001d037737:10</td>
 <td align="left">tgcaCGGTACCAAAGATATAAAAA</td>
 <td align="left">aaacTTTTTATATCTTTGGTACCG</td>
 </tr>
-<tr class="even">
-<td align="right">60</td>
+<tr class="odd">
+<td align="right">89</td>
 <td align="left">Zm00001d037737:11</td>
 <td align="left">tgcaAGAGGGGAATGGAAGAGTCC</td>
 <td align="left">aaacGGACTCTTCCATTCCCCTCT</td>
 </tr>
-<tr class="odd">
-<td align="right">61</td>
-<td align="left">Zm00001d037737:12</td>
-<td align="left">tgcaTTTCGTCCGTTTGAAACGTG</td>
-<td align="left">aaacCACGTTTCAAACGGACGAAA</td>
-</tr>
 <tr class="even">
-<td align="right">62</td>
-<td align="left">Zm00001d037737:13</td>
+<td align="right">90</td>
+<td align="left">Zm00001d037737:12</td>
 <td align="left">tgcaGCTACGACCTGCACATTTTT</td>
 <td align="left">aaacAAAAATGTGCAGGTCGTAGC</td>
 </tr>
 <tr class="odd">
-<td align="right">63</td>
+<td align="right">91</td>
+<td align="left">Zm00001d037737:13</td>
+<td align="left">tgcaTTTCGTCCGTTTGAAACGTG</td>
+<td align="left">aaacCACGTTTCAAACGGACGAAA</td>
+</tr>
+<tr class="even">
+<td align="right">92</td>
 <td align="left">Zm00001d037737:8</td>
 <td align="left">tgcaATAATTACCTAAAAATGTGC</td>
 <td align="left">aaacGCACATTTTTAGGTAATTAT</td>
 </tr>
-<tr class="even">
-<td align="right">64</td>
+<tr class="odd">
+<td align="right">93</td>
 <td align="left">Zm00001d037737:9</td>
 <td align="left">tgcaTTAAATTAATACGAAAGAAT</td>
 <td align="left">aaacATTCTTTCGTATTAATTTAA</td>
 </tr>
-<tr class="odd">
-<td align="right">65</td>
-<td align="left">Zm00001d037814:0</td>
-<td align="left">tgcaTGACTGAATGCTCCGCAGCG</td>
-<td align="left">aaacCGCTGCGGAGCATTCAGTCA</td>
-</tr>
 <tr class="even">
-<td align="right">66</td>
-<td align="left">Zm00001d037814:2</td>
+<td align="right">94</td>
+<td align="left">Zm00001d037814:1</td>
 <td align="left">tgcaTTGCATGGAAGAGCTTGGTG</td>
 <td align="left">aaacCACCAAGCTCTTCCATGCAA</td>
 </tr>
 <tr class="odd">
-<td align="right">67</td>
-<td align="left">Zm00001d037814:4</td>
+<td align="right">95</td>
+<td align="left">Zm00001d037814:2</td>
+<td align="left">tgcaTGACTGAATGCTCCGCAGCG</td>
+<td align="left">aaacCGCTGCGGAGCATTCAGTCA</td>
+</tr>
+<tr class="even">
+<td align="right">96</td>
+<td align="left">Zm00001d037814:3</td>
 <td align="left">tgcaGGCTATGGGTCGAGAAAGAG</td>
 <td align="left">aaacCTCTTTCTCGACCCATAGCC</td>
 </tr>
-<tr class="even">
-<td align="right">68</td>
-<td align="left">Zm00001d037814:5</td>
+<tr class="odd">
+<td align="right">97</td>
+<td align="left">Zm00001d037814:4</td>
 <td align="left">tgcaCACATCCTCGCCCCGCGCTG</td>
 <td align="left">aaacCAGCGCGGGGCGAGGATGTG</td>
 </tr>
-<tr class="odd">
-<td align="right">69</td>
-<td align="left">Zm00001d037814:6</td>
+<tr class="even">
+<td align="right">98</td>
+<td align="left">Zm00001d037814:5</td>
 <td align="left">tgcaGTCATTTGCCACTACTCTCA</td>
 <td align="left">aaacTGAGAGTAGTGGCAAATGAC</td>
 </tr>
-<tr class="even">
-<td align="right">70</td>
-<td align="left">Zm00001d037814:7</td>
+<tr class="odd">
+<td align="right">99</td>
+<td align="left">Zm00001d037814:6</td>
 <td align="left">tgcaAAGCTCTTCCATGCAATCCA</td>
 <td align="left">aaacTGGATTGCATGGAAGAGCTT</td>
 </tr>
-<tr class="odd">
-<td align="right">71</td>
-<td align="left">Zm00001d037814:8</td>
+<tr class="even">
+<td align="right">100</td>
+<td align="left">Zm00001d037814:7</td>
 <td align="left">tgcaGTAGCAACAAAAGTGGTGAC</td>
 <td align="left">aaacGTCACCACTTTTGTTGCTAC</td>
 </tr>
-<tr class="even">
-<td align="right">72</td>
+<tr class="odd">
+<td align="right">101</td>
 <td align="left">Zm00001d038832:1</td>
 <td align="left">tgcaGGATGGTGTGTAGTCTAGAT</td>
 <td align="left">aaacATCTAGACTACACACCATCC</td>
 </tr>
-<tr class="odd">
-<td align="right">73</td>
-<td align="left">Zm00001d038832:7</td>
-<td align="left">tgcaTATAAAATTTTAAACAACAA</td>
-<td align="left">aaacTTGTTGTTTAAAATTTTATA</td>
-</tr>
 <tr class="even">
-<td align="right">74</td>
-<td align="left">Zm00001d038832:9</td>
+<td align="right">102</td>
+<td align="left">Zm00001d038832:14</td>
 <td align="left">tgcaTATAAGCTAGATAATAGAGA</td>
 <td align="left">aaacTCTCTATTATCTAGCTTATA</td>
 </tr>
 <tr class="odd">
-<td align="right">75</td>
+<td align="right">103</td>
+<td align="left">Zm00001d038832:25</td>
+<td align="left">tgcaTATAAAATTTTAAACAACAA</td>
+<td align="left">aaacTTGTTGTTTAAAATTTTATA</td>
+</tr>
+<tr class="even">
+<td align="right">104</td>
 <td align="left">Zm00001d039017:0</td>
 <td align="left">tgcaCACCCCAGCTGTCTTGCCCA</td>
 <td align="left">aaacTGGGCAAGACAGCTGGGGTG</td>
 </tr>
-<tr class="even">
-<td align="right">76</td>
+<tr class="odd">
+<td align="right">105</td>
 <td align="left">Zm00001d039017:2</td>
 <td align="left">tgcaCCGACGTGCGCTTTTATCGA</td>
 <td align="left">aaacTCGATAAAAGCGCACGTCGG</td>
 </tr>
+<tr class="even">
+<td align="right">106</td>
+<td align="left">Zm00001d039017:4</td>
+<td align="left">tgcaCTGTGCTCGATCGATGATGA</td>
+<td align="left">aaacTCATCATCGATCGAGCACAG</td>
+</tr>
 <tr class="odd">
-<td align="right">77</td>
+<td align="right">107</td>
+<td align="left">Zm00001d039017:5</td>
+<td align="left">tgcaGTGCGTCACTGCTGGTGAGA</td>
+<td align="left">aaacTCTCACCAGCAGTGACGCAC</td>
+</tr>
+<tr class="even">
+<td align="right">108</td>
+<td align="left">Zm00001d039510:0</td>
+<td align="left">tgcaCTCCATTTTTCTAACTCCAC</td>
+<td align="left">aaacGTGGAGTTAGAAAAATGGAG</td>
+</tr>
+<tr class="odd">
+<td align="right">109</td>
+<td align="left">Zm00001d039510:1</td>
+<td align="left">tgcaCAGTGACTCAGTCCCCCGCT</td>
+<td align="left">aaacAGCGGGGGACTGAGTCACTG</td>
+</tr>
+<tr class="even">
+<td align="right">110</td>
+<td align="left">Zm00001d039510:2</td>
+<td align="left">tgcaCGCAGCCGGCAAGTGAAGCT</td>
+<td align="left">aaacAGCTTCACTTGCCGGCTGCG</td>
+</tr>
+<tr class="odd">
+<td align="right">111</td>
+<td align="left">Zm00001d039510:4</td>
+<td align="left">tgcaGGGACTGAGTCACTGAGGTG</td>
+<td align="left">aaacCACCTCAGTGACTCAGTCCC</td>
+</tr>
+<tr class="even">
+<td align="right">112</td>
+<td align="left">Zm00001d039510:5</td>
+<td align="left">tgcaAACTAGAAGCAGCTGAAGTG</td>
+<td align="left">aaacCACTTCAGCTGCTTCTAGTT</td>
+</tr>
+<tr class="odd">
+<td align="right">113</td>
+<td align="left">Zm00001d039510:6</td>
+<td align="left">tgcaGGCCGGTGGAGTTAGAAAAA</td>
+<td align="left">aaacTTTTTCTAACTCCACCGGCC</td>
+</tr>
+<tr class="even">
+<td align="right">114</td>
+<td align="left">Zm00001d039510:7</td>
+<td align="left">tgcaCGGAGCCGAGCTTCACTTGC</td>
+<td align="left">aaacGCAAGTGAAGCTCGGCTCCG</td>
+</tr>
+<tr class="odd">
+<td align="right">115</td>
+<td align="left">Zm00001d039531:0</td>
+<td align="left">tgcaCTAGAGTAGACGCACGCGCA</td>
+<td align="left">aaacTGCGCGTGCGTCTACTCTAG</td>
+</tr>
+<tr class="even">
+<td align="right">116</td>
+<td align="left">Zm00001d039531:1</td>
+<td align="left">tgcaTCCCGTCACACGCAACGCAA</td>
+<td align="left">aaacTTGCGTTGCGTGTGACGGGA</td>
+</tr>
+<tr class="odd">
+<td align="right">117</td>
+<td align="left">Zm00001d039531:3</td>
+<td align="left">tgcaTGCCGTTGCGTTGCGTGTGA</td>
+<td align="left">aaacTCACACGCAACGCAACGGCA</td>
+</tr>
+<tr class="even">
+<td align="right">118</td>
+<td align="left">Zm00001d039531:8</td>
+<td align="left">tgcaCGCTCGCTATAGCTCCACAG</td>
+<td align="left">aaacCTGTGGAGCTATAGCGAGCG</td>
+</tr>
+<tr class="odd">
+<td align="right">119</td>
 <td align="left">Zm00001d039694:0</td>
 <td align="left">tgcaTTTTCCTTCCTGGCCTAGCT</td>
 <td align="left">aaacAGCTAGGCCAGGAAGGAAAA</td>
 </tr>
 <tr class="even">
-<td align="right">78</td>
+<td align="right">120</td>
 <td align="left">Zm00001d039694:2</td>
-<td align="left">tgcaAAAAACGTTGATTAATTAGT</td>
-<td align="left">aaacACTAATTAATCAACGTTTTT</td>
+<td align="left">tgcaCGTATATCTATCTCTACATA</td>
+<td align="left">aaacTATGTAGAGATAGATATACG</td>
 </tr>
 <tr class="odd">
-<td align="right">79</td>
-<td align="left">Zm00001d042111:0</td>
+<td align="right">121</td>
+<td align="left">Zm00001d039694:4</td>
+<td align="left">tgcaTTTTCTACTGATTTATTCGC</td>
+<td align="left">aaacGCGAATAAATCAGTAGAAAA</td>
+</tr>
+<tr class="even">
+<td align="right">122</td>
+<td align="left">Zm00001d041853:0</td>
+<td align="left">tgcaTTTCTCTCCTCCTACCTACC</td>
+<td align="left">aaacGGTAGGTAGGAGGAGAGAAA</td>
+</tr>
+<tr class="odd">
+<td align="right">123</td>
+<td align="left">Zm00001d041853:3</td>
+<td align="left">tgcaAGACATTTGACCGGGTAGGT</td>
+<td align="left">aaacACCTACCCGGTCAAATGTCT</td>
+</tr>
+<tr class="even">
+<td align="right">124</td>
+<td align="left">Zm00001d041853:4</td>
+<td align="left">tgcaAAACGCGAGGGATGAAGACG</td>
+<td align="left">aaacCGTCTTCATCCCTCGCGTTT</td>
+</tr>
+<tr class="odd">
+<td align="right">125</td>
+<td align="left">Zm00001d042111:2</td>
 <td align="left">tgcaGCTCTTGAGAAAAAGAGAGA</td>
 <td align="left">aaacTCTCTCTTTTTCTCAAGAGC</td>
 </tr>
 <tr class="even">
-<td align="right">80</td>
-<td align="left">Zm00001d042821:0</td>
-<td align="left">tgcaTCAGCATTTCCTCTGACCAG</td>
-<td align="left">aaacCTGGTCAGAGGAAATGCTGA</td>
+<td align="right">126</td>
+<td align="left">Zm00001d042111:4</td>
+<td align="left">tgcaATGGCTACTGTTACTGTATG</td>
+<td align="left">aaacCATACAGTAACAGTAGCCAT</td>
 </tr>
 <tr class="odd">
-<td align="right">81</td>
-<td align="left">Zm00001d042821:6</td>
+<td align="right">127</td>
+<td align="left">Zm00001d042111:6</td>
+<td align="left">tgcaGGGAAGGCTGTCTCGCAGTG</td>
+<td align="left">aaacCACTGCGAGACAGCCTTCCC</td>
+</tr>
+<tr class="even">
+<td align="right">128</td>
+<td align="left">Zm00001d042821:1</td>
 <td align="left">tgcaCCTCGCCACTGCCCCTGAGC</td>
 <td align="left">aaacGCTCAGGGGCAGTGGCGAGG</td>
 </tr>
-<tr class="even">
-<td align="right">82</td>
-<td align="left">Zm00001d042821:7</td>
+<tr class="odd">
+<td align="right">129</td>
+<td align="left">Zm00001d042821:10</td>
 <td align="left">tgcaTCTAGCTTCTGCTTCTGATT</td>
 <td align="left">aaacAATCAGAAGCAGAAGCTAGA</td>
 </tr>
-<tr class="odd">
-<td align="right">83</td>
-<td align="left">Zm00001d042821:9</td>
+<tr class="even">
+<td align="right">130</td>
+<td align="left">Zm00001d042821:13</td>
 <td align="left">tgcaGGTCCTTATATAGCCGGCTC</td>
 <td align="left">aaacGAGCCGGCTATATAAGGACC</td>
 </tr>
+<tr class="odd">
+<td align="right">131</td>
+<td align="left">Zm00001d042821:7</td>
+<td align="left">tgcaTCAGCATTTCCTCTGACCAG</td>
+<td align="left">aaacCTGGTCAGAGGAAATGCTGA</td>
+</tr>
 <tr class="even">
-<td align="right">84</td>
-<td align="left">Zm00001d043840:2</td>
+<td align="right">132</td>
+<td align="left">Zm00001d043131:15</td>
+<td align="left">tgcaCTCTCTCTACTTCAACTTCG</td>
+<td align="left">aaacCGAAGTTGAAGTAGAGAGAG</td>
+</tr>
+<tr class="odd">
+<td align="right">133</td>
+<td align="left">Zm00001d043131:17</td>
+<td align="left">tgcaTTGAAGTAGAGAGAGAAAAT</td>
+<td align="left">aaacATTTTCTCTCTCTACTTCAA</td>
+</tr>
+<tr class="even">
+<td align="right">134</td>
+<td align="left">Zm00001d043131:18</td>
+<td align="left">tgcaCCCATACGCCCACGCCCAAT</td>
+<td align="left">aaacATTGGGCGTGGGCGTATGGG</td>
+</tr>
+<tr class="odd">
+<td align="right">135</td>
+<td align="left">Zm00001d043131:9</td>
+<td align="left">tgcaACAGCGCCAGAGAAGCCTAT</td>
+<td align="left">aaacATAGGCTTCTCTGGCGCTGT</td>
+</tr>
+<tr class="even">
+<td align="right">136</td>
+<td align="left">Zm00001d043271:0</td>
+<td align="left">tgcaAGTGGATCTTGCTGGCCAGG</td>
+<td align="left">aaacCCTGGCCAGCAAGATCCACT</td>
+</tr>
+<tr class="odd">
+<td align="right">137</td>
+<td align="left">Zm00001d043271:4</td>
+<td align="left">tgcaCATCTCGCAGGAACACTGCC</td>
+<td align="left">aaacGGCAGTGTTCCTGCGAGATG</td>
+</tr>
+<tr class="even">
+<td align="right">138</td>
+<td align="left">Zm00001d043271:5</td>
+<td align="left">tgcaCTGTCGGCCCTTGCACCACC</td>
+<td align="left">aaacGGTGGTGCAAGGGCCGACAG</td>
+</tr>
+<tr class="odd">
+<td align="right">139</td>
+<td align="left">Zm00001d043840:1</td>
 <td align="left">tgcaAACAAGCTCTACATCTCACA</td>
 <td align="left">aaacTGTGAGATGTAGAGCTTGTT</td>
 </tr>
-<tr class="odd">
-<td align="right">85</td>
+<tr class="even">
+<td align="right">140</td>
 <td align="left">Zm00001d043937:0</td>
+<td align="left">tgcaGAGACCGACCATTCATTGCG</td>
+<td align="left">aaacCGCAATGAATGGTCGGTCTC</td>
+</tr>
+<tr class="odd">
+<td align="right">141</td>
+<td align="left">Zm00001d043937:1</td>
+<td align="left">tgcaGCGCGAGCGCGAGACGACCG</td>
+<td align="left">aaacCGGTCGTCTCGCGCTCGCGC</td>
+</tr>
+<tr class="even">
+<td align="right">142</td>
+<td align="left">Zm00001d043937:2</td>
 <td align="left">tgcaGTAGGTGCTGCCATTATAAG</td>
 <td align="left">aaacCTTATAATGGCAGCACCTAC</td>
 </tr>
-<tr class="even">
-<td align="right">86</td>
-<td align="left">Zm00001d043937:1</td>
-<td align="left">tgcaGAACGCTCGCACACTGCTGC</td>
-<td align="left">aaacGCAGCAGTGTGCGAGCGTTC</td>
-</tr>
 <tr class="odd">
-<td align="right">87</td>
+<td align="right">143</td>
+<td align="left">Zm00001d043937:3</td>
+<td align="left">tgcaCCCCGTAGCGTGTAGCGAGA</td>
+<td align="left">aaacTCTCGCTACACGCTACGGGG</td>
+</tr>
+<tr class="even">
+<td align="right">144</td>
 <td align="left">Zm00001d043937:4</td>
 <td align="left">tgcaCACCTTCTCGCTACACGCTA</td>
 <td align="left">aaacTAGCGTGTAGCGAGAAGGTG</td>
 </tr>
-<tr class="even">
-<td align="right">88</td>
+<tr class="odd">
+<td align="right">145</td>
 <td align="left">Zm00001d043937:5</td>
+<td align="left">tgcaGAACGCTCGCACACTGCTGC</td>
+<td align="left">aaacGCAGCAGTGTGCGAGCGTTC</td>
+</tr>
+<tr class="even">
+<td align="right">146</td>
+<td align="left">Zm00001d043937:6</td>
 <td align="left">tgcaATAATGGCAGCACCTACCCT</td>
 <td align="left">aaacAGGGTAGGTGCTGCCATTAT</td>
 </tr>
 <tr class="odd">
-<td align="right">89</td>
-<td align="left">Zm00001d043937:6</td>
+<td align="right">147</td>
+<td align="left">Zm00001d043937:7</td>
 <td align="left">tgcaCAGCGTTGCCACGCAATGAA</td>
 <td align="left">aaacTTCATTGCGTGGCAACGCTG</td>
 </tr>
 <tr class="even">
-<td align="right">90</td>
+<td align="right">148</td>
 <td align="left">Zm00001d046126:0</td>
-<td align="left">tgcaTATACATTTTATACACACAT</td>
-<td align="left">aaacATGTGTGTATAAAATGTATA</td>
-</tr>
-<tr class="odd">
-<td align="right">91</td>
-<td align="left">Zm00001d046126:1</td>
-<td align="left">tgcaTTTGTCTTTGAAGAGAATCT</td>
-<td align="left">aaacAGATTCTCTTCAAAGACAAA</td>
-</tr>
-<tr class="even">
-<td align="right">92</td>
-<td align="left">Zm00001d046126:11</td>
 <td align="left">tgcaATAAAATGTATACTAGTCTT</td>
 <td align="left">aaacAAGACTAGTATACATTTTAT</td>
 </tr>
 <tr class="odd">
-<td align="right">93</td>
-<td align="left">Zm00001d046126:5</td>
+<td align="right">149</td>
+<td align="left">Zm00001d046126:12</td>
 <td align="left">tgcaGGATGTATTGCTGCCTTATA</td>
 <td align="left">aaacTATAAGGCAGCAATACATCC</td>
 </tr>
 <tr class="even">
-<td align="right">94</td>
-<td align="left">Zm00001d046126:9</td>
+<td align="right">150</td>
+<td align="left">Zm00001d046126:17</td>
+<td align="left">tgcaTTTGTCTTTGAAGAGAATCT</td>
+<td align="left">aaacAGATTCTCTTCAAAGACAAA</td>
+</tr>
+<tr class="odd">
+<td align="right">151</td>
+<td align="left">Zm00001d046126:18</td>
 <td align="left">tgcaTCTCTACCCCACTCCATATA</td>
 <td align="left">aaacTATATGGAGTGGGGTAGAGA</td>
 </tr>
+<tr class="even">
+<td align="right">152</td>
+<td align="left">Zm00001d046126:7</td>
+<td align="left">tgcaTATACATTTTATACACACAT</td>
+<td align="left">aaacATGTGTGTATAAAATGTATA</td>
+</tr>
 <tr class="odd">
-<td align="right">95</td>
+<td align="right">153</td>
 <td align="left">Zm00001d046501:0</td>
+<td align="left">tgcaGCCTCCGGATCAGGGAGTGG</td>
+<td align="left">aaacCCACTCCCTGATCCGGAGGC</td>
+</tr>
+<tr class="even">
+<td align="right">154</td>
+<td align="left">Zm00001d046501:1</td>
+<td align="left">tgcaGGGTATGTGTAGATGCCGGC</td>
+<td align="left">aaacGCCGGCATCTACACATACCC</td>
+</tr>
+<tr class="odd">
+<td align="right">155</td>
+<td align="left">Zm00001d046501:2</td>
 <td align="left">tgcaGCCCTCTTTCCCTTCCATTC</td>
 <td align="left">aaacGAATGGAAGGGAAAGAGGGC</td>
 </tr>
 <tr class="even">
-<td align="right">96</td>
-<td align="left">Zm00001d046501:1</td>
-<td align="left">tgcaGCCTCCGGATCAGGGAGTGG</td>
-<td align="left">aaacCCACTCCCTGATCCGGAGGC</td>
-</tr>
-<tr class="odd">
-<td align="right">97</td>
-<td align="left">Zm00001d046501:2</td>
-<td align="left">tgcaGGGTATGTGTAGATGCCGGC</td>
-<td align="left">aaacGCCGGCATCTACACATACCC</td>
-</tr>
-<tr class="even">
-<td align="right">98</td>
+<td align="right">156</td>
 <td align="left">Zm00001d046501:3</td>
 <td align="left">tgcaCGCACTGTACTTGCGTCCGC</td>
 <td align="left">aaacGCGGACGCAAGTACAGTGCG</td>
 </tr>
 <tr class="odd">
-<td align="right">99</td>
+<td align="right">157</td>
 <td align="left">Zm00001d046501:4</td>
 <td align="left">tgcaACCGCATTAACGCTGCCCTG</td>
 <td align="left">aaacCAGGGCAGCGTTAATGCGGT</td>
 </tr>
 <tr class="even">
-<td align="right">100</td>
+<td align="right">158</td>
 <td align="left">Zm00001d046501:5</td>
 <td align="left">tgcaGGTAGCGCTAAAATATTCAC</td>
 <td align="left">aaacGTGAATATTTTAGCGCTACC</td>
 </tr>
 <tr class="odd">
-<td align="right">101</td>
+<td align="right">159</td>
 <td align="left">Zm00001d046501:7</td>
 <td align="left">tgcaCCCACCCCCACTCCCTGATC</td>
 <td align="left">aaacGATCAGGGAGTGGGGGTGGG</td>
 </tr>
 <tr class="even">
-<td align="right">102</td>
+<td align="right">160</td>
 <td align="left">Zm00001d048319:0</td>
 <td align="left">tgcaTCAACTCGAGCCGCAGCTTG</td>
 <td align="left">aaacCAAGCTGCGGCTCGAGTTGA</td>
 </tr>
 <tr class="odd">
-<td align="right">103</td>
+<td align="right">161</td>
 <td align="left">Zm00001d048319:10</td>
 <td align="left">tgcaAAACTGGATGCGCGACACGC</td>
 <td align="left">aaacGCGTGTCGCGCATCCAGTTT</td>
 </tr>
 <tr class="even">
-<td align="right">104</td>
+<td align="right">162</td>
 <td align="left">Zm00001d048319:11</td>
 <td align="left">tgcaACTGCTGGAGCCTCAAGCTG</td>
 <td align="left">aaacCAGCTTGAGGCTCCAGCAGT</td>
 </tr>
 <tr class="odd">
-<td align="right">105</td>
+<td align="right">163</td>
 <td align="left">Zm00001d048319:12</td>
-<td align="left">tgcaCCCTGTCCTCGATTTCAAAA</td>
-<td align="left">aaacTTTTGAAATCGAGGACAGGG</td>
-</tr>
-<tr class="even">
-<td align="right">106</td>
-<td align="left">Zm00001d048319:13</td>
 <td align="left">tgcaGCGTGTCGCGCATCCAGTTT</td>
 <td align="left">aaacAAACTGGATGCGCGACACGC</td>
 </tr>
+<tr class="even">
+<td align="right">164</td>
+<td align="left">Zm00001d048319:13</td>
+<td align="left">tgcaCCCTGTCCTCGATTTCAAAA</td>
+<td align="left">aaacTTTTGAAATCGAGGACAGGG</td>
+</tr>
 <tr class="odd">
-<td align="right">107</td>
+<td align="right">165</td>
 <td align="left">Zm00001d048319:8</td>
 <td align="left">tgcaTCGGCTCCGTTTTGAAATCG</td>
 <td align="left">aaacCGATTTCAAAACGGAGCCGA</td>
 </tr>
 <tr class="even">
-<td align="right">108</td>
+<td align="right">166</td>
 <td align="left">Zm00001d048319:9</td>
 <td align="left">tgcaACAGGGATGCTTTGCTTGCC</td>
 <td align="left">aaacGGCAAGCAAAGCATCCCTGT</td>
 </tr>
 <tr class="odd">
-<td align="right">109</td>
+<td align="right">167</td>
 <td align="left">Zm00001d051891:3</td>
-<td align="left">tgcaAGGGCTGTGTCTGTGTAGAC</td>
-<td align="left">aaacGTCTACACAGACACAGCCCT</td>
-</tr>
-<tr class="even">
-<td align="right">110</td>
-<td align="left">Zm00001d051891:4</td>
 <td align="left">tgcaTTTATAGGAGGGGAGGCGAG</td>
 <td align="left">aaacCTCGCCTCCCCTCCTATAAA</td>
 </tr>
+<tr class="even">
+<td align="right">168</td>
+<td align="left">Zm00001d051891:4</td>
+<td align="left">tgcaAGGGCTGTGTCTGTGTAGAC</td>
+<td align="left">aaacGTCTACACAGACACAGCCCT</td>
+</tr>
 <tr class="odd">
-<td align="right">111</td>
-<td align="left">Zm00001d051891:6</td>
+<td align="right">169</td>
+<td align="left">Zm00001d051891:5</td>
 <td align="left">tgcaGGGACGAGTGTCTGGTTCGA</td>
 <td align="left">aaacTCGAACCAGACACTCGTCCC</td>
 </tr>
 <tr class="even">
-<td align="right">112</td>
-<td align="left">Zm00001d051891:7</td>
+<td align="right">170</td>
+<td align="left">Zm00001d051891:6</td>
 <td align="left">tgcaTTAATGCTGTGTTGAAGAAA</td>
 <td align="left">aaacTTTCTTCAACACAGCATTAA</td>
 </tr>
 <tr class="odd">
-<td align="right">113</td>
+<td align="right">171</td>
 <td align="left">Zm00001d051995:0</td>
 <td align="left">tgcaGGGGCCCTGGTCCGTGGTTA</td>
 <td align="left">aaacTAACCACGGACCAGGGCCCC</td>
 </tr>
 <tr class="even">
-<td align="right">114</td>
-<td align="left">Zm00001d051995:1</td>
-<td align="left">tgcaTGCCCCGCCCTTTCCCAAAC</td>
-<td align="left">aaacGTTTGGGAAAGGGCGGGGCA</td>
-</tr>
-<tr class="odd">
-<td align="right">115</td>
-<td align="left">Zm00001d051995:10</td>
-<td align="left">tgcaGGGCGGGGCATCCGAAACTG</td>
-<td align="left">aaacCAGTTTCGGATGCCCCGCCC</td>
-</tr>
-<tr class="even">
-<td align="right">116</td>
-<td align="left">Zm00001d051995:2</td>
+<td align="right">172</td>
+<td align="left">Zm00001d051995:11</td>
 <td align="left">tgcaGTGCTGAGCAGCAGAGATGG</td>
 <td align="left">aaacCCATCTCTGCTGCTCAGCAC</td>
 </tr>
 <tr class="odd">
-<td align="right">117</td>
-<td align="left">Zm00001d051995:3</td>
+<td align="right">173</td>
+<td align="left">Zm00001d051995:12</td>
 <td align="left">tgcaTGCGTCTCCCGCCTCAGTTT</td>
 <td align="left">aaacAAACTGAGGCGGGAGACGCA</td>
 </tr>
 <tr class="even">
-<td align="right">118</td>
-<td align="left">Zm00001d051995:5</td>
+<td align="right">174</td>
+<td align="left">Zm00001d051995:13</td>
+<td align="left">tgcaTGCCCCGCCCTTTCCCAAAC</td>
+<td align="left">aaacGTTTGGGAAAGGGCGGGGCA</td>
+</tr>
+<tr class="odd">
+<td align="right">175</td>
+<td align="left">Zm00001d051995:14</td>
 <td align="left">tgcaGCCCGTGTCTCCCCACCGAC</td>
 <td align="left">aaacGTCGGTGGGGAGACACGGGC</td>
 </tr>
-<tr class="odd">
-<td align="right">119</td>
-<td align="left">Zm00001d051995:6</td>
+<tr class="even">
+<td align="right">176</td>
+<td align="left">Zm00001d051995:15</td>
 <td align="left">tgcaCCAATCCTTAACCACGGACC</td>
 <td align="left">aaacGGTCCGTGGTTAAGGATTGG</td>
 </tr>
-<tr class="even">
-<td align="right">120</td>
-<td align="left">Zm00001d051995:9</td>
+<tr class="odd">
+<td align="right">177</td>
+<td align="left">Zm00001d051995:7</td>
 <td align="left">tgcaATTGGACCCACCTGTCGGTG</td>
 <td align="left">aaacCACCGACAGGTGGGTCCAAT</td>
 </tr>
+<tr class="even">
+<td align="right">178</td>
+<td align="left">Zm00001d051995:9</td>
+<td align="left">tgcaGGGCGGGGCATCCGAAACTG</td>
+<td align="left">aaacCAGTTTCGGATGCCCCGCCC</td>
+</tr>
 <tr class="odd">
-<td align="right">121</td>
-<td align="left">Zm00001d053696:2</td>
+<td align="right">179</td>
+<td align="left">Zm00001d052543:1</td>
+<td align="left">tgcaATTTTGTTCTCCCTTTCCCT</td>
+<td align="left">aaacAGGGAAAGGGAGAACAAAAT</td>
+</tr>
+<tr class="even">
+<td align="right">180</td>
+<td align="left">Zm00001d052543:19</td>
+<td align="left">tgcaCAAAATCACAGTACAAAAGC</td>
+<td align="left">aaacGCTTTTGTACTGTGATTTTG</td>
+</tr>
+<tr class="odd">
+<td align="right">181</td>
+<td align="left">Zm00001d053696:17</td>
 <td align="left">tgcaTCTTTCTCTACGACGCAAAC</td>
 <td align="left">aaacGTTTGCGTCGTAGAGAAAGA</td>
 </tr>
 <tr class="even">
-<td align="right">122</td>
-<td align="left">Zm00001d053696:4</td>
-<td align="left">tgcaTGCGTCGTAGAGAAAGAACA</td>
-<td align="left">aaacTGTTCTTTCTCTACGACGCA</td>
-</tr>
-<tr class="odd">
-<td align="right">123</td>
-<td align="left">Zm00001d053696:5</td>
+<td align="right">182</td>
+<td align="left">Zm00001d053696:22</td>
 <td align="left">tgcaCTGCAAGTGTGTGTGTGTGT</td>
 <td align="left">aaacACACACACACACACTTGCAG</td>
+</tr>
+<tr class="odd">
+<td align="right">183</td>
+<td align="left">Zm00001d053696:23</td>
+<td align="left">tgcaTGCGTCGTAGAGAAAGAACA</td>
+<td align="left">aaacTGTTCTTTCTCTACGACGCA</td>
 </tr>
 </tbody>
 </table>

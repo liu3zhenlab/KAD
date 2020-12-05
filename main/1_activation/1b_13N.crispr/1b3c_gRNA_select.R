@@ -1,4 +1,4 @@
-setwd("/bulk/liu3zhen/research/projects/HTcrispr/main/1_activation/1b_crispr")
+setwd("/bulk/liu3zhen/research/projects/HTcrispr/main/1_activation/1b_13N.crispr")
 
 select_num <- 2
 ##################################################################################################
@@ -78,6 +78,10 @@ head(good_gRNA)
 # GC contain (30-80% GC): as.numeric(sapply(as.character(gsub("[AT]", "", good_gRNA$crOligo)), nchar)) / as.numeric(sapply(as.character(good_gRNA$crOligo), nchar))
 # repeated bases in a row (<=4 polyhomo):  grepl("A{5}|T{5}|G{5}|C{5}", good_gRNA$crOligo)
 
+# 
+good_gRNA$isA <- 1
+good_gRNA$isA[grep("^A", good_gRNA$crOligo)] <- 10 # guideRNA with A at the 1st base is preferred due to the compatible desigh with pYPQ141D2.0 using the riceU3 promoter and requiring A at 1st
+
 # GC
 gcbases <- as.character(gsub("[AT]", "", good_gRNA$crOligo))
 ngc <- as.numeric(sapply(gcbases, nchar))
@@ -95,7 +99,7 @@ genes <- unique(good_gRNA2$Gene)
 out <- NULL
 for (eg in genes) {
   egdata <- good_gRNA2[good_gRNA2$Gene == eg, ]
-  seldata <- egdata[sample(nrow(egdata), min(nrow(egdata), select_num)), ]
+  seldata <- egdata[sample(nrow(egdata), min(nrow(egdata), select_num), prob=egdata$isA), ]
   out <- rbind(out, seldata)
 }
 
@@ -103,4 +107,4 @@ out <- out[order(out$Order), ]
 nrow(out)
 
 ### output
-write.table(out, "1b3o_regeneration.candidate.guideRNAs.txt", row.names=F, quote=F, sep="\t")
+write.table(out, "1b3o_regeneration.cand.13Nact.guideRNAs.txt", row.names=F, quote=F, sep="\t")

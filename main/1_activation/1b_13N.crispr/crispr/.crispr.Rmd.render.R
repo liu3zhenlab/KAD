@@ -3,7 +3,7 @@ library(knitr)
 
 render('/bulk/liu3zhen/research/projects/HTcrispr/crisprDesign/utils/crRNAonGene.Rmd',
   params = list(
-    wd="/bulk/liu3zhen/research/projects/HTcrispr/main/1_activation/1b_crispr",
+    wd="/bulk/liu3zhen/research/projects/HTcrispr/main/1_activation/1b_13N.crispr",
     crdesign="crispr/4.gRNA.design",
     gtf="crispr/1.gtf",
     prefix="crispr",
