@@ -3,7 +3,7 @@ Assessing genome assemblies by comparing k-mer copies in assemblies and k-mer ab
 
 See a case run at [case_Ecoli](case_Ecoli)
 
-### citation
+### Citation
 C He, G Lin, H Wei, H Tang, FF White, B Valent, S Liu. (2020). Factorial estimating assembly base errors using k-mer abundance difference (KAD) between short reads and genome assembled sequences, NAR Genomics and Bioinformatics, 2:lqaa075 [link](https://doi.org/10.1093/nargab/lqaa075)
 
 ### Introduction
