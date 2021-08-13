@@ -1,0 +1,12 @@
+Zm00001eb032110	NAM	exon	76	517	.	+	.	transcript_id "Zm00001eb032110_T003"; gene_id "Zm00001eb032110";
+Zm00001eb032110	NAM	exon	4125	4247	.	+	.	transcript_id "Zm00001eb032110_T003"; gene_id "Zm00001eb032110";
+Zm00001eb032110	NAM	exon	5129	5300	.	+	.	transcript_id "Zm00001eb032110_T003"; gene_id "Zm00001eb032110";
+Zm00001eb032110	NAM	exon	5443	5494	.	+	.	transcript_id "Zm00001eb032110_T003"; gene_id "Zm00001eb032110";
+Zm00001eb032110	NAM	exon	5589	5664	.	+	.	transcript_id "Zm00001eb032110_T003"; gene_id "Zm00001eb032110";
+Zm00001eb032110	NAM	exon	5774	6239	.	+	.	transcript_id "Zm00001eb032110_T003"; gene_id "Zm00001eb032110";
+Zm00001eb032110	NAM	CDS	443	517	.	+	0	transcript_id "Zm00001eb032110_T003"; gene_id "Zm00001eb032110";
+Zm00001eb032110	NAM	CDS	4125	4247	.	+	0	transcript_id "Zm00001eb032110_T003"; gene_id "Zm00001eb032110";
+Zm00001eb032110	NAM	CDS	5129	5300	.	+	0	transcript_id "Zm00001eb032110_T003"; gene_id "Zm00001eb032110";
+Zm00001eb032110	NAM	CDS	5443	5494	.	+	2	transcript_id "Zm00001eb032110_T003"; gene_id "Zm00001eb032110";
+Zm00001eb032110	NAM	CDS	5589	5664	.	+	1	transcript_id "Zm00001eb032110_T003"; gene_id "Zm00001eb032110";
+Zm00001eb032110	NAM	CDS	5774	5899	.	+	0	transcript_id "Zm00001eb032110_T003"; gene_id "Zm00001eb032110";

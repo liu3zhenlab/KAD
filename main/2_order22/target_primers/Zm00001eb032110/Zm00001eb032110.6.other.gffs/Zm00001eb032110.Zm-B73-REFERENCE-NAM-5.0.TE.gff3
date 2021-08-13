@@ -1,0 +1,2 @@
+chr1	EDTA	helitron	179714000	179714137	576	+	.	ID=TE_homo_106169;Name=TE_00011522;Classification=DNA/Helitron;Sequence_ontology=SO:0000544;Identity=0.798;Method=homology
+chr1	EDTA	Copia_LTR_retrotransposon	179714717	179714816	620	+	.	ID=TE_homo_106170;Name=TE_00008512_LTR;Classification=LTR/Copia;Sequence_ontology=SO:0002264;Identity=0.83;Method=homology

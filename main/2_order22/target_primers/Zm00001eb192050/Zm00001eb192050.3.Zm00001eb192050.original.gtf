@@ -1,0 +1,14 @@
+chr4	NAM	exon	178107776	178108340	.	-	.	transcript_id "Zm00001eb192050_T001"; gene_id "Zm00001eb192050";
+chr4	NAM	exon	178108552	178108649	.	-	.	transcript_id "Zm00001eb192050_T001"; gene_id "Zm00001eb192050";
+chr4	NAM	exon	178108738	178108890	.	-	.	transcript_id "Zm00001eb192050_T001"; gene_id "Zm00001eb192050";
+chr4	NAM	exon	178108987	178109453	.	-	.	transcript_id "Zm00001eb192050_T001"; gene_id "Zm00001eb192050";
+chr4	NAM	CDS	178108119	178108340	.	-	0	transcript_id "Zm00001eb192050_T001"; gene_id "Zm00001eb192050";
+chr4	NAM	CDS	178108552	178108649	.	-	2	transcript_id "Zm00001eb192050_T001"; gene_id "Zm00001eb192050";
+chr4	NAM	CDS	178108738	178108890	.	-	2	transcript_id "Zm00001eb192050_T001"; gene_id "Zm00001eb192050";
+chr4	NAM	CDS	178108987	178109305	.	-	0	transcript_id "Zm00001eb192050_T001"; gene_id "Zm00001eb192050";
+chr4	NAM	exon	178107777	178108649	.	-	.	transcript_id "Zm00001eb192050_T002"; gene_id "Zm00001eb192050";
+chr4	NAM	exon	178108738	178108890	.	-	.	transcript_id "Zm00001eb192050_T002"; gene_id "Zm00001eb192050";
+chr4	NAM	exon	178108987	178109453	.	-	.	transcript_id "Zm00001eb192050_T002"; gene_id "Zm00001eb192050";
+chr4	NAM	CDS	178108513	178108649	.	-	2	transcript_id "Zm00001eb192050_T002"; gene_id "Zm00001eb192050";
+chr4	NAM	CDS	178108738	178108890	.	-	2	transcript_id "Zm00001eb192050_T002"; gene_id "Zm00001eb192050";
+chr4	NAM	CDS	178108987	178109305	.	-	0	transcript_id "Zm00001eb192050_T002"; gene_id "Zm00001eb192050";

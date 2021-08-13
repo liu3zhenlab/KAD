@@ -1,0 +1,8 @@
+Zm00001eb094040	NAM	exon	122	393	.	+	.	transcript_id "Zm00001eb094040_T002"; gene_id "Zm00001eb094040";
+Zm00001eb094040	NAM	exon	693	1145	.	+	.	transcript_id "Zm00001eb094040_T002"; gene_id "Zm00001eb094040";
+Zm00001eb094040	NAM	exon	1244	1361	.	+	.	transcript_id "Zm00001eb094040_T002"; gene_id "Zm00001eb094040";
+Zm00001eb094040	NAM	exon	1450	1739	.	+	.	transcript_id "Zm00001eb094040_T002"; gene_id "Zm00001eb094040";
+Zm00001eb094040	NAM	CDS	211	393	.	+	0	transcript_id "Zm00001eb094040_T002"; gene_id "Zm00001eb094040";
+Zm00001eb094040	NAM	CDS	693	1145	.	+	0	transcript_id "Zm00001eb094040_T002"; gene_id "Zm00001eb094040";
+Zm00001eb094040	NAM	CDS	1244	1361	.	+	0	transcript_id "Zm00001eb094040_T002"; gene_id "Zm00001eb094040";
+Zm00001eb094040	NAM	CDS	1450	1724	.	+	2	transcript_id "Zm00001eb094040_T002"; gene_id "Zm00001eb094040";

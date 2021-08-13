@@ -1,0 +1,9 @@
+Zm00001eb079910	EDTA	PIF_Harbinger_TIR_transposon	2614	2729	413	-	.	ID=TE_homo_198165;Name=TE_00022360;Classification=MITE/DTH;Sequence_ontology=SO:0002284;Identity=0.836;Method=homology
+Zm00001eb079910	EDTA	Tc1_Mariner_TIR_transposon	2751	2884	487	+	.	ID=TE_homo_198164;Name=TE_00006142;Classification=MITE/DTT;Sequence_ontology=SO:0002278;Identity=0.809;Method=homology
+Zm00001eb079910	EDTA	PIF_Harbinger_TIR_transposon	3012	3369	.	+	.	ID=TE_struc_7648;Name=DTH_ZM00175_consensus;Classification=MITE/DTH;Sequence_ontology=SO:0002284;Identity=0.8182;Method=structural;TSD=TTA_TTA_100.0;TIR=GGCCCCATTTG_CAAACGGAGCC
+Zm00001eb079910	EDTA	PIF_Harbinger_TIR_transposon	3707	3982	698	-	.	ID=TE_homo_198163;Name=TE_00016936;Classification=DNA/DTH;Sequence_ontology=SO:0002284;Identity=0.752;Method=homology
+Zm00001eb079910	EDTA	Tc1_Mariner_TIR_transposon	3994	4220	699	-	.	ID=TE_homo_198162;Name=DTT_ZM00051_consensus;Classification=MITE/DTT;Sequence_ontology=SO:0002278;Identity=0.758;Method=homology
+Zm00001eb079910	EDTA	helitron	4349	4630	1694	+	.	ID=TE_homo_198161;Name=TE_00002225;Classification=DNA/Helitron;Sequence_ontology=SO:0000544;Identity=0.876;Method=homology
+Zm00001eb079910	EDTA	PIF_Harbinger_TIR_transposon	4647	4727	350	-	.	ID=TE_homo_198160;Name=TE_00004387;Classification=MITE/DTH;Sequence_ontology=SO:0002284;Identity=0.812;Method=homology
+Zm00001eb079910	EDTA	hAT_TIR_transposon	6754	6837	455	-	.	ID=TE_homo_198159;Name=DTA_ZM00169_consensus;Classification=MITE/DTA;Sequence_ontology=SO:0002279;Identity=0.786;Method=homology
+Zm00001eb079910	EDTA	LTR_retrotransposon	7237	7340	2748	+	.	ID=TE_homo_198158;Name=milt_AC209648_10275;Classification=LTR/unknown;Sequence_ontology=SO:0000186;Identity=0.741;Method=homology

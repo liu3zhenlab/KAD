@@ -73,8 +73,8 @@ nrow(good_gRNA)
 head(good_gRNA)
 
 # final selection:
-# two guide RNAs per gene
-# no high-level overlaps
+# at most two guide RNAs per gene
+# crRNA oligo with A at the 1st base is preferred
 # GC contain (30-80% GC): as.numeric(sapply(as.character(gsub("[AT]", "", good_gRNA$crOligo)), nchar)) / as.numeric(sapply(as.character(good_gRNA$crOligo), nchar))
 # repeated bases in a row (<=4 polyhomo):  grepl("A{5}|T{5}|G{5}|C{5}", good_gRNA$crOligo)
 

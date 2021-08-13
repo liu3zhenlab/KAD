@@ -1,0 +1,7 @@
+Zm00001eb157360	NAM	exon	1	484	.	+	.	transcript_id "Zm00001eb157360_T002"; gene_id "Zm00001eb157360";
+Zm00001eb157360	NAM	exon	715	1767	.	+	.	transcript_id "Zm00001eb157360_T002"; gene_id "Zm00001eb157360";
+Zm00001eb157360	NAM	exon	3888	4289	.	+	.	transcript_id "Zm00001eb157360_T002"; gene_id "Zm00001eb157360";
+Zm00001eb157360	NAM	exon	4597	5034	.	+	.	transcript_id "Zm00001eb157360_T002"; gene_id "Zm00001eb157360";
+Zm00001eb157360	NAM	CDS	307	484	.	+	0	transcript_id "Zm00001eb157360_T002"; gene_id "Zm00001eb157360";
+Zm00001eb157360	NAM	CDS	715	1767	.	+	2	transcript_id "Zm00001eb157360_T002"; gene_id "Zm00001eb157360";
+Zm00001eb157360	NAM	CDS	3888	4201	.	+	2	transcript_id "Zm00001eb157360_T002"; gene_id "Zm00001eb157360";

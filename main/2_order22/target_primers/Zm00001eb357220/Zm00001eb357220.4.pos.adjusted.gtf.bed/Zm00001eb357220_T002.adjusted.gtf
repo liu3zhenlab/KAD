@@ -1,0 +1,6 @@
+Zm00001eb357220	NAM	exon	95	1056	.	+	.	transcript_id "Zm00001eb357220_T002"; gene_id "Zm00001eb357220";
+Zm00001eb357220	NAM	exon	1145	1547	.	+	.	transcript_id "Zm00001eb357220_T002"; gene_id "Zm00001eb357220";
+Zm00001eb357220	NAM	exon	2677	3864	.	+	.	transcript_id "Zm00001eb357220_T002"; gene_id "Zm00001eb357220";
+Zm00001eb357220	NAM	CDS	867	1056	.	+	0	transcript_id "Zm00001eb357220_T002"; gene_id "Zm00001eb357220";
+Zm00001eb357220	NAM	CDS	1145	1547	.	+	2	transcript_id "Zm00001eb357220_T002"; gene_id "Zm00001eb357220";
+Zm00001eb357220	NAM	CDS	2677	3490	.	+	1	transcript_id "Zm00001eb357220_T002"; gene_id "Zm00001eb357220";

@@ -1,0 +1,437 @@
+Zm00001eb284010
+[31mWarning: the directory Zm00001eb284010 exists.
+[0m[35mo 2021-08-13 11:30:50
+[0m  Start to run geneseq.
+[35mo 2021-08-13 11:30:51
+[0m  requirments checked.
+[31mWarning: the directory Zm00001eb284010/Zm00001eb284010.4.pos.adjusted.gtf.bed exists.
+[0m[31mWarning: the directory Zm00001eb284010/Zm00001eb284010.5.cdna.highlighted exists.
+[0m[31mWarning: the directory Zm00001eb284010/Zm00001eb284010.6.other.gffs exists.
+[0m[31mWarning: the directory Zm00001eb284010/Zm00001eb284010.7.cds.cdna.prot exists.
+[0m[35mo 2021-08-13 11:30:52
+[0m  Gene was found in GTF.
+[35mo 2021-08-13 11:31:05
+[0m  chromosome/target sequence found.
+[35mo 2021-08-13 11:31:06
+[0m  Gene sequence produced.
+[35mo 2021-08-13 11:31:07
+[0m  sequences with exon/cds highlighted generated.
+***** WARNING: File /homes/liu3zhen/references/NAM1.0/TEs/Zm-B73-REFERENCE-NAM-5.0.TE.gff3 has inconsistent naming convention for record:
+scaf_21	EDTA	centromeric_repeat	1	134	1133	+	.	ID=TE_homo_1282741;Name=CentC;Classification=Cent/CentC;Sequence_ontology=SO:0001797;Identity=0.97;Method=homology
+
+***** WARNING: File /homes/liu3zhen/references/NAM1.0/TEs/Zm-B73-REFERENCE-NAM-5.0.TE.gff3 has inconsistent naming convention for record:
+scaf_21	EDTA	centromeric_repeat	1	134	1133	+	.	ID=TE_homo_1282741;Name=CentC;Classification=Cent/CentC;Sequence_ontology=SO:0001797;Identity=0.97;Method=homology
+
+[35mo 2021-08-13 11:31:12
+[0m  Other GFF produced.
+[35mo 2021-08-13 11:31:14
+[0m  cds sequences extracted.
+[35mo 2021-08-13 11:31:16
+[0m  cdna/trancript sequences extracted.
+[35mo 2021-08-13 11:31:18
+[0m  protein sequences extracted.
+Zm00001eb332860
+[35mo 2021-08-13 11:31:19
+[0m  Start to run geneseq.
+[35mo 2021-08-13 11:31:20
+[0m  requirments checked.
+[35mo 2021-08-13 11:31:22
+[0m  Gene was found in GTF.
+[35mo 2021-08-13 11:31:33
+[0m  chromosome/target sequence found.
+[35mo 2021-08-13 11:31:34
+[0m  Gene sequence produced.
+[35mo 2021-08-13 11:31:35
+[0m  sequences with exon/cds highlighted generated.
+***** WARNING: File /homes/liu3zhen/references/NAM1.0/TEs/Zm-B73-REFERENCE-NAM-5.0.TE.gff3 has inconsistent naming convention for record:
+scaf_21	EDTA	centromeric_repeat	1	134	1133	+	.	ID=TE_homo_1282741;Name=CentC;Classification=Cent/CentC;Sequence_ontology=SO:0001797;Identity=0.97;Method=homology
+
+***** WARNING: File /homes/liu3zhen/references/NAM1.0/TEs/Zm-B73-REFERENCE-NAM-5.0.TE.gff3 has inconsistent naming convention for record:
+scaf_21	EDTA	centromeric_repeat	1	134	1133	+	.	ID=TE_homo_1282741;Name=CentC;Classification=Cent/CentC;Sequence_ontology=SO:0001797;Identity=0.97;Method=homology
+
+[35mo 2021-08-13 11:31:37
+[0m  Other GFF produced.
+[35mo 2021-08-13 11:31:38
+[0m  cds sequences extracted.
+[35mo 2021-08-13 11:31:40
+[0m  cdna/trancript sequences extracted.
+[35mo 2021-08-13 11:31:42
+[0m  protein sequences extracted.
+Zm00001eb005740
+[35mo 2021-08-13 11:31:49
+[0m  Start to run geneseq.
+[35mo 2021-08-13 11:31:50
+[0m  requirments checked.
+[35mo 2021-08-13 11:31:51
+[0m  Gene was found in GTF.
+[35mo 2021-08-13 11:31:53
+[0m  chromosome/target sequence found.
+[35mo 2021-08-13 11:31:55
+[0m  Gene sequence produced.
+[35mo 2021-08-13 11:31:55
+[0m  sequences with exon/cds highlighted generated.
+***** WARNING: File /homes/liu3zhen/references/NAM1.0/TEs/Zm-B73-REFERENCE-NAM-5.0.TE.gff3 has inconsistent naming convention for record:
+scaf_21	EDTA	centromeric_repeat	1	134	1133	+	.	ID=TE_homo_1282741;Name=CentC;Classification=Cent/CentC;Sequence_ontology=SO:0001797;Identity=0.97;Method=homology
+
+***** WARNING: File /homes/liu3zhen/references/NAM1.0/TEs/Zm-B73-REFERENCE-NAM-5.0.TE.gff3 has inconsistent naming convention for record:
+scaf_21	EDTA	centromeric_repeat	1	134	1133	+	.	ID=TE_homo_1282741;Name=CentC;Classification=Cent/CentC;Sequence_ontology=SO:0001797;Identity=0.97;Method=homology
+
+[35mo 2021-08-13 11:31:58
+[0m  Other GFF produced.
+[35mo 2021-08-13 11:32:00
+[0m  cds sequences extracted.
+[35mo 2021-08-13 11:32:01
+[0m  cdna/trancript sequences extracted.
+[35mo 2021-08-13 11:32:03
+[0m  protein sequences extracted.
+Zm00001eb032110
+[35mo 2021-08-13 11:32:04
+[0m  Start to run geneseq.
+[35mo 2021-08-13 11:32:05
+[0m  requirments checked.
+[35mo 2021-08-13 11:32:07
+[0m  Gene was found in GTF.
+[35mo 2021-08-13 11:32:08
+[0m  chromosome/target sequence found.
+[35mo 2021-08-13 11:32:09
+[0m  Gene sequence produced.
+[35mo 2021-08-13 11:32:10
+[0m  sequences with exon/cds highlighted generated.
+***** WARNING: File /homes/liu3zhen/references/NAM1.0/TEs/Zm-B73-REFERENCE-NAM-5.0.TE.gff3 has inconsistent naming convention for record:
+scaf_21	EDTA	centromeric_repeat	1	134	1133	+	.	ID=TE_homo_1282741;Name=CentC;Classification=Cent/CentC;Sequence_ontology=SO:0001797;Identity=0.97;Method=homology
+
+***** WARNING: File /homes/liu3zhen/references/NAM1.0/TEs/Zm-B73-REFERENCE-NAM-5.0.TE.gff3 has inconsistent naming convention for record:
+scaf_21	EDTA	centromeric_repeat	1	134	1133	+	.	ID=TE_homo_1282741;Name=CentC;Classification=Cent/CentC;Sequence_ontology=SO:0001797;Identity=0.97;Method=homology
+
+[35mo 2021-08-13 11:32:12
+[0m  Other GFF produced.
+[35mo 2021-08-13 11:32:13
+[0m  cds sequences extracted.
+[35mo 2021-08-13 11:32:14
+[0m  cdna/trancript sequences extracted.
+[35mo 2021-08-13 11:32:15
+[0m  protein sequences extracted.
+Zm00001eb079910
+[35mo 2021-08-13 11:32:15
+[0m  Start to run geneseq.
+[35mo 2021-08-13 11:32:15
+[0m  requirments checked.
+[35mo 2021-08-13 11:32:16
+[0m  Gene was found in GTF.
+[35mo 2021-08-13 11:32:18
+[0m  chromosome/target sequence found.
+[35mo 2021-08-13 11:32:18
+[0m  Gene sequence produced.
+[35mo 2021-08-13 11:32:18
+[0m  sequences with exon/cds highlighted generated.
+***** WARNING: File /homes/liu3zhen/references/NAM1.0/TEs/Zm-B73-REFERENCE-NAM-5.0.TE.gff3 has inconsistent naming convention for record:
+scaf_21	EDTA	centromeric_repeat	1	134	1133	+	.	ID=TE_homo_1282741;Name=CentC;Classification=Cent/CentC;Sequence_ontology=SO:0001797;Identity=0.97;Method=homology
+
+***** WARNING: File /homes/liu3zhen/references/NAM1.0/TEs/Zm-B73-REFERENCE-NAM-5.0.TE.gff3 has inconsistent naming convention for record:
+scaf_21	EDTA	centromeric_repeat	1	134	1133	+	.	ID=TE_homo_1282741;Name=CentC;Classification=Cent/CentC;Sequence_ontology=SO:0001797;Identity=0.97;Method=homology
+
+[35mo 2021-08-13 11:32:19
+[0m  Other GFF produced.
+[35mo 2021-08-13 11:32:19
+[0m  cds sequences extracted.
+[35mo 2021-08-13 11:32:20
+[0m  cdna/trancript sequences extracted.
+[35mo 2021-08-13 11:32:20
+[0m  protein sequences extracted.
+Zm00001eb094040
+[35mo 2021-08-13 11:32:20
+[0m  Start to run geneseq.
+[35mo 2021-08-13 11:32:20
+[0m  requirments checked.
+[35mo 2021-08-13 11:32:21
+[0m  Gene was found in GTF.
+[35mo 2021-08-13 11:32:23
+[0m  chromosome/target sequence found.
+[35mo 2021-08-13 11:32:23
+[0m  Gene sequence produced.
+[35mo 2021-08-13 11:32:23
+[0m  sequences with exon/cds highlighted generated.
+***** WARNING: File /homes/liu3zhen/references/NAM1.0/TEs/Zm-B73-REFERENCE-NAM-5.0.TE.gff3 has inconsistent naming convention for record:
+scaf_21	EDTA	centromeric_repeat	1	134	1133	+	.	ID=TE_homo_1282741;Name=CentC;Classification=Cent/CentC;Sequence_ontology=SO:0001797;Identity=0.97;Method=homology
+
+***** WARNING: File /homes/liu3zhen/references/NAM1.0/TEs/Zm-B73-REFERENCE-NAM-5.0.TE.gff3 has inconsistent naming convention for record:
+scaf_21	EDTA	centromeric_repeat	1	134	1133	+	.	ID=TE_homo_1282741;Name=CentC;Classification=Cent/CentC;Sequence_ontology=SO:0001797;Identity=0.97;Method=homology
+
+[35mo 2021-08-13 11:32:24
+[0m  Other GFF produced.
+[35mo 2021-08-13 11:32:25
+[0m  cds sequences extracted.
+[35mo 2021-08-13 11:32:25
+[0m  cdna/trancript sequences extracted.
+[35mo 2021-08-13 11:32:26
+[0m  protein sequences extracted.
+Zm00001eb100410
+[35mo 2021-08-13 11:32:26
+[0m  Start to run geneseq.
+[35mo 2021-08-13 11:32:26
+[0m  requirments checked.
+[35mo 2021-08-13 11:32:26
+[0m  Gene was found in GTF.
+[35mo 2021-08-13 11:32:28
+[0m  chromosome/target sequence found.
+[35mo 2021-08-13 11:32:28
+[0m  Gene sequence produced.
+[35mo 2021-08-13 11:32:28
+[0m  sequences with exon/cds highlighted generated.
+***** WARNING: File /homes/liu3zhen/references/NAM1.0/TEs/Zm-B73-REFERENCE-NAM-5.0.TE.gff3 has inconsistent naming convention for record:
+scaf_21	EDTA	centromeric_repeat	1	134	1133	+	.	ID=TE_homo_1282741;Name=CentC;Classification=Cent/CentC;Sequence_ontology=SO:0001797;Identity=0.97;Method=homology
+
+***** WARNING: File /homes/liu3zhen/references/NAM1.0/TEs/Zm-B73-REFERENCE-NAM-5.0.TE.gff3 has inconsistent naming convention for record:
+scaf_21	EDTA	centromeric_repeat	1	134	1133	+	.	ID=TE_homo_1282741;Name=CentC;Classification=Cent/CentC;Sequence_ontology=SO:0001797;Identity=0.97;Method=homology
+
+[35mo 2021-08-13 11:32:30
+[0m  Other GFF produced.
+[35mo 2021-08-13 11:32:30
+[0m  cds sequences extracted.
+[35mo 2021-08-13 11:32:31
+[0m  cdna/trancript sequences extracted.
+[35mo 2021-08-13 11:32:31
+[0m  protein sequences extracted.
+Zm00001eb110350
+[35mo 2021-08-13 11:32:31
+[0m  Start to run geneseq.
+[35mo 2021-08-13 11:32:31
+[0m  requirments checked.
+[35mo 2021-08-13 11:32:32
+[0m  Gene was found in GTF.
+[35mo 2021-08-13 11:32:34
+[0m  chromosome/target sequence found.
+[35mo 2021-08-13 11:32:34
+[0m  Gene sequence produced.
+[35mo 2021-08-13 11:32:34
+[0m  sequences with exon/cds highlighted generated.
+***** WARNING: File /homes/liu3zhen/references/NAM1.0/TEs/Zm-B73-REFERENCE-NAM-5.0.TE.gff3 has inconsistent naming convention for record:
+scaf_21	EDTA	centromeric_repeat	1	134	1133	+	.	ID=TE_homo_1282741;Name=CentC;Classification=Cent/CentC;Sequence_ontology=SO:0001797;Identity=0.97;Method=homology
+
+***** WARNING: File /homes/liu3zhen/references/NAM1.0/TEs/Zm-B73-REFERENCE-NAM-5.0.TE.gff3 has inconsistent naming convention for record:
+scaf_21	EDTA	centromeric_repeat	1	134	1133	+	.	ID=TE_homo_1282741;Name=CentC;Classification=Cent/CentC;Sequence_ontology=SO:0001797;Identity=0.97;Method=homology
+
+[35mo 2021-08-13 11:32:35
+[0m  Other GFF produced.
+[35mo 2021-08-13 11:32:35
+[0m  cds sequences extracted.
+[35mo 2021-08-13 11:32:36
+[0m  cdna/trancript sequences extracted.
+[35mo 2021-08-13 11:32:36
+[0m  protein sequences extracted.
+Zm00001eb138920
+[35mo 2021-08-13 11:32:36
+[0m  Start to run geneseq.
+[35mo 2021-08-13 11:32:36
+[0m  requirments checked.
+[35mo 2021-08-13 11:32:37
+[0m  Gene was found in GTF.
+[35mo 2021-08-13 11:32:40
+[0m  chromosome/target sequence found.
+[35mo 2021-08-13 11:32:40
+[0m  Gene sequence produced.
+[35mo 2021-08-13 11:32:40
+[0m  sequences with exon/cds highlighted generated.
+***** WARNING: File /homes/liu3zhen/references/NAM1.0/TEs/Zm-B73-REFERENCE-NAM-5.0.TE.gff3 has inconsistent naming convention for record:
+scaf_21	EDTA	centromeric_repeat	1	134	1133	+	.	ID=TE_homo_1282741;Name=CentC;Classification=Cent/CentC;Sequence_ontology=SO:0001797;Identity=0.97;Method=homology
+
+***** WARNING: File /homes/liu3zhen/references/NAM1.0/TEs/Zm-B73-REFERENCE-NAM-5.0.TE.gff3 has inconsistent naming convention for record:
+scaf_21	EDTA	centromeric_repeat	1	134	1133	+	.	ID=TE_homo_1282741;Name=CentC;Classification=Cent/CentC;Sequence_ontology=SO:0001797;Identity=0.97;Method=homology
+
+[35mo 2021-08-13 11:32:41
+[0m  Other GFF produced.
+[35mo 2021-08-13 11:32:42
+[0m  cds sequences extracted.
+[35mo 2021-08-13 11:32:42
+[0m  cdna/trancript sequences extracted.
+[35mo 2021-08-13 11:32:43
+[0m  protein sequences extracted.
+Zm00001eb150140
+[35mo 2021-08-13 11:32:43
+[0m  Start to run geneseq.
+[35mo 2021-08-13 11:32:43
+[0m  requirments checked.
+[35mo 2021-08-13 11:32:43
+[0m  Gene was found in GTF.
+[35mo 2021-08-13 11:32:46
+[0m  chromosome/target sequence found.
+[35mo 2021-08-13 11:32:46
+[0m  Gene sequence produced.
+[35mo 2021-08-13 11:32:46
+[0m  sequences with exon/cds highlighted generated.
+***** WARNING: File /homes/liu3zhen/references/NAM1.0/TEs/Zm-B73-REFERENCE-NAM-5.0.TE.gff3 has inconsistent naming convention for record:
+scaf_21	EDTA	centromeric_repeat	1	134	1133	+	.	ID=TE_homo_1282741;Name=CentC;Classification=Cent/CentC;Sequence_ontology=SO:0001797;Identity=0.97;Method=homology
+
+***** WARNING: File /homes/liu3zhen/references/NAM1.0/TEs/Zm-B73-REFERENCE-NAM-5.0.TE.gff3 has inconsistent naming convention for record:
+scaf_21	EDTA	centromeric_repeat	1	134	1133	+	.	ID=TE_homo_1282741;Name=CentC;Classification=Cent/CentC;Sequence_ontology=SO:0001797;Identity=0.97;Method=homology
+
+[35mo 2021-08-13 11:32:48
+[0m  Other GFF produced.
+[35mo 2021-08-13 11:32:48
+[0m  cds sequences extracted.
+[35mo 2021-08-13 11:32:49
+[0m  cdna/trancript sequences extracted.
+[35mo 2021-08-13 11:32:49
+[0m  protein sequences extracted.
+Zm00001eb157360
+[35mo 2021-08-13 11:32:49
+[0m  Start to run geneseq.
+[35mo 2021-08-13 11:32:49
+[0m  requirments checked.
+[35mo 2021-08-13 11:32:50
+[0m  Gene was found in GTF.
+[35mo 2021-08-13 11:32:53
+[0m  chromosome/target sequence found.
+[35mo 2021-08-13 11:32:53
+[0m  Gene sequence produced.
+[35mo 2021-08-13 11:32:53
+[0m  sequences with exon/cds highlighted generated.
+***** WARNING: File /homes/liu3zhen/references/NAM1.0/TEs/Zm-B73-REFERENCE-NAM-5.0.TE.gff3 has inconsistent naming convention for record:
+scaf_21	EDTA	centromeric_repeat	1	134	1133	+	.	ID=TE_homo_1282741;Name=CentC;Classification=Cent/CentC;Sequence_ontology=SO:0001797;Identity=0.97;Method=homology
+
+***** WARNING: File /homes/liu3zhen/references/NAM1.0/TEs/Zm-B73-REFERENCE-NAM-5.0.TE.gff3 has inconsistent naming convention for record:
+scaf_21	EDTA	centromeric_repeat	1	134	1133	+	.	ID=TE_homo_1282741;Name=CentC;Classification=Cent/CentC;Sequence_ontology=SO:0001797;Identity=0.97;Method=homology
+
+[35mo 2021-08-13 11:32:54
+[0m  Other GFF produced.
+[35mo 2021-08-13 11:32:55
+[0m  cds sequences extracted.
+[35mo 2021-08-13 11:32:55
+[0m  cdna/trancript sequences extracted.
+[35mo 2021-08-13 11:32:56
+[0m  protein sequences extracted.
+Zm00001eb192050
+[35mo 2021-08-13 11:32:56
+[0m  Start to run geneseq.
+[35mo 2021-08-13 11:32:56
+[0m  requirments checked.
+[35mo 2021-08-13 11:32:57
+[0m  Gene was found in GTF.
+[35mo 2021-08-13 11:33:00
+[0m  chromosome/target sequence found.
+[35mo 2021-08-13 11:33:00
+[0m  Gene sequence produced.
+[35mo 2021-08-13 11:33:00
+[0m  sequences with exon/cds highlighted generated.
+***** WARNING: File /homes/liu3zhen/references/NAM1.0/TEs/Zm-B73-REFERENCE-NAM-5.0.TE.gff3 has inconsistent naming convention for record:
+scaf_21	EDTA	centromeric_repeat	1	134	1133	+	.	ID=TE_homo_1282741;Name=CentC;Classification=Cent/CentC;Sequence_ontology=SO:0001797;Identity=0.97;Method=homology
+
+***** WARNING: File /homes/liu3zhen/references/NAM1.0/TEs/Zm-B73-REFERENCE-NAM-5.0.TE.gff3 has inconsistent naming convention for record:
+scaf_21	EDTA	centromeric_repeat	1	134	1133	+	.	ID=TE_homo_1282741;Name=CentC;Classification=Cent/CentC;Sequence_ontology=SO:0001797;Identity=0.97;Method=homology
+
+[35mo 2021-08-13 11:33:02
+[0m  Other GFF produced.
+[35mo 2021-08-13 11:33:02
+[0m  cds sequences extracted.
+[35mo 2021-08-13 11:33:03
+[0m  cdna/trancript sequences extracted.
+[35mo 2021-08-13 11:33:03
+[0m  protein sequences extracted.
+Zm00001eb284730
+[35mo 2021-08-13 11:33:03
+[0m  Start to run geneseq.
+[35mo 2021-08-13 11:33:03
+[0m  requirments checked.
+[35mo 2021-08-13 11:33:04
+[0m  Gene was found in GTF.
+[35mo 2021-08-13 11:33:09
+[0m  chromosome/target sequence found.
+[35mo 2021-08-13 11:33:10
+[0m  Gene sequence produced.
+[35mo 2021-08-13 11:33:10
+[0m  sequences with exon/cds highlighted generated.
+***** WARNING: File /homes/liu3zhen/references/NAM1.0/TEs/Zm-B73-REFERENCE-NAM-5.0.TE.gff3 has inconsistent naming convention for record:
+scaf_21	EDTA	centromeric_repeat	1	134	1133	+	.	ID=TE_homo_1282741;Name=CentC;Classification=Cent/CentC;Sequence_ontology=SO:0001797;Identity=0.97;Method=homology
+
+***** WARNING: File /homes/liu3zhen/references/NAM1.0/TEs/Zm-B73-REFERENCE-NAM-5.0.TE.gff3 has inconsistent naming convention for record:
+scaf_21	EDTA	centromeric_repeat	1	134	1133	+	.	ID=TE_homo_1282741;Name=CentC;Classification=Cent/CentC;Sequence_ontology=SO:0001797;Identity=0.97;Method=homology
+
+[35mo 2021-08-13 11:33:11
+[0m  Other GFF produced.
+[35mo 2021-08-13 11:33:11
+[0m  cds sequences extracted.
+[35mo 2021-08-13 11:33:12
+[0m  cdna/trancript sequences extracted.
+[35mo 2021-08-13 11:33:12
+[0m  protein sequences extracted.
+Zm00001eb357220
+[35mo 2021-08-13 11:33:12
+[0m  Start to run geneseq.
+[35mo 2021-08-13 11:33:12
+[0m  requirments checked.
+[35mo 2021-08-13 11:33:14
+[0m  Gene was found in GTF.
+[35mo 2021-08-13 11:33:20
+[0m  chromosome/target sequence found.
+[35mo 2021-08-13 11:33:20
+[0m  Gene sequence produced.
+[35mo 2021-08-13 11:33:20
+[0m  sequences with exon/cds highlighted generated.
+***** WARNING: File /homes/liu3zhen/references/NAM1.0/TEs/Zm-B73-REFERENCE-NAM-5.0.TE.gff3 has inconsistent naming convention for record:
+scaf_21	EDTA	centromeric_repeat	1	134	1133	+	.	ID=TE_homo_1282741;Name=CentC;Classification=Cent/CentC;Sequence_ontology=SO:0001797;Identity=0.97;Method=homology
+
+***** WARNING: File /homes/liu3zhen/references/NAM1.0/TEs/Zm-B73-REFERENCE-NAM-5.0.TE.gff3 has inconsistent naming convention for record:
+scaf_21	EDTA	centromeric_repeat	1	134	1133	+	.	ID=TE_homo_1282741;Name=CentC;Classification=Cent/CentC;Sequence_ontology=SO:0001797;Identity=0.97;Method=homology
+
+[35mo 2021-08-13 11:33:22
+[0m  Other GFF produced.
+[35mo 2021-08-13 11:33:22
+[0m  cds sequences extracted.
+[35mo 2021-08-13 11:33:23
+[0m  cdna/trancript sequences extracted.
+[35mo 2021-08-13 11:33:23
+[0m  protein sequences extracted.
+Zm00001eb402330
+[35mo 2021-08-13 11:33:23
+[0m  Start to run geneseq.
+[35mo 2021-08-13 11:33:23
+[0m  requirments checked.
+[35mo 2021-08-13 11:33:25
+[0m  Gene was found in GTF.
+[35mo 2021-08-13 11:33:34
+[0m  chromosome/target sequence found.
+[35mo 2021-08-13 11:33:34
+[0m  Gene sequence produced.
+[35mo 2021-08-13 11:33:34
+[0m  sequences with exon/cds highlighted generated.
+***** WARNING: File /homes/liu3zhen/references/NAM1.0/TEs/Zm-B73-REFERENCE-NAM-5.0.TE.gff3 has inconsistent naming convention for record:
+scaf_21	EDTA	centromeric_repeat	1	134	1133	+	.	ID=TE_homo_1282741;Name=CentC;Classification=Cent/CentC;Sequence_ontology=SO:0001797;Identity=0.97;Method=homology
+
+***** WARNING: File /homes/liu3zhen/references/NAM1.0/TEs/Zm-B73-REFERENCE-NAM-5.0.TE.gff3 has inconsistent naming convention for record:
+scaf_21	EDTA	centromeric_repeat	1	134	1133	+	.	ID=TE_homo_1282741;Name=CentC;Classification=Cent/CentC;Sequence_ontology=SO:0001797;Identity=0.97;Method=homology
+
+[35mo 2021-08-13 11:33:35
+[0m  Other GFF produced.
+[35mo 2021-08-13 11:33:35
+[0m  cds sequences extracted.
+[35mo 2021-08-13 11:33:36
+[0m  cdna/trancript sequences extracted.
+[35mo 2021-08-13 11:33:36
+[0m  protein sequences extracted.
+Zm00001eb386280
+[35mo 2021-08-13 11:33:36
+[0m  Start to run geneseq.
+[35mo 2021-08-13 11:33:36
+[0m  requirments checked.
+[35mo 2021-08-13 11:33:38
+[0m  Gene was found in GTF.
+[35mo 2021-08-13 11:33:45
+[0m  chromosome/target sequence found.
+[35mo 2021-08-13 11:33:45
+[0m  Gene sequence produced.
+[35mo 2021-08-13 11:33:45
+[0m  sequences with exon/cds highlighted generated.
+***** WARNING: File /homes/liu3zhen/references/NAM1.0/TEs/Zm-B73-REFERENCE-NAM-5.0.TE.gff3 has inconsistent naming convention for record:
+scaf_21	EDTA	centromeric_repeat	1	134	1133	+	.	ID=TE_homo_1282741;Name=CentC;Classification=Cent/CentC;Sequence_ontology=SO:0001797;Identity=0.97;Method=homology
+
+***** WARNING: File /homes/liu3zhen/references/NAM1.0/TEs/Zm-B73-REFERENCE-NAM-5.0.TE.gff3 has inconsistent naming convention for record:
+scaf_21	EDTA	centromeric_repeat	1	134	1133	+	.	ID=TE_homo_1282741;Name=CentC;Classification=Cent/CentC;Sequence_ontology=SO:0001797;Identity=0.97;Method=homology
+
+[35mo 2021-08-13 11:33:47
+[0m  Other GFF produced.
+[35mo 2021-08-13 11:33:47
+[0m  cds sequences extracted.
+[35mo 2021-08-13 11:33:48
+[0m  cdna/trancript sequences extracted.
+[35mo 2021-08-13 11:33:48
+[0m  protein sequences extracted.

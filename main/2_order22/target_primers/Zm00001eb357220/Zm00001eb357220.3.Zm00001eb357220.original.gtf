@@ -1,0 +1,13 @@
+chr8	NAM	exon	143050881	143051936	.	+	.	transcript_id "Zm00001eb357220_T001"; gene_id "Zm00001eb357220";
+chr8	NAM	exon	143052025	143052427	.	+	.	transcript_id "Zm00001eb357220_T001"; gene_id "Zm00001eb357220";
+chr8	NAM	exon	143053557	143054414	.	+	.	transcript_id "Zm00001eb357220_T001"; gene_id "Zm00001eb357220";
+chr8	NAM	exon	143054527	143054744	.	+	.	transcript_id "Zm00001eb357220_T001"; gene_id "Zm00001eb357220";
+chr8	NAM	CDS	143051747	143051936	.	+	0	transcript_id "Zm00001eb357220_T001"; gene_id "Zm00001eb357220";
+chr8	NAM	CDS	143052025	143052427	.	+	2	transcript_id "Zm00001eb357220_T001"; gene_id "Zm00001eb357220";
+chr8	NAM	CDS	143053557	143054370	.	+	1	transcript_id "Zm00001eb357220_T001"; gene_id "Zm00001eb357220";
+chr8	NAM	exon	143050975	143051936	.	+	.	transcript_id "Zm00001eb357220_T002"; gene_id "Zm00001eb357220";
+chr8	NAM	exon	143052025	143052427	.	+	.	transcript_id "Zm00001eb357220_T002"; gene_id "Zm00001eb357220";
+chr8	NAM	exon	143053557	143054744	.	+	.	transcript_id "Zm00001eb357220_T002"; gene_id "Zm00001eb357220";
+chr8	NAM	CDS	143051747	143051936	.	+	0	transcript_id "Zm00001eb357220_T002"; gene_id "Zm00001eb357220";
+chr8	NAM	CDS	143052025	143052427	.	+	2	transcript_id "Zm00001eb357220_T002"; gene_id "Zm00001eb357220";
+chr8	NAM	CDS	143053557	143054370	.	+	1	transcript_id "Zm00001eb357220_T002"; gene_id "Zm00001eb357220";

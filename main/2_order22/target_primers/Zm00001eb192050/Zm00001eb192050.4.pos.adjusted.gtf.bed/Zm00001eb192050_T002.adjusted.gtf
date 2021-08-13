@@ -1,0 +1,6 @@
+Zm00001eb192050	NAM	exon	1	467	.	+	.	transcript_id "Zm00001eb192050_T002"; gene_id "Zm00001eb192050";
+Zm00001eb192050	NAM	exon	564	716	.	+	.	transcript_id "Zm00001eb192050_T002"; gene_id "Zm00001eb192050";
+Zm00001eb192050	NAM	exon	805	1677	.	+	.	transcript_id "Zm00001eb192050_T002"; gene_id "Zm00001eb192050";
+Zm00001eb192050	NAM	CDS	149	467	.	+	0	transcript_id "Zm00001eb192050_T002"; gene_id "Zm00001eb192050";
+Zm00001eb192050	NAM	CDS	564	716	.	+	2	transcript_id "Zm00001eb192050_T002"; gene_id "Zm00001eb192050";
+Zm00001eb192050	NAM	CDS	805	941	.	+	2	transcript_id "Zm00001eb192050_T002"; gene_id "Zm00001eb192050";

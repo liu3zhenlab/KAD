@@ -1,0 +1,6 @@
+chr8	NAM	exon	3092516	3093273	.	+	.	transcript_id "Zm00001eb332860_T001"; gene_id "Zm00001eb332860";
+chr8	NAM	exon	3093421	3093909	.	+	.	transcript_id "Zm00001eb332860_T001"; gene_id "Zm00001eb332860";
+chr8	NAM	exon	3094027	3094596	.	+	.	transcript_id "Zm00001eb332860_T001"; gene_id "Zm00001eb332860";
+chr8	NAM	CDS	3093103	3093273	.	+	0	transcript_id "Zm00001eb332860_T001"; gene_id "Zm00001eb332860";
+chr8	NAM	CDS	3093421	3093909	.	+	0	transcript_id "Zm00001eb332860_T001"; gene_id "Zm00001eb332860";
+chr8	NAM	CDS	3094027	3094269	.	+	0	transcript_id "Zm00001eb332860_T001"; gene_id "Zm00001eb332860";

@@ -1,0 +1,8 @@
+Zm00001eb150140	NAM	exon	107	395	.	+	.	transcript_id "Zm00001eb150140_T002"; gene_id "Zm00001eb150140";
+Zm00001eb150140	NAM	exon	796	802	.	+	.	transcript_id "Zm00001eb150140_T002"; gene_id "Zm00001eb150140";
+Zm00001eb150140	NAM	exon	896	1291	.	+	.	transcript_id "Zm00001eb150140_T002"; gene_id "Zm00001eb150140";
+Zm00001eb150140	NAM	exon	2261	3284	.	+	.	transcript_id "Zm00001eb150140_T002"; gene_id "Zm00001eb150140";
+Zm00001eb150140	NAM	exon	3366	3818	.	+	.	transcript_id "Zm00001eb150140_T002"; gene_id "Zm00001eb150140";
+Zm00001eb150140	NAM	CDS	902	1291	.	+	0	transcript_id "Zm00001eb150140_T002"; gene_id "Zm00001eb150140";
+Zm00001eb150140	NAM	CDS	2261	3284	.	+	0	transcript_id "Zm00001eb150140_T002"; gene_id "Zm00001eb150140";
+Zm00001eb150140	NAM	CDS	3366	3631	.	+	2	transcript_id "Zm00001eb150140_T002"; gene_id "Zm00001eb150140";

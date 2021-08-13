@@ -1,0 +1,4 @@
+chr3	NAM	exon	141758915	141759337	.	+	.	transcript_id "Zm00001eb138920_T001"; gene_id "Zm00001eb138920";
+chr3	NAM	exon	141759450	141760104	.	+	.	transcript_id "Zm00001eb138920_T001"; gene_id "Zm00001eb138920";
+chr3	NAM	CDS	141759075	141759337	.	+	0	transcript_id "Zm00001eb138920_T001"; gene_id "Zm00001eb138920";
+chr3	NAM	CDS	141759450	141759867	.	+	1	transcript_id "Zm00001eb138920_T001"; gene_id "Zm00001eb138920";

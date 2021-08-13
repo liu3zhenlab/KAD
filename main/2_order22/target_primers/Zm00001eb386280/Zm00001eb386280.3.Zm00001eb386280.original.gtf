@@ -1,0 +1,4 @@
+chr9	NAM	exon	94824490	94825298	.	-	.	transcript_id "Zm00001eb386280_T001"; gene_id "Zm00001eb386280";
+chr9	NAM	exon	94825462	94825674	.	-	.	transcript_id "Zm00001eb386280_T001"; gene_id "Zm00001eb386280";
+chr9	NAM	CDS	94824728	94825298	.	-	1	transcript_id "Zm00001eb386280_T001"; gene_id "Zm00001eb386280";
+chr9	NAM	CDS	94825462	94825544	.	-	0	transcript_id "Zm00001eb386280_T001"; gene_id "Zm00001eb386280";

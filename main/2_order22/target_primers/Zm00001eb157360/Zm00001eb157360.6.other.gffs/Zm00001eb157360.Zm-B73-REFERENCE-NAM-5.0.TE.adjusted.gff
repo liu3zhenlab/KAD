@@ -1,0 +1,2 @@
+Zm00001eb157360	EDTA	Gypsy_LTR_retrotransposon	1470	1718	1135	+	.	ID=TE_homo_439634;Name=juta_AC190498_2318;Classification=LTR/Gypsy;Sequence_ontology=SO:0002265;Identity=0.825;Method=homology
+Zm00001eb157360	EDTA	PIF_Harbinger_TIR_transposon	3209	3381	605	-	.	ID=TE_homo_439635;Name=TE_00000289;Classification=MITE/DTH;Sequence_ontology=SO:0002284;Identity=0.775;Method=homology

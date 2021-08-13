@@ -1,0 +1,4 @@
+chr2	NAM	exon	190138317	190138818	.	+	.	transcript_id "Zm00001eb100410_T001"; gene_id "Zm00001eb100410";
+chr2	NAM	exon	190138930	190140178	.	+	.	transcript_id "Zm00001eb100410_T001"; gene_id "Zm00001eb100410";
+chr2	NAM	CDS	190138576	190138818	.	+	0	transcript_id "Zm00001eb100410_T001"; gene_id "Zm00001eb100410";
+chr2	NAM	CDS	190138930	190139871	.	+	0	transcript_id "Zm00001eb100410_T001"; gene_id "Zm00001eb100410";

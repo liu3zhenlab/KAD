@@ -1,0 +1,4 @@
+chr6	EDTA	Copia_LTR_retrotransposon	142695058	142695145	322	+	.	ID=TE_homo_837014;Name=TE_00008512_LTR;Classification=LTR/Copia;Sequence_ontology=SO:0002264;Identity=0.767;Method=homology
+chr6	EDTA	Tc1_Mariner_TIR_transposon	142695563	142695802	803	+	.	ID=TE_homo_837015;Name=DTT_ZM00053_consensus;Classification=MITE/DTT;Sequence_ontology=SO:0002278;Identity=0.823;Method=homology
+chr6	EDTA	PIF_Harbinger_TIR_transposon	142696809	142697119	2039	+	.	ID=TE_homo_837016;Name=DTH_ZM00202_consensus;Classification=MITE/DTH;Sequence_ontology=SO:0002284;Identity=0.881;Method=homology
+chr6	EDTA	Tc1_Mariner_TIR_transposon	142699849	142699980	464	-	.	ID=TE_homo_837017;Name=DTT_ZM00026_consensus;Classification=MITE/DTT;Sequence_ontology=SO:0002278;Identity=0.818;Method=homology

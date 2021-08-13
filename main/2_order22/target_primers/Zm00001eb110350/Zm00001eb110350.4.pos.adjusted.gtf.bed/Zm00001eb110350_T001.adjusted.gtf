@@ -1,0 +1,4 @@
+Zm00001eb110350	NAM	exon	1	1654	.	+	.	transcript_id "Zm00001eb110350_T001"; gene_id "Zm00001eb110350";
+Zm00001eb110350	NAM	exon	1753	2196	.	+	.	transcript_id "Zm00001eb110350_T001"; gene_id "Zm00001eb110350";
+Zm00001eb110350	NAM	CDS	135	1654	.	+	0	transcript_id "Zm00001eb110350_T001"; gene_id "Zm00001eb110350";
+Zm00001eb110350	NAM	CDS	1753	1831	.	+	1	transcript_id "Zm00001eb110350_T001"; gene_id "Zm00001eb110350";
